@@ -25,6 +25,48 @@ int AckermannLoop(int m, int n);
 
 static int Akm_deep = 0; // 当前递归深度
 static int deep_max = 0; // 最大递归深度
+
+class Akm_t
+{
+private:
+    std::string _name;
+
+public:
+    Akm_t(std::string name = "name") : _name(name) {}
+    ~Akm_t() = default;
+    static void Akm_loop(int x, int y);
+    static void Akm_rec(int x, int y);
+};
+
+void Akm_t::Akm_loop(int x, int y)
+{
+    clock_t t;
+    int result;
+
+    t = clock();
+    result = AckermannLoop(x, y);
+    t = clock() - t;
+
+    printf("\nAckermannLoop(%i, %i) = %i\n", x, y, result);
+    printf("AckermannLoop(%i, %i) took %ld clicks (%f seconds).\n", x, y, t, ((float)t) / CLOCKS_PER_SEC);
+}
+
+void Akm_t::Akm_rec(int x, int y)
+{
+    clock_t t;
+    int result;
+
+    t = clock(); // Returns the processor time consumed by the program.
+    std::cout << "\nCurrent call:\n";
+    result = Ackermann(x, y);
+    std::cout << "Current deep: " << std::scientific << std::setw(10) << std::left << Akm_deep << " Max deep: " << std::setw(10) << deep_max;
+    std::cout << "\nRecursion terminated.\n";
+    t = clock() - t;
+
+    printf("\nAckermann(%i, %i) = %i\n", x, y, result);
+    printf("Ackermann(%i, %i) took %ld clicks (%f seconds).\n", x, y, t, ((float)t) / CLOCKS_PER_SEC);
+}
+
 int Ackermann(int m, int n)
 {
     static time_t begTime = time(nullptr);

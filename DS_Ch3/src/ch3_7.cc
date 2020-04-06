@@ -11,9 +11,6 @@
 
 #include "Ackermann.hh"
 
-static void Akm_loop(int x, int y);
-static void Akm_rec(int x, int y);
-
 int main(int argc, char const *argv[])
 {
     // Configure
@@ -43,10 +40,10 @@ int main(int argc, char const *argv[])
         y = atoi(argv[2]);
 
         if (stkEn)
-            Akm_loop(x, y);
+            Akm_t::Akm_loop(x, y);
 
         if (recEn)
-            Akm_rec(x, y);
+            Akm_t::Akm_rec(x, y);
 
         return 0;
     }
@@ -66,39 +63,10 @@ int main(int argc, char const *argv[])
     } while (true);
 
     if (stkEn)
-        Akm_loop(x, y);
+        Akm_t::Akm_loop(x, y);
 
     if (recEn)
-        Akm_rec(x, y);
+        Akm_t::Akm_rec(x, y);
 
     return 0;
-}
-
-void Akm_loop(int x, int y)
-{
-    clock_t t;
-    int result;
-
-    t = clock();
-    result = AckermannLoop(x, y);
-    t = clock() - t;
-
-    printf("\nAckermannLoop(%i, %i) = %i\n", x, y, result);
-    printf("AckermannLoop(%i, %i) took %ld clicks (%f seconds).\n", x, y, t, ((float)t) / CLOCKS_PER_SEC);
-}
-
-void Akm_rec(int x, int y)
-{
-    clock_t t;
-    int result;
-
-    t = clock(); // Returns the processor time consumed by the program.
-    std::cout << "\nCurrent call:\n";
-    result = Ackermann(x, y);
-    std::cout << "Current deep: " << std::scientific << std::setw(10) << std::left << Akm_deep << " Max deep: " << std::setw(10) << deep_max;
-    std::cout << "\nRecursion terminated.\n";
-    t = clock() - t;
-
-    printf("\nAckermann(%i, %i) = %i\n", x, y, result);
-    printf("Ackermann(%i, %i) took %ld clicks (%f seconds).\n", x, y, t, ((float)t) / CLOCKS_PER_SEC);
 }
