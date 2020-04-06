@@ -1,0 +1,40 @@
+$\ast$$\ast$\+\_\+\+\_\+《数据结构：思想与方法》（第2版）第4章 队列\+\_\+\+\_\+$\ast$$\ast$\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{文件结构}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\ttfamily ./include}\+: \href{./include/Queue.h}{\texttt{ 队列的抽象类}}，\href{./include/seqQueue.hh}{\texttt{ 循环队列}}、\href{./include/vecQueue.hh}{\texttt{ 顺序队列}}、\href{./include/linkQueue.h}{\texttt{ 链接队列}}的定义和实现。
+\item {\ttfamily ./src}\+: 测试例程。
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{test0_8cc}{test0.\+cc}}}：测试上述三种队列的基本功能，包括构造、入队和出队。
+\end{DoxyItemize}
+\item {\ttfamily ./doc}\+: {\ttfamily H\+T\+ML}和{\ttfamily L\+A\+T\+EX}文档
+\begin{DoxyItemize}
+\item {\ttfamily H\+T\+ML}文档打开方式：
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ./path/to/projectRoot}
+\DoxyCodeLine{./doc/html/index.html}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{编译方法}\label{md__r_e_a_d_m_e_autotoc_md2}
+将{\ttfamily ./include}文件夹加入{\ttfamily Include\+Path}，编译{\ttfamily ./src}文件夹中的单个源文件。
+
+
+\begin{DoxyItemize}
+\item 以用g++编译{\ttfamily \mbox{\hyperlink{test0_8cc}{test0.\+cc}}}为例：
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ./path/to/projectRoot}
+\DoxyCodeLine{mkdir bin}
+\DoxyCodeLine{g++ ./src/test0.cc -\/o ./bin/test0.exe -\/g -\/fexec-\/charset=GBK -\/std=c++11 -\/I ./include}
+\DoxyCodeLine{./bin/test0.exe}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Contact us}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Author\+: Guorui Wei (危 国锐)
+\item E-\/mail\+: \href{mailto:313017602@qq.com}{\texttt{ 313017602@qq.\+com}} 
+\end{DoxyItemize}

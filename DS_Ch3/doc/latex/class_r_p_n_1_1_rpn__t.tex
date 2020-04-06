@@ -1,0 +1,437 @@
+\hypertarget{class_r_p_n_1_1_rpn__t}{}\doxysection{R\+PN\+::Rpn\+\_\+t Class Reference}
+\label{class_r_p_n_1_1_rpn__t}\index{RPN::Rpn\_t@{RPN::Rpn\_t}}
+
+
+{\ttfamily \#include $<$Rpn.\+hh$>$}
+
+
+
+Collaboration diagram for R\+PN\+::Rpn\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_r_p_n_1_1_rpn__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}}
+\begin{DoxyCompactList}\small\item\em $<$ 后缀式的元素\+: 操作数, 操作符 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a2328e43bfa616ee63c9bf475188ca511}{Rpn\+\_\+t}} (const std\+::string \&expr\+\_\+str=\char`\"{}0.\+0\char`\"{}, \mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6}{notation\+Type}} expr\+Type=\mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6a918c0f86e7efc8d13bb39d2ccedee454}{notation\+Type\+::\+Infix}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_r_p_n_1_1_rpn__t}{Rpn\+\_\+t}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a794cc6457026f80d9a0aaf67f06abf34}{$\sim$\+Rpn\+\_\+t}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_r_p_n_1_1_rpn__t}{Rpn\+\_\+t}} object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a760c2a7b4a404cfe61345e06110c40ff}{calc\+Val}} () const
+\begin{DoxyCompactList}\small\item\em 计算(后缀)表达式的值 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a62b11e5c5e6e89370bd9388f652d4d4e}{postfix}} () const
+\begin{DoxyCompactList}\small\item\em 获取后缀形式的string \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_p_n_1_1_rpn__t}{Rpn\+\_\+t}} \& \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a13f84208d6722039432be70b4bffee8c}{assign}} (const std\+::string \&expr\+\_\+str, \mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6}{notation\+Type}} \+\_\+type=\mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6a918c0f86e7efc8d13bb39d2ccedee454}{notation\+Type\+::\+Infix}})
+\begin{DoxyCompactList}\small\item\em 设置\+Rpn\+\_\+t类对象的值 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_afd8fb64bcf5a70cbe919497eea4e209a}{sto\+Item}} (const char $\ast$\+\_\+ch, const char $\ast$$\ast$\+\_\+\+End\+Ptr=nullptr) const
+\begin{DoxyCompactList}\small\item\em Rpn类的工具函数 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a7db7b05c3ce06c9b98cf957498aba17b}{item\+To\+Str}} (const \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} \&Op) const
+\begin{DoxyCompactList}\small\item\em 获取表示项(操作符/操作数)的string \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} $>$ \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a673867029e31811b1c70d28fe360b715}{expr\+Str\+To\+List}} (const std\+::string \&expr\+Str) const
+\begin{DoxyCompactList}\small\item\em 用string中的表达式创建一个list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} $>$ \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a8dd551d02431c034e10f256ff384c39f}{infix\+List\+To\+Postfix\+List}} (const \mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} $>$ \&infix\+List) const
+\begin{DoxyCompactList}\small\item\em 用一个中缀list创建一个后缀list \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a8bf0b803ffe55b4ecdf5d99d05b5897f}{item\+List\+To\+Str}} (const \mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} $>$ \&\mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a06bad2a3d04d50d45a8edd6c0dbe2cfd}{item\+List}}) const
+\begin{DoxyCompactList}\small\item\em 获取表示item\+List的string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} $>$ \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a06bad2a3d04d50d45a8edd6c0dbe2cfd}{item\+List}}
+\begin{DoxyCompactList}\small\item\em 存储后缀表达式的双链表 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_a204f8b9ec4010679b0f05b1ebb866aeb}{postfix\+Str}}
+\begin{DoxyCompactList}\small\item\em 存储后缀形式的字符串 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_r_p_n_1_1_rpn__t_ab20effab31ea89b0bdb4c1e4ad94f2fd}{operator==}} (const \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} \&lhs, const \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} \&rhs)
+\begin{DoxyCompactList}\small\item\em operator== \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 126 of file Rpn.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a2328e43bfa616ee63c9bf475188ca511}\label{class_r_p_n_1_1_rpn__t_a2328e43bfa616ee63c9bf475188ca511}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!Rpn\_t@{Rpn\_t}}
+\index{Rpn\_t@{Rpn\_t}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{Rpn\_t()}{Rpn\_t()}}
+{\footnotesize\ttfamily R\+P\+N\+::\+Rpn\+\_\+t\+::\+Rpn\+\_\+t (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expr\+\_\+str = {\ttfamily \char`\"{}0.0\char`\"{}},  }\item[{\mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6}{notation\+Type}}}]{expr\+Type = {\ttfamily \mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6a918c0f86e7efc8d13bb39d2ccedee454}{notation\+Type\+::\+Infix}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_r_p_n_1_1_rpn__t}{Rpn\+\_\+t}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr\+\_\+str} & \\
+\hline
+{\em expr\+Type} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 375 of file Rpn.\+hh.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a2328e43bfa616ee63c9bf475188ca511_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a794cc6457026f80d9a0aaf67f06abf34}\label{class_r_p_n_1_1_rpn__t_a794cc6457026f80d9a0aaf67f06abf34}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!````~Rpn\_t@{$\sim$Rpn\_t}}
+\index{````~Rpn\_t@{$\sim$Rpn\_t}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rpn\_t()}{~Rpn\_t()}}
+{\footnotesize\ttfamily R\+P\+N\+::\+Rpn\+\_\+t\+::$\sim$\+Rpn\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_r_p_n_1_1_rpn__t}{Rpn\+\_\+t}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a13f84208d6722039432be70b4bffee8c}\label{class_r_p_n_1_1_rpn__t_a13f84208d6722039432be70b4bffee8c}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!assign@{assign}}
+\index{assign@{assign}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_p_n_1_1_rpn__t}{Rpn\+\_\+t}} \& R\+P\+N\+::\+Rpn\+\_\+t\+::assign (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expr\+\_\+str,  }\item[{\mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6}{notation\+Type}}}]{\+\_\+type = {\ttfamily \mbox{\hyperlink{namespace_r_p_n_a1dba8d3e56be7f48013b97b798b165d6a918c0f86e7efc8d13bb39d2ccedee454}{notation\+Type\+::\+Infix}}} }\end{DoxyParamCaption})}
+
+
+
+设置\+Rpn\+\_\+t类对象的值 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr\+\_\+str} & \\
+\hline
+{\em \+\_\+type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_r_p_n_1_1_rpn__t}{Rpn\+\_\+t}}\& 
+\end{DoxyReturn}
+
+
+Definition at line 396 of file Rpn.\+hh.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a13f84208d6722039432be70b4bffee8c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{class_r_p_n_1_1_rpn__t_a13f84208d6722039432be70b4bffee8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a760c2a7b4a404cfe61345e06110c40ff}\label{class_r_p_n_1_1_rpn__t_a760c2a7b4a404cfe61345e06110c40ff}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!calcVal@{calcVal}}
+\index{calcVal@{calcVal}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{calcVal()}{calcVal()}}
+{\footnotesize\ttfamily double R\+P\+N\+::\+Rpn\+\_\+t\+::calc\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+计算(后缀)表达式的值 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 587 of file Rpn.\+hh.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a760c2a7b4a404cfe61345e06110c40ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{class_r_p_n_1_1_rpn__t_a760c2a7b4a404cfe61345e06110c40ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a673867029e31811b1c70d28fe360b715}\label{class_r_p_n_1_1_rpn__t_a673867029e31811b1c70d28fe360b715}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!exprStrToList@{exprStrToList}}
+\index{exprStrToList@{exprStrToList}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{exprStrToList()}{exprStrToList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Rpn\+\_\+t\+::\+Item}} $>$ R\+P\+N\+::\+Rpn\+\_\+t\+::expr\+Str\+To\+List (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expr\+Str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+用string中的表达式创建一个list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr\+Str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List\+::d\+Link\+List$<$\+Item$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 492 of file Rpn.\+hh.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a673867029e31811b1c70d28fe360b715_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a673867029e31811b1c70d28fe360b715_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a8dd551d02431c034e10f256ff384c39f}\label{class_r_p_n_1_1_rpn__t_a8dd551d02431c034e10f256ff384c39f}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!infixListToPostfixList@{infixListToPostfixList}}
+\index{infixListToPostfixList@{infixListToPostfixList}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{infixListToPostfixList()}{infixListToPostfixList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Rpn\+\_\+t\+::\+Item}} $>$ R\+P\+N\+::\+Rpn\+\_\+t\+::infix\+List\+To\+Postfix\+List (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} $>$ \&}]{infix\+List }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+用一个中缀list创建一个后缀list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em infix\+List} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List\+::d\+Link\+List$<$\+Item$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 508 of file Rpn.\+hh.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a8dd551d02431c034e10f256ff384c39f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a8dd551d02431c034e10f256ff384c39f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a8bf0b803ffe55b4ecdf5d99d05b5897f}\label{class_r_p_n_1_1_rpn__t_a8bf0b803ffe55b4ecdf5d99d05b5897f}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!itemListToStr@{itemListToStr}}
+\index{itemListToStr@{itemListToStr}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{itemListToStr()}{itemListToStr()}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+\_\+t\+::item\+List\+To\+Str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$ \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} $>$ \&}]{item\+List }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+获取表示item\+List的string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\+List} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 627 of file Rpn.\+hh.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a8bf0b803ffe55b4ecdf5d99d05b5897f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a8bf0b803ffe55b4ecdf5d99d05b5897f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a7db7b05c3ce06c9b98cf957498aba17b}\label{class_r_p_n_1_1_rpn__t_a7db7b05c3ce06c9b98cf957498aba17b}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!itemToStr@{itemToStr}}
+\index{itemToStr@{itemToStr}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{itemToStr()}{itemToStr()}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+\_\+t\+::item\+To\+Str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} \&}]{Op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+获取表示项(操作符/操作数)的string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Op} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 640 of file Rpn.\+hh.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_a7db7b05c3ce06c9b98cf957498aba17b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a62b11e5c5e6e89370bd9388f652d4d4e}\label{class_r_p_n_1_1_rpn__t_a62b11e5c5e6e89370bd9388f652d4d4e}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!postfix@{postfix}}
+\index{postfix@{postfix}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{postfix()}{postfix()}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+\_\+t\+::postfix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+获取后缀形式的string 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 421 of file Rpn.\+hh.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{class_r_p_n_1_1_rpn__t_a62b11e5c5e6e89370bd9388f652d4d4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_afd8fb64bcf5a70cbe919497eea4e209a}\label{class_r_p_n_1_1_rpn__t_afd8fb64bcf5a70cbe919497eea4e209a}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!stoItem@{stoItem}}
+\index{stoItem@{stoItem}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{stoItem()}{stoItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Rpn\+\_\+t\+::\+Item}} R\+P\+N\+::\+Rpn\+\_\+t\+::sto\+Item (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+ch,  }\item[{const char $\ast$$\ast$}]{\+\_\+\+End\+Ptr = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rpn类的工具函数 
+
+从string首解析一个项(操作符/操作数)
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+ch} & \\
+\hline
+{\em \+\_\+\+End\+Ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} 
+\end{DoxyReturn}
+
+
+Definition at line 427 of file Rpn.\+hh.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_r_p_n_1_1_rpn__t_afd8fb64bcf5a70cbe919497eea4e209a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_ab20effab31ea89b0bdb4c1e4ad94f2fd}\label{class_r_p_n_1_1_rpn__t_ab20effab31ea89b0bdb4c1e4ad94f2fd}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!operator==@{operator==}}
+\index{operator==@{operator==}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+operator== 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 740 of file Rpn.\+hh.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a06bad2a3d04d50d45a8edd6c0dbe2cfd}\label{class_r_p_n_1_1_rpn__t_a06bad2a3d04d50d45a8edd6c0dbe2cfd}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!itemList@{itemList}}
+\index{itemList@{itemList}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{itemList}{itemList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list_1_1d_link_list}{List\+::d\+Link\+List}}$<$\mbox{\hyperlink{struct_r_p_n_1_1_rpn__t_1_1_item}{Item}}$>$ R\+P\+N\+::\+Rpn\+\_\+t\+::item\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+存储后缀表达式的双链表 
+
+
+
+Definition at line 286 of file Rpn.\+hh.
+
+\mbox{\Hypertarget{class_r_p_n_1_1_rpn__t_a204f8b9ec4010679b0f05b1ebb866aeb}\label{class_r_p_n_1_1_rpn__t_a204f8b9ec4010679b0f05b1ebb866aeb}} 
+\index{RPN::Rpn\_t@{RPN::Rpn\_t}!postfixStr@{postfixStr}}
+\index{postfixStr@{postfixStr}!RPN::Rpn\_t@{RPN::Rpn\_t}}
+\doxysubsubsection{\texorpdfstring{postfixStr}{postfixStr}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+\_\+t\+::postfix\+Str\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+存储后缀形式的字符串 
+
+
+
+Definition at line 291 of file Rpn.\+hh.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_rpn_8hh}{Rpn.\+hh}}\end{DoxyCompactItemize}

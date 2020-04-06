@@ -1,0 +1,595 @@
+\hypertarget{class_queue_1_1vec_queue}{}\doxysection{Queue\+::vec\+Queue$<$ T $>$ Class Template Reference}
+\label{class_queue_1_1vec_queue}\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+
+
+队头位置固定的队列类  
+
+
+
+
+{\ttfamily \#include $<$vec\+Queue.\+hh$>$}
+
+
+
+Inheritance diagram for Queue\+::vec\+Queue$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{class_queue_1_1vec_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Queue\+::vec\+Queue$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{class_queue_1_1vec_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 类型别名定义 \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \& \mbox{\hyperlink{class_queue_1_1vec_queue_a24fd0b74ee229bedee480f3a16a212f3}{reference}}
+\begin{DoxyCompactList}\small\item\em 数据的引用 \end{DoxyCompactList}\item 
+typedef size\+\_\+t \mbox{\hyperlink{class_queue_1_1vec_queue_a5d6461e5544d8a356b48ff531de6d9b6}{size\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 计数器类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_queue_1_1vec_queue_a8b29ec2766b75e2e4104ac1750c9e3f3}{vec\+Queue}} (\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}} init\+Size=10)
+\begin{DoxyCompactList}\small\item\em Construct a new vec \mbox{\hyperlink{class_queue_1_1_queue}{Queue}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_queue_1_1vec_queue_a4bd0502ae4aac0c8e07d55186120adda}{$\sim$vec\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the vec \mbox{\hyperlink{class_queue_1_1_queue}{Queue}} object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_queue_1_1vec_queue_a4706d52871dae567f7191f8c9b7d9a09}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em 判队空 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_queue_1_1vec_queue_a9fa4e1ebac29845c4f48d8668dacfd13}{en\+Queue}} (\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}} \&x)
+\begin{DoxyCompactList}\small\item\em 入队一个元素 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue_a34472178c199808dab4db051750e99d3}{de\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em 出队一个元素 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue_aac46859598ecdcd06af0de88de1f8cb2}{get\+Head}} () const
+\begin{DoxyCompactList}\small\item\em Get the Head object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_queue_1_1vec_queue_a7f8ac7b73205ea04e63925c1b6d95daa}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Test whether container is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue_a87033e46f24c51e7215515269e3542ae}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_1_1_queue_a4e3a13b89ce9081afd5798de32d4fa81}{reference}} \& \mbox{\hyperlink{class_queue_1_1vec_queue_ad938d48bc5b2353deeca16e992a6aa74}{front}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the next element in the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}} \& \mbox{\hyperlink{class_queue_1_1vec_queue_a6e0fe8e9569745d019caa76c91a117a6}{front}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the next element in the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_1_1_queue_a4e3a13b89ce9081afd5798de32d4fa81}{reference}} \& \mbox{\hyperlink{class_queue_1_1vec_queue_abf83fd5bd53187167cf6b210df8610cb}{back}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the last element in the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}} \& \mbox{\hyperlink{class_queue_1_1vec_queue_ade3cf6b752d8c7d37aa1ec1c3d5d938c}{back}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the last element in the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_1_1vec_queue_a8bddaaee746c198ac2d86810ba078f98}{push}} (const \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \&val)
+\begin{DoxyCompactList}\small\item\em Inserts a new element at the end of the queue, after its current last element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_1_1vec_queue_a39b371b5537647e83d5fcacf5b8f449c}{push}} (\mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \&\&val)
+\begin{DoxyCompactList}\small\item\em Inserts a new element at the end of the queue, after its current last element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_1_1vec_queue_ab2be18405f3f469df24b457013fed522}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Removes the next element in the queue. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_queue_1_1_queue_aa2ef424f20563040f57f0c61ec7bb218}{en\+Queue}} (const \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \&x)=0
+\begin{DoxyCompactList}\small\item\em 入队一个元素 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const typedef \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \& \mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em 数据的常量引用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_queue_1_1vec_queue_a2e7017cbd96497cd5b36ddc75710b665}{double\+Space}} ()
+\begin{DoxyCompactList}\small\item\em 扩大数组空间 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue_aefdade135508fc92606cc4e2487e698e}{\+\_\+max\+Size}}
+\begin{DoxyCompactList}\small\item\em 内部数组的规模 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} $\ast$ \mbox{\hyperlink{class_queue_1_1vec_queue_a65b87d8374aed524f96812b8e9e8fed5}{\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em 存储队列的动态数组 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue_aedbb1fe1e47d71b4313169769e68e305}{\+\_\+rear}}
+\begin{DoxyCompactList}\small\item\em 队尾下标 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Queue\+::vec\+Queue$<$ T $>$}
+
+队头位置固定的队列类 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 数据的类型 \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 46 of file vec\+Queue.\+hh.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a24fd0b74ee229bedee480f3a16a212f3}\label{class_queue_1_1vec_queue_a24fd0b74ee229bedee480f3a16a212f3}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!reference@{reference}}
+\index{reference@{reference}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}}\& \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_queue_1_1_queue_a4e3a13b89ce9081afd5798de32d4fa81}{reference}}}
+
+
+
+数据的引用 
+
+
+
+Definition at line 68 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a5d6461e5544d8a356b48ff531de6d9b6}\label{class_queue_1_1vec_queue_a5d6461e5544d8a356b48ff531de6d9b6}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef size\+\_\+t \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}}}
+
+
+
+计数器类型 
+
+
+
+Definition at line 70 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}\label{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef T \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}}}
+
+
+
+类型别名定义 
+
+\begin{DoxyNote}{Note}
+测试：能否从基类继承 数据类型 
+\end{DoxyNote}
+
+
+Definition at line 67 of file vec\+Queue.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a8b29ec2766b75e2e4104ac1750c9e3f3}\label{class_queue_1_1vec_queue_a8b29ec2766b75e2e4104ac1750c9e3f3}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!vecQueue@{vecQueue}}
+\index{vecQueue@{vecQueue}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vecQueue()}{vecQueue()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_queue_1_1vec_queue}{vec\+Queue}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}}}]{init\+Size = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Construct a new vec \mbox{\hyperlink{class_queue_1_1_queue}{Queue}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+Size} & 队列初始容量 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 211 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a4bd0502ae4aac0c8e07d55186120adda}\label{class_queue_1_1vec_queue_a4bd0502ae4aac0c8e07d55186120adda}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!````~vecQueue@{$\sim$vecQueue}}
+\index{````~vecQueue@{$\sim$vecQueue}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$vecQueue()}{~vecQueue()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_queue_1_1vec_queue}{vec\+Queue}}\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the vec \mbox{\hyperlink{class_queue_1_1_queue}{Queue}} object. 
+
+
+
+Definition at line 217 of file vec\+Queue.\+hh.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_abf83fd5bd53187167cf6b210df8610cb}\label{class_queue_1_1vec_queue_abf83fd5bd53187167cf6b210df8610cb}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!back@{back}}
+\index{back@{back}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue}{vec\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}} \& \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::back}
+
+
+
+Returns a reference to the last element in the queue. 
+
+\begin{DoxyReturn}{Returns}
+reference\& 队尾元素的引用 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_ade3cf6b752d8c7d37aa1ec1c3d5d938c}\label{class_queue_1_1vec_queue_ade3cf6b752d8c7d37aa1ec1c3d5d938c}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!back@{back}}
+\index{back@{back}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}}\& \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the last element in the queue. 
+
+\begin{DoxyReturn}{Returns}
+const\+\_\+reference\& 队尾元素的常量引用 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a34472178c199808dab4db051750e99d3}\label{class_queue_1_1vec_queue_a34472178c199808dab4db051750e99d3}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!deQueue@{deQueue}}
+\index{deQueue@{deQueue}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deQueue()}{deQueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::de\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+出队一个元素 
+
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 出队元素的值 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_queue_1_1_queue_a99c3a22792cac8edd4f1f3f66b51b204}{Queue\+::\+Queue$<$ T $>$}}.
+
+
+
+Definition at line 138 of file vec\+Queue.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{class_queue_1_1vec_queue_a34472178c199808dab4db051750e99d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a2e7017cbd96497cd5b36ddc75710b665}\label{class_queue_1_1vec_queue_a2e7017cbd96497cd5b36ddc75710b665}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!doubleSpace@{doubleSpace}}
+\index{doubleSpace@{doubleSpace}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{doubleSpace()}{doubleSpace()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::double\+Space\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+扩大数组空间 
+
+
+
+Definition at line 285 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a7f8ac7b73205ea04e63925c1b6d95daa}\label{class_queue_1_1vec_queue_a7f8ac7b73205ea04e63925c1b6d95daa}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::empty}
+
+
+
+Test whether container is empty. 
+
+\begin{DoxyReturn}{Returns}
+true is empty 
+
+false not empty 
+\end{DoxyReturn}
+
+
+Definition at line 223 of file vec\+Queue.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_queue_1_1vec_queue_a7f8ac7b73205ea04e63925c1b6d95daa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_queue_1_1_queue_aa2ef424f20563040f57f0c61ec7bb218}\label{class_queue_1_1_queue_aa2ef424f20563040f57f0c61ec7bb218}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!enQueue@{enQueue}}
+\index{enQueue@{enQueue}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enQueue()}{enQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{class_queue_1_1_queue}{Queue\+::\+Queue}}$<$ T $>$\+::en\+Queue (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_queue_1_1_queue_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+
+
+入队一个元素 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 数据的值 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a9fa4e1ebac29845c4f48d8668dacfd13}\label{class_queue_1_1vec_queue_a9fa4e1ebac29845c4f48d8668dacfd13}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!enQueue@{enQueue}}
+\index{enQueue@{enQueue}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enQueue()}{enQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::en\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+入队一个元素 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 元素的数据 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 128 of file vec\+Queue.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{class_queue_1_1vec_queue_a9fa4e1ebac29845c4f48d8668dacfd13_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_ad938d48bc5b2353deeca16e992a6aa74}\label{class_queue_1_1vec_queue_ad938d48bc5b2353deeca16e992a6aa74}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!front@{front}}
+\index{front@{front}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue}{vec\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}} \& \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::front}
+
+
+
+Returns a reference to the next element in the queue. 
+
+\begin{DoxyReturn}{Returns}
+reference\& 队首元素的引用 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a6e0fe8e9569745d019caa76c91a117a6}\label{class_queue_1_1vec_queue_a6e0fe8e9569745d019caa76c91a117a6}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!front@{front}}
+\index{front@{front}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}{const\+\_\+reference}}\& \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a reference to the next element in the queue. 
+
+\begin{DoxyReturn}{Returns}
+const\+\_\+reference\& 队首元素的常量引用 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_aac46859598ecdcd06af0de88de1f8cb2}\label{class_queue_1_1vec_queue_aac46859598ecdcd06af0de88de1f8cb2}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!getHead@{getHead}}
+\index{getHead@{getHead}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Head object. 
+
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 队首元素的值 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_queue_1_1_queue_a873aceeb23ba3fc9a384b58c51d06470}{Queue\+::\+Queue$<$ T $>$}}.
+
+
+
+Definition at line 150 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a4706d52871dae567f7191f8c9b7d9a09}\label{class_queue_1_1vec_queue_a4706d52871dae567f7191f8c9b7d9a09}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+判队空 
+
+\begin{DoxyReturn}{Returns}
+true 队空 
+
+false 队非空 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_queue_1_1_queue_a6365212cc8eddb4a9cfcd01157871a28}{Queue\+::\+Queue$<$ T $>$}}.
+
+
+
+Definition at line 118 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_ab2be18405f3f469df24b457013fed522}\label{class_queue_1_1vec_queue_ab2be18405f3f469df24b457013fed522}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::pop}
+
+
+
+Removes the next element in the queue. 
+
+\begin{DoxyNote}{Note}
+effectively reducing its size by one. 
+\end{DoxyNote}
+
+
+Definition at line 277 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a8bddaaee746c198ac2d86810ba078f98}\label{class_queue_1_1vec_queue_a8bddaaee746c198ac2d86810ba078f98}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!push@{push}}
+\index{push@{push}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Inserts a new element at the end of the queue, after its current last element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & 数据的值 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 259 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a39b371b5537647e83d5fcacf5b8f449c}\label{class_queue_1_1vec_queue_a39b371b5537647e83d5fcacf5b8f449c}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!push@{push}}
+\index{push@{push}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}} \&\&}]{val }\end{DoxyParamCaption})}
+
+
+
+Inserts a new element at the end of the queue, after its current last element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & 数据的值 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 268 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a87033e46f24c51e7215515269e3542ae}\label{class_queue_1_1vec_queue_a87033e46f24c51e7215515269e3542ae}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!size@{size}}
+\index{size@{size}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue}{vec\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::size}
+
+
+
+Returns the number of elements in the queue. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+type the number of elements in the queue 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file vec\+Queue.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{class_queue_1_1vec_queue_a87033e46f24c51e7215515269e3542ae_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_queue_1_1vec_queue_a65b87d8374aed524f96812b8e9e8fed5}\label{class_queue_1_1vec_queue_a65b87d8374aed524f96812b8e9e8fed5}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!\_data@{\_data}}
+\index{\_data@{\_data}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}}$\ast$ \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+存储队列的动态数组 
+
+
+
+Definition at line 82 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_aefdade135508fc92606cc4e2487e698e}\label{class_queue_1_1vec_queue_aefdade135508fc92606cc4e2487e698e}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!\_maxSize@{\_maxSize}}
+\index{\_maxSize@{\_maxSize}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_maxSize}{\_maxSize}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::\+\_\+max\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+内部数组的规模 
+
+
+
+Definition at line 76 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_aedbb1fe1e47d71b4313169769e68e305}\label{class_queue_1_1vec_queue_aedbb1fe1e47d71b4313169769e68e305}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!\_rear@{\_rear}}
+\index{\_rear@{\_rear}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_rear}{\_rear}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_queue_1_1_queue_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}} \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::\+\_\+rear\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+队尾下标 
+
+\begin{DoxyNote}{Note}
+队头下标固定为0, 数据范围\mbox{[}0, \+\_\+rear) 
+\end{DoxyNote}
+
+
+Definition at line 90 of file vec\+Queue.\+hh.
+
+\mbox{\Hypertarget{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}\label{class_queue_1_1vec_queue_ab661ed3f5ac197fa8f26e92a3f733cc9}} 
+\index{Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!Queue::vecQueue$<$ T $>$@{Queue::vecQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const typedef \mbox{\hyperlink{class_queue_1_1vec_queue_abf9197e3a23e9069000b32e1153ef2ca}{value\+\_\+type}}\& \mbox{\hyperlink{class_queue_1_1vec_queue}{Queue\+::vec\+Queue}}$<$ T $>$\+::const\+\_\+reference}
+
+
+
+数据的常量引用 
+
+
+
+Definition at line 69 of file vec\+Queue.\+hh.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{vec_queue_8hh}{vec\+Queue.\+hh}}\end{DoxyCompactItemize}
