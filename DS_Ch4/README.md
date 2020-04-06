@@ -1,6 +1,6 @@
 # Overview
 
-**__《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）第4章 队列__**
+**_《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）第4章 队列_**
 
 主页: [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/doc/html/index.html)
 
