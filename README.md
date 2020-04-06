@@ -1,3 +1,21 @@
+# "Data Structure" course homework
+
+## Overview
+
+Textbook: __**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**__
+
+## Content
+
+- 第1章 [引言](https://grwei.github.io/data-structure-homework/DS_Ch1/doc/html/index.html)
+- 第2章 [线性表](https://grwei.github.io/data-structure-homework/DS_Ch2/doc/html/index.html)
+- 第3章 [栈](https://grwei.github.io/data-structure-homework/DS_Ch3/doc/html/index.html)
+- 第4章 [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/doc/html/index.html)
+
+## Contact me
+
+- QQ: 313017602
+- E-mail: 313017602@qq.com
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/grwei/data-structure-homework/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
