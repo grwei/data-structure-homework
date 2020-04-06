@@ -4,11 +4,11 @@
 
 ## 文件结构
 
-* `./include`: [队列的抽象类](./include/Queue.h)，[循环队列](./include/seqQueue.hh)、[顺序队列](./include/vecQueue.hh)、[链接队列](./include/linkQueue.h)的定义和实现。
+* `./include`: [队列的抽象类](./include/Queue.h)，[循环队列](./include/seqQueue.hh)、[顺序队列](./include/vecQueue.hh)、[链接队列](./include/linkQueue.hh)的定义和实现。
 * `./src`: 测试例程。
   * `test0.cc`：测试上述三种队列的基本功能，包括构造、入队和出队。
 * `./doc`: `HTML`和`LATEX`文档
-  * `HTML`文档打开方式：
+  * `HTML`文档[打开](./doc/html/index.html)方式：
   
   ```
   cd ./path/to/projectRoot
