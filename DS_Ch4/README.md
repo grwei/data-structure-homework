@@ -2,7 +2,7 @@
 
 **_《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）第4章 队列_**
 
-主页: [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/doc/html/index.html)
+文档: [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/doc/html/index.html)
 
 ## 文件结构
 
@@ -12,25 +12,25 @@
 * `./doc`: `HTML`和`LATEX`文档
   * `HTML`文档[打开](./doc/html/index.html)方式：
   
-  ```
+  ```powershell
   cd ./path/to/projectRoot
   ./doc/html/index.html
   ```
 
-## 编译方法
+## Compiling
 
 将`./include`文件夹加入`IncludePath`，编译`./src`文件夹中的单个源文件。
 
-* 以用g++编译并运行`test0.cc`为例：
+* *例* g++编译并运行`test0.cc`
 
-```
+```powershell
 cd ./path/to/projectRoot
 mkdir bin
 g++ ./src/test0.cc -o ./bin/test0.exe -g -fexec-charset=GBK -std=c++11 -I ./include
 ./bin/test0.exe
 ```
 
-## Contact us
+## Contact me
 
 * Author: Guorui Wei (危 国锐)
 * E-mail: 313017602@qq.com

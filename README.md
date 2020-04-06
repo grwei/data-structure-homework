@@ -13,7 +13,7 @@ Textbook: _**《数据结构：思想与实现（第2版）》（翁惠玉，俞
 
 ## Contact me
 
-- QQ: 313017602
+- Author: Guorui Wei (危 国锐)
 - E-mail: 313017602@qq.com
 
 ## Welcome to GitHub Pages

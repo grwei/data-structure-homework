@@ -1,5 +1,10 @@
 # Overview
 
-_**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**_
+_**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）第2章 线性表**_
 
-主页: [线性表](https://grwei.github.io/data-structure-homework/DS_Ch2/doc/html/index.html)
+文档: [线性表](https://grwei.github.io/data-structure-homework/DS_Ch2/doc/html/index.html)
+
+## Contact me
+
+- Author: Guorui Wei (危 国锐)
+- E-mail: 313017602@qq.com
