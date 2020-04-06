@@ -25,8 +25,8 @@ var NAVTREE =
   [ "队列", "index.html", [
     [ "Overview", "index.html", [
       [ "文件结构", "index.html#autotoc_md1", null ],
-      [ "编译方法", "index.html#autotoc_md2", null ],
-      [ "Contact us", "index.html#autotoc_md3", null ]
+      [ "Compiling", "index.html#autotoc_md2", null ],
+      [ "Contact me", "index.html#autotoc_md3", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
