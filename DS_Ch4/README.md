@@ -2,6 +2,8 @@
 
 **__《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）第4章 队列__**
 
+主页: [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/doc/html/index.html)
+
 ## 文件结构
 
 * `./include`: [队列的抽象类](./include/Queue.h)，[循环队列](./include/seqQueue.hh)、[顺序队列](./include/vecQueue.hh)、[链接队列](./include/linkQueue.hh)的定义和实现。
