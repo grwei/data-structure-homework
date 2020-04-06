@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for List\+::s\+Link\+List$<$ T $>$\+::iterator\+:\nopagebreak
+Inheritance diagram for List\+::s\+Link\+List$<$ T $>$\+::iterator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for List\+::s\+Link\+List$<$ T $>$\+::iterator\+:\nopagebrea
 \end{figure}
 
 
-Collaboration diagram for List\+::s\+Link\+List$<$ T $>$\+::iterator\+:\nopagebreak
+Collaboration diagram for List\+::s\+Link\+List$<$ T $>$\+::iterator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,6 +36,12 @@ virtual const T \& \mbox{\hyperlink{class_list_1_1s_link_list_1_1iterator_a091cd
 \mbox{\hyperlink{class_list_1_1s_link_list_1_1iterator}{iterator}} \& \mbox{\hyperlink{class_list_1_1s_link_list_1_1iterator_af8d526653669896d86d6fab7011acd46}{operator++}} ()
 \item 
 \mbox{\hyperlink{class_list_1_1s_link_list_1_1iterator}{iterator}} \mbox{\hyperlink{class_list_1_1s_link_list_1_1iterator_a74caf261414fdef308257dfe589b20bd}{operator++}} (int)
+\item 
+virtual bool \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator_a6b4dbfcf579084e814011f171e70bc99}{operator==}} (const \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator}{const\+\_\+iterator}} \&rhs) const
+\item 
+virtual bool \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator_a201f3b95445a675e1c390af2e27f34bd}{operator!=}} (const \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator}{const\+\_\+iterator}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator_a777ef64002d7ef2ad4949f3d525230ae}{is\+End}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -44,6 +52,8 @@ virtual const T \& \mbox{\hyperlink{class_list_1_1s_link_list_1_1iterator_a091cd
 \begin{DoxyCompactItemize}
 \item 
 friend \mbox{\hyperlink{class_list_1_1s_link_list_1_1iterator_a9052882ba1763ec8f7bead62914f468e}{s\+Link\+List$<$ T $>$}}
+\item 
+\mbox{\hyperlink{struct_list_1_1s_link_list_1_1node}{node}} $\ast$ \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator_aa0abeef85e31b466cc3dd2af8e94eb76}{current}}
 \end{DoxyCompactItemize}
 
 
@@ -79,6 +89,36 @@ Definition at line 92 of file s\+Link\+List.\+h.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_list_1_1s_link_list_1_1const__iterator_a777ef64002d7ef2ad4949f3d525230ae}\label{class_list_1_1s_link_list_1_1const__iterator_a777ef64002d7ef2ad4949f3d525230ae}} 
+\index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!isEnd@{isEnd}}
+\index{isEnd@{isEnd}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{isEnd()}{isEnd()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_list_1_1s_link_list}{List\+::s\+Link\+List}}$<$ T $>$\+::const\+\_\+iterator\+::is\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 59 of file s\+Link\+List.\+h.
+
+
+
+References List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+\mbox{\Hypertarget{class_list_1_1s_link_list_1_1const__iterator_a201f3b95445a675e1c390af2e27f34bd}\label{class_list_1_1s_link_list_1_1const__iterator_a201f3b95445a675e1c390af2e27f34bd}} 
+\index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{class_list_1_1s_link_list}{List\+::s\+Link\+List}}$<$ T $>$\+::const\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator}{const\+\_\+iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 58 of file s\+Link\+List.\+h.
+
+
+
+References List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
 \mbox{\Hypertarget{class_list_1_1s_link_list_1_1iterator_a622d30c494b3f7b25ea0207bcad70942}\label{class_list_1_1s_link_list_1_1iterator_a622d30c494b3f7b25ea0207bcad70942}} 
 \index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}
@@ -89,6 +129,10 @@ virtual T\& \mbox{\hyperlink{class_list_1_1s_link_list}{List\+::s\+Link\+List}}$
 
 
 Definition at line 73 of file s\+Link\+List.\+h.
+
+
+
+References List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::current, and List\+::s\+Link\+List$<$ T $>$\+::node\+::data.
 
 \mbox{\Hypertarget{class_list_1_1s_link_list_1_1iterator_a091cdfa503dc1861cf45390b0c9f6766}\label{class_list_1_1s_link_list_1_1iterator_a091cdfa503dc1861cf45390b0c9f6766}} 
 \index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!operator$\ast$@{operator$\ast$}}
@@ -105,6 +149,10 @@ Reimplemented from \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator
 
 Definition at line 74 of file s\+Link\+List.\+h.
 
+
+
+References List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::current, and List\+::s\+Link\+List$<$ T $>$\+::node\+::data.
+
 \mbox{\Hypertarget{class_list_1_1s_link_list_1_1iterator_af8d526653669896d86d6fab7011acd46}\label{class_list_1_1s_link_list_1_1iterator_af8d526653669896d86d6fab7011acd46}} 
 \index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!operator++@{operator++}}
 \index{operator++@{operator++}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}
@@ -120,6 +168,10 @@ Reimplemented from \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator
 
 Definition at line 75 of file s\+Link\+List.\+h.
 
+
+
+References List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::current, and List\+::s\+Link\+List$<$ T $>$\+::node\+::next.
+
 \mbox{\Hypertarget{class_list_1_1s_link_list_1_1iterator_a74caf261414fdef308257dfe589b20bd}\label{class_list_1_1s_link_list_1_1iterator_a74caf261414fdef308257dfe589b20bd}} 
 \index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!operator++@{operator++}}
 \index{operator++@{operator++}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}
@@ -133,7 +185,41 @@ Definition at line 82 of file s\+Link\+List.\+h.
 
 
 
+References List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::current, and List\+::s\+Link\+List$<$ T $>$\+::node\+::next.
+
+\mbox{\Hypertarget{class_list_1_1s_link_list_1_1const__iterator_a6b4dbfcf579084e814011f171e70bc99}\label{class_list_1_1s_link_list_1_1const__iterator_a6b4dbfcf579084e814011f171e70bc99}} 
+\index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{class_list_1_1s_link_list}{List\+::s\+Link\+List}}$<$ T $>$\+::const\+\_\+iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_list_1_1s_link_list_1_1const__iterator}{const\+\_\+iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 57 of file s\+Link\+List.\+h.
+
+
+
+References List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+
+
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_list_1_1s_link_list_1_1const__iterator_aa0abeef85e31b466cc3dd2af8e94eb76}\label{class_list_1_1s_link_list_1_1const__iterator_aa0abeef85e31b466cc3dd2af8e94eb76}} 
+\index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!current@{current}}
+\index{current@{current}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_list_1_1s_link_list_1_1node}{node}}$\ast$ \mbox{\hyperlink{class_list_1_1s_link_list}{List\+::s\+Link\+List}}$<$ T $>$\+::const\+\_\+iterator\+::current\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 62 of file s\+Link\+List.\+h.
+
+
+
+Referenced by List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::is\+End(), List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::operator!=(), List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::operator$\ast$(), List\+::s\+Link\+List$<$ T $>$\+::iterator\+::operator$\ast$(), List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::operator++(), List\+::s\+Link\+List$<$ T $>$\+::iterator\+::operator++(), and List\+::s\+Link\+List$<$ T $>$\+::const\+\_\+iterator\+::operator==().
+
 \mbox{\Hypertarget{class_list_1_1s_link_list_1_1iterator_a9052882ba1763ec8f7bead62914f468e}\label{class_list_1_1s_link_list_1_1iterator_a9052882ba1763ec8f7bead62914f468e}} 
 \index{List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}!sLinkList$<$ T $>$@{sLinkList$<$ T $>$}}
 \index{sLinkList$<$ T $>$@{sLinkList$<$ T $>$}!List::sLinkList$<$ T $>$::iterator@{List::sLinkList$<$ T $>$::iterator}}

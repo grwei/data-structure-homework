@@ -8,7 +8,8 @@ var indexSectionsWithContent =
   5: "_abcdehimnopst",
   6: "ino",
   7: "acdeimnops",
-  8: "o"
+  8: "o",
+  9: "o"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "variables",
   6: "enums",
   7: "enumvalues",
-  8: "related"
+  8: "related",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "Variables",
   6: "Enumerations",
   7: "Enumerator",
-  8: "Friends"
+  8: "Friends",
+  9: "Pages"
 };
 

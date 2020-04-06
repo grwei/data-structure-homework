@@ -23,6 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "栈", "index.html", [
+    [ "Overview", "index.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -58,7 +59,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_ackermann_8hh.html",
-"files.html"
+"class_stack_1_1seq_stack.html#a91fa28d561e88adc40c3213552c58402"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

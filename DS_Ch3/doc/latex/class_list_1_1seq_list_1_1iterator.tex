@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for List\+::seq\+List$<$ T $>$\+::iterator\+:\nopagebreak
+Inheritance diagram for List\+::seq\+List$<$ T $>$\+::iterator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for List\+::seq\+List$<$ T $>$\+::iterator\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for List\+::seq\+List$<$ T $>$\+::iterator\+:\nopagebreak
+Collaboration diagram for List\+::seq\+List$<$ T $>$\+::iterator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,6 +34,10 @@ virtual const T \& \mbox{\hyperlink{class_list_1_1seq_list_1_1iterator_a24d17155
 virtual \mbox{\hyperlink{class_list_1_1seq_list_1_1iterator}{iterator}} \& \mbox{\hyperlink{class_list_1_1seq_list_1_1iterator_aa6a48d6c90aac1d940e38e6c944f86c3}{operator++}} ()
 \item 
 \mbox{\hyperlink{class_list_1_1seq_list_1_1iterator}{iterator}} \mbox{\hyperlink{class_list_1_1seq_list_1_1iterator_ae36048c2d1a1f6a936dac2090a615ec2}{operator++}} (int)
+\item 
+virtual bool \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator_ad2a6e388236a2b78fd5cf27ee7ab08f7}{operator==}} (const \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator}{const\+\_\+iterator}} \&rhs) const
+\item 
+virtual bool \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator_ad2ce9999b77b82762b2a971f14de2ffa}{operator!=}} (const \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator}{const\+\_\+iterator}} \&rhs) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -42,6 +48,8 @@ virtual \mbox{\hyperlink{class_list_1_1seq_list_1_1iterator}{iterator}} \& \mbox
 \begin{DoxyCompactItemize}
 \item 
 friend \mbox{\hyperlink{class_list_1_1seq_list_1_1iterator_a12a5755cc5d758d5bcb3872d4c3e1ede}{seq\+List$<$ T $>$}}
+\item 
+T $\ast$ \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator_aad4c6920da708d11649953dc7118e8bd}{current}}
 \end{DoxyCompactItemize}
 
 
@@ -70,6 +78,21 @@ Definition at line 78 of file seq\+List.\+h.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_list_1_1seq_list_1_1const__iterator_ad2ce9999b77b82762b2a971f14de2ffa}\label{class_list_1_1seq_list_1_1const__iterator_ad2ce9999b77b82762b2a971f14de2ffa}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{class_list_1_1seq_list}{List\+::seq\+List}}$<$ T $>$\+::const\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator}{const\+\_\+iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 47 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
 \mbox{\Hypertarget{class_list_1_1seq_list_1_1iterator_aa482fb7d140f3ddeb3d0276bbed66757}\label{class_list_1_1seq_list_1_1iterator_aa482fb7d140f3ddeb3d0276bbed66757}} 
 \index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
@@ -80,6 +103,10 @@ virtual T\& \mbox{\hyperlink{class_list_1_1seq_list}{List\+::seq\+List}}$<$ T $>
 
 
 Definition at line 60 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
 
 \mbox{\Hypertarget{class_list_1_1seq_list_1_1iterator_a24d171557b7f4f7f121fc7cf358a65a7}\label{class_list_1_1seq_list_1_1iterator_a24d171557b7f4f7f121fc7cf358a65a7}} 
 \index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator$\ast$@{operator$\ast$}}
@@ -96,7 +123,12 @@ Reimplemented from \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator_ae
 
 Definition at line 61 of file seq\+List.\+h.
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator$\ast$().
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -118,6 +150,10 @@ Reimplemented from \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator_a1
 
 Definition at line 62 of file seq\+List.\+h.
 
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
 \mbox{\Hypertarget{class_list_1_1seq_list_1_1iterator_ae36048c2d1a1f6a936dac2090a615ec2}\label{class_list_1_1seq_list_1_1iterator_ae36048c2d1a1f6a936dac2090a615ec2}} 
 \index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator++@{operator++}}
 \index{operator++@{operator++}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
@@ -131,7 +167,41 @@ Definition at line 68 of file seq\+List.\+h.
 
 
 
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+\mbox{\Hypertarget{class_list_1_1seq_list_1_1const__iterator_ad2a6e388236a2b78fd5cf27ee7ab08f7}\label{class_list_1_1seq_list_1_1const__iterator_ad2a6e388236a2b78fd5cf27ee7ab08f7}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{class_list_1_1seq_list}{List\+::seq\+List}}$<$ T $>$\+::const\+\_\+iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_list_1_1seq_list_1_1const__iterator}{const\+\_\+iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 46 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+
+
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_list_1_1seq_list_1_1const__iterator_aad4c6920da708d11649953dc7118e8bd}\label{class_list_1_1seq_list_1_1const__iterator_aad4c6920da708d11649953dc7118e8bd}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!current@{current}}
+\index{current@{current}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_list_1_1seq_list}{List\+::seq\+List}}$<$ T $>$\+::const\+\_\+iterator\+::current\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 50 of file seq\+List.\+h.
+
+
+
+Referenced by List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator!=(), List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator$\ast$(), List\+::seq\+List$<$ T $>$\+::iterator\+::operator$\ast$(), List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator++(), List\+::seq\+List$<$ T $>$\+::iterator\+::operator++(), and List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator==().
+
 \mbox{\Hypertarget{class_list_1_1seq_list_1_1iterator_a12a5755cc5d758d5bcb3872d4c3e1ede}\label{class_list_1_1seq_list_1_1iterator_a12a5755cc5d758d5bcb3872d4c3e1ede}} 
 \index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!seqList$<$ T $>$@{seqList$<$ T $>$}}
 \index{seqList$<$ T $>$@{seqList$<$ T $>$}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
