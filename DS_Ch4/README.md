@@ -1,8 +1,13 @@
-# Overview
+# Documentation
 
-**_《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）第4章 队列_**
+## Overview
 
-文档: [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/doc/html/index.html)
+_**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**_ **第4章 队列**
+
+- 本章文档: [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/doc/html/index.html)
+- 本章主页: [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/)
+- 课程主页: [数据结构](https://grwei.github.io/data-structure-homework/)
+- 个人主页: [grwei](https://grwei.github.io/)
 
 ## 文件结构
 
