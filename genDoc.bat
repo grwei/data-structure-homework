@@ -40,12 +40,14 @@ set /P delFlag=Delete original docs?(y/n)
 IF /i %delFlag% == Y (
     echo WARNNING: Original docs will be deleted!
     set delFlag=1
+    pause
     goto :EOF
 ) 
 
 IF /i %delFlag% == n (
     echo Original docs maybe override.
     set delFlag=0
+    pause
     goto :EOF
 )
 rem if input neither y(Y) or n(N), ask again
