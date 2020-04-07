@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node_46',['node',['../struct_queue_1_1link_queue_1_1node.html',1,'Queue::linkQueue']]]
+  ['node_46',['node',['../a05359.html',1,'Queue::linkQueue']]]
 ];

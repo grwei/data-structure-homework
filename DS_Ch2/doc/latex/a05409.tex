@@ -1,0 +1,217 @@
+\hypertarget{a05409}{}\doxysection{List\+::seq\+List$<$ T $>$\+::iterator Class Reference}
+\label{a05409}\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+
+
+{\ttfamily \#include $<$seq\+List.\+h$>$}
+
+
+
+Inheritance diagram for List\+::seq\+List$<$ T $>$\+::iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{a05408}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for List\+::seq\+List$<$ T $>$\+::iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{a05407}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual T \& \mbox{\hyperlink{a05409_aa482fb7d140f3ddeb3d0276bbed66757}{operator$\ast$}} ()
+\item 
+virtual const T \& \mbox{\hyperlink{a05409_a24d171557b7f4f7f121fc7cf358a65a7}{operator$\ast$}} () const
+\item 
+virtual \mbox{\hyperlink{a05409}{iterator}} \& \mbox{\hyperlink{a05409_aa6a48d6c90aac1d940e38e6c944f86c3}{operator++}} ()
+\item 
+\mbox{\hyperlink{a05409}{iterator}} \mbox{\hyperlink{a05409_ae36048c2d1a1f6a936dac2090a615ec2}{operator++}} (int)
+\item 
+virtual bool \mbox{\hyperlink{a05405_ad2a6e388236a2b78fd5cf27ee7ab08f7}{operator==}} (const \mbox{\hyperlink{a05405}{const\+\_\+iterator}} \&rhs) const
+\item 
+virtual bool \mbox{\hyperlink{a05405_ad2ce9999b77b82762b2a971f14de2ffa}{operator!=}} (const \mbox{\hyperlink{a05405}{const\+\_\+iterator}} \&rhs) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05409_ae870e4ef712b2f3370db1a23d6f0bc67}{iterator}} (T $\ast$p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{a05409_a12a5755cc5d758d5bcb3872d4c3e1ede}{seq\+List$<$ T $>$}}
+\item 
+T $\ast$ \mbox{\hyperlink{a05405_aad4c6920da708d11649953dc7118e8bd}{current}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class List\+::seq\+List$<$ T $>$\+::iterator}
+
+
+
+Definition at line 46 of file seq\+List.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05409_ae870e4ef712b2f3370db1a23d6f0bc67}\label{a05409_ae870e4ef712b2f3370db1a23d6f0bc67}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!iterator@{iterator}}
+\index{iterator@{iterator}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::iterator\+::iterator (\begin{DoxyParamCaption}\item[{T $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 67 of file seq\+List.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05405_ad2ce9999b77b82762b2a971f14de2ffa}\label{a05405_ad2ce9999b77b82762b2a971f14de2ffa}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::const\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05405}{const\+\_\+iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 36 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+\mbox{\Hypertarget{a05409_aa482fb7d140f3ddeb3d0276bbed66757}\label{a05409_aa482fb7d140f3ddeb3d0276bbed66757}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual T\& \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 49 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+\mbox{\Hypertarget{a05409_a24d171557b7f4f7f121fc7cf358a65a7}\label{a05409_a24d171557b7f4f7f121fc7cf358a65a7}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual const T\& \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{a05405_ae37d64e2c93beaacadbd2b16b671cf13}{List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator}}.
+
+
+
+Definition at line 50 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator$\ast$().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{a05409_a24d171557b7f4f7f121fc7cf358a65a7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05409_aa6a48d6c90aac1d940e38e6c944f86c3}\label{a05409_aa6a48d6c90aac1d940e38e6c944f86c3}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05409}{iterator}}\& \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{a05405_a16a6450f03c1690c090db1a2e09adec7}{List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator}}.
+
+
+
+Definition at line 51 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+\mbox{\Hypertarget{a05409_ae36048c2d1a1f6a936dac2090a615ec2}\label{a05409_ae36048c2d1a1f6a936dac2090a615ec2}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05409}{iterator}} \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 57 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+\mbox{\Hypertarget{a05405_ad2a6e388236a2b78fd5cf27ee7ab08f7}\label{a05405_ad2a6e388236a2b78fd5cf27ee7ab08f7}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::const\+\_\+iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05405}{const\+\_\+iterator}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 35 of file seq\+List.\+h.
+
+
+
+References List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::current.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05405_aad4c6920da708d11649953dc7118e8bd}\label{a05405_aad4c6920da708d11649953dc7118e8bd}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!current@{current}}
+\index{current@{current}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::const\+\_\+iterator\+::current\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 39 of file seq\+List.\+h.
+
+
+
+Referenced by List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator!=(), List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator$\ast$(), List\+::seq\+List$<$ T $>$\+::iterator\+::operator$\ast$(), List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator++(), List\+::seq\+List$<$ T $>$\+::iterator\+::operator++(), and List\+::seq\+List$<$ T $>$\+::const\+\_\+iterator\+::operator==().
+
+\mbox{\Hypertarget{a05409_a12a5755cc5d758d5bcb3872d4c3e1ede}\label{a05409_a12a5755cc5d758d5bcb3872d4c3e1ede}} 
+\index{List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}!seqList$<$ T $>$@{seqList$<$ T $>$}}
+\index{seqList$<$ T $>$@{seqList$<$ T $>$}!List::seqList$<$ T $>$::iterator@{List::seqList$<$ T $>$::iterator}}
+\doxysubsubsection{\texorpdfstring{seqList$<$ T $>$}{seqList< T >}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+friend \mbox{\hyperlink{a05401}{List\+::seq\+List}}$<$ T $>$\+::iterator\+::seq\+List$<$ T $>$\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 69 of file seq\+List.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04544}{seq\+List.\+h}}\end{DoxyCompactItemize}

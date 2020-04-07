@@ -1,7 +1,7 @@
 var namespaces_dup =
 [
-    [ "ch3_3", "namespacech3__3.html", null ],
-    [ "List", "namespace_list.html", null ],
-    [ "RPN", "namespace_r_p_n.html", null ],
-    [ "Stack", "namespace_stack.html", null ]
+    [ "ch3_3", "a04574.html", null ],
+    [ "List", "a04572.html", null ],
+    [ "RPN", "a04575.html", null ],
+    [ "Stack", "a04573.html", null ]
 ];

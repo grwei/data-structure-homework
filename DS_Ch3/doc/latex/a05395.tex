@@ -1,0 +1,449 @@
+\hypertarget{a05395}{}\doxysection{List\+::d\+Link\+List$<$ T $>$ Class Template Reference}
+\label{a05395}\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$d\+Link\+List.\+h$>$}
+
+
+
+Collaboration diagram for List\+::d\+Link\+List$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{a05393}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{a05403}{const\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{a05407}{iterator}}
+\item 
+struct \mbox{\hyperlink{a05399}{node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05395_a30c9e6a82d499cc444ee1e078f5ccb72}{d\+Link\+List}} ()
+\item 
+\mbox{\hyperlink{a05395_aa63c1809536621634a7847420977fed7}{d\+Link\+List}} (const \mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&rhs)
+\item 
+\mbox{\hyperlink{a05395_a74a40692748e21388e60735c007530f0}{d\+Link\+List}} (\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&\&rvalue)
+\item 
+\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \& \mbox{\hyperlink{a05395_a951485bf585224eed6c0cf6be14bc8e4}{operator=}} (\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&\&rvalue)
+\item 
+\mbox{\hyperlink{a05395_a5a47c5b0f2b7873d754cb4cd3f312b09}{$\sim$d\+Link\+List}} ()
+\item 
+virtual void \mbox{\hyperlink{a05395_ac534727ffdca2c98880664d0905a91af}{clear}} ()
+\item 
+virtual int \mbox{\hyperlink{a05395_a409a14609900f720b281c6af32919951}{length}} () const
+\item 
+virtual void \mbox{\hyperlink{a05395_a268712f8f9ed4dfba5f887e19fcad6c9}{insert}} (int i, const T \&obj)
+\item 
+virtual void \mbox{\hyperlink{a05395_aff560eedba4fdcd358cf5f09fbc774cd}{remove}} (int i)
+\item 
+virtual int \mbox{\hyperlink{a05395_a5ab8b1cc293f94b2ad0fece2bbcfc41a}{search}} (const T \&obj) const
+\item 
+virtual T \mbox{\hyperlink{a05395_ace371397c4c7acc568af495b4c8fb6c4}{visit}} (int i) const
+\item 
+virtual void \mbox{\hyperlink{a05395_a8340bd4be84086de559eca52774c07f2}{traverse}} () const =delete
+\item 
+virtual \mbox{\hyperlink{a05407}{iterator}} \mbox{\hyperlink{a05395_affb0e531ea57721ecd9b6dde83d2ebf0}{begin}} ()
+\item 
+virtual \mbox{\hyperlink{a05403}{const\+\_\+iterator}} \mbox{\hyperlink{a05395_a79b405cd12aa7034b7197a2e0f065e8d}{begin}} () const
+\item 
+void \mbox{\hyperlink{a05395_a6cfc6d4245a507047fe729057227e0ad}{push\+\_\+back}} (const T \&obj)
+\item 
+void \mbox{\hyperlink{a05395_a99ae19a9f143647362ca804a0f02ab59}{push\+\_\+back}} (T \&\&obj)
+\item 
+void \mbox{\hyperlink{a05395_a9049a1016ba8cf218ca9688fe51dcc78}{pop\+\_\+back}} ()
+\item 
+const T \& \mbox{\hyperlink{a05395_acd557446ee0dc637b4633d3389cf4e6c}{back}} () const
+\item 
+T \& \mbox{\hyperlink{a05395_a42fbe9d90d1ebcd7c8b0703ff6b33252}{back}} ()
+\item 
+virtual \mbox{\hyperlink{a05407}{iterator}} \mbox{\hyperlink{a05395_ae8e62a19d3afc64b6fdb9b36d52a9a46}{end}} ()
+\item 
+virtual \mbox{\hyperlink{a05403}{const\+\_\+iterator}} \mbox{\hyperlink{a05395_aa3cce499aa24b3ae8480ce79ad4a64a8}{end}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05399}{node}} $\ast$ \mbox{\hyperlink{a05395_ad34dcfa86196367dcf056ec546fb5137}{move}} (int i) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05399}{node}} $\ast$ \mbox{\hyperlink{a05395_ac48edb97c50b03c02582f1d700c88b27}{head}}
+\item 
+\mbox{\hyperlink{a05399}{node}} $\ast$ \mbox{\hyperlink{a05395_a353d1da2f759b8a3177685dec72a4171}{tail}}
+\item 
+int \mbox{\hyperlink{a05395_af185e5fe756a302935897f3cbb0f5901}{current\+Length}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \mbox{\hyperlink{a05395_acef4180baf29603456b8d51105f9e204}{operator+}} (const \mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&A, const \mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&B)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class List\+::d\+Link\+List$<$ T $>$}
+
+
+
+Definition at line 23 of file d\+Link\+List.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05395_a30c9e6a82d499cc444ee1e078f5ccb72}\label{a05395_a30c9e6a82d499cc444ee1e078f5ccb72}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!dLinkList@{dLinkList}}
+\index{dLinkList@{dLinkList}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dLinkList()}{dLinkList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::\mbox{\hyperlink{a05395}{d\+Link\+List}}}
+
+
+
+Definition at line 174 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_aa63c1809536621634a7847420977fed7}\label{a05395_aa63c1809536621634a7847420977fed7}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!dLinkList@{dLinkList}}
+\index{dLinkList@{dLinkList}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dLinkList()}{dLinkList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::\mbox{\hyperlink{a05395}{d\+Link\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a74a40692748e21388e60735c007530f0}\label{a05395_a74a40692748e21388e60735c007530f0}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!dLinkList@{dLinkList}}
+\index{dLinkList@{dLinkList}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dLinkList()}{dLinkList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::\mbox{\hyperlink{a05395}{d\+Link\+List}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&\&}]{rvalue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 182 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a5a47c5b0f2b7873d754cb4cd3f312b09}\label{a05395_a5a47c5b0f2b7873d754cb4cd3f312b09}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!````~dLinkList@{$\sim$dLinkList}}
+\index{````~dLinkList@{$\sim$dLinkList}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$dLinkList()}{~dLinkList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{a05395}{d\+Link\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 118 of file d\+Link\+List.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05395_a42fbe9d90d1ebcd7c8b0703ff6b33252}\label{a05395_a42fbe9d90d1ebcd7c8b0703ff6b33252}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!back@{back}}
+\index{back@{back}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 142 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_acd557446ee0dc637b4633d3389cf4e6c}\label{a05395_acd557446ee0dc637b4633d3389cf4e6c}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!back@{back}}
+\index{back@{back}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 141 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_affb0e531ea57721ecd9b6dde83d2ebf0}\label{a05395_affb0e531ea57721ecd9b6dde83d2ebf0}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05407}{iterator}} \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 136 of file d\+Link\+List.\+h.
+
+
+
+Referenced by List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::d\+Link\+List(), and R\+P\+N\+::\+Rpn\+\_\+t\+::infix\+List\+To\+Postfix\+List().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05395_affb0e531ea57721ecd9b6dde83d2ebf0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05395_a79b405cd12aa7034b7197a2e0f065e8d}\label{a05395_a79b405cd12aa7034b7197a2e0f065e8d}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05403}{const\+\_\+iterator}} \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 137 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_ac534727ffdca2c98880664d0905a91af}\label{a05395_ac534727ffdca2c98880664d0905a91af}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::clear\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 244 of file d\+Link\+List.\+h.
+
+
+
+Referenced by List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::$\sim$d\+Link\+List().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05395_ac534727ffdca2c98880664d0905a91af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05395_ae8e62a19d3afc64b6fdb9b36d52a9a46}\label{a05395_ae8e62a19d3afc64b6fdb9b36d52a9a46}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!end@{end}}
+\index{end@{end}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05407}{iterator}} \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 145 of file d\+Link\+List.\+h.
+
+
+
+Referenced by List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::d\+Link\+List(), and R\+P\+N\+::\+Rpn\+\_\+t\+::infix\+List\+To\+Postfix\+List().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05395_ae8e62a19d3afc64b6fdb9b36d52a9a46_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05395_aa3cce499aa24b3ae8480ce79ad4a64a8}\label{a05395_aa3cce499aa24b3ae8480ce79ad4a64a8}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!end@{end}}
+\index{end@{end}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05403}{const\+\_\+iterator}} \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 146 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a268712f8f9ed4dfba5f887e19fcad6c9}\label{a05395_a268712f8f9ed4dfba5f887e19fcad6c9}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{const T \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 222 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a409a14609900f720b281c6af32919951}\label{a05395_a409a14609900f720b281c6af32919951}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!length@{length}}
+\index{length@{length}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::length\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 206 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_ad34dcfa86196367dcf056ec546fb5137}\label{a05395_ad34dcfa86196367dcf056ec546fb5137}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!move@{move}}
+\index{move@{move}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$\+::\mbox{\hyperlink{a05399}{node}} $\ast$ \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::move (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 212 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a951485bf585224eed6c0cf6be14bc8e4}\label{a05395_a951485bf585224eed6c0cf6be14bc8e4}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \& \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&\&}]{rvalue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a9049a1016ba8cf218ca9688fe51dcc78}\label{a05395_a9049a1016ba8cf218ca9688fe51dcc78}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::pop\+\_\+back}
+
+
+
+Definition at line 317 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a6cfc6d4245a507047fe729057227e0ad}\label{a05395_a6cfc6d4245a507047fe729057227e0ad}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Definition at line 304 of file d\+Link\+List.\+h.
+
+
+
+Referenced by R\+P\+N\+::\+Rpn\+\_\+t\+::infix\+List\+To\+Postfix\+List(), and List\+::operator+().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05395_a6cfc6d4245a507047fe729057227e0ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05395_a99ae19a9f143647362ca804a0f02ab59}\label{a05395_a99ae19a9f143647362ca804a0f02ab59}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T \&\&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Definition at line 310 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_aff560eedba4fdcd358cf5f09fbc774cd}\label{a05395_aff560eedba4fdcd358cf5f09fbc774cd}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 232 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a5ab8b1cc293f94b2ad0fece2bbcfc41a}\label{a05395_a5ab8b1cc293f94b2ad0fece2bbcfc41a}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!search@{search}}
+\index{search@{search}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::search (\begin{DoxyParamCaption}\item[{const T \&}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 265 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_a8340bd4be84086de559eca52774c07f2}\label{a05395_a8340bd4be84086de559eca52774c07f2}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!traverse@{traverse}}
+\index{traverse@{traverse}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{traverse()}{traverse()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::traverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{a05395_ace371397c4c7acc568af495b4c8fb6c4}\label{a05395_ace371397c4c7acc568af495b4c8fb6c4}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!visit@{visit}}
+\index{visit@{visit}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::visit (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 283 of file d\+Link\+List.\+h.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{a05395_acef4180baf29603456b8d51105f9e204}\label{a05395_acef4180baf29603456b8d51105f9e204}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05395}{d\+Link\+List}}$<$T$>$ operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&}]{A,  }\item[{const \mbox{\hyperlink{a05395}{d\+Link\+List}}$<$ T $>$ \&}]{B }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 151 of file d\+Link\+List.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05395_af185e5fe756a302935897f3cbb0f5901}\label{a05395_af185e5fe756a302935897f3cbb0f5901}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!currentLength@{currentLength}}
+\index{currentLength@{currentLength}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{currentLength}{currentLength}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::current\+Length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file d\+Link\+List.\+h.
+
+\mbox{\Hypertarget{a05395_ac48edb97c50b03c02582f1d700c88b27}\label{a05395_ac48edb97c50b03c02582f1d700c88b27}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!head@{head}}
+\index{head@{head}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05399}{node}}$\ast$ \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 46 of file d\+Link\+List.\+h.
+
+
+
+Referenced by List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::begin(), List\+::operator+(), and List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::$\sim$d\+Link\+List().
+
+\mbox{\Hypertarget{a05395_a353d1da2f759b8a3177685dec72a4171}\label{a05395_a353d1da2f759b8a3177685dec72a4171}} 
+\index{List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}!tail@{tail}}
+\index{tail@{tail}!List::dLinkList$<$ T $>$@{List::dLinkList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05399}{node}} $\ast$ \mbox{\hyperlink{a05395}{List\+::d\+Link\+List}}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 46 of file d\+Link\+List.\+h.
+
+
+
+Referenced by List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::back(), List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::end(), List\+::operator+(), and List\+::d\+Link\+List$<$ R\+P\+N\+::\+Rpn\+\_\+t\+::\+Item $>$\+::$\sim$d\+Link\+List().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04523}{d\+Link\+List.\+h}}\end{DoxyCompactItemize}

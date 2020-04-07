@@ -1,0 +1,246 @@
+\hypertarget{a05431}{}\doxysection{R\+PN\+::Rpn\+Exception Class Reference}
+\label{a05431}\index{RPN::RpnException@{RPN::RpnException}}
+
+
+异常类  
+
+
+
+
+{\ttfamily \#include $<$Rpn.\+hh$>$}
+
+
+
+Inheritance diagram for R\+PN\+::Rpn\+Exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{a05430}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for R\+PN\+::Rpn\+Exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{a05429}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05431_a329f8935c42cdfe28e460638a41bf63a}{Rpn\+Exception}} (const std\+::string \&text=\char`\"{}undefined exception\char`\"{}, const std\+::string \&id=\char`\"{}undefined\char`\"{}, const std\+::string \&td=\char`\"{}Generic Arg\+Exception\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{a05431_aefa1766a286ca92207a0aa1dabb42873}{$\sim$\+Rpn\+Exception}} () noexcept
+\begin{DoxyCompactList}\small\item\em Destroy the Rpn Exception object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{a05431_afcdafde3c5af81dee7bce25687ac0d05}{error}} () const
+\begin{DoxyCompactList}\small\item\em Returns the error text. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{a05431_aafd7afa27556ddc22bf783a776de2df3}{arg\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the argument id. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{a05431_a8c0060f165a24e051aade453adff82b1}{what}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the arg id and error text. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{a05431_a6f1052966c88e3c6f7655a02f079934f}{type\+Description}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{a05431_aa34e8795b0e045df3b874921a7b1a00b}{\+\_\+error\+Text}}
+\begin{DoxyCompactList}\small\item\em The text of the exception message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{a05431_a2fde3645a6633986c27f590c66272d33}{\+\_\+arg\+Id}}
+\begin{DoxyCompactList}\small\item\em The argument related to this exception. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{a05431_a6f9a0270b642d7298f90351cb324bca4}{\+\_\+type\+Description}}
+\begin{DoxyCompactList}\small\item\em Describes the type of the exception. ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+异常类 
+
+
+
+Definition at line 44 of file Rpn.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05431_a329f8935c42cdfe28e460638a41bf63a}\label{a05431_a329f8935c42cdfe28e460638a41bf63a}} 
+\index{RPN::RpnException@{RPN::RpnException}!RpnException@{RpnException}}
+\index{RpnException@{RpnException}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{RpnException()}{RpnException()}}
+{\footnotesize\ttfamily R\+P\+N\+::\+Rpn\+Exception\+::\+Rpn\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text = {\ttfamily \char`\"{}undefined~exception\char`\"{}},  }\item[{const std\+::string \&}]{id = {\ttfamily \char`\"{}undefined\char`\"{}},  }\item[{const std\+::string \&}]{td = {\ttfamily \char`\"{}Generic~ArgException\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & -\/ The text of the exception. \\
+\hline
+{\em id} & -\/ The text identifying the argument source. \\
+\hline
+{\em td} & -\/ Text describing the type of Arg\+Exception it is. of the exception. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Rpn.\+hh.
+
+\mbox{\Hypertarget{a05431_aefa1766a286ca92207a0aa1dabb42873}\label{a05431_aefa1766a286ca92207a0aa1dabb42873}} 
+\index{RPN::RpnException@{RPN::RpnException}!````~RpnException@{$\sim$RpnException}}
+\index{````~RpnException@{$\sim$RpnException}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{$\sim$RpnException()}{~RpnException()}}
+{\footnotesize\ttfamily virtual R\+P\+N\+::\+Rpn\+Exception\+::$\sim$\+Rpn\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Destroy the Rpn Exception object. 
+
+
+
+Definition at line 66 of file Rpn.\+hh.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05431_aafd7afa27556ddc22bf783a776de2df3}\label{a05431_aafd7afa27556ddc22bf783a776de2df3}} 
+\index{RPN::RpnException@{RPN::RpnException}!argId@{argId}}
+\index{argId@{argId}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{argId()}{argId()}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+Exception\+::arg\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the argument id. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Rpn.\+hh.
+
+
+
+References \+\_\+arg\+Id.
+
+\mbox{\Hypertarget{a05431_afcdafde3c5af81dee7bce25687ac0d05}\label{a05431_afcdafde3c5af81dee7bce25687ac0d05}} 
+\index{RPN::RpnException@{RPN::RpnException}!error@{error}}
+\index{error@{error}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+Exception\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the error text. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Rpn.\+hh.
+
+
+
+References \+\_\+error\+Text.
+
+\mbox{\Hypertarget{a05431_a6f1052966c88e3c6f7655a02f079934f}\label{a05431_a6f1052966c88e3c6f7655a02f079934f}} 
+\index{RPN::RpnException@{RPN::RpnException}!typeDescription@{typeDescription}}
+\index{typeDescription@{typeDescription}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{typeDescription()}{typeDescription()}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+Exception\+::type\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+@ brief Returns the type of the exception. ~\newline
+
+
+Used to explain and distinguish between different child exceptions. 
+
+Definition at line 104 of file Rpn.\+hh.
+
+
+
+References \+\_\+type\+Description.
+
+\mbox{\Hypertarget{a05431_a8c0060f165a24e051aade453adff82b1}\label{a05431_a8c0060f165a24e051aade453adff82b1}} 
+\index{RPN::RpnException@{RPN::RpnException}!what@{what}}
+\index{what@{what}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ R\+P\+N\+::\+Rpn\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the arg id and error text. 
+
+
+
+Definition at line 91 of file Rpn.\+hh.
+
+
+
+References \+\_\+arg\+Id, and \+\_\+error\+Text.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05431_a2fde3645a6633986c27f590c66272d33}\label{a05431_a2fde3645a6633986c27f590c66272d33}} 
+\index{RPN::RpnException@{RPN::RpnException}!\_argId@{\_argId}}
+\index{\_argId@{\_argId}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{\_argId}{\_argId}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+Exception\+::\+\_\+arg\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The argument related to this exception. 
+
+
+
+Definition at line 115 of file Rpn.\+hh.
+
+
+
+Referenced by arg\+Id(), and what().
+
+\mbox{\Hypertarget{a05431_aa34e8795b0e045df3b874921a7b1a00b}\label{a05431_aa34e8795b0e045df3b874921a7b1a00b}} 
+\index{RPN::RpnException@{RPN::RpnException}!\_errorText@{\_errorText}}
+\index{\_errorText@{\_errorText}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{\_errorText}{\_errorText}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+Exception\+::\+\_\+error\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The text of the exception message. 
+
+
+
+Definition at line 110 of file Rpn.\+hh.
+
+
+
+Referenced by error(), and what().
+
+\mbox{\Hypertarget{a05431_a6f9a0270b642d7298f90351cb324bca4}\label{a05431_a6f9a0270b642d7298f90351cb324bca4}} 
+\index{RPN::RpnException@{RPN::RpnException}!\_typeDescription@{\_typeDescription}}
+\index{\_typeDescription@{\_typeDescription}!RPN::RpnException@{RPN::RpnException}}
+\doxysubsubsection{\texorpdfstring{\_typeDescription}{\_typeDescription}}
+{\footnotesize\ttfamily std\+::string R\+P\+N\+::\+Rpn\+Exception\+::\+\_\+type\+Description\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Describes the type of the exception. ~\newline
+ 
+
+Used to distinguish between different child exceptions. 
+
+Definition at line 123 of file Rpn.\+hh.
+
+
+
+Referenced by type\+Description().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04535}{Rpn.\+hh}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "Queue", "namespace_queue.html", null ]
+    [ "Queue", "a04539.html", null ]
 ];

@@ -1,5 +1,5 @@
 var annotated_dup =
 [
-    [ "Queue", "namespace_queue.html", "namespace_queue" ],
-    [ "data_t", "structdata__t.html", "structdata__t" ]
+    [ "Queue", "a04539.html", "a04539" ],
+    [ "data_t", "a05375.html", "a05375" ]
 ];

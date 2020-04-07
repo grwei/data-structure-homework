@@ -1,0 +1,17 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="测试队列类的基本功能" alt="" coords="5,335,56,361"/>
+<area shape="rect" id="node2" href="$a05371.html#a34472178c199808dab4db051750e99d3" title="出队一个元素" alt="" coords="105,5,290,32"/>
+<area shape="rect" id="node3" href="$a05367.html#a333f4b5828c74edd7e6d750b0f763fd8" title="出队一个元素" alt="" coords="104,56,291,83"/>
+<area shape="rect" id="node4" href="$a05371.html#a7f8ac7b73205ea04e63925c1b6d95daa" title="Test whether container is empty." alt="" coords="113,107,282,133"/>
+<area shape="rect" id="node5" href="$a05367.html#a99456c2d4e2034b8304de5c153caf06f" title="Test whether container is empty." alt="" coords="112,157,283,184"/>
+<area shape="rect" id="node6" href="$a05371.html#a9fa4e1ebac29845c4f48d8668dacfd13" title="入队一个元素" alt="" coords="105,208,290,235"/>
+<area shape="rect" id="node7" href="$a05367.html#ab2052ffdebba52e6d337c2fd15559fc9" title="入队一个元素" alt="" coords="104,259,291,285"/>
+<area shape="rect" id="node8" href="$a05355.html#a3d55a01fb2481fbeea2aa2242e3fe2e0" title="Returns a reference to the next element in the queue." alt="" coords="118,309,277,336"/>
+<area shape="rect" id="node9" href="$a05355.html#ab2530a905f47965fa272fa9462ed6949" title="判队空" alt="" coords="106,360,289,387"/>
+<area shape="rect" id="node10" href="$a05355.html#aeae9f79486c195f593260dcf7cee8705" title="Removes the next element in the queue." alt="" coords="120,411,275,437"/>
+<area shape="rect" id="node11" href="$a05375.html#a74dea66cb8785da84110fb3337395649" title="print" alt="" coords="155,461,239,488"/>
+<area shape="rect" id="node12" href="$a05355.html#ac499d36d6f71e5620b598d233033bf9e" title="Inserts a new element at the end of the queue, after its current last element." alt="" coords="116,512,279,539"/>
+<area shape="rect" id="node13" href="$a05371.html#a87033e46f24c51e7215515269e3542ae" title="Returns the number of elements in the queue." alt="" coords="119,563,276,589"/>
+<area shape="rect" id="node14" href="$a05367.html#a3c7041a7aae2c0fc3e9f71a1a4da0574" title="Returns the number of elements in the queue." alt="" coords="118,613,277,640"/>
+<area shape="rect" id="node15" href="$a05355.html#a9ddfcaefd4d1a8dce222c978d35f1474" title="Returns the number of elements in the queue." alt="" coords="118,664,277,691"/>
+</map>

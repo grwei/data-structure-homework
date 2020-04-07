@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "List", "namespace_list.html", null ]
+    [ "List", "a04557.html", null ]
 ];

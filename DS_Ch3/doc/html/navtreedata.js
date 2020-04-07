@@ -61,8 +61,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_ackermann_8hh.html",
-"class_stack_1_1seq_stack.html#a35a066a0aedc630474fd3e3dcaa9ced8"
+"a04520.html",
+"a05451.html#a12a5755cc5d758d5bcb3872d4c3e1ede"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

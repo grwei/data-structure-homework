@@ -137,7 +137,7 @@ private:
         enum class Operator_type : int8_t ///< 操作符类型
         {
             /**
-             * @detail priority = 算术右移4位(得0 ~ 7, -1). 0: 未定义; -1: NAO; 1 ~ 7: 一般运算符, 7为最高优先级
+             * @details priority = 算术右移4位(得0 ~ 7, -1). 0: 未定义; -1: NAO; 1 ~ 7: 一般运算符, 7为最高优先级
              * 
              */
 
@@ -168,7 +168,7 @@ private:
         /**
          * @brief Construct a new Item object
          * 
-         * @detail 构造一个操作数item
+         * @details 构造一个操作数item
          * @param operand_val 
          */
         explicit Item(double operand_val)

@@ -1,7 +1,7 @@
 var annotated_dup =
 [
-    [ "List", "namespace_list.html", "namespace_list" ],
-    [ "RPN", "namespace_r_p_n.html", "namespace_r_p_n" ],
-    [ "Stack", "namespace_stack.html", "namespace_stack" ],
-    [ "Akm_t", "class_akm__t.html", "class_akm__t" ]
+    [ "List", "a04572.html", "a04572" ],
+    [ "RPN", "a04575.html", "a04575" ],
+    [ "Stack", "a04573.html", "a04573" ],
+    [ "Akm_t", "a05391.html", "a05391" ]
 ];
