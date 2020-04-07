@@ -12,7 +12,7 @@ Include dependency graph for ch3\+\_\+7.\+cc\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{a04565_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ackermann类测试例程 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -39,13 +39,51 @@ Copyright (c) 2020
 
 
 
-Definition at line 14 of file ch3\+\_\+7.\+cc.
+Ackermann类测试例程 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & 命令行参数的个数 \\
+\hline
+{\em argv} & 命令行参数的内容 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 返回0表示程序正常结束, 返回1表示程序异常终止
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Example 1\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.bin/ch3\_7 }
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Example 2\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.bin/ch3\_7 3 11 -\/s}
+\end{DoxyCode}
+ 
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+命令行arg3含义\+: ~\newline
+
+\begin{DoxyItemize}
+\item -\/s 指定使用堆栈
+\item -\/r 指定使用系统栈
+\item 省略或其他 使用两种方法 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+Definition at line 36 of file ch3\+\_\+7.\+cc.
 
 
 
 References Akm\+\_\+t\+::\+Akm\+\_\+loop(), and Akm\+\_\+t\+::\+Akm\+\_\+rec().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

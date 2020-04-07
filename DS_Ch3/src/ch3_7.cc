@@ -11,6 +11,28 @@
 
 #include "Ackermann.hh"
 
+/**
+ * @brief Ackermann类测试例程
+ * 
+ * @param argc 命令行参数的个数
+ * @param argv 命令行参数的内容
+ * @return int 返回0表示程序正常结束, 返回1表示程序异常终止
+ * 
+ * @par Example 1:
+ * @code
+ *    .bin/ch3_7 
+ * @endcode
+ * 
+ * @par Example 2:
+ * @code
+ *    .bin/ch3_7 3 11 -s
+ * @endcode
+ * @note 命令行arg3含义: \n
+ * - -s   指定使用堆栈 
+ * - -r   指定使用系统栈
+ * - 省略或其他   使用两种方法
+ * 
+ */
 int main(int argc, char const *argv[])
 {
     // Configure
@@ -50,7 +72,7 @@ int main(int argc, char const *argv[])
 
     do
     {
-        std::cout << "\nInput [m n]: ";
+        std::cout << "Input [m n]: ";
         std::cin >> x >> y;
         if (std::cin.fail())
         {

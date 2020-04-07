@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-24 173,-24 173,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="堆栈版本的Ackermann函数">
 <polygon fill="#bfbfbf" stroke="black" points="74,-0.5 74,-19.5 169,-19.5 169,-0.5 74,-0.5"/>
 <text text-anchor="middle" x="121.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Akm_t::Akm_loop</text>
 </a>
@@ -19,7 +19,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="a04565.html#abf9e6b7e6f15df4b525a2e7705ba3089" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="a04565.html#abf9e6b7e6f15df4b525a2e7705ba3089" target="_top" xlink:title="Ackermann类测试例程">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-19.5 38,-19.5 38,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="19" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>

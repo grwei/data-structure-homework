@@ -2,11 +2,17 @@
 \label{a05391}\index{Akm\_t@{Akm\_t}}
 
 
+实现\+Acker\+Mann函数。  
+
+
+
+
 {\ttfamily \#include $<$Ackermann.\+hh$>$}
 
 
 
-Collaboration diagram for Akm\+\_\+t\+:\nopagebreak
+Collaboration diagram for Akm\+\_\+t\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,27 +23,49 @@ Collaboration diagram for Akm\+\_\+t\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{a05391_a47fc2e33fc03702b3e13df5d1d029572}{Akm\+\_\+t}} (std\+::string name=\char`\"{}name\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{a05391}{Akm\+\_\+t}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{a05391_ae6a69312567f98690067d930e3005dd7}{$\sim$\+Akm\+\_\+t}} ()=default
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{a05391}{Akm\+\_\+t}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{a05391_acce004321aba1561adc7622c3e9f9e72}{Akm\+\_\+loop}} (int x, int y)
-\item 
+\begin{DoxyCompactList}\small\item\em 堆栈版本的\+Ackermann函数 \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{a05391_ad6156801029eb664e589ea5013e9bd4a}{Akm\+\_\+rec}} (int x, int y)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 递归版本的\+Ackermann函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{a05391_a51975f6e439a660d39944f6516ce63e8}{Ackermann}} (int m, int n)
+\begin{DoxyCompactList}\small\item\em Ackermann函数递归版本 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{a05391_a0036aac01f88b4e9c22c43c14970a506}{Ackermann\+Loop}} (int m, int n)
+\begin{DoxyCompactList}\small\item\em Ackermann函数堆栈模拟递归版本 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{a05391_a864a85602360a8d5f10d124b54a1d9ff}{Akm\+Init}} ()
+\begin{DoxyCompactList}\small\item\em 初始化类内部的静态计数器 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{a05391_a70ec38b84f0578da298d8e409eed7d3c}{\+\_\+name}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 对象标识 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{a05391_a061607a67f71aa249ab527bc013028aa}{Akm\+\_\+deep}} = 0
+\begin{DoxyCompactList}\small\item\em 记录当前递归深度 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{a05391_a7a7bc2df56803ef7bff3b349fadc8675}{deep\+\_\+max}} = 0
+\begin{DoxyCompactList}\small\item\em 记录最大递归深度 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+实现\+Acker\+Mann函数。 
 
+两种方式\+:
+\begin{DoxyItemize}
+\item 递归调用(系统栈)
+\item 堆栈模拟(堆栈) 
+\end{DoxyItemize}
 
-Definition at line 29 of file Ackermann.\+hh.
+Definition at line 31 of file Ackermann.\+hh.
 
 
 
@@ -50,7 +78,16 @@ Definition at line 29 of file Ackermann.\+hh.
 
 
 
-Definition at line 35 of file Ackermann.\+hh.
+Construct a new \mbox{\hyperlink{a05391}{Akm\+\_\+t}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & 对象标识符.\\
+\hline
+\end{DoxyParams}
+传入的参数不会被使用 
+
+Definition at line 82 of file Ackermann.\+hh.
 
 \mbox{\Hypertarget{a05391_ae6a69312567f98690067d930e3005dd7}\label{a05391_ae6a69312567f98690067d930e3005dd7}} 
 \index{Akm\_t@{Akm\_t}!````~Akm\_t@{$\sim$Akm\_t}}
@@ -60,7 +97,103 @@ Definition at line 35 of file Ackermann.\+hh.
 
 
 
+Destroy the \mbox{\hyperlink{a05391}{Akm\+\_\+t}} object. 
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05391_a51975f6e439a660d39944f6516ce63e8}\label{a05391_a51975f6e439a660d39944f6516ce63e8}} 
+\index{Akm\_t@{Akm\_t}!Ackermann@{Ackermann}}
+\index{Ackermann@{Ackermann}!Akm\_t@{Akm\_t}}
+\doxysubsubsection{\texorpdfstring{Ackermann()}{Ackermann()}}
+{\footnotesize\ttfamily int Akm\+\_\+t\+::\+Ackermann (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Ackermann函数递归版本 
+
+是工具函数
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & 第一个参数, 建议取1 $\sim$ 4 \\
+\hline
+{\em n} & 第二个参数, 建议取1 $\sim$ 13 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 计算结果 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file Ackermann.\+hh.
+
+
+
+References Akm\+\_\+deep, and deep\+\_\+max.
+
+
+
+Referenced by Akm\+\_\+rec().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05391_a51975f6e439a660d39944f6516ce63e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05391_a0036aac01f88b4e9c22c43c14970a506}\label{a05391_a0036aac01f88b4e9c22c43c14970a506}} 
+\index{Akm\_t@{Akm\_t}!AckermannLoop@{AckermannLoop}}
+\index{AckermannLoop@{AckermannLoop}!Akm\_t@{Akm\_t}}
+\doxysubsubsection{\texorpdfstring{AckermannLoop()}{AckermannLoop()}}
+{\footnotesize\ttfamily int Akm\+\_\+t\+::\+Ackermann\+Loop (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Ackermann函数堆栈模拟递归版本 
+
+是工具函数
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & 第一个参数, 建议取1 $\sim$ 4 \\
+\hline
+{\em n} & 第二个参数, 建议取1 $\sim$ 13 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 计算结果 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file Ackermann.\+hh.
+
+
+
+References Akm\+\_\+deep, deep\+\_\+max, Stack\+::seq\+Stack$<$ T $>$\+::elem\+Mem(), Stack\+::seq\+Stack$<$ T $>$\+::is\+Empty(), Stack\+::seq\+Stack$<$ T $>$\+::pop(), Stack\+::seq\+Stack$<$ T $>$\+::push(), Stack\+::seq\+Stack$<$ T $>$\+::size(), and Stack\+::seq\+Stack$<$ T $>$\+::top().
+
+
+
+Referenced by Akm\+\_\+loop().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05391_a0036aac01f88b4e9c22c43c14970a506_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05391_a0036aac01f88b4e9c22c43c14970a506_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{a05391_acce004321aba1561adc7622c3e9f9e72}\label{a05391_acce004321aba1561adc7622c3e9f9e72}} 
 \index{Akm\_t@{Akm\_t}!Akm\_loop@{Akm\_loop}}
 \index{Akm\_loop@{Akm\_loop}!Akm\_t@{Akm\_t}}
@@ -69,24 +202,37 @@ Definition at line 35 of file Ackermann.\+hh.
 
 
 
-Definition at line 41 of file Ackermann.\+hh.
+堆栈版本的\+Ackermann函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 参数1, 建议取1 $\sim$ 4 \\
+\hline
+{\em y} & 参数2, 建议取1 $\sim$ 13\\
+\hline
+\end{DoxyParams}
+将会半实时刷新当前堆栈深度。当最大深度增加时, 刷新显示内容 
+
+Definition at line 117 of file Ackermann.\+hh.
 
 
 
-References Ackermann\+Loop().
+References Ackermann\+Loop(), and Akm\+Init().
 
 
 
 Referenced by main().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{a05391_acce004321aba1561adc7622c3e9f9e72_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -101,28 +247,71 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 54 of file Ackermann.\+hh.
+递归版本的\+Ackermann函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 参数1, 建议取1 $\sim$ 4 \\
+\hline
+{\em y} & 参数2, 建议取1 $\sim$ 13\\
+\hline
+\end{DoxyParams}
+将会半实时刷新当前递归深度。当最大深度增加时, 刷新显示内容 
+
+Definition at line 132 of file Ackermann.\+hh.
 
 
 
-References Ackermann(), Akm\+\_\+deep, and deep\+\_\+max.
+References Ackermann(), Akm\+\_\+deep, Akm\+Init(), and deep\+\_\+max.
 
 
 
 Referenced by main().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=272pt]{a05391_ad6156801029eb664e589ea5013e9bd4a_cgraph}
+\includegraphics[width=307pt]{a05391_ad6156801029eb664e589ea5013e9bd4a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=244pt]{a05391_ad6156801029eb664e589ea5013e9bd4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05391_a864a85602360a8d5f10d124b54a1d9ff}\label{a05391_a864a85602360a8d5f10d124b54a1d9ff}} 
+\index{Akm\_t@{Akm\_t}!AkmInit@{AkmInit}}
+\index{AkmInit@{AkmInit}!Akm\_t@{Akm\_t}}
+\doxysubsubsection{\texorpdfstring{AkmInit()}{AkmInit()}}
+{\footnotesize\ttfamily static void Akm\+\_\+t\+::\+Akm\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+初始化类内部的静态计数器 
+
+
+
+Definition at line 68 of file Ackermann.\+hh.
+
+
+
+References Akm\+\_\+deep, and deep\+\_\+max.
+
+
+
+Referenced by Akm\+\_\+loop(), and Akm\+\_\+rec().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05391_a864a85602360a8d5f10d124b54a1d9ff_icgraph}
 \end{center}
 \end{figure}
 
@@ -136,7 +325,47 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 32 of file Ackermann.\+hh.
+对象标识 
+
+无实际作用 
+
+Definition at line 40 of file Ackermann.\+hh.
+
+\mbox{\Hypertarget{a05391_a061607a67f71aa249ab527bc013028aa}\label{a05391_a061607a67f71aa249ab527bc013028aa}} 
+\index{Akm\_t@{Akm\_t}!Akm\_deep@{Akm\_deep}}
+\index{Akm\_deep@{Akm\_deep}!Akm\_t@{Akm\_t}}
+\doxysubsubsection{\texorpdfstring{Akm\_deep}{Akm\_deep}}
+{\footnotesize\ttfamily int Akm\+\_\+t\+::\+Akm\+\_\+deep = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+记录当前递归深度 
+
+
+
+Definition at line 70 of file Ackermann.\+hh.
+
+
+
+Referenced by Ackermann(), Ackermann\+Loop(), Akm\+\_\+rec(), and Akm\+Init().
+
+\mbox{\Hypertarget{a05391_a7a7bc2df56803ef7bff3b349fadc8675}\label{a05391_a7a7bc2df56803ef7bff3b349fadc8675}} 
+\index{Akm\_t@{Akm\_t}!deep\_max@{deep\_max}}
+\index{deep\_max@{deep\_max}!Akm\_t@{Akm\_t}}
+\doxysubsubsection{\texorpdfstring{deep\_max}{deep\_max}}
+{\footnotesize\ttfamily int Akm\+\_\+t\+::deep\+\_\+max = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+记录最大递归深度 
+
+
+
+Definition at line 71 of file Ackermann.\+hh.
+
+
+
+Referenced by Ackermann(), Ackermann\+Loop(), Akm\+\_\+rec(), and Akm\+Init().
 
 
 

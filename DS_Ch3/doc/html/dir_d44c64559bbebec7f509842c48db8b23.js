@@ -1,6 +1,8 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
-    [ "Ackermann.hh", "a04520.html", "a04520" ],
+    [ "Ackermann.hh", "a04520.html", [
+      [ "Akm_t", "a05391.html", "a05391" ]
+    ] ],
     [ "dLinkList.h", "a04523.html", "a04523" ],
     [ "linkStack.hpp", "a04526.html", [
       [ "linkStack", "a05411.html", "a05411" ],

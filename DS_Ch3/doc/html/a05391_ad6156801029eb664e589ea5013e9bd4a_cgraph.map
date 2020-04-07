@@ -1,4 +1,5 @@
 <map id="Akm_t::Akm_rec" name="Akm_t::Akm_rec">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,125,32"/>
-<area shape="rect" id="node2" href="$a04520.html#a779e6d0f676b89e7b2bcfaf974a59544" title=" " alt="" coords="173,5,261,32"/>
+<area shape="rect" id="node1" title="递归版本的Ackermann函数" alt="" coords="5,31,125,57"/>
+<area shape="rect" id="node2" href="$a05391.html#a51975f6e439a660d39944f6516ce63e8" title="Ackermann函数递归版本" alt="" coords="173,5,308,32"/>
+<area shape="rect" id="node3" href="$a05391.html#a864a85602360a8d5f10d124b54a1d9ff" title="初始化类内部的静态计数器" alt="" coords="185,56,297,83"/>
 </map>
