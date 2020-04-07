@@ -17,7 +17,7 @@ _**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**_ 
   - `vecQueue.hh`: [顺序队列](./include/vecQueue.hh)
   - `linkQueue.hh`: [链接队列](./include/linkQueue.hh)
 - `./src`: 测试例程
-  - `test0.cc`：[测试0](./src/test0.cc) 测试上述三种队列的基本功能，包括构造、入队和出队。
+  - `test0.cc`：[测试0](./src/test0.cc) - 测试上述三种队列的基本功能，包括构造、入队和出队。
 - `./doc`: `HTML`和`LATEX`文档
   - `HTML`文档[打开](./doc/html/index.html)方式：
   
