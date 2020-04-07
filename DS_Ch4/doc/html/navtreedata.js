@@ -23,10 +23,11 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "队列", "index.html", [
-    [ "Overview", "index.html", [
-      [ "文件结构", "index.html#autotoc_md1", null ],
-      [ "Compiling", "index.html#autotoc_md2", null ],
-      [ "Contact me", "index.html#autotoc_md3", null ]
+    [ "Documentation", "index.html", [
+      [ "Overview", "index.html#autotoc_md1", null ],
+      [ "文件结构", "index.html#autotoc_md2", null ],
+      [ "Compiling", "index.html#autotoc_md3", null ],
+      [ "Contact me", "index.html#autotoc_md4", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]

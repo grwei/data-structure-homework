@@ -7,5 +7,6 @@ var searchData=
   ['dlinklist_2eh_33',['dLinkList.h',['../d_link_list_8h.html',1,'']]],
   ['dlinklist_3c_20rpn_3a_3arpn_5ft_3a_3aitem_20_3e_34',['dLinkList&lt; RPN::Rpn_t::Item &gt;',['../class_list_1_1d_link_list.html',1,'List']]],
   ['dlinklist_3c_20t_20_3e_35',['dLinkList&lt; T &gt;',['../class_list_1_1d_link_list_1_1const__iterator.html#a2f8fa5c6d003ed392081efcf43a2cf93',1,'List::dLinkList::const_iterator::dLinkList&lt; T &gt;()'],['../class_list_1_1d_link_list_1_1iterator.html#ad88e2a87bb65cbcb7aa834c6ffda836c',1,'List::dLinkList::iterator::dLinkList&lt; T &gt;()']]],
-  ['doublespace_36',['doubleSpace',['../class_list_1_1seq_list.html#a67f000ad64599c4a7e09aa5c225d0f3f',1,'List::seqList::doubleSpace()'],['../class_stack_1_1seq_stack.html#ad22ae3e3ca71b7d76fc5d32a7d249095',1,'Stack::seqStack::doubleSpace()']]]
+  ['doublespace_36',['doubleSpace',['../class_list_1_1seq_list.html#a67f000ad64599c4a7e09aa5c225d0f3f',1,'List::seqList::doubleSpace()'],['../class_stack_1_1seq_stack.html#ad22ae3e3ca71b7d76fc5d32a7d249095',1,'Stack::seqStack::doubleSpace()']]],
+  ['documentation_37',['Documentation',['../index.html',1,'']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['overview_76',['Overview',['../index.html',1,'']]],
   ['oparen_77',['Oparen',['../struct_r_p_n_1_1_rpn__t_1_1_item.html#aa7993f18354b1d782d82b153efbe7a85a9a4acae27b9c16388eb6e9ee19ac8c3b',1,'RPN::Rpn_t::Item']]],
   ['operand_78',['Operand',['../struct_r_p_n_1_1_rpn__t_1_1_item.html#a066879e3b9106250d9937382828b77d6a1b488933c47964ca059d24f978f094e4',1,'RPN::Rpn_t::Item']]],
   ['operand_5fval_79',['operand_val',['../struct_r_p_n_1_1_rpn__t_1_1_item.html#afd80b3dc23b1b96e8233f3a979d65c61',1,'RPN::Rpn_t::Item']]],

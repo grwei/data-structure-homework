@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_15',['main',['../_ch1__1_8cxx.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;Ch1_1.cxx'],['../_ch1__2_8c_09_09.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;Ch1_2.c++'],['../_ch1__3_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;Ch1_3.cpp'],['../main_8cxx.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;main.cxx']]],
-  ['main_2ecxx_16',['main.cxx',['../main_8cxx.html',1,'']]]
+  ['isprime_15',['isPrime',['../_ch1__1_8cxx.html#a907bff58162e4542b88424bafff6b1e8',1,'Ch1_1.cxx']]]
 ];

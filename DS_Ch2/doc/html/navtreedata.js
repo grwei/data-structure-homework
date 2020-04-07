@@ -23,8 +23,9 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "线性表", "index.html", [
-    [ "Overview", "index.html", [
-      [ "Contact me", "index.html#autotoc_md1", null ]
+    [ "Documentation", "index.html", [
+      [ "Overview", "index.html#autotoc_md1", null ],
+      [ "Contact me", "index.html#autotoc_md2", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],

@@ -7,7 +7,7 @@ var indexSectionsWithContent =
   4: "bcdefilmnoprstv~",
   5: "cdhmnpst",
   6: "o",
-  7: "o"
+  7: "d"
 };
 
 var indexSectionNames =
