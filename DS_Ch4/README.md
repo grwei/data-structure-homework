@@ -23,7 +23,7 @@ _**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**_ 
 - `./doc`: `HTML`和`LATEX`文档
   - `HTML`文档[打开](./doc/html/index.html)方式：
   
-  ```powershell
+  ```bat
   cd ./path/to/projectRoot
   ./doc/html/index.html
   ```
@@ -34,7 +34,7 @@ _**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**_ 
 
 - **例** `g++`编译并运行`test0.cc`
 
-```powershell
+```bat
 cd ./path/to/projectRoot
 mkdir bin
 g++ ./src/test0.cc -o ./bin/test0.exe -g -fexec-charset=GBK -std=c++11 -I ./include

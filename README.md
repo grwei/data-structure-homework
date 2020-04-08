@@ -6,6 +6,24 @@ codes and documentations
 
 Textbook: _**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**_
 
+## Generating documents
+
+```bat
+cd ".\path\to\root"
+genDoc.bat
+```
+
+## Compiling
+
+see docs in each project
+
+```bat
+cd ./path/to/projectRoot
+mkdir bin
+g++ ./src/test0.cc -o ./bin/test0.exe -g -fexec-charset=GBK -std=c++11 -I ./include
+./bin/test0.exe
+```
+
 ## Table of Contents
 
 - 第1章 [引言](https://grwei.github.io/data-structure-homework/DS_Ch1/)
