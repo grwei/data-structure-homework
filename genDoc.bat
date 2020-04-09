@@ -40,6 +40,7 @@ FOR /D %%i IN (%rootPath%%prefix%*) DO (
         echo Docs generated at: %%i\%docFolder%!
     ) ELSE (
         echo ERROR: Couldn't generate docs!
+        pause
     )
 
     rem back to root path, ready for the next loop
@@ -53,10 +54,10 @@ exit
 rem sub-proc: init. Set project root path, sub-project folder prefix, doc folder name and index
 :: Users may need to modify the following var definitions  
 :init
-set rootPath="%~d0%~p0"
+set rootPath="%~dp0"
 set prefix="DS_Ch"
 set idx=1
-set docFolder="doc"
+set docFolder="doc\"
 :: Test: pass relative path as arg, then expand to full path
 ::call :testArg %rootPath%%prefix%%idx%
 goto :EOF
@@ -95,7 +96,8 @@ IF %delFlag% EQU 1 (
 
     rem check if delete successful
     IF EXIST "%~f1\%docFolder%" (
-        echo ERROR: delete fails in path: %~f1\%docFolder%!
+        echo ERROR: delete failed in path: %~f1\%docFolder%!
+        pause
     ) ELSE (
         echo deleted path finished: %~f1\%docFolder%
     )
@@ -113,8 +115,9 @@ echo %%2 = %2
 
 goto :EOF
 
-:: test
+rem test
 :: reference: https://blog.csdn.net/xiaoding133/article/details/39253083
+rem reference: https://ss64.com/nt/syntax-args.html
 echo 正在运行的这个批处理：
 echo %%0：%0
 echo 去掉引号：%~0
