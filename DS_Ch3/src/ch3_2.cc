@@ -38,7 +38,7 @@ static void prnPDecInBin(double pDec = 0.0, unsigned int errP = 20);
  * @return int 程序正常终止时返回0
  * 
  * @details 可选：命令行arg[1]为一个合法的非负十进制实数。若不给出，程序将要求用户输入。
- * 
+ * 合法表示: https://en.cppreference.com/w/cpp/language/floating_literal
  */
 int main(int argc, char const *argv[])
 {
