@@ -86,7 +86,7 @@
 </g>
 <!-- Node6 -->
 <g id="node6" class="node"><title>Node6</title>
-<g id="a_node6"><a xlink:href="a04559.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="a04559.html" target="_top" xlink:title="中缀表达式转为后缀表达式">
 <polygon fill="white" stroke="black" points="298.5,-0.5 298.5,-19.5 371.5,-19.5 371.5,-0.5 298.5,-0.5"/>
 <text text-anchor="middle" x="335" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/ch3_4.cc</text>
 </a>
@@ -99,7 +99,7 @@
 </g>
 <!-- Node7 -->
 <g id="node7" class="node"><title>Node7</title>
-<g id="a_node7"><a xlink:href="a04562.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="a04562.html" target="_top" xlink:title="后缀表达式的计算">
 <polygon fill="white" stroke="black" points="389.5,-0.5 389.5,-19.5 462.5,-19.5 462.5,-0.5 389.5,-0.5"/>
 <text text-anchor="middle" x="426" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/ch3_5.cc</text>
 </a>

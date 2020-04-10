@@ -1,5 +1,5 @@
 <map id="src/ch3_4.cc" name="src/ch3_4.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="464,5,561,32"/>
+<area shape="rect" id="node1" title="中缀表达式转为后缀表达式" alt="" coords="464,5,561,32"/>
 <area shape="rect" id="node2" href="$a04535.html" title="后缀表达式类" alt="" coords="440,80,502,107"/>
 <area shape="rect" id="node19" title=" " alt="" coords="526,80,581,107"/>
 <area shape="rect" id="node3" href="$a04529.html" title="栈的抽象类" alt="" coords="136,155,190,181"/>

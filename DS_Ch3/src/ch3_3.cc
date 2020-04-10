@@ -1,7 +1,7 @@
 /**
  * @file ch3_3.cc
  * @author Guorui Wei (313017602@qq.com)
- * @brief 
+ * @brief 全排列的递归和非递归实现
  * @version 0.1
  * @date 2020-04-05
  * 

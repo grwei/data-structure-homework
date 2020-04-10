@@ -89,13 +89,17 @@ $(document).ready(function(){initNavTree('a04553.html',''); initResizable(); });
 <div class="title">ch3_2.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>将十进制非负实数以二进制打印  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a04547_source.html">Stack.hh</a>&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ch3_2.cc:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a04554.svg" width="474" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a04554.svg" width="556" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -103,13 +107,19 @@ Include dependency graph for ch3_2.cc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a62ce3117115c8823ed9ab22c5df86de9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a04553.html#a62ce3117115c8823ed9ab22c5df86de9">prnNonNegDecInBin</a> (unsigned long dec=0)</td></tr>
-<tr class="separator:a62ce3117115c8823ed9ab22c5df86de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa0bbb610bee03cf93ee15fed263627a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a04553.html#aaa0bbb610bee03cf93ee15fed263627a">prnUIntInBin</a> (unsigned long decUi=0)</td></tr>
+<tr class="memdesc:aaa0bbb610bee03cf93ee15fed263627a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将十进制非负整数以其二进制形式打印  <a href="a04553.html#aaa0bbb610bee03cf93ee15fed263627a">More...</a><br /></td></tr>
+<tr class="separator:aaa0bbb610bee03cf93ee15fed263627a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1cc28671495c0727d788f23efbf908"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a04553.html#a2a1cc28671495c0727d788f23efbf908">prnPDecInBin</a> (double pDec=0.0, unsigned int errP=20)</td></tr>
+<tr class="memdesc:a2a1cc28671495c0727d788f23efbf908"><td class="mdescLeft">&#160;</td><td class="mdescRight">将（非负）十进制纯小数以其二进制形式打印  <a href="a04553.html#a2a1cc28671495c0727d788f23efbf908">More...</a><br /></td></tr>
+<tr class="separator:a2a1cc28671495c0727d788f23efbf908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a04553.html#abf9e6b7e6f15df4b525a2e7705ba3089">main</a> (int argc, char const *argv[])</td></tr>
+<tr class="memdesc:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="mdescLeft">&#160;</td><td class="mdescRight">将非负十进制实数以其二进制形式打印  <a href="a04553.html#abf9e6b7e6f15df4b525a2e7705ba3089">More...</a><br /></td></tr>
 <tr class="separator:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Guorui Wei (<a href="#" onclick="location.href='mai'+'lto:'+'313'+'01'+'760'+'2@'+'qq.'+'co'+'m'; return false;">31301<span style="display: none;">.nosp@m.</span>7602<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
+<div class="textblock"><p>将十进制非负实数以二进制打印 </p>
+<dl class="section author"><dt>Author</dt><dd>Guorui Wei (<a href="#" onclick="location.href='mai'+'lto:'+'313'+'01'+'760'+'2@'+'qq.'+'co'+'m'; return false;">31301<span style="display: none;">.nosp@m.</span>7602<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2020-04-05</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020 </dd></dl>
@@ -142,49 +152,131 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a04553_source.html#l00018">18</a> of file <a class="el" href="a04553_source.html">ch3_2.cc</a>.</p>
+<p>将非负十进制实数以其二进制形式打印 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>命令行参数的个数 </td></tr>
+    <tr><td class="paramname">argv</td><td>命令行参数的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 程序正常终止时返回0</dd></dl>
+<p>可选：命令行arg[1]为一个合法的非负十进制实数。若不给出，程序将要求用户输入。 </p>
 
-<p class="reference">References <a class="el" href="a04553_source.html#l00045">prnNonNegDecInBin()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a04553_source.html#l00043">43</a> of file <a class="el" href="a04553_source.html">ch3_2.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="a04553_source.html#l00094">prnPDecInBin()</a>, and <a class="el" href="a04553_source.html#l00080">prnUIntInBin()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a04553_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph.svg" width="451" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a04553_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph.svg" width="414" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a62ce3117115c8823ed9ab22c5df86de9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62ce3117115c8823ed9ab22c5df86de9">&#9670;&nbsp;</a></span>prnNonNegDecInBin()</h2>
+<a id="a2a1cc28671495c0727d788f23efbf908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1cc28671495c0727d788f23efbf908">&#9670;&nbsp;</a></span>prnPDecInBin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void prnNonNegDecInBin </td>
+          <td class="memname">void prnPDecInBin </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pDec</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>errP</em> = <code>20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将（非负）十进制纯小数以其二进制形式打印 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pDec</td><td>十进制纯小数 </td></tr>
+    <tr><td class="paramname">errP</td><td>允许误差: 2^(-errP), 即输出小数点后errP位。默认取值20 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="a04553_source.html#l00094">94</a> of file <a class="el" href="a04553_source.html">ch3_2.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="a04553_source.html#l00043">main()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a04553_a2a1cc28671495c0727d788f23efbf908_icgraph.svg" width="211" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aaa0bbb610bee03cf93ee15fed263627a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa0bbb610bee03cf93ee15fed263627a">&#9670;&nbsp;</a></span>prnUIntInBin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prnUIntInBin </td>
           <td>(</td>
           <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>dec</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>decUi</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a04553_source.html#l00045">45</a> of file <a class="el" href="a04553_source.html">ch3_2.cc</a>.</p>
+<p>将十进制非负整数以其二进制形式打印 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decUi</td><td>非负十进制整数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="a04553_source.html#l00080">80</a> of file <a class="el" href="a04553_source.html">ch3_2.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="a04526_source.html#l00076">Stack::linkStack&lt; T &gt;::push()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="a04553_source.html#l00018">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="a04553_source.html#l00043">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a04553_a62ce3117115c8823ed9ab22c5df86de9_cgraph.svg" width="352" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a04553_aaa0bbb610bee03cf93ee15fed263627a_cgraph.svg" width="306" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a04553_a62ce3117115c8823ed9ab22c5df86de9_icgraph.svg" width="248" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a04553_aaa0bbb610bee03cf93ee15fed263627a_icgraph.svg" width="202" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -196,7 +288,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="a04553.html">ch3_2.cc</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 11:55:18 for 栈 by
+    <li class="footer">Generated on Fri Apr 10 2020 22:42:04 for 栈 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

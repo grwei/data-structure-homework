@@ -104,15 +104,15 @@ var sectionId = 'dynsection-5';
 </g>
 <!-- Node10 -->
 <g id="node10" class="node"><title>Node10</title>
-<g id="a_node10"><a xlink:href="a04553.html#a62ce3117115c8823ed9ab22c5df86de9" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="254.5,-0.5 254.5,-19.5 358.5,-19.5 358.5,-0.5 254.5,-0.5"/>
-<text text-anchor="middle" x="306.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">prnNonNegDecInBin</text>
+<g id="a_node10"><a xlink:href="a04553.html#aaa0bbb610bee03cf93ee15fed263627a" target="_top" xlink:title="将十进制非负整数以其二进制形式打印">
+<polygon fill="white" stroke="black" points="272,-0.5 272,-19.5 341,-19.5 341,-0.5 272,-0.5"/>
+<text text-anchor="middle" x="306.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">prnUIntInBin</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node10 -->
 <g id="edge9" class="edge"><title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M459.308,-53.2986C441.285,-45.3792 417.653,-35.6907 396,-29 384.139,-25.3349 371.17,-22.1225 358.907,-19.4324"/>
+<path fill="none" stroke="midnightblue" d="M459.308,-53.2986C441.285,-45.3792 417.653,-35.6907 396,-29 378.133,-23.4792 357.754,-18.9855 341.058,-15.7569"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="458.137,-56.6088 468.695,-57.486 460.988,-50.2159 458.137,-56.6088"/>
 </g>
 <!-- Node3 -->
@@ -182,7 +182,7 @@ var sectionId = 'dynsection-5';
 </g>
 <!-- Node11 -->
 <g id="node11" class="node"><title>Node11</title>
-<g id="a_node11"><a xlink:href="a04553.html#abf9e6b7e6f15df4b525a2e7705ba3089" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="a04553.html#abf9e6b7e6f15df4b525a2e7705ba3089" target="_top" xlink:title="将非负十进制实数以其二进制形式打印">
 <polygon fill="white" stroke="black" points="108.5,-0.5 108.5,-19.5 146.5,-19.5 146.5,-0.5 108.5,-0.5"/>
 <text text-anchor="middle" x="127.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
@@ -190,8 +190,8 @@ var sectionId = 'dynsection-5';
 </g>
 <!-- Node10&#45;&gt;Node11 -->
 <g id="edge10" class="edge"><title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M243.897,-10C209.665,-10 169.501,-10 146.721,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="244.304,-13.5001 254.304,-10 244.304,-6.5001 244.304,-13.5001"/>
+<path fill="none" stroke="midnightblue" d="M261.785,-10C224.871,-10 173.84,-10 146.888,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="261.791,-13.5001 271.791,-10 261.791,-6.5001 261.791,-13.5001"/>
 </g>
 </g>
 </svg>

@@ -1,7 +1,7 @@
 /**
  * @file ch3_5.cc
  * @author Guorui Wei (313017602@qq.com)
- * @brief 
+ * @brief 后缀表达式的计算
  * @version 0.1
  * @date 2020-04-05
  * 

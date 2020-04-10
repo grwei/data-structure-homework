@@ -1,6 +1,12 @@
 \hypertarget{a04553}{}\doxysection{src/ch3\+\_\+2.cc File Reference}
 \label{a04553}\index{src/ch3\_2.cc@{src/ch3\_2.cc}}
+
+
+将十进制非负实数以二进制打印  
+
+
 {\ttfamily \#include \char`\"{}Stack.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 Include dependency graph for ch3\+\_\+2.\+cc\+:
@@ -14,13 +20,17 @@ Include dependency graph for ch3\+\_\+2.\+cc\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{a04553_a62ce3117115c8823ed9ab22c5df86de9}{prn\+Non\+Neg\+Dec\+In\+Bin}} (unsigned long dec=0)
-\item 
+static void \mbox{\hyperlink{a04553_aaa0bbb610bee03cf93ee15fed263627a}{prn\+U\+Int\+In\+Bin}} (unsigned long dec\+Ui=0)
+\begin{DoxyCompactList}\small\item\em 将十进制非负整数以其二进制形式打印 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{a04553_a2a1cc28671495c0727d788f23efbf908}{prn\+P\+Dec\+In\+Bin}} (double p\+Dec=0.\+0, unsigned int errP=20)
+\begin{DoxyCompactList}\small\item\em 将（非负）十进制纯小数以其二进制形式打印 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{a04553_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 将非负十进制实数以其二进制形式打印 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+将十进制非负实数以二进制打印 
+
 \begin{DoxyAuthor}{Author}
 Guorui Wei (\href{mailto:313017602@qq.com}{\texttt{ 313017602@qq.\+com}}) 
 \end{DoxyAuthor}
@@ -44,11 +54,25 @@ Copyright (c) 2020
 
 
 
-Definition at line 18 of file ch3\+\_\+2.\+cc.
+将非负十进制实数以其二进制形式打印 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & 命令行参数的个数 \\
+\hline
+{\em argv} & 命令行参数的值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 程序正常终止时返回0
+\end{DoxyReturn}
+可选：命令行arg\mbox{[}1\mbox{]}为一个合法的非负十进制实数。若不给出，程序将要求用户输入。 
+
+Definition at line 43 of file ch3\+\_\+2.\+cc.
 
 
 
-References prn\+Non\+Neg\+Dec\+In\+Bin().
+References prn\+P\+Dec\+In\+Bin(), and prn\+U\+Int\+In\+Bin().
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -58,15 +82,57 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{a04553_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{a04553_a62ce3117115c8823ed9ab22c5df86de9}\label{a04553_a62ce3117115c8823ed9ab22c5df86de9}} 
-\index{ch3\_2.cc@{ch3\_2.cc}!prnNonNegDecInBin@{prnNonNegDecInBin}}
-\index{prnNonNegDecInBin@{prnNonNegDecInBin}!ch3\_2.cc@{ch3\_2.cc}}
-\doxysubsubsection{\texorpdfstring{prnNonNegDecInBin()}{prnNonNegDecInBin()}}
-{\footnotesize\ttfamily void prn\+Non\+Neg\+Dec\+In\+Bin (\begin{DoxyParamCaption}\item[{unsigned long}]{dec = {\ttfamily 0} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{a04553_a2a1cc28671495c0727d788f23efbf908}\label{a04553_a2a1cc28671495c0727d788f23efbf908}} 
+\index{ch3\_2.cc@{ch3\_2.cc}!prnPDecInBin@{prnPDecInBin}}
+\index{prnPDecInBin@{prnPDecInBin}!ch3\_2.cc@{ch3\_2.cc}}
+\doxysubsubsection{\texorpdfstring{prnPDecInBin()}{prnPDecInBin()}}
+{\footnotesize\ttfamily void prn\+P\+Dec\+In\+Bin (\begin{DoxyParamCaption}\item[{double}]{p\+Dec = {\ttfamily 0.0},  }\item[{unsigned int}]{errP = {\ttfamily 20} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line 45 of file ch3\+\_\+2.\+cc.
+将（非负）十进制纯小数以其二进制形式打印 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Dec} & 十进制纯小数 \\
+\hline
+{\em errP} & 允许误差\+: 2$^\wedge$(-\/errP), 即输出小数点后err\+P位。默认取值20 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file ch3\+\_\+2.\+cc.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{a04553_a2a1cc28671495c0727d788f23efbf908_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a04553_aaa0bbb610bee03cf93ee15fed263627a}\label{a04553_aaa0bbb610bee03cf93ee15fed263627a}} 
+\index{ch3\_2.cc@{ch3\_2.cc}!prnUIntInBin@{prnUIntInBin}}
+\index{prnUIntInBin@{prnUIntInBin}!ch3\_2.cc@{ch3\_2.cc}}
+\doxysubsubsection{\texorpdfstring{prnUIntInBin()}{prnUIntInBin()}}
+{\footnotesize\ttfamily void prn\+U\+Int\+In\+Bin (\begin{DoxyParamCaption}\item[{unsigned long}]{dec\+Ui = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+将十进制非负整数以其二进制形式打印 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dec\+Ui} & 非负十进制整数 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file ch3\+\_\+2.\+cc.
 
 
 
@@ -81,7 +147,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=336pt]{a04553_a62ce3117115c8823ed9ab22c5df86de9_cgraph}
+\includegraphics[width=301pt]{a04553_aaa0bbb610bee03cf93ee15fed263627a_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -89,6 +155,6 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=258pt]{a04553_a62ce3117115c8823ed9ab22c5df86de9_icgraph}
+\includegraphics[width=223pt]{a04553_aaa0bbb610bee03cf93ee15fed263627a_icgraph}
 \end{center}
 \end{figure}

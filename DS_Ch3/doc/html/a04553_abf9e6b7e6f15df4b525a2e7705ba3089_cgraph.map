@@ -1,5 +1,6 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node2" href="$a04553.html#a62ce3117115c8823ed9ab22c5df86de9" title=" " alt="" coords="104,5,243,32"/>
-<area shape="rect" id="node3" href="$a05411.html#a3425bfbff5c6945af2dd9683405a0e0b" title=" " alt="" coords="291,5,445,32"/>
+<area shape="rect" id="node1" title="将非负十进制实数以其二进制形式打印" alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$a04553.html#a2a1cc28671495c0727d788f23efbf908" title="将（非负）十进制纯小数以其二进制形式打印" alt="" coords="104,5,205,32"/>
+<area shape="rect" id="node3" href="$a04553.html#aaa0bbb610bee03cf93ee15fed263627a" title="将十进制非负整数以其二进制形式打印" alt="" coords="109,56,201,83"/>
+<area shape="rect" id="node4" href="$a05411.html#a3425bfbff5c6945af2dd9683405a0e0b" title=" " alt="" coords="253,56,408,83"/>
 </map>

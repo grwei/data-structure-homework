@@ -1,7 +1,7 @@
 /**
  * @file ch3_4.cc
  * @author Guorui Wei (313017602@qq.com)
- * @brief 
+ * @brief 中缀表达式转为后缀表达式
  * @version 0.1
  * @date 2020-04-05
  * 

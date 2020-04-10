@@ -19,7 +19,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="a04565.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="a04565.html" target="_top" xlink:title="Ackerman函数的递归和非递归实现">
 <polygon fill="white" stroke="black" points="20,-0.5 20,-19.5 93,-19.5 93,-0.5 20,-0.5"/>
 <text text-anchor="middle" x="56.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/ch3_7.cc</text>
 </a>
