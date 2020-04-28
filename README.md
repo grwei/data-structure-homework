@@ -30,6 +30,7 @@ g++ ./src/test0.cc -o ./bin/test0.exe -g -fexec-charset=GBK -std=c++11 -I ./incl
 - 第2章 [线性表](https://grwei.github.io/data-structure-homework/DS_Ch2/)
 - 第3章 [栈](https://grwei.github.io/data-structure-homework/DS_Ch3/)
 - 第4章 [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/)
+- 第6章 [树](https://grwei.github.io/data-structure-homework/DS_Ch6/)
 
 ## Contact me
 
