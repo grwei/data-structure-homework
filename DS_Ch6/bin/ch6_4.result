@@ -4,7 +4,7 @@ D	E	F	G
 @	@	@	@	@	@	H	I
 @	@	@	@
 
-Current local time and date: Tue Apr 28 23:01:42 2020
+Current local time and date: Tue Apr 28 23:34:43 2020
 
 二叉树的规模(递归 非递归)：
 9 9
@@ -114,4 +114,4 @@ F	@	@
 E	@	@
 D	@	@
 
-It took me 375 clicks (0.375 seconds).
+It took me 1921 clicks (1.921 seconds).

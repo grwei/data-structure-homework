@@ -1,24 +1,24 @@
 # Documentation
 
-ÎÄµµ
+æ–‡æ¡£
 
 ## Overview
 
-_**¡¶Êı¾İ½á¹¹£ºË¼ÏëÓëÊµÏÖ£¨µÚ2°æ£©¡·£¨ÎÌ»İÓñ£¬ÓáÓÂ£©**_ **µÚ6ÕÂ Ê÷**
+_**ã€Šæ•°æ®ç»“æ„ï¼šæ€æƒ³ä¸å®ç°ï¼ˆç¬¬2ç‰ˆï¼‰ã€‹ï¼ˆç¿æƒ ç‰ï¼Œä¿å‹‡ï¼‰**_ **ç¬¬6ç«  æ ‘**
 
-- ±¾ÕÂÎÄµµ: [Ê÷](https://grwei.github.io/data-structure-homework/DS_Ch6/doc/html/index.html)
-- ±¾ÕÂÖ÷Ò³: [Ê÷](https://grwei.github.io/data-structure-homework/DS_Ch6/)
-- ¿Î³ÌÖ÷Ò³: [Êı¾İ½á¹¹](https://grwei.github.io/data-structure-homework/)
-- ¸öÈËÖ÷Ò³: [grwei](https://grwei.github.io/)
+- æœ¬ç« æ–‡æ¡£: [æ ‘](https://grwei.github.io/data-structure-homework/DS_Ch6/doc/html/index.html)
+- æœ¬ç« ä¸»é¡µ: [æ ‘](https://grwei.github.io/data-structure-homework/DS_Ch6/)
+- è¯¾ç¨‹ä¸»é¡µ: [æ•°æ®ç»“æ„](https://grwei.github.io/data-structure-homework/)
+- ä¸ªäººä¸»é¡µ: [grwei](https://grwei.github.io/)
 
-## ÎÄ¼ş½á¹¹
+## æ–‡ä»¶ç»“æ„
 
-**×¢Òâ£º±¾ÕÂËùÓĞÎÄ¼şµÄ±àÂë¶¼ÊÇ`GBK`**
+**æ³¨æ„ï¼šæœ¬ç« æ‰€æœ‰æ–‡ä»¶çš„ç¼–ç éƒ½æ˜¯`UTF-8`**
 
-- `./include`: Í·ÎÄ¼ş
-- `./src`: ²âÊÔÀı³Ì
-- `./doc`: `HTML`ºÍ`LATEX`ÎÄµµ
-  - `HTML`ÎÄµµ[´ò¿ª](./doc/html/index.html)·½Ê½£º
+- `./include`: å¤´æ–‡ä»¶
+- `./src`: æµ‹è¯•ä¾‹ç¨‹
+- `./doc`: `HTML`å’Œ`LATEX`æ–‡æ¡£
+  - `HTML`æ–‡æ¡£[æ‰“å¼€](./doc/html/index.html)æ–¹å¼ï¼š
   
   ```bat
   cd ./path/to/projectRoot
@@ -27,9 +27,9 @@ _**¡¶Êı¾İ½á¹¹£ºË¼ÏëÓëÊµÏÖ£¨µÚ2°æ£©¡·£¨ÎÌ»İÓñ£¬ÓáÓÂ£©**_ **µÚ6ÕÂ Ê÷**
 
 ## Compiling
 
-½«`./include`ÎÄ¼ş¼Ğ¼ÓÈë`IncludePath`£¬±àÒë`./src`ÎÄ¼ş¼ĞÖĞµÄ**µ¥¸ö**Ô´ÎÄ¼ş¡£
+å°†`./include`æ–‡ä»¶å¤¹åŠ å…¥`IncludePath`ï¼Œç¼–è¯‘`./src`æ–‡ä»¶å¤¹ä¸­çš„**å•ä¸ª**æºæ–‡ä»¶ã€‚
 
-- **Àı1** `g++`±àÒë²¢ÔËĞĞ[`test0.cc`](src/test0.cc)
+- **ä¾‹1** `g++`ç¼–è¯‘å¹¶è¿è¡Œ[`test0.cc`](src/test0.cc)
 
 ```bat
 cd ./DS_Ch6
@@ -38,7 +38,7 @@ g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -
 ./bin/test0.exe
 ```
 
-- **Àı2** ±àÒë²¢Ö´ĞĞËùÓĞ²âÊÔ
+- **ä¾‹2** ç¼–è¯‘å¹¶æ‰§è¡Œæ‰€æœ‰æµ‹è¯•
 
 ```bat
 cd ./DS_Ch6
@@ -47,39 +47,39 @@ run_test.bat
 
 ## References and notes
 
-1. ´Ó¾ø¶ÔÂ·¾¶½âÎöÎÄ¼şËùÔÚÄ¿Â¼£º[`find_last_of`](http://www.cplusplus.com/reference/string/string/find_last_of/)£¬ÓÃÓÚ[`test0.cc`](src/test0.cc)
-2. ÓÃ`C/C++`µ÷ÓÃ`DOS`ÃüÁîÉ¾³ıÎÄ¼ş£¬ÓÃÓÚ[`test0.hh`](include/test0.hh)
-3. Returns the processor time consumed by the program£º[`clock`](http://www.cplusplus.com/reference/ctime/clock/)£¬ÓÃÓÚ[`test0.hh`](include/test0.hh)
-4. »ñÈ¡µ±Ç°Ê±¼ä£º[`localtime`](http://www.cplusplus.com/reference/ctime/localtime/)£¬ÓÃÓÚ[`test0.hh`](include/test0.hh)
-5. [ÓÃ¶ÑÕ»Ïû³ıµİ¹éµÄÒ»°ã·½·¨](https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and)£¬ÓÃÓÚ[`binaryTree.hh`](include/binaryTree.hh)
-6. ²»ÒªÀàÄÚ³õÊ¼»¯`struct`µÄ³ÉÔ±£¡·ñÔòÎŞ·¨Ê¹ÓÃ[ÁĞ±í³õÊ¼»¯](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/#braced-initializer-list)£¬³ı·Ç¶¨Òå¹¹Ôìº¯Êı¡£ÓÃÓÚ[`binaryTree.hh`](include/binaryTree.hh)(braced-initializer-list)¡£
-    - ²Î¿¼£º[List initialization (since C++11)](https://en.cppreference.com/w/cpp/language/list_initialization)
-7. ¶à¼ÓÀ¨ºÅÒÔ±ÜÃâÓÅÏÈ¼¶ÎÊÌâ¡£ÀıÈçÓÅÏÈ¼¶ `&&` > `||`£¬ÔÚg++±àÒëÑ¡Ïî¿ªÆô[`-Wextra`](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#Warning-Options)Ê±£¬¿ÉÄÜ³öÏÖ `warning: suggest parentheses around '&&' within '||'`¡£Ïê¼ûgcc¹Ù·½ÎÄµµ£º[`-Wparentheses`](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#Warning-Options)
-8. ¶ş²æÊ÷±éÀúµÄ·Çµİ¹éÊµÏÖÊÇ[ÓÃ¶ÑÕ»Ïû³ıµİ¹éµÄÒ»°ã·½·¨](https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and)µÄ¼ò»¯Çé¿ö¡£½Ì²Ä¸ø³öµÄ·½·¨¿ÉÊÓ×÷Ò»°ã·½·¨µÄ¼òµ¥Çé¿ö£¬ÓÚÊÇ´Ë·½·¨Í³Ò»ÁË½Ì²Ä¸ø³öµÄµİ¹éÏû³ı·½°¸¡£ÓÃÓÚ[`binaryTree.hh`](include/binaryTree.hh)
-   - Á¬Ğøµİ¹éµ÷ÓÃ£¬¿É¹éÎªÒ»¸östage£¬°´·´ĞòÒ»´ÎĞÔ½øÕ»¡£
-   - ÓĞÏŞ´ÎÁ¬Ğøtail recursions²»±Ø·Östage£¬Ö±½Ó°´·´Ğò½øÕ»¼´¿É
+1. ä»ç»å¯¹è·¯å¾„è§£ææ–‡ä»¶æ‰€åœ¨ç›®å½•ï¼š[`find_last_of`](http://www.cplusplus.com/reference/string/string/find_last_of/)ï¼Œç”¨äº[`test0.cc`](src/test0.cc)
+2. ç”¨`C/C++`è°ƒç”¨`DOS`å‘½ä»¤åˆ é™¤æ–‡ä»¶ï¼Œç”¨äº[`test0.hh`](include/test0.hh)
+3. Returns the processor time consumed by the programï¼š[`clock`](http://www.cplusplus.com/reference/ctime/clock/)ï¼Œç”¨äº[`test0.hh`](include/test0.hh)
+4. è·å–å½“å‰æ—¶é—´ï¼š[`localtime`](http://www.cplusplus.com/reference/ctime/localtime/)ï¼Œç”¨äº[`test0.hh`](include/test0.hh)
+5. [ç”¨å †æ ˆæ¶ˆé™¤é€’å½’çš„ä¸€èˆ¬æ–¹æ³•](https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and)ï¼Œç”¨äº[`binaryTree.hh`](include/binaryTree.hh)
+6. ä¸è¦ç±»å†…åˆå§‹åŒ–`struct`çš„æˆå‘˜ï¼å¦åˆ™æ— æ³•ä½¿ç”¨[åˆ—è¡¨åˆå§‹åŒ–](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/#braced-initializer-list)ï¼Œé™¤éå®šä¹‰æ„é€ å‡½æ•°ã€‚ç”¨äº[`binaryTree.hh`](include/binaryTree.hh)(braced-initializer-list)ã€‚
+    - å‚è€ƒï¼š[List initialization (since C++11)](https://en.cppreference.com/w/cpp/language/list_initialization)
+7. å¤šåŠ æ‹¬å·ä»¥é¿å…ä¼˜å…ˆçº§é—®é¢˜ã€‚ä¾‹å¦‚ä¼˜å…ˆçº§ `&&` > `||`ï¼Œåœ¨g++ç¼–è¯‘é€‰é¡¹å¼€å¯[`-Wextra`](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#Warning-Options)æ—¶ï¼Œå¯èƒ½å‡ºç° `warning: suggest parentheses around '&&' within '||'`ã€‚è¯¦è§gccå®˜æ–¹æ–‡æ¡£ï¼š[`-Wparentheses`](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#Warning-Options)
+8. äºŒå‰æ ‘éå†çš„éé€’å½’å®ç°æ˜¯[ç”¨å †æ ˆæ¶ˆé™¤é€’å½’çš„ä¸€èˆ¬æ–¹æ³•](https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and)çš„ç®€åŒ–æƒ…å†µã€‚æ•™æç»™å‡ºçš„æ–¹æ³•å¯è§†ä½œä¸€èˆ¬æ–¹æ³•çš„ç®€å•æƒ…å†µï¼Œäºæ˜¯æ­¤æ–¹æ³•ç»Ÿä¸€äº†æ•™æç»™å‡ºçš„é€’å½’æ¶ˆé™¤æ–¹æ¡ˆã€‚ç”¨äº[`binaryTree.hh`](include/binaryTree.hh)
+   - è¿ç»­é€’å½’è°ƒç”¨ï¼Œå¯å½’ä¸ºä¸€ä¸ªstageï¼ŒæŒ‰ååºä¸€æ¬¡æ€§è¿›æ ˆã€‚
+   - æœ‰é™æ¬¡è¿ç»­tail recursionsä¸å¿…åˆ†stageï¼Œç›´æ¥æŒ‰ååºè¿›æ ˆå³å¯
 
-9. ÀàµÄ·Ç¾²Ì¬Êı¾İ³ÉÔ±²»ÄÜ×÷³ÉÔ±º¯ÊıµÄÄ¬ÈÏÊµ²Î£º[Ô­Òò](https://www.zhihu.com/question/39643639)¡£
-10. º¯ÊıÄ£°åµÄÌØ¶¨ÊµÀı×÷ÀàÄ£°åµÄÌØ¶¨ÊµÀıµÄÓÑÔª£ºÀàÄ£°åÄÚµÄÓÑÔªÉùÃ÷ÊÇ·ñ¿ÉÊ¡ÂÔÄ£°åÊµ²Î£¿[binaryTree.hh](include/binaryTree.hh)
-    - ½áÂÛ£º¿ÉÒÔ¡£ÀàÄ£°å¶¨ÒåÄÚ£¬ÀàÄ£°åÃûÒıÓÃ´¦µÄÄ£°åÊµ²ÎÄ¬ÈÏÍ¬Àà¶¨ÒåÊ¹ÓÃµÄÄ£°åÊµ²Î¡£ÀıÈç£º
+9. ç±»çš„éé™æ€æ•°æ®æˆå‘˜ä¸èƒ½ä½œæˆå‘˜å‡½æ•°çš„é»˜è®¤å®å‚ï¼š[åŸå› ](https://www.zhihu.com/question/39643639)ã€‚
+10. å‡½æ•°æ¨¡æ¿çš„ç‰¹å®šå®ä¾‹ä½œç±»æ¨¡æ¿çš„ç‰¹å®šå®ä¾‹çš„å‹å…ƒï¼šç±»æ¨¡æ¿å†…çš„å‹å…ƒå£°æ˜æ˜¯å¦å¯çœç•¥æ¨¡æ¿å®å‚ï¼Ÿ[binaryTree.hh](include/binaryTree.hh)
+    - ç»“è®ºï¼šå¯ä»¥ã€‚ç±»æ¨¡æ¿å®šä¹‰å†…ï¼Œç±»æ¨¡æ¿åå¼•ç”¨å¤„çš„æ¨¡æ¿å®å‚é»˜è®¤åŒç±»å®šä¹‰ä½¿ç”¨çš„æ¨¡æ¿å®å‚ã€‚ä¾‹å¦‚ï¼š
 
     ```cpp
     friend bool operator==</*T, Comparator*/>(const binaryTree /*<T, Comparator>*/ &lhs, const binaryTree /*<T, Comparator>*/ &rhs);
     friend void printBinaryTree</*T, Comparator*/>(const binaryTree /*<T, Comparator>*/ &bin_tree, const typename binaryTree /*<T, Comparator>*/ ::value_type &flag, std::ostream &out);
     ```
 
-11. ÀàµÄ¿½±´/ÒÆ¶¯¹¹Ôì/¸³ÖµÔËËã·ûÖØÔØº¯Êı
-    - ²Î¿¼1£º[C++·ç¸ñÖ¸ÄÏ¡ª¡ª¿É¿½±´ÀàĞÍºÍ¿ÉÒÆ¶¯ÀàĞÍ](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/#copyable-and-movable-types)
-    - ²Î¿¼2£º[C++Éè¼ÆÄ£Ê½¡ª¡ªÔ­ĞÍÄ£Ê½](https://blog.csdn.net/cabinriver/article/details/8895372?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2)
-12. ¹ØÓÚÀàµÄÇ°ÏòÉùÃ÷
-    ºËĞÄÊÇ´Ó±àÒëÆ÷µÄ½Ç¶ÈË¼¿¼£ºË³Ğò±àÒëµ½´ËÌõÓï¾äÊ±£¬ÊÇ·ñÓĞ×ã¹»µÄĞÅÏ¢Íê³É±àÒë£¿
-    ²Î¿¼×ÊÁÏ£º
+11. ç±»çš„æ‹·è´/ç§»åŠ¨æ„é€ /èµ‹å€¼è¿ç®—ç¬¦é‡è½½å‡½æ•°
+    - å‚è€ƒ1ï¼š[C++é£æ ¼æŒ‡å—â€”â€”å¯æ‹·è´ç±»å‹å’Œå¯ç§»åŠ¨ç±»å‹](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/#copyable-and-movable-types)
+    - å‚è€ƒ2ï¼š[C++è®¾è®¡æ¨¡å¼â€”â€”åŸå‹æ¨¡å¼](https://blog.csdn.net/cabinriver/article/details/8895372?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2)
+12. å…³äºç±»çš„å‰å‘å£°æ˜
+    æ ¸å¿ƒæ˜¯ä»ç¼–è¯‘å™¨çš„è§’åº¦æ€è€ƒï¼šé¡ºåºç¼–è¯‘åˆ°æ­¤æ¡è¯­å¥æ—¶ï¼Œæ˜¯å¦æœ‰è¶³å¤Ÿçš„ä¿¡æ¯å®Œæˆç¼–è¯‘ï¼Ÿ
+    å‚è€ƒèµ„æ–™ï¼š
     - [When can I use a forward declaration?](https://stackoverflow.com/questions/553682/when-can-i-use-a-forward-declaration)
     - [Forward declaration with friend function: invalid use of incomplete type](https://stackoverflow.com/questions/3183710/forward-declaration-with-friend-function-invalid-use-of-incomplete-type?noredirect=1)
-13. `std::move()`µÄºó¹û£ºÊµ²Î±äÓÒÖµ£¬Óï¾äÖ´ĞĞÍê±Ïºó±»Îö¹¹£¬±ä³É**¹ıÆÚ¶ÔÏó**¡£
-    - [¹ØÓÚÁ½ÖÖ¹¹ÔìºÍÁ½ÖÖ¸³ÖµµÄ¼òµ¥²âÊÔ](src/ch6_6.cc)£º±»ÒÆ¶¯µÄ¶ş²æÊ÷±ä³É¿Õ¶ş²æÊ÷£¬ÕâÕıÊÇ[Îö¹¹º¯Êı](include/binaryTree.hh)¶¨ÒåµÄĞĞÎª¡£¹ıÆÚ¶ÔÏóÈÔ¿É·ÃÎÊ£¬»¹¿É±»ÒÆ¶¯¸³Öµ¡£ÒÉÎÊ£ºÎö¹¹º¯ÊıÊÇ·ñ»áÊÍ·Å×Ô¶¯³ÉÔ±£¿Àı[`BinNode *root_`](include/binaryTree.hh)
+13. `std::move()`çš„åæœï¼šå®å‚å˜å³å€¼ï¼Œè¯­å¥æ‰§è¡Œå®Œæ¯•åè¢«ææ„ï¼Œå˜æˆ**è¿‡æœŸå¯¹è±¡**ã€‚
+    - [å…³äºä¸¤ç§æ„é€ å’Œä¸¤ç§èµ‹å€¼çš„ç®€å•æµ‹è¯•](src/ch6_6.cc)ï¼šè¢«ç§»åŠ¨çš„äºŒå‰æ ‘å˜æˆç©ºäºŒå‰æ ‘ï¼Œè¿™æ­£æ˜¯[ææ„å‡½æ•°](include/binaryTree.hh)å®šä¹‰çš„è¡Œä¸ºã€‚è¿‡æœŸå¯¹è±¡ä»å¯è®¿é—®ï¼Œè¿˜å¯è¢«ç§»åŠ¨èµ‹å€¼ã€‚ç–‘é—®ï¼šææ„å‡½æ•°æ˜¯å¦ä¼šé‡Šæ”¾è‡ªåŠ¨æˆå‘˜ï¼Ÿä¾‹[`BinNode *root_`](include/binaryTree.hh)
 
 ## Contact me
 
-- Author: Guorui Wei (Î£ ¹úÈñ)
+- Author: Guorui Wei (å± å›½é”)
 - E-mail: 313017602@qq.com

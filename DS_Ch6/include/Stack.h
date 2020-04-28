@@ -1,7 +1,7 @@
 /****************************************************
  * @file Stack.h
  * @author Guorui Wei (313017602@qq.com)
- * @brief Õ»µÄ³éÏóÀà
+ * @brief æ ˆçš„æŠ½è±¡ç±»
  * @version 0.1
  * @date 2020-04-05
  * 
@@ -25,10 +25,10 @@ template <class T>
 class Stack
 {
 public:
-    virtual bool isEmpty() const = 0;     // ÅÐÕ»¿Õ
-    virtual void push(const T &elem) = 0; // ½øÕ»
-    virtual T pop() = 0;                  // ³öÕ»
-    virtual T top() const = 0;            // ¶ÁÕ»¶¥ÔªËØ
+    virtual bool isEmpty() const = 0;     // åˆ¤æ ˆç©º
+    virtual void push(const T &elem) = 0; // è¿›æ ˆ
+    virtual T pop() = 0;                  // å‡ºæ ˆ
+    virtual T top() const = 0;            // è¯»æ ˆé¡¶å…ƒç´ 
     virtual ~Stack() = default;
 };
 

@@ -1,7 +1,7 @@
 /****************************************************
  * @file vecQueue.hh
  * @author Guorui Wei (313017602@qq.com)
- * @brief ¶ÓÍ·Î»ÖÃ¹Ì¶¨µÄË³Ğò¶ÓÁĞµÄ¶¨ÒåºÍÊµÏÖ
+ * @brief é˜Ÿå¤´ä½ç½®å›ºå®šçš„é¡ºåºé˜Ÿåˆ—çš„å®šä¹‰å’Œå®ç°
  * @version 0.1
  * @date 2020-04-06
  * 
@@ -19,54 +19,54 @@
 #include <utility>
 
 /**
- * @brief ×Ô¶¨ÒåµÄ¶ÓÁĞÀà¶¼ÔÚQueueÃû×Ö¿Õ¼äÏÂ(vecQueue.hh)
+ * @brief è‡ªå®šä¹‰çš„é˜Ÿåˆ—ç±»éƒ½åœ¨Queueåå­—ç©ºé—´ä¸‹(vecQueue.hh)
  * 
  */
 namespace Queue
 {
 
 /**
- * @brief ¶ÓÍ·Î»ÖÃ¹Ì¶¨µÄ¶ÓÁĞÀà
+ * @brief é˜Ÿå¤´ä½ç½®å›ºå®šçš„é˜Ÿåˆ—ç±»
  * 
- * @tparam T Êı¾İµÄÀàĞÍ
+ * @tparam T æ•°æ®çš„ç±»å‹
  */
 template <typename T>
 class vecQueue : public Queue<T>
 {
 public:
     /**
-     * @brief ÀàĞÍ±ğÃû¶¨Òå
+     * @brief ç±»å‹åˆ«åå®šä¹‰
      * 
-     * @note ²âÊÔ£ºÄÜ·ñ´Ó»ùÀà¼Ì³Ğ
+     * @note æµ‹è¯•ï¼šèƒ½å¦ä»åŸºç±»ç»§æ‰¿
      * 
      */
-    typedef T value_type;                      ///< Êı¾İÀàĞÍ
-    typedef value_type &reference;             ///< Êı¾İµÄÒıÓÃ
-    typedef const value_type &const_reference; ///< Êı¾İµÄ³£Á¿ÒıÓÃ
-    typedef size_t size_type;                  ///< ¼ÆÊıÆ÷ÀàĞÍ
+    typedef T value_type;                      ///< æ•°æ®ç±»å‹
+    typedef value_type &reference;             ///< æ•°æ®çš„å¼•ç”¨
+    typedef const value_type &const_reference; ///< æ•°æ®çš„å¸¸é‡å¼•ç”¨
+    typedef size_t size_type;                  ///< è®¡æ•°å™¨ç±»å‹
 private:
     /**
-     * @brief ÄÚ²¿Êı×éµÄ¹æÄ£
+     * @brief å†…éƒ¨æ•°ç»„çš„è§„æ¨¡
      * 
      */
     size_type _maxSize;
 
     /**
-     * @brief ´æ´¢¶ÓÁĞµÄ¶¯Ì¬Êı×é
+     * @brief å­˜å‚¨é˜Ÿåˆ—çš„åŠ¨æ€æ•°ç»„
      * 
      */
     value_type *_data;
 
     /**
-     * @brief ¶ÓÎ²ÏÂ±ê
+     * @brief é˜Ÿå°¾ä¸‹æ ‡
      * 
-     * @note ¶ÓÍ·ÏÂ±ê¹Ì¶¨Îª0, Êı¾İ·¶Î§[0, _rear)
+     * @note é˜Ÿå¤´ä¸‹æ ‡å›ºå®šä¸º0, æ•°æ®èŒƒå›´[0, _rear)
      * 
      */
     size_type _rear;
 
     /**
-     * @brief À©´óÊı×é¿Õ¼ä
+     * @brief æ‰©å¤§æ•°ç»„ç©ºé—´
      * 
      */
     void doubleSpace();
@@ -75,7 +75,7 @@ public:
     /**
      * @brief Construct a new vec Queue object
      * 
-     * @param initSize ¶ÓÁĞ³õÊ¼ÈİÁ¿
+     * @param initSize é˜Ÿåˆ—åˆå§‹å®¹é‡
      */
     vecQueue(size_type initSize = 10);
 
@@ -86,10 +86,10 @@ public:
     virtual ~vecQueue();
 
     /**
-     * @brief ÅĞ¶Ó¿Õ
+     * @brief åˆ¤é˜Ÿç©º
      * 
-     * @return true ¶Ó¿Õ
-     * @return false ¶Ó·Ç¿Õ
+     * @return true é˜Ÿç©º
+     * @return false é˜Ÿéç©º
      */
     virtual bool isEmpty() const
     {
@@ -97,9 +97,9 @@ public:
     }
 
     /**
-     * @brief Èë¶ÓÒ»¸öÔªËØ
+     * @brief å…¥é˜Ÿä¸€ä¸ªå…ƒç´ 
      * 
-     * @param x ÔªËØµÄÊı¾İ
+     * @param x å…ƒç´ çš„æ•°æ®
      */
     virtual void enQueue(const_reference &x)
     {
@@ -107,9 +107,9 @@ public:
     }
 
     /**
-     * @brief ³ö¶ÓÒ»¸öÔªËØ
+     * @brief å‡ºé˜Ÿä¸€ä¸ªå…ƒç´ 
      * 
-     * @return value_type ³ö¶ÓÔªËØµÄÖµ
+     * @return value_type å‡ºé˜Ÿå…ƒç´ çš„å€¼
      */
     virtual value_type deQueue()
     {
@@ -121,7 +121,7 @@ public:
     /**
      * @brief Get the Head object
      * 
-     * @return value_type ¶ÓÊ×ÔªËØµÄÖµ
+     * @return value_type é˜Ÿé¦–å…ƒç´ çš„å€¼
      */
     virtual value_type getHead() const
     {
@@ -146,28 +146,28 @@ public:
     /**
      * @brief Returns a reference to the next element in the queue.
      * 
-     * @return reference& ¶ÓÊ×ÔªËØµÄÒıÓÃ
+     * @return reference& é˜Ÿé¦–å…ƒç´ çš„å¼•ç”¨
      */
     reference &front();
 
     /**
      * @brief Returns a reference to the next element in the queue.
      * 
-     * @return const_reference& ¶ÓÊ×ÔªËØµÄ³£Á¿ÒıÓÃ
+     * @return const_reference& é˜Ÿé¦–å…ƒç´ çš„å¸¸é‡å¼•ç”¨
      */
     const_reference &front() const;
 
     /**
      * @brief Returns a reference to the last element in the queue.
      * 
-     * @return reference& ¶ÓÎ²ÔªËØµÄÒıÓÃ
+     * @return reference& é˜Ÿå°¾å…ƒç´ çš„å¼•ç”¨
      */
     reference &back();
 
     /**
      * @brief Returns a reference to the last element in the queue.
      * 
-     * @return const_reference& ¶ÓÎ²ÔªËØµÄ³£Á¿ÒıÓÃ
+     * @return const_reference& é˜Ÿå°¾å…ƒç´ çš„å¸¸é‡å¼•ç”¨
      */
     const_reference &back() const;
 
@@ -175,7 +175,7 @@ public:
      * @brief Inserts a new element at the end of the queue, 
      * after its current last element.
      * 
-     * @param val Êı¾İµÄÖµ
+     * @param val æ•°æ®çš„å€¼
      */
     void push(const value_type &val);
 
@@ -183,7 +183,7 @@ public:
      * @brief Inserts a new element at the end of the queue, 
      * after its current last element.
      * 
-     * @param val Êı¾İµÄÖµ
+     * @param val æ•°æ®çš„å€¼
      */
     void push(value_type &&val);
 

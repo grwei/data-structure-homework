@@ -1,10 +1,10 @@
 /****************************************************
  * @file test0.cc
  * @author Guorui Wei (313017602@qq.com)
- * @brief ¶ş²æÁ´±íÊµÏÖµÄ¶ş²æÊ÷Àà(binaryTree)µÄ»ù±¾¹¦ÄÜ²âÊÔ
+ * @brief äºŒå‰é“¾è¡¨å®ç°çš„äºŒå‰æ ‘ç±»(binaryTree)çš„åŸºæœ¬åŠŸèƒ½æµ‹è¯•
  * @version 0.1
  * @date 2020-04-19
- * @note ¶ÁÈ¡ÎÄ¼şÂ·¾¶£¬²Î¿¼£ºhttp://www.cplusplus.com/reference/string/string/find_last_of/
+ * @note è¯»å–æ–‡ä»¶è·¯å¾„ï¼Œå‚è€ƒï¼šhttp://www.cplusplus.com/reference/string/string/find_last_of/
  * 
  * @copyright Copyright (c) 2020
  * 
@@ -21,13 +21,13 @@
 #include "test0.hh"
 
 /**
- * @brief ¶ş²æÁ´±íÊµÏÖµÄ¶ş²æÊ÷Àà(binaryTree)µÄ²âÊÔÀı³Ì
+ * @brief äºŒå‰é“¾è¡¨å®ç°çš„äºŒå‰æ ‘ç±»(binaryTree)çš„æµ‹è¯•ä¾‹ç¨‹
  * 
- * @param argc ÃüÁîĞĞ²ÎÊıµÄÊıÄ¿
- * @param argv ÃüÁîĞĞ²ÎÊıµÄÄÚÈİ
- * @return int 0-Õı³£
- * @warning ÒªÇó.exe¶ÔÆäËùÔÚµÄÄ¿Â¼ÓĞ¶ÁĞ´È¨ÏŞ
- * @details ²¿·Ö²âÊÔ½á¹û½«Êä³öµ½Ò»¸öÎÄ±¾ÎÄµµÖĞ
+ * @param argc å‘½ä»¤è¡Œå‚æ•°çš„æ•°ç›®
+ * @param argv å‘½ä»¤è¡Œå‚æ•°çš„å†…å®¹
+ * @return int 0-æ­£å¸¸
+ * @warning è¦æ±‚.exeå¯¹å…¶æ‰€åœ¨çš„ç›®å½•æœ‰è¯»å†™æƒé™
+ * @details éƒ¨åˆ†æµ‹è¯•ç»“æœå°†è¾“å‡ºåˆ°ä¸€ä¸ªæ–‡æœ¬æ–‡æ¡£ä¸­
  * 
  * @note Reference
  * -# http://www.cplusplus.com/reference/string/string/find_last_of/
@@ -41,47 +41,47 @@ int main(int argc, char const *argv[])
     time_t rawtime;
     struct tm *timeinfo;
 
-    // »ñÈ¡ÎÄ¼şÂ·¾¶£¬²Î¿¼£ºhttp://www.cplusplus.com/reference/string/string/find_last_of/
+    // è·å–æ–‡ä»¶è·¯å¾„ï¼Œå‚è€ƒï¼šhttp://www.cplusplus.com/reference/string/string/find_last_of/
     const std::string full_path_exec{argv[0]};
     std::string::size_type found = full_path_exec.find_last_of("/\\", std::string::npos);
     const std::string exec_path = full_path_exec.substr(0, found);
     const std::string exec_filename = full_path_exec.substr(found + 1, std::string::npos);
     const std::string data_file_name("\\test0.result");
 
-    // ±ß½ç²âÊÔ£º½öÓĞ¸ù½áµãµÄÊ÷
+    // è¾¹ç•Œæµ‹è¯•ï¼šä»…æœ‰æ ¹ç»“ç‚¹çš„æ ‘
     Tree::binaryTree<std::string> binary_tree{"r"};
     binary_tree.delLeft("r");
     binary_tree.delRight("r");
 
     Tree::print_test_result(binary_tree, "@", std::cout);
 
-    // Éú³ÉÊı¾İÎÄ¼ş£¬È»ºó´ÓÎÄ¼şÖĞ¶ÁÈ¡Êı¾İ£¬ÒÀ´Ë½¨Á¢Ò»¿Ã¶ş²æÊ÷
-    std::string data_file_full_path{exec_path + data_file_name}; // Êı¾İÎÄ¼şµÄ¾ø¶ÔµØÖ·
+    // ç”Ÿæˆæ•°æ®æ–‡ä»¶ï¼Œç„¶åä»æ–‡ä»¶ä¸­è¯»å–æ•°æ®ï¼Œä¾æ­¤å»ºç«‹ä¸€æ£µäºŒå‰æ ‘
+    std::string data_file_full_path{exec_path + data_file_name}; // æ•°æ®æ–‡ä»¶çš„ç»å¯¹åœ°å€
 
-    // Éú³ÉÊı¾İÎÄ¼ş
+    // ç”Ÿæˆæ•°æ®æ–‡ä»¶
     if (!Tree::GenTreeData(data_file_full_path.c_str(), "@"))
     {
-        std::cout << "ÎÄ¼ş£º" << data_file_full_path << "Éú³ÉÊ§°Ü£¡\n";
+        std::cout << "æ–‡ä»¶ï¼š" << data_file_full_path << "ç”Ÿæˆå¤±è´¥ï¼\n";
         return 1;
     }
 
-    // ¶ÁÊı¾İÎÄ¼ş
+    // è¯»æ•°æ®æ–‡ä»¶
     std::ifstream fin(data_file_full_path.c_str(), std::ios_base::in);
     if (fin.fail())
     {
-        std::cout << "ÎÄ¼ş£º" << data_file_full_path << "¶ÁÈ¡Ê§°Ü£¡\n";
+        std::cout << "æ–‡ä»¶ï¼š" << data_file_full_path << "è¯»å–å¤±è´¥ï¼\n";
         return 1;
     }
 
-    // ½¨Á¢¶ş²æÊ÷
+    // å»ºç«‹äºŒå‰æ ‘
     binary_tree.createTree("@", fin);
     fin.close();
 
-    // ×¼±¸½«½á¹ûĞ´ÈëÊı¾İÎÄ¼ş
+    // å‡†å¤‡å°†ç»“æœå†™å…¥æ•°æ®æ–‡ä»¶
     std::ofstream fout(data_file_full_path.c_str(), std::ios_base::app);
     if (fout.fail())
     {
-        std::cerr << "ÎÄ¼ş£º" << data_file_full_path << "Ğ´ÈëÊ§°Ü£¡\n";
+        std::cerr << "æ–‡ä»¶ï¼š" << data_file_full_path << "å†™å…¥å¤±è´¥ï¼\n";
         return 1;
     }
 
@@ -99,9 +99,9 @@ int main(int argc, char const *argv[])
     binary_tree.delRight("C");
     binary_tree.delLeft("C");
 
-    std::cout << "\n¼ôÖ¦ºó£º\n";
+    std::cout << "\nå‰ªæåï¼š\n";
     Tree::print_test_result(binary_tree, "@", std::cout);
-    fout << "\n¼ôÖ¦ºó£º\n";
+    fout << "\nå‰ªæåï¼š\n";
     Tree::print_test_result(binary_tree, "@", fout);
 
     t = clock() - t;

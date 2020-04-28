@@ -1,7 +1,7 @@
 /****************************************************
  * @file linkStack.hpp
  * @author Guorui Wei (313017602@qq.com)
- * @brief Ë³ĞòÕ»Àà
+ * @brief é¡ºåºæ ˆç±»
  * @version 0.1
  * @date 2020-04-05
  * 
@@ -37,16 +37,16 @@ private:
         ~node() = default;
     };
 
-    node *top_p; // Ö¸ÏòÕ»¶¥½áµã
+    node *top_p; // æŒ‡å‘æ ˆé¡¶ç»“ç‚¹
 
 public:
     linkStack();
-    linkStack(std::initializer_list<T> &&il); // Ö§³ÖÁĞ±í³õÊ¼»¯
-    virtual bool isEmpty() const;             // ÅĞÕ»¿Õ
-    virtual void push(const T &elem);         // ½øÕ»
-    virtual void push(T &&elem);              // ½øÕ»(move)
-    virtual T pop();                          // ³öÕ»
-    virtual T top() const;                    // ¶ÁÕ»¶¥ÔªËØ
+    linkStack(std::initializer_list<T> &&il); // æ”¯æŒåˆ—è¡¨åˆå§‹åŒ–
+    virtual bool isEmpty() const;             // åˆ¤æ ˆç©º
+    virtual void push(const T &elem);         // è¿›æ ˆ
+    virtual void push(T &&elem);              // è¿›æ ˆ(move)
+    virtual T pop();                          // å‡ºæ ˆ
+    virtual T top() const;                    // è¯»æ ˆé¡¶å…ƒç´ 
     virtual ~linkStack();
 };
 

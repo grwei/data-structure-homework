@@ -21,13 +21,13 @@ IF EXIST %rootPath%%binFolder% (
 )
 
 :: How to write the following into a for /D ?
-g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
-g++ ./src/ch6_1.cc -o ./bin/ch6_1.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
-g++ ./src/ch6_2.cc -o ./bin/ch6_2.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
-g++ ./src/ch6_3.cc -o ./bin/ch6_3.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
-g++ ./src/ch6_4.cc -o ./bin/ch6_4.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
-g++ ./src/ch6_5.cc -o ./bin/ch6_5.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
-g++ ./src/ch6_6.cc -o ./bin/ch6_6.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
+g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
+g++ ./src/ch6_1.cc -o ./bin/ch6_1.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
+g++ ./src/ch6_2.cc -o ./bin/ch6_2.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
+g++ ./src/ch6_3.cc -o ./bin/ch6_3.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
+g++ ./src/ch6_4.cc -o ./bin/ch6_4.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
+g++ ./src/ch6_5.cc -o ./bin/ch6_5.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
+g++ ./src/ch6_6.cc -o ./bin/ch6_6.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
 
 FOR /R %rootPath%%binFolder% %%i IN (*.exe) DO (
     %%i

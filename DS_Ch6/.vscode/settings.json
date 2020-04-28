@@ -70,7 +70,7 @@
         "cstring": "cpp",
         "ctime": "cpp"
     },
-    "files.encoding": "gbk",
+    "files.encoding": "utf8",
     "doxygen_runner.doxygen_command": "D:\\Program Files\\doxygen\\bin\\doxygen.exe",
     "editor.formatOnSave": true,
 }

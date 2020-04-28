@@ -1,7 +1,7 @@
 /****************************************************
  * @file seqStack.hxx
  * @author Guorui Wei (313017602@qq.com)
- * @brief Ë³ĞòÕ»ÀàµÄ¶¨ÒåºÍÊµÏÖ
+ * @brief é¡ºåºæ ˆç±»çš„å®šä¹‰å’Œå®ç°
  * @version 0.1
  * @date 2020-04-05
  * 
@@ -25,21 +25,21 @@ template <class T>
 class seqStack : public Stack<T>
 {
 private:
-    T *elem;            // Êı×éÃû
-    int top_p;          // Õ»¶¥ÔªËØµÄÏÂ±ê¡£-1±íÊ¾Õ»¿Õ
-    int maxSize;        // Êı×é¹æÄ£
-    void doubleSpace(); // À©Õ¹¿Õ¼ä
+    T *elem;            // æ•°ç»„å
+    int top_p;          // æ ˆé¡¶å…ƒç´ çš„ä¸‹æ ‡ã€‚-1è¡¨ç¤ºæ ˆç©º
+    int maxSize;        // æ•°ç»„è§„æ¨¡
+    void doubleSpace(); // æ‰©å±•ç©ºé—´
 
 public:
     seqStack(int initSize = 10);
-    seqStack(std::initializer_list<T> &&il); // Ö§³ÖÁĞ±í³õÊ¼»¯
-    virtual bool isEmpty() const;            // ÅĞÕ»¿Õ
-    virtual void push(const T &elem);        // ½øÕ»
-    virtual void push(T &&elem);             // ½øÕ»(move)
-    virtual T pop();                         // ³öÕ»
-    virtual T top() const;                   // ¶ÁÕ»¶¥ÔªËØ
+    seqStack(std::initializer_list<T> &&il); // æ”¯æŒåˆ—è¡¨åˆå§‹åŒ–
+    virtual bool isEmpty() const;            // åˆ¤æ ˆç©º
+    virtual void push(const T &elem);        // è¿›æ ˆ
+    virtual void push(T &&elem);             // è¿›æ ˆ(move)
+    virtual T pop();                         // å‡ºæ ˆ
+    virtual T top() const;                   // è¯»æ ˆé¡¶å…ƒç´ 
     int size() const;                        // Returns the number of elements in the stack.
-    int elemMem() const;                     // ·µ»Ø¶¯Ì¬Êı×éµÄ´óĞ¡(Bytes)
+    int elemMem() const;                     // è¿”å›åŠ¨æ€æ•°ç»„çš„å¤§å°(Bytes)
     virtual ~seqStack();
     bool empty() const { return isEmpty(); }
 };

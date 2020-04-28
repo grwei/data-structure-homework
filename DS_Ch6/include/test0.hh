@@ -1,7 +1,7 @@
 /**
  * @file test0.hh
  * @author Guorui Wei (313017602@qq.com)
- * @brief Éú³ÉÒ»¸öÎÄ¼ş£¬ÄÚÈİÊÇÒ»¿Ã¶ş²æÊ÷µÄ²ã´Î±éÀú(deprecated)
+ * @brief ç”Ÿæˆä¸€ä¸ªæ–‡ä»¶ï¼Œå†…å®¹æ˜¯ä¸€æ£µäºŒå‰æ ‘çš„å±‚æ¬¡éå†(deprecated)
  * @version 0.1
  * @date 2020-04-19
  * 
@@ -23,24 +23,24 @@ namespace Tree
 {
 
 /**
- * @brief Éú³ÉÒ»¸öÎÄ¼ş£¬ÄÚÈİÊÇÒ»¿Ã¶ş²æÊ÷µÄ²ã´Î±éÀú
+ * @brief ç”Ÿæˆä¸€ä¸ªæ–‡ä»¶ï¼Œå†…å®¹æ˜¯ä¸€æ£µäºŒå‰æ ‘çš„å±‚æ¬¡éå†
  * 
- * @param _file_path ÎÄ¼şÂ·¾¶
- * @param empty_flag ¿Õ½áµã±ê¼Ç
+ * @param _file_path æ–‡ä»¶è·¯å¾„
+ * @param empty_flag ç©ºç»“ç‚¹æ ‡è®°
  * 
- * @details Ê×ÏÈÑ¯ÎÊÊÇ·ñÉ¾³ıÍ¬ÃûÎÄ¼ş£¨ÈôÓĞ£©¡£
- * È»ºóÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚÇÒ¿É¶Á£¬ÈôÊÇ£¬Ôò²»×öÈÎºÎ²Ù×÷£»
- * Èô·ñ£¬Ôò³¢ÊÔĞÂ½¨ÎÄ¼ş¡£
- * º¯Êı·µ»Øtrue£¬Ö»±£Ö¤ÎÄ¼şfile_path´æÔÚ£¬²»±£Ö¤Æä¿É¶Á¡£
+ * @details é¦–å…ˆè¯¢é—®æ˜¯å¦åˆ é™¤åŒåæ–‡ä»¶ï¼ˆè‹¥æœ‰ï¼‰ã€‚
+ * ç„¶ååˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨ä¸”å¯è¯»ï¼Œè‹¥æ˜¯ï¼Œåˆ™ä¸åšä»»ä½•æ“ä½œï¼›
+ * è‹¥å¦ï¼Œåˆ™å°è¯•æ–°å»ºæ–‡ä»¶ã€‚
+ * å‡½æ•°è¿”å›trueï¼Œåªä¿è¯æ–‡ä»¶file_pathå­˜åœ¨ï¼Œä¸ä¿è¯å…¶å¯è¯»ã€‚
  *
- * @return true ÎÄ¼şÒÑ´æÔÚ£¬»òÉú³É³É¹¦
- * @return false ÎÄ¼şÉú³ÉÊ§°Ü
+ * @return true æ–‡ä»¶å·²å­˜åœ¨ï¼Œæˆ–ç”ŸæˆæˆåŠŸ
+ * @return false æ–‡ä»¶ç”Ÿæˆå¤±è´¥
  */
 static bool GenTreeData(const char *_file_path = "./test0.txt", const char *empty_flag = "@")
 {
     std::string file_path(_file_path);
 
-    // µ÷ÓÃDOSÃüÁî£¬Ñ¯ÎÊÊÇ·ñÉ¾³ıÎÄ¼ş
+    // è°ƒç”¨DOSå‘½ä»¤ï¼Œè¯¢é—®æ˜¯å¦åˆ é™¤æ–‡ä»¶
     std::string cmd = std::string("DEL /P \"") + file_path + '"';
     system("@echo on");
     system("echo We are trying to delete some files, which will be created later.");
@@ -53,22 +53,22 @@ static bool GenTreeData(const char *_file_path = "./test0.txt", const char *empt
     // system(")");
     // system("pause");
 
-    // ¼ì²éÎÄ¼şÊÇ·ñ´æÔÚÇÒ¿É¶Á
+    // æ£€æŸ¥æ–‡ä»¶æ˜¯å¦å­˜åœ¨ä¸”å¯è¯»
     std::ifstream fin(file_path.c_str(), std::ios_base::in);
     if (fin.good())
     {
-        std::cerr << "ÎÄ¼şÒÑ´æÔÚ£¡\n";
+        std::cerr << "æ–‡ä»¶å·²å­˜åœ¨ï¼\n";
         fin.close();
 
         system("pause");
         return true;
     }
 
-    // ÎÄ¼ş²»´æÔÚ»ò²»¿É¶Á£¬³¢ÊÔĞÂ½¨
+    // æ–‡ä»¶ä¸å­˜åœ¨æˆ–ä¸å¯è¯»ï¼Œå°è¯•æ–°å»º
     std::ofstream fout(file_path.c_str(), std::ios_base::out);
     if (fout.fail())
     {
-        std::cerr << "ÎŞĞ´È¨ÏŞ£¬ÎÄ¼şÉú³ÉÊ§°Ü£¡\n";
+        std::cerr << "æ— å†™æƒé™ï¼Œæ–‡ä»¶ç”Ÿæˆå¤±è´¥ï¼\n";
 
         system("pause");
         return false;
@@ -80,7 +80,7 @@ static bool GenTreeData(const char *_file_path = "./test0.txt", const char *empt
          << empty_flag << "\tX\n"
          << empty_flag << '\t' << empty_flag << std::endl;
 
-    // ¼ì²éÊÇ·ñÉú³É³É¹¦
+    // æ£€æŸ¥æ˜¯å¦ç”ŸæˆæˆåŠŸ
     if (fout.good())
     {
         system("echo File created successfully!");
@@ -89,43 +89,43 @@ static bool GenTreeData(const char *_file_path = "./test0.txt", const char *empt
         return true;
     }
 
-    std::cerr << "ÎŞ·¨Éú³ÉÎÄ¼ş£¡\n";
+    std::cerr << "æ— æ³•ç”Ÿæˆæ–‡ä»¶ï¼\n";
     system("pause");
     return false;
 }
 
 /**
- * @brief (²âÊÔÓÃ)½«Ò»¿Ã¶ş²æÊ÷µÄ±éÀú½á¹û²åµ½Êä³öÁ÷
+ * @brief (æµ‹è¯•ç”¨)å°†ä¸€æ£µäºŒå‰æ ‘çš„éå†ç»“æœæ’åˆ°è¾“å‡ºæµ
  * 
- * @tparam T ¶ş²æÊ÷´æ´¢µÄÊı¾İµÄÀàĞÍ
- * @tparam Comparator º¯Êı¶ÔÏó£¬ÓÃÓÚ±È½ÏTÀàĞÍµÄÊı¾İ£ºlhs < rhs
- * ÒªÇóÖØÔØbool operator(const T &lhs, const T &rhs)
- * @param binary_tree ¶ş²æÊ÷ÀàµÄ¶ÔÏó
- * @param flag ÀàTµÄ¶ÔÏó£¬±íÊ¾¿Õ½áµãµÄÌØÊâ±ê¼Ç
- * @param out Êä³öÁ÷¶ÔÏó£¬ÒªÇóÊÇostreamÀà¼°ÆäÅÉÉúÀàµÄ¶ÔÏó£¬Èçstd::cout£¬»òofstreamÀàµÄ¶ÔÏó
+ * @tparam T äºŒå‰æ ‘å­˜å‚¨çš„æ•°æ®çš„ç±»å‹
+ * @tparam Comparator å‡½æ•°å¯¹è±¡ï¼Œç”¨äºæ¯”è¾ƒTç±»å‹çš„æ•°æ®ï¼šlhs < rhs
+ * è¦æ±‚é‡è½½bool operator(const T &lhs, const T &rhs)
+ * @param binary_tree äºŒå‰æ ‘ç±»çš„å¯¹è±¡
+ * @param flag ç±»Tçš„å¯¹è±¡ï¼Œè¡¨ç¤ºç©ºç»“ç‚¹çš„ç‰¹æ®Šæ ‡è®°
+ * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œè¦æ±‚æ˜¯ostreamç±»åŠå…¶æ´¾ç”Ÿç±»çš„å¯¹è±¡ï¼Œå¦‚std::coutï¼Œæˆ–ofstreamç±»çš„å¯¹è±¡
  */
 template <typename T, typename Comparator>
 static void print_test_result(const binaryTree<T, Comparator> &binary_tree, const typename binaryTree<T, Comparator>::value_type &flag, std::ostream &out = std::cout)
 {
-    out << "¶ş²æÊ÷µÄ¹æÄ£(µİ¹é ·Çµİ¹é)£º\n"
+    out << "äºŒå‰æ ‘çš„è§„æ¨¡(é€’å½’ éé€’å½’)ï¼š\n"
         << binary_tree.size() << ' ' << binary_tree.size_loop();
-    out << "\n¶ş²æÊ÷µÄ¸ß(Éî)¶È(µİ¹é ·Çµİ¹é)£¬´Ó0Æğ£º\n"
+    out << "\näºŒå‰æ ‘çš„é«˜(æ·±)åº¦(é€’å½’ éé€’å½’)ï¼Œä»0èµ·ï¼š\n"
         << binary_tree.height() << ' ' << binary_tree.height_loop();
-    out << "\nÇ°Ğò±éÀú(µİ¹é)£º\n";
+    out << "\nå‰åºéå†(é€’å½’)ï¼š\n";
     binary_tree.preOrder(out);
-    out << "\nÇ°Ğò±éÀú(·Çµİ¹é)£º\n";
+    out << "\nå‰åºéå†(éé€’å½’)ï¼š\n";
     binary_tree.preOrder_loop(out);
-    out << "\nÖĞĞò±éÀú(µİ¹é)£º\n";
+    out << "\nä¸­åºéå†(é€’å½’)ï¼š\n";
     binary_tree.inOrder(out);
-    out << "\nÖĞĞò±éÀú(·Çµİ¹é)£º\n";
+    out << "\nä¸­åºéå†(éé€’å½’)ï¼š\n";
     binary_tree.inOrder_loop(out);
-    out << "\nºóĞò±éÀú(µİ¹é)£º\n";
+    out << "\nååºéå†(é€’å½’)ï¼š\n";
     binary_tree.postOrder(out);
-    out << "\nºóĞò±éÀú(·Çµİ¹é)£º\n";
+    out << "\nååºéå†(éé€’å½’)ï¼š\n";
     binary_tree.postOrder_loop(out);
-    out << "\n²ã´Î±éÀú£º\n";
+    out << "\nå±‚æ¬¡éå†ï¼š\n";
     binary_tree.levelOrder(out);
-    out << "\n²ã´Î´òÓ¡(µ÷ÓÃlchild(), rchild(), root()µÈAPI)£º\n";
+    out << "\nå±‚æ¬¡æ‰“å°(è°ƒç”¨lchild(), rchild(), root()ç­‰API)ï¼š\n";
     printBinaryTree(binary_tree, flag, out);
 }
 

@@ -1,7 +1,7 @@
 /****************************************************
  * @file binTree.h
  * @author Guorui Wei (313017602@qq.com)
- * @brief ¶ş²æÊ÷µÄ³éÏóÀà
+ * @brief äºŒå‰æ ‘çš„æŠ½è±¡ç±»
  * @version 0.1
  * @date 2020-04-19
  * 
@@ -23,13 +23,13 @@ class binTree
 {
 public:
     /**
-     * @brief ÀàĞÍ±ğÃû¶¨Òå
+     * @brief ç±»å‹åˆ«åå®šä¹‰
      * 
      */
-    typedef T value_type;                      ///< Êı¾İÀàĞÍ
-    typedef value_type &reference;             ///< Êı¾İµÄÒıÓÃ
-    typedef const value_type &const_reference; ///< Êı¾İµÄ³£Á¿ÒıÓÃ
-    typedef size_t size_type;                  ///< ¼ÆÊıÆ÷ÀàĞÍ
+    typedef T value_type;                      ///< æ•°æ®ç±»å‹
+    typedef value_type &reference;             ///< æ•°æ®çš„å¼•ç”¨
+    typedef const value_type &const_reference; ///< æ•°æ®çš„å¸¸é‡å¼•ç”¨
+    typedef size_t size_type;                  ///< è®¡æ•°å™¨ç±»å‹
 
 public:
     virtual void clear() = 0;

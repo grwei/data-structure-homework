@@ -1,7 +1,7 @@
 /****************************************************
  * @file Queue.h
  * @author Guorui Wei (313017602@qq.com)
- * @brief ¶ÓÁĞµÄ³éÏóÀà
+ * @brief é˜Ÿåˆ—çš„æŠ½è±¡ç±»
  * @version 0.1
  * @date 2020-04-05
  * 
@@ -18,59 +18,59 @@
 #include <cstddef>
 
 /**
- * @brief ×Ô¶¨ÒåµÄ¶ÓÁĞÀà¶¼ÔÚQueueÃû×Ö¿Õ¼äÏÂ(Queue.h)
+ * @brief è‡ªå®šä¹‰çš„é˜Ÿåˆ—ç±»éƒ½åœ¨Queueåå­—ç©ºé—´ä¸‹(Queue.h)
  * 
  */
 namespace Queue
 {
 
 /**
- * @brief ¶ÓÁĞµÄ³éÏóÀà
+ * @brief é˜Ÿåˆ—çš„æŠ½è±¡ç±»
  * 
- * @tparam T Êı¾İµÄÀàĞÍ
+ * @tparam T æ•°æ®çš„ç±»å‹
  */
 template <typename T>
 class Queue
 {
 public:
     /**
-     * @brief ÀàĞÍ±ğÃû¶¨Òå
+     * @brief ç±»å‹åˆ«åå®šä¹‰
      * 
-     * @note ²âÊÔ£ºÄÜ·ñ´Ó±»ÅÉÉúÀà¼Ì³Ğ
+     * @note æµ‹è¯•ï¼šèƒ½å¦ä»è¢«æ´¾ç”Ÿç±»ç»§æ‰¿
      * 
      */
-    typedef T value_type;                      ///< Êı¾İÀàĞÍ
-    typedef value_type &reference;             ///< Êı¾İµÄÒıÓÃ
-    typedef const value_type &const_reference; ///< Êı¾İµÄ³£Á¿ÒıÓÃ
-    typedef size_t size_type;                  ///< ¼ÆÊıÆ÷ÀàĞÍ
+    typedef T value_type;                      ///< æ•°æ®ç±»å‹
+    typedef value_type &reference;             ///< æ•°æ®çš„å¼•ç”¨
+    typedef const value_type &const_reference; ///< æ•°æ®çš„å¸¸é‡å¼•ç”¨
+    typedef size_t size_type;                  ///< è®¡æ•°å™¨ç±»å‹
 
 public:
     /**
-     * @brief ÅĞ¶Ó¿Õ
+     * @brief åˆ¤é˜Ÿç©º
      * 
-     * @return true ¶Ó¿Õ
-     * @return false ¶Ó·Ç¿Õ
+     * @return true é˜Ÿç©º
+     * @return false é˜Ÿéç©º
      */
     virtual bool isEmpty() const = 0;
 
     /**
-     * @brief Èë¶ÓÒ»¸öÔªËØ
+     * @brief å…¥é˜Ÿä¸€ä¸ªå…ƒç´ 
      * 
-     * @param x Êı¾İµÄÖµ
+     * @param x æ•°æ®çš„å€¼
      */
     virtual void enQueue(const value_type &x) = 0;
 
     /**
-     * @brief ³ö¶ÓÒ»¸öÔªËØ
+     * @brief å‡ºé˜Ÿä¸€ä¸ªå…ƒç´ 
      * 
-     * @return value_type ³ö¶ÓÊı¾İµÄÖµ
+     * @return value_type å‡ºé˜Ÿæ•°æ®çš„å€¼
      */
     virtual value_type deQueue() = 0;
 
     /**
      * @brief Get the Head object
      * 
-     * @return value_type ¶ÓÊ×ÔªËØµÄÖµ
+     * @return value_type é˜Ÿé¦–å…ƒç´ çš„å€¼
      */
     virtual value_type getHead() const = 0;
 
@@ -83,8 +83,8 @@ public:
 
 } // namespace Queue
 
-#include "linkQueue.hh" ///< µ¥Á´±íÊµÏÖµÄ¶ÓÁĞ
-#include "seqQueue.hh"  ///< Ñ­»·¶ÓÁĞ
-#include "vecQueue.hh"  ///< ¶ÓÍ·Î»ÖÃ¹Ì¶¨µÄË³Ğò¶ÓÁĞ
+#include "linkQueue.hh" ///< å•é“¾è¡¨å®ç°çš„é˜Ÿåˆ—
+#include "seqQueue.hh"  ///< å¾ªç¯é˜Ÿåˆ—
+#include "vecQueue.hh"  ///< é˜Ÿå¤´ä½ç½®å›ºå®šçš„é¡ºåºé˜Ÿåˆ—
 
 #endif /* INCLUDE_QUEUE_H_ */

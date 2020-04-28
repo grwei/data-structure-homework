@@ -4,7 +4,7 @@ D	E	F	G
 @	@	@	@	@	@	H	I
 @	@	@	@
 
-Current local time and date: Tue Apr 28 23:01:43 2020
+Current local time and date: Tue Apr 28 23:34:46 2020
 
 二叉树的规模(递归 非递归)：
 9 9
@@ -127,4 +127,4 @@ true
 tree_swaplr_and_prune == tree_swaplr_and_prune?
 true
 
-It took me 383 clicks (0.383 seconds).
+It took me 1920 clicks (1.92 seconds).

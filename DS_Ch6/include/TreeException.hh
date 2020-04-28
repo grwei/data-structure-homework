@@ -1,7 +1,7 @@
 /****************************************************
  * @file TreeException.hh
  * @author Guorui Wei (313017602@qq.com)
- * @brief Ê÷µÄÒì³£Àà
+ * @brief æ ‘çš„å¼‚å¸¸ç±»
  * @version 0.1
  * @date 2020-04-19
  * 

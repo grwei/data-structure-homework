@@ -1,7 +1,7 @@
 /****************************************************
  * @file binaryTree.hh
  * @author Guorui Wei (313017602@qq.com)
- * @brief ¶ş²æÊ÷µÄ¶ş²æÁ´±íÊµÏÖ
+ * @brief äºŒå‰æ ‘çš„äºŒå‰é“¾è¡¨å®ç°
  * @version 0.1
  * @date 2020-04-19
  * 
@@ -27,52 +27,52 @@
 namespace Tree
 {
 /**
- * @brief ÓÃ¶ş²æÁ´±íÊµÏÖµÄ¶ş²æÊ÷Àà
+ * @brief ç”¨äºŒå‰é“¾è¡¨å®ç°çš„äºŒå‰æ ‘ç±»
  * 
- * @tparam T Êı¾İÀàĞÍ
- * @tparam Comparator Êı¾İÀàĞÍµÄ±È½ÏÆ÷Àà£¬Ä¬ÈÏÎªstd::less<T> 
+ * @tparam T æ•°æ®ç±»å‹
+ * @tparam Comparator æ•°æ®ç±»å‹çš„æ¯”è¾ƒå™¨ç±»ï¼Œé»˜è®¤ä¸ºstd::less<T> 
  * 
- * @details ÈôÀàĞÍTÖØÔØÁËoperator<£¬ÔòComparatorµÄÄ¬ÈÏÀàĞÍstd::less<T>½«µ÷ÓÃoperator<£¬¹ÊÊµÀı»¯Ê±²»±ØÖ¸¶¨tparam2£»\n
- * ·ñÔò£¬ÒªÇóÖ¸¶¨Ä£°å²ÎÊıComparator£¬which is a function object, ÖØÔØÁËbool operator(T t1, T t2)£ºµ±ÓïÒåÉÏt1 < t2Ê±·µ»Øtrue¡£
- * @details ÒªÇó¶ÔTÖØÔØÁËoperator<< ºÍ operator>>¡£½¨ÒéÃ¿¸ö¶ÔÏóµÄÊä³öÔÚÒ»ĞĞÒÔÄÚ
- * @warning ÈôÊ÷ÖĞ´æ´¢ÁËdataÏàÍ¬µÄ½áµã£¬ÔòË½ÓĞfind·½·¨µ÷ÓÃ¸Ã·½·¨µÄ¹«ÓĞ·½·¨¿ÉÄÜ³öÏÖÒì³££¡
+ * @details è‹¥ç±»å‹Té‡è½½äº†operator<ï¼Œåˆ™Comparatorçš„é»˜è®¤ç±»å‹std::less<T>å°†è°ƒç”¨operator<ï¼Œæ•…å®ä¾‹åŒ–æ—¶ä¸å¿…æŒ‡å®štparam2ï¼›\n
+ * å¦åˆ™ï¼Œè¦æ±‚æŒ‡å®šæ¨¡æ¿å‚æ•°Comparatorï¼Œwhich is a function object, é‡è½½äº†bool operator(T t1, T t2)ï¼šå½“è¯­ä¹‰ä¸Št1 < t2æ—¶è¿”å›trueã€‚
+ * @details è¦æ±‚å¯¹Té‡è½½äº†operator<< å’Œ operator>>ã€‚å»ºè®®æ¯ä¸ªå¯¹è±¡çš„è¾“å‡ºåœ¨ä¸€è¡Œä»¥å†…
+ * @warning è‹¥æ ‘ä¸­å­˜å‚¨äº†dataç›¸åŒçš„ç»“ç‚¹ï¼Œåˆ™ç§æœ‰findæ–¹æ³•è°ƒç”¨è¯¥æ–¹æ³•çš„å…¬æœ‰æ–¹æ³•å¯èƒ½å‡ºç°å¼‚å¸¸ï¼
  */
 template <typename T, typename Comparator = std::less<T>>
 class binaryTree;
 
 /**
- * @brief Êä³öÒ»¿Ã¶ş²æÊ÷
+ * @brief è¾“å‡ºä¸€æ£µäºŒå‰æ ‘
  * 
- * @tparam T ¶ş²æÊ÷µÄÊı¾İÀàĞÍ
- * @param bin_tree ¶ş²æÊ÷ÀàµÄ¶ÔÏó
- * @param flag ÓÃÓÚ±íÊ¾¿Õ½áµãµÄÌØÊâ±ê¼Ç
- * @param out Êä³öÁ÷¶ÔÏó¡£Ä¬ÈÏÊÇstd::cout£¬Ò²¿ÉÒÔÊÇostreamÀà¼°ÆäÅÉÉúÀàµÄ¶ÔÏó£¬°üÀ¨Êä³öÎÄ¼şÁ÷µÈ¡£
+ * @tparam T äºŒå‰æ ‘çš„æ•°æ®ç±»å‹
+ * @param bin_tree äºŒå‰æ ‘ç±»çš„å¯¹è±¡
+ * @param flag ç”¨äºè¡¨ç¤ºç©ºç»“ç‚¹çš„ç‰¹æ®Šæ ‡è®°
+ * @param out è¾“å‡ºæµå¯¹è±¡ã€‚é»˜è®¤æ˜¯std::coutï¼Œä¹Ÿå¯ä»¥æ˜¯ostreamç±»åŠå…¶æ´¾ç”Ÿç±»çš„å¯¹è±¡ï¼ŒåŒ…æ‹¬è¾“å‡ºæ–‡ä»¶æµç­‰ã€‚
  * 
- * @details °´²ã´ÎË³ĞòÊä³öÃ¿¸ö½áµã¼°Æächildren£¬ÓÃÓÚ²âÊÔ¶ş²æÊ÷ÀàÊµÏÖµÄÕıÈ·ĞÔ¡£
- * ¸Ãº¯Êı¼Ù¶¨Ê÷ÖĞÃ»ÓĞdataÏàÍ¬µÄ½áµã
- * @note ¸Ãº¯ÊıÄ£°å±»ÉùÃ÷ÎªbinaryTree<T>ÀàµÄÓÑÔª½ö×÷²âÊÔÓÃ£¬Êµ¼ÊÉÏ²»±Ø×÷ÓÑÔª¡£\n
- * ÓÃÓÚ²âÊÔ£º
- * -# ¶ş²æÊ÷ÀàÊµÏÖµÄÕıÈ·ĞÔ£¬°üÀ¨lchild£¬rchild£¬rootµÈAPI
- * -# Ä£°å×÷Í¬²ÎÄ£°åµÄÓÑÔª
- * -# Ä£°åº¯ÊıµÄÄ£°åÊµ²ÎµÄÍÆ¶Ï£ºtparam2ÊÇ·ñÄÜÓÉbinaryTreeµÄtparam2µÄÄ¬ÈÏÖµÍÆ¶Ï£¿
- * @deprecated ¸Ãº¯Êı½ö×÷²âÊÔÓÃ£¬½«ÔÚÕıÊ½°æ±¾ÖĞÉ¾³ı¡£
- * @bug bin_treeÖĞ²»ÔÊĞíº¬ÓĞdataÏàÍ¬µÄ½áµã£¬·ñÔò¿ÉÄÜµ¼ÖÂÎŞÏŞÑ­»·£¡
+ * @details æŒ‰å±‚æ¬¡é¡ºåºè¾“å‡ºæ¯ä¸ªç»“ç‚¹åŠå…¶childrenï¼Œç”¨äºæµ‹è¯•äºŒå‰æ ‘ç±»å®ç°çš„æ­£ç¡®æ€§ã€‚
+ * è¯¥å‡½æ•°å‡å®šæ ‘ä¸­æ²¡æœ‰dataç›¸åŒçš„ç»“ç‚¹
+ * @note è¯¥å‡½æ•°æ¨¡æ¿è¢«å£°æ˜ä¸ºbinaryTree<T>ç±»çš„å‹å…ƒä»…ä½œæµ‹è¯•ç”¨ï¼Œå®é™…ä¸Šä¸å¿…ä½œå‹å…ƒã€‚\n
+ * ç”¨äºæµ‹è¯•ï¼š
+ * -# äºŒå‰æ ‘ç±»å®ç°çš„æ­£ç¡®æ€§ï¼ŒåŒ…æ‹¬lchildï¼Œrchildï¼Œrootç­‰API
+ * -# æ¨¡æ¿ä½œåŒå‚æ¨¡æ¿çš„å‹å…ƒ
+ * -# æ¨¡æ¿å‡½æ•°çš„æ¨¡æ¿å®å‚çš„æ¨æ–­ï¼štparam2æ˜¯å¦èƒ½ç”±binaryTreeçš„tparam2çš„é»˜è®¤å€¼æ¨æ–­ï¼Ÿ
+ * @deprecated è¯¥å‡½æ•°ä»…ä½œæµ‹è¯•ç”¨ï¼Œå°†åœ¨æ­£å¼ç‰ˆæœ¬ä¸­åˆ é™¤ã€‚
+ * @bug bin_treeä¸­ä¸å…è®¸å«æœ‰dataç›¸åŒçš„ç»“ç‚¹ï¼Œå¦åˆ™å¯èƒ½å¯¼è‡´æ— é™å¾ªç¯ï¼
  */
 template <class T, typename Comparator>
 void printBinaryTree(const binaryTree<T, Comparator> &bin_tree, const typename binaryTree<T, Comparator>::value_type &flag, std::ostream &out = std::cout);
 
 /**
- * @brief ±È½ÏÁ½¿Ã¶ş²æÊ÷ÊÇ·ñÏàÍ¬
- * "ÏàÍ¬"ÊÇÖ¸£º
- * @tparam T Êı¾İÀàĞÍ
- * @tparam Comparator Êı¾İÀàĞÍµÄ±È½ÏÆ÷Àà£¬Ä¬ÈÏÎªstd::less<T>
- * @note ´Ëº¯ÊıÄ£°åµÄÄ£°åÊµ²ÎÓÉº¯ÊıÊµ²Î±íÍÆ¶Ï£¬ÓÃ»§ÎŞĞèÖ¸¶¨
- * @details ÈôÀàĞÍTÖØÔØÁËoperator<£¬ÔòComparatorµÄÄ¬ÈÏÀàĞÍstd::less<T>½«µ÷ÓÃoperator<£¬¹ÊÊµÀı»¯Ê±²»±ØÖ¸¶¨tparam2£»\n
- * ·ñÔò£¬ÒªÇóÖ¸¶¨Ä£°å²ÎÊıComparator£¬which is a function object, ÖØÔØÁËbool operator(T t1, T t2)£ºµ±ÓïÒåÉÏt1 < t2Ê±·µ»Øtrue¡£
- * @param lhs ¶ş²æÊ÷#1
- * @param rhs ¶ş²æÊ÷#2
- * @return true #1ºÍ#2ÏàÍ¬
- * @return false #1ºÍ#2²»Í¬
+ * @brief æ¯”è¾ƒä¸¤æ£µäºŒå‰æ ‘æ˜¯å¦ç›¸åŒ
+ * "ç›¸åŒ"æ˜¯æŒ‡ï¼š
+ * @tparam T æ•°æ®ç±»å‹
+ * @tparam Comparator æ•°æ®ç±»å‹çš„æ¯”è¾ƒå™¨ç±»ï¼Œé»˜è®¤ä¸ºstd::less<T>
+ * @note æ­¤å‡½æ•°æ¨¡æ¿çš„æ¨¡æ¿å®å‚ç”±å‡½æ•°å®å‚è¡¨æ¨æ–­ï¼Œç”¨æˆ·æ— éœ€æŒ‡å®š
+ * @details è‹¥ç±»å‹Té‡è½½äº†operator<ï¼Œåˆ™Comparatorçš„é»˜è®¤ç±»å‹std::less<T>å°†è°ƒç”¨operator<ï¼Œæ•…å®ä¾‹åŒ–æ—¶ä¸å¿…æŒ‡å®štparam2ï¼›\n
+ * å¦åˆ™ï¼Œè¦æ±‚æŒ‡å®šæ¨¡æ¿å‚æ•°Comparatorï¼Œwhich is a function object, é‡è½½äº†bool operator(T t1, T t2)ï¼šå½“è¯­ä¹‰ä¸Št1 < t2æ—¶è¿”å›trueã€‚
+ * @param lhs äºŒå‰æ ‘#1
+ * @param rhs äºŒå‰æ ‘#2
+ * @return true #1å’Œ#2ç›¸åŒ
+ * @return false #1å’Œ#2ä¸åŒ
  */
 template <class T, typename Comparator>
 bool operator==(const binaryTree<T, Comparator> &lhs, const binaryTree<T, Comparator> &rhs);
@@ -81,51 +81,51 @@ template <typename T, typename Comparator>
 class binaryTree /* : binTree<T> */
 {
     /**
-     * ²»ÄÜÔÚ´ËÉùÃ÷ÏÂÊöÓÑÔª(invalid use of incomplete type)£¬
-     * Ô­Òò£ºÀàµÄÄÚ²¿ÀàĞÍvalue_typeÎ´ÉùÃ÷¡£
-     * Ö»Ğè°ÑÓÑÔªÉùÃ÷ÖÃÓÚtypedefºó¼´¿É
+     * ä¸èƒ½åœ¨æ­¤å£°æ˜ä¸‹è¿°å‹å…ƒ(invalid use of incomplete type)ï¼Œ
+     * åŸå› ï¼šç±»çš„å†…éƒ¨ç±»å‹value_typeæœªå£°æ˜ã€‚
+     * åªéœ€æŠŠå‹å…ƒå£°æ˜ç½®äºtypedefåå³å¯
      */
     // friend void printBinaryTree</*T, Comparator*/>(const binaryTree<T, Comparator> &bin_tree, const typename binaryTree<T, Comparator>::value_type &flag, std::ostream &out);
     friend bool operator==</*T, Comparator*/>(const binaryTree /*<T, Comparator>*/ &lhs, const binaryTree /*<T, Comparator>*/ &rhs);
 
 public:
     /**
-     * @brief ÀàĞÍ±ğÃû¶¨Òå
+     * @brief ç±»å‹åˆ«åå®šä¹‰
      * 
      */
-    typedef T value_type;                      ///< Êı¾İÀàĞÍ
-    typedef value_type &reference;             ///< Êı¾İµÄÒıÓÃ
-    typedef const value_type &const_reference; ///< Êı¾İµÄ³£Á¿ÒıÓÃ
-    typedef size_t size_type;                  ///< ¼ÆÊıÆ÷ÀàĞÍ
+    typedef T value_type;                      ///< æ•°æ®ç±»å‹
+    typedef value_type &reference;             ///< æ•°æ®çš„å¼•ç”¨
+    typedef const value_type &const_reference; ///< æ•°æ®çš„å¸¸é‡å¼•ç”¨
+    typedef size_t size_type;                  ///< è®¡æ•°å™¨ç±»å‹
 
     friend void printBinaryTree</*T, Comparator*/>(const binaryTree /*<T, Comparator>*/ &bin_tree, const typename binaryTree /*<T, Comparator>*/ ::value_type &flag, std::ostream &out);
 
 private:
     /**
-     * @brief ¶ş²æÁ´±íµÄ½áµãÀà
+     * @brief äºŒå‰é“¾è¡¨çš„ç»“ç‚¹ç±»
      * 
      */
     struct BinNode
     {
-        value_type data; ///< Êı¾İ
-        BinNode *left;   ///< Ö¸Ïò×óchild
-        BinNode *right;  ///< Ö¸ÏòÓÒchild
+        value_type data; ///< æ•°æ®
+        BinNode *left;   ///< æŒ‡å‘å·¦child
+        BinNode *right;  ///< æŒ‡å‘å³child
 
         /**
          * @brief Construct a new Bin Node object
          * 
-         * @param _data Êı¾İ
-         * @param _left ×óchildµÄµØÖ·
-         * @param _right ÓÒchildµÄµØÖ·
+         * @param _data æ•°æ®
+         * @param _left å·¦childçš„åœ°å€
+         * @param _right å³childçš„åœ°å€
          */
         explicit BinNode(const value_type &_data = value_type{}, BinNode *_left = nullptr, BinNode *_right = nullptr) : data(_data), left(_left), right(_right) {}
 
         /**
          * @brief Construct a new Bin Node object
          * 
-         * @param _data Êı¾İ
-         * @param _left ×óchildµÄµØÖ·
-         * @param _right ÓÒchildµÄµØÖ·
+         * @param _data æ•°æ®
+         * @param _left å·¦childçš„åœ°å€
+         * @param _right å³childçš„åœ°å€
          */
         explicit BinNode(value_type &&_data, BinNode *_left, BinNode *_right) : data(std::move(_data)), left(_left), right(_right) {}
 
@@ -136,13 +136,13 @@ private:
         ~BinNode() = default;
     };
 
-    BinNode *root_; ///< ¶ş²æÊ÷µÄ¸ù½áµã
+    BinNode *root_; ///< äºŒå‰æ ‘çš„æ ¹ç»“ç‚¹
 
 public:
     /**
      * @brief Construct a new binary Tree object
      * 
-     * ´´½¨Ò»¿Ã¿ÕÊ÷
+     * åˆ›å»ºä¸€æ£µç©ºæ ‘
      * 
      */
     binaryTree() : root_(nullptr){};
@@ -150,53 +150,53 @@ public:
     /**
      * @brief Construct a new binary Tree object
      * 
-     * ´´½¨Ò»¿Ã´øÓĞ¸ù½ÚµãµÄÊ÷
+     * åˆ›å»ºä¸€æ£µå¸¦æœ‰æ ¹èŠ‚ç‚¹çš„æ ‘
      * 
-     * @param x ¸ù½áµãµÄÊı¾İ
+     * @param x æ ¹ç»“ç‚¹çš„æ•°æ®
      */
     explicit binaryTree(const value_type &x) : root_(new BinNode(x)) {}
 
     /**
      * @brief Construct a new binary Tree object
-     * ¿½±´¹¹Ôìº¯Êı
-     * @param rhs Ô´¶ÔÏó
-     * @note ²Î¿¼C++Éè¼ÆÄ£Ê½¡ª¡ªÔ­ĞÍÄ£Ê½
+     * æ‹·è´æ„é€ å‡½æ•°
+     * @param rhs æºå¯¹è±¡
+     * @note å‚è€ƒC++è®¾è®¡æ¨¡å¼â€”â€”åŸå‹æ¨¡å¼
      */
     binaryTree(const binaryTree &rhs) : binaryTree() { root_ = clone(rhs.root_); }
 
     /**
-     * @brief ¸³ÖµÔËËã·ûÖØÔØ
+     * @brief èµ‹å€¼è¿ç®—ç¬¦é‡è½½
      * 
-     * @param rhs Ô´¶ÔÏó
-     * @return binaryTree& Ä¿µÄ¶ÔÏóµÄÒıÓÃ
+     * @param rhs æºå¯¹è±¡
+     * @return binaryTree& ç›®çš„å¯¹è±¡çš„å¼•ç”¨
      */
     binaryTree &operator=(const binaryTree &rhs)
     {
-        // ÕâÖÖÄ£Ê½¿ÉÏû³ı¶Ô×ÔÉí¸³ÖµµÄÌØÊâÇé¿ö
-        binaryTree copy = rhs;  // Òªµ÷ÓÃ¸´ÖÆ¹¹Ôìº¯Êı
-        std::swap(*this, copy); // Òªµ÷ÓÃÒÆ¶¯¹¹Ôì¡¢ÒÆ¶¯¸³Öµº¯Êı
+        // è¿™ç§æ¨¡å¼å¯æ¶ˆé™¤å¯¹è‡ªèº«èµ‹å€¼çš„ç‰¹æ®Šæƒ…å†µ
+        binaryTree copy = rhs;  // è¦è°ƒç”¨å¤åˆ¶æ„é€ å‡½æ•°
+        std::swap(*this, copy); // è¦è°ƒç”¨ç§»åŠ¨æ„é€ ã€ç§»åŠ¨èµ‹å€¼å‡½æ•°
         return *this;
     }
 
     /**
      * @brief Construct a new binary Tree object
-     * ÒÆ¶¯¹¹Ôìº¯Êı
-     * @param rhs Ô´¶ÔÏó£¬ÓÒÖµ
+     * ç§»åŠ¨æ„é€ å‡½æ•°
+     * @param rhs æºå¯¹è±¡ï¼Œå³å€¼
      */
     binaryTree(binaryTree &&rhs) : root_{rhs.root_} { rhs.root_ = nullptr; }
 
     /**
-     * @brief ÒÆ¶¯¸³ÖµÔËËã·û
+     * @brief ç§»åŠ¨èµ‹å€¼è¿ç®—ç¬¦
      * 
-     * @param rhs Ô´¶ÔÏó£¬ÓÒÖµ
-     * @return binaryTree& Ä¿µÄ¶ÔÏóµÄÒıÓÃ
+     * @param rhs æºå¯¹è±¡ï¼Œå³å€¼
+     * @return binaryTree& ç›®çš„å¯¹è±¡çš„å¼•ç”¨
      */
     binaryTree &operator=(binaryTree &&rhs)
     {
-        // ·ÀÖ¹×ÔÉí¸³Öµ
+        // é˜²æ­¢è‡ªèº«èµ‹å€¼
         if (rhs.root_ == root_)
             return *this;
-        std::swap(root_, rhs.root_); // ½»»»ºó£¬Ô­ÓÉ×ó²Ù×÷ÊıÎ¬»¤µÄ×ÊÔ´×ªÖÁÓÒ²Ù×÷Êı£¬´Ó¶ø½«±»ÊÍ·Å
+        std::swap(root_, rhs.root_); // äº¤æ¢åï¼ŒåŸç”±å·¦æ“ä½œæ•°ç»´æŠ¤çš„èµ„æºè½¬è‡³å³æ“ä½œæ•°ï¼Œä»è€Œå°†è¢«é‡Šæ”¾
         return *this;
     }
 
@@ -207,224 +207,224 @@ public:
     ~binaryTree();
 
     /**
-     * @brief Çå¿Õ¶ş²æÊ÷
-     * º¯Êı·µ»Øºó£¬¶ÔÏóµÄ³ÉÔ±root_½«±»ÖÃnullptr
+     * @brief æ¸…ç©ºäºŒå‰æ ‘
+     * å‡½æ•°è¿”å›åï¼Œå¯¹è±¡çš„æˆå‘˜root_å°†è¢«ç½®nullptr
      */
     void clear();
 
     /**
-     * @brief ÅĞ¶Ï¶ş²æÊ÷ÊÇ·ñÎª¿ÕÊ÷
+     * @brief åˆ¤æ–­äºŒå‰æ ‘æ˜¯å¦ä¸ºç©ºæ ‘
      * 
-     * @return true ÊÇ¿ÕÊ÷
-     * @return false ·Ç¿ÕÊ÷
+     * @return true æ˜¯ç©ºæ ‘
+     * @return false éç©ºæ ‘
      */
     bool empty() const;
 
     /**
-     * @brief ·µ»Ø¸ù½áµãµÄÊı¾İ
+     * @brief è¿”å›æ ¹ç»“ç‚¹çš„æ•°æ®
      * 
-     * @param flag Îª¿ÕÊ÷Ê±·µ»ØµÄÌØÊâ±ê¼Ç
-     * @return value_type ¸ù½áµãµÄÊı¾İ
+     * @param flag ä¸ºç©ºæ ‘æ—¶è¿”å›çš„ç‰¹æ®Šæ ‡è®°
+     * @return value_type æ ¹ç»“ç‚¹çš„æ•°æ®
      */
     value_type root(const value_type &flag) const;
 
     /**
-     * @brief »ñµÃÊı¾İÎªxµÄ½áµãµÄ×óchild
+     * @brief è·å¾—æ•°æ®ä¸ºxçš„ç»“ç‚¹çš„å·¦child
      * 
-     * @param x Ä¿±ê½áµãµÄÊı¾İ
-     * @param flag ÎŞ×óchildÊ±·µ»ØµÄ±ê¼Ç
-     * @return value_type ×óchildµÄÊı¾İ
-     * @warning Ê÷ÖĞÓĞdataÏàÍ¬µÄ½áµãÊ±£¬¸Ã·½·¨Ö»ÄÜ·ÃÎÊµ½Ç°ĞòĞòÁĞÖĞÊ×´Î³öÏÖ¸ÃÊı¾İµÄÄÇ¸ö½áµã£¡
+     * @param x ç›®æ ‡ç»“ç‚¹çš„æ•°æ®
+     * @param flag æ— å·¦childæ—¶è¿”å›çš„æ ‡è®°
+     * @return value_type å·¦childçš„æ•°æ®
+     * @warning æ ‘ä¸­æœ‰dataç›¸åŒçš„ç»“ç‚¹æ—¶ï¼Œè¯¥æ–¹æ³•åªèƒ½è®¿é—®åˆ°å‰åºåºåˆ—ä¸­é¦–æ¬¡å‡ºç°è¯¥æ•°æ®çš„é‚£ä¸ªç»“ç‚¹ï¼
      */
     value_type lchild(const value_type &x, const value_type &flag) const;
 
     /**
-     * @brief »ñµÃÊı¾İÎªxµÄ½áµãµÄÓÒchild
+     * @brief è·å¾—æ•°æ®ä¸ºxçš„ç»“ç‚¹çš„å³child
      * 
-     * @param x Ä¿±ê½áµãµÄÊı¾İ
-     * @param flag ÎŞÓÒchildÊ±·µ»ØµÄ±ê¼Ç
-     * @return value_type ÓÒchildµÄÊı¾İ
-     * @warning Ê÷ÖĞÓĞdataÏàÍ¬µÄ½áµãÊ±£¬¸Ã·½·¨Ö»ÄÜ·ÃÎÊµ½Ç°ĞòĞòÁĞÖĞÊ×´Î³öÏÖ¸ÃÊı¾İµÄÄÇ¸ö½áµã£¡
+     * @param x ç›®æ ‡ç»“ç‚¹çš„æ•°æ®
+     * @param flag æ— å³childæ—¶è¿”å›çš„æ ‡è®°
+     * @return value_type å³childçš„æ•°æ®
+     * @warning æ ‘ä¸­æœ‰dataç›¸åŒçš„ç»“ç‚¹æ—¶ï¼Œè¯¥æ–¹æ³•åªèƒ½è®¿é—®åˆ°å‰åºåºåˆ—ä¸­é¦–æ¬¡å‡ºç°è¯¥æ•°æ®çš„é‚£ä¸ªç»“ç‚¹ï¼
      */
     value_type rchild(const value_type &x, const value_type &flag) const;
 
     /**
-     * @brief É¾³ı×ósubtree
+     * @brief åˆ é™¤å·¦subtree
      * 
-     * @param x Ä¿±ê½áµã¡£ÒÔ¸Ã½áµãµÄ×óchildÎª¸ùµÄÊ÷½«±»É¾³ı
-     * @warning Ê÷ÖĞÓĞdataÏàÍ¬µÄ½áµãÊ±£¬¸Ã·½·¨Ö»ÄÜ·ÃÎÊµ½Ç°ĞòĞòÁĞÖĞÊ×´Î³öÏÖ¸ÃÊı¾İµÄÄÇ¸ö½áµã£¡
+     * @param x ç›®æ ‡ç»“ç‚¹ã€‚ä»¥è¯¥ç»“ç‚¹çš„å·¦childä¸ºæ ¹çš„æ ‘å°†è¢«åˆ é™¤
+     * @warning æ ‘ä¸­æœ‰dataç›¸åŒçš„ç»“ç‚¹æ—¶ï¼Œè¯¥æ–¹æ³•åªèƒ½è®¿é—®åˆ°å‰åºåºåˆ—ä¸­é¦–æ¬¡å‡ºç°è¯¥æ•°æ®çš„é‚£ä¸ªç»“ç‚¹ï¼
      */
     void delLeft(const value_type &x);
 
     /**
-     * @brief É¾³ıÓÒsubtree
+     * @brief åˆ é™¤å³subtree
      * 
-     * @param x Ä¿±ê½áµã¡£ÒÔ¸Ã½ÚµãµÄÓÒchildÎª¸ùµÄÊ÷½«±»É¾³ı
-     * @warning Ê÷ÖĞÓĞdataÏàÍ¬µÄ½áµãÊ±£¬¸Ã·½·¨Ö»ÄÜ·ÃÎÊµ½Ç°ĞòĞòÁĞÖĞÊ×´Î³öÏÖ¸ÃÊı¾İµÄÄÇ¸ö½áµã£¡
+     * @param x ç›®æ ‡ç»“ç‚¹ã€‚ä»¥è¯¥èŠ‚ç‚¹çš„å³childä¸ºæ ¹çš„æ ‘å°†è¢«åˆ é™¤
+     * @warning æ ‘ä¸­æœ‰dataç›¸åŒçš„ç»“ç‚¹æ—¶ï¼Œè¯¥æ–¹æ³•åªèƒ½è®¿é—®åˆ°å‰åºåºåˆ—ä¸­é¦–æ¬¡å‡ºç°è¯¥æ•°æ®çš„é‚£ä¸ªç»“ç‚¹ï¼
      */
     void delRight(const value_type &x);
 
     /**
-     * @brief Ç°Ğò±éÀú(µİ¹é°æ±¾)
+     * @brief å‰åºéå†(é€’å½’ç‰ˆæœ¬)
      * 
-     * Ç°Ğò´òÓ¡¶ş²æÊ÷¸÷½áµãµÄÊı¾İµ½±ê×¼Êä³öÉè±¸
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
+     * å‰åºæ‰“å°äºŒå‰æ ‘å„ç»“ç‚¹çš„æ•°æ®åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
      */
     void preOrder(std::ostream &out = std::cout) const;
 
     /**
-     * @brief Ç°Ğò±éÀú(·Çµİ¹é°æ±¾)
+     * @brief å‰åºéå†(éé€’å½’ç‰ˆæœ¬)
      * 
-     * Ç°Ğò´òÓ¡¶ş²æÊ÷¸÷½áµãµÄÊı¾İµ½±ê×¼Êä³öÉè±¸
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
+     * å‰åºæ‰“å°äºŒå‰æ ‘å„ç»“ç‚¹çš„æ•°æ®åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
      */
     void preOrder_loop(/* BinNode *root, */ std::ostream &out = std::cout) const;
 
     /**
-     * @brief ÖĞĞò±éÀú(µİ¹é°æ±¾)
+     * @brief ä¸­åºéå†(é€’å½’ç‰ˆæœ¬)
      * 
-     * ÖĞĞò´òÓ¡¶ş²æÊ÷¸÷½áµãµÄÊı¾İµ½±ê×¼Êä³öÉè±¸
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
+     * ä¸­åºæ‰“å°äºŒå‰æ ‘å„ç»“ç‚¹çš„æ•°æ®åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
      */
     void inOrder(std::ostream &out = std::cout) const;
 
     /**
-     * @brief ÖĞĞò±éÀú(·Çµİ¹é°æ±¾)
+     * @brief ä¸­åºéå†(éé€’å½’ç‰ˆæœ¬)
      * 
-     * ÖĞĞò´òÓ¡¶ş²æÊ÷¸÷½áµãµÄÊı¾İµ½±ê×¼Êä³öÉè±¸
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
+     * ä¸­åºæ‰“å°äºŒå‰æ ‘å„ç»“ç‚¹çš„æ•°æ®åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
      */
     void inOrder_loop(/* BinNode *root, */ std::ostream &out = std::cout) const;
 
     /**
-     * @brief ºóĞò±éÀú(µİ¹é°æ±¾)
+     * @brief ååºéå†(é€’å½’ç‰ˆæœ¬)
      * 
-     * ºóĞò´òÓ¡¶ş²æÊ÷¸÷½áµãµÄÊı¾İµ½±ê×¼Êä³öÉè±¸
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
+     * ååºæ‰“å°äºŒå‰æ ‘å„ç»“ç‚¹çš„æ•°æ®åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
      */
     void postOrder(std::ostream &out = std::cout) const;
 
     /**
-     * @brief ºóĞò±éÀú(·Çµİ¹é°æ±¾)
+     * @brief ååºéå†(éé€’å½’ç‰ˆæœ¬)
      * 
-     * ºóĞò´òÓ¡¶ş²æÊ÷¸÷½áµãµÄÊı¾İµ½±ê×¼Êä³öÉè±¸
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
+     * ååºæ‰“å°äºŒå‰æ ‘å„ç»“ç‚¹çš„æ•°æ®åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
      */
     void postOrder_loop(/* BinNode *root, */ std::ostream &out = std::cout) const;
 
     /**
-     * @brief ²ã´Î±éÀú
+     * @brief å±‚æ¬¡éå†
      * 
-     * ²ã´Î´òÓ¡¶ş²æÊ÷¸÷½áµãµÄÊı¾İµ½±ê×¼Êä³öÉè±¸
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
+     * å±‚æ¬¡æ‰“å°äºŒå‰æ ‘å„ç»“ç‚¹çš„æ•°æ®åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
      */
     void levelOrder(std::ostream &out = std::cout) const;
 
     /**
      * @brief Create a Tree object
      * 
-     * @param flag "¿Õ½áµã"µÄÌØÊâ±ê¼Ç
-     * @param in ÊäÈëÁ÷¶ÔÏó£¬¿ÉÒÔÊÇcin, »òÕßifstreamÀàµÄ¶ÔÏóµÈ
+     * @param flag "ç©ºç»“ç‚¹"çš„ç‰¹æ®Šæ ‡è®°
+     * @param in è¾“å…¥æµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯cin, æˆ–è€…ifstreamç±»çš„å¯¹è±¡ç­‰
      * 
-     * @ details ¸Ã·½·¨Ê×ÏÈµ÷ÓÃclear()Çå¿Õ¶ş²æÊ÷¡£
-     * È»ºóÒª´ÓÊäÈëÁ÷(±ê×¼/ÎÄ¼şÁ÷)°´²ã´ÎË³ĞòÊäÈëÔÚ½¨¶ş²æÊ÷¸÷½áµãµÄÖµ£¬ÒÀ´Ë½¨Á¢Ò»¿Ã¶ş²æÊ÷\n
-     * ÊäÈëflag±íÊ¾"¿Õ½áµã"
-     * @warning ±¾·½·¨¿ÉÄÜµ÷ÓÃifstreamÀà´ÓistreamÀà¼Ì³ĞµÄµÄsync()·½·¨£¬which¿ÉÄÜµ¼ÖÂÎ´¶¨ÒåĞĞÎª¡£
-     * @note ÒªÇó¶Ôvalue_typeÀàĞÍÖØÔØÁËoperator>>ºÍoperator<<
+     * @ details è¯¥æ–¹æ³•é¦–å…ˆè°ƒç”¨clear()æ¸…ç©ºäºŒå‰æ ‘ã€‚
+     * ç„¶åè¦ä»è¾“å…¥æµ(æ ‡å‡†/æ–‡ä»¶æµ)æŒ‰å±‚æ¬¡é¡ºåºè¾“å…¥åœ¨å»ºäºŒå‰æ ‘å„ç»“ç‚¹çš„å€¼ï¼Œä¾æ­¤å»ºç«‹ä¸€æ£µäºŒå‰æ ‘\n
+     * è¾“å…¥flagè¡¨ç¤º"ç©ºç»“ç‚¹"
+     * @warning æœ¬æ–¹æ³•å¯èƒ½è°ƒç”¨ifstreamç±»ä»istreamç±»ç»§æ‰¿çš„çš„sync()æ–¹æ³•ï¼Œwhichå¯èƒ½å¯¼è‡´æœªå®šä¹‰è¡Œä¸ºã€‚
+     * @note è¦æ±‚å¯¹value_typeç±»å‹é‡è½½äº†operator>>å’Œoperator<<
      */
     void createTree(const value_type &flag = value_type{}, std::istream &in = std::cin);
 
     /**
-     * @brief ·µ»ØÊı¾İÎªxµÄ½áµãµÄparent½áµã
+     * @brief è¿”å›æ•°æ®ä¸ºxçš„ç»“ç‚¹çš„parentç»“ç‚¹
      * 
-     * @param x Ä¿±ê½áµãµÄÊı¾İ
-     * @param flag parent²»´æÔÚÊ±·µ»ØµÄÌØÊâ±ê¼Ç
-     * @return value_type parent½áµãµÄÊı¾İ
+     * @param x ç›®æ ‡ç»“ç‚¹çš„æ•°æ®
+     * @param flag parentä¸å­˜åœ¨æ—¶è¿”å›çš„ç‰¹æ®Šæ ‡è®°
+     * @return value_type parentç»“ç‚¹çš„æ•°æ®
      * 
-     * @bug ¶ş²æÁ´±í²»ÔÊĞí·ÃÎÊ½áµãµÄparent£¬±¾º¯Êıºã·µ»Øflag
+     * @bug äºŒå‰é“¾è¡¨ä¸å…è®¸è®¿é—®ç»“ç‚¹çš„parentï¼Œæœ¬å‡½æ•°æ’è¿”å›flag
      */
     value_type parent(value_type x, const value_type &flag) const { return flag; }
 
     /**
-     * @brief ·µ»Ø¶ş²æÊ÷µÄ¸ß¶È(µİ¹é°æ±¾)
+     * @brief è¿”å›äºŒå‰æ ‘çš„é«˜åº¦(é€’å½’ç‰ˆæœ¬)
      * @details The height of n_i is the length of the longest path from n_i to a 
      * leaf. Thus all leaves are at height 0. \n
      * The height of a tree is equal to the height of the root.
      * 
-     * @return size_type ¶ş²æÊ÷µÄ¸ß¶È
+     * @return size_type äºŒå‰æ ‘çš„é«˜åº¦
      */
     size_type height() const;
 
     /**
-     * @brief ·µ»Ø¶ş²æÊ÷µÄ¸ß¶È(·Çµİ¹é°æ±¾)
+     * @brief è¿”å›äºŒå‰æ ‘çš„é«˜åº¦(éé€’å½’ç‰ˆæœ¬)
      * @details The height of n_i is the length of the longest path from n_i to a 
      * leaf. Thus all leaves are at height 0. \n
      * The height of a tree is equal to the height of the root.
      * 
-     * @return size_type ¶ş²æÊ÷µÄ¸ß¶È
+     * @return size_type äºŒå‰æ ‘çš„é«˜åº¦
      * @note Reference
      * https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and
      */
     size_type height_loop() const;
 
     /**
-     * @brief ·µ»Ø¶ş²æÊ÷µÄ½áµãÊı(µİ¹é°æ±¾)
+     * @brief è¿”å›äºŒå‰æ ‘çš„ç»“ç‚¹æ•°(é€’å½’ç‰ˆæœ¬)
      * 
-     * @return size_type ¶ş²æÊ÷µÄ½áµãÊı
+     * @return size_type äºŒå‰æ ‘çš„ç»“ç‚¹æ•°
      */
     size_type size() const;
 
     /**
-     * @brief ·µ»Ø¶ş²æÊ÷µÄ½áµãÊı(·Çµİ¹é°æ±¾)
+     * @brief è¿”å›äºŒå‰æ ‘çš„ç»“ç‚¹æ•°(éé€’å½’ç‰ˆæœ¬)
      * 
-     * @return size_type ¶ş²æÊ÷µÄ½áµãÊı
+     * @return size_type äºŒå‰æ ‘çš„ç»“ç‚¹æ•°
      * @note Reference
      * https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and
      */
     size_type size_loop() const;
 
     /**
-     * @brief ½»»»×óÓÒ×ÓÊ÷
+     * @brief äº¤æ¢å·¦å³å­æ ‘
      * 
-     * @param _root Ö¸ÏòÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @warning ²»ÔÊĞíÓÃ»§Ö¸¶¨²ÎÊı
+     * @param _root æŒ‡å‘æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @warning ä¸å…è®¸ç”¨æˆ·æŒ‡å®šå‚æ•°
      */
     void swaplr() { swaplr(root_); }
 
     /**
-     * @brief Í³¼ÆÊ÷ÖĞ¶ÈÎª2µÄ½áµãµÄ¸öÊı
+     * @brief ç»Ÿè®¡æ ‘ä¸­åº¦ä¸º2çš„ç»“ç‚¹çš„ä¸ªæ•°
      */
     size_type CountDegreeTwo() const { return CountDegreeTwo(root_); }
 
     /**
-     * @brief ·µ»ØÊÇ·ñÍêÈ«¶ş²æÊ÷
+     * @brief è¿”å›æ˜¯å¦å®Œå…¨äºŒå‰æ ‘
      * 
-     * @return true ÊÇÍêÈ«¶ş²æÊ÷
-     * @return false ²»ÊÇÍêÈ«¶ş²æÊ÷
+     * @return true æ˜¯å®Œå…¨äºŒå‰æ ‘
+     * @return false ä¸æ˜¯å®Œå…¨äºŒå‰æ ‘
      */
     bool isCompleteTree() const;
 
     /**
-     * @brief ÊÇ·ñÂú¶ş²æÊ÷
+     * @brief æ˜¯å¦æ»¡äºŒå‰æ ‘
      * 
-     * @note ¶¨ÒåÂú¶ş²æÊ÷£ºÈÎÒâÒ»²ãµÄ½áµãÊı¶¼´ïµ½ÁË×î´óÖµ¡£
+     * @note å®šä¹‰æ»¡äºŒå‰æ ‘ï¼šä»»æ„ä¸€å±‚çš„ç»“ç‚¹æ•°éƒ½è¾¾åˆ°äº†æœ€å¤§å€¼ã€‚
      * 
-     * @return true ÊÇÂú¶ş²æÊ÷
-     * @return false ·ÇÂú¶ş²æÊ÷
+     * @return true æ˜¯æ»¡äºŒå‰æ ‘
+     * @return false éæ»¡äºŒå‰æ ‘
      */
     bool isFullBinaryTree() const;
 
     /**
-     * @brief ÅĞ¶ÏÁ½¿Ã¶ş²æÊ÷ÊÇ·ñ»¥Îª¾µÏñ
-     * Á½¿Ã¶ş²æÊ÷#1ºÍ#2»¥Îª¾µÏñ£¬Èç¹û¶şÕß½ÔÎª¿ÕÊ÷£»»ò¶şÕß¸ù½áµãµÄÖµÏàÍ¬£¬ÇÒ#1µÄ×ó¡¢ÓÒ×ÓÊ÷Óë#2µÄÓÒ¡¢×ó×ÓÊ÷»¥Îª¾µÏñ
-     * @param lhs ¶ş²æÊ÷#1
-     * @param rhs ¶ş²æÊ÷#2
+     * @brief åˆ¤æ–­ä¸¤æ£µäºŒå‰æ ‘æ˜¯å¦äº’ä¸ºé•œåƒ
+     * ä¸¤æ£µäºŒå‰æ ‘#1å’Œ#2äº’ä¸ºé•œåƒï¼Œå¦‚æœäºŒè€…çš†ä¸ºç©ºæ ‘ï¼›æˆ–äºŒè€…æ ¹ç»“ç‚¹çš„å€¼ç›¸åŒï¼Œä¸”#1çš„å·¦ã€å³å­æ ‘ä¸#2çš„å³ã€å·¦å­æ ‘äº’ä¸ºé•œåƒ
+     * @param lhs äºŒå‰æ ‘#1
+     * @param rhs äºŒå‰æ ‘#2
      * @return true #1 symmetrical to #2
      * @return false otherwise
      */
     static bool is_symmetrical_tree(const binaryTree &lhs, const binaryTree &rhs) { return is_symmetrical_subtree(lhs.root_, rhs.root_); }
 
-    // »ùÀàÒªÇóÊµÏÖÏÂÁĞAPI
+    // åŸºç±»è¦æ±‚å®ç°ä¸‹åˆ—API
     /*
     virtual value_type root(value_type flag) const;
     virtual value_type parent(value_type x, value_type flag) const;
@@ -436,168 +436,168 @@ public:
 
 private:
     /**
-     * @brief ÔÚÒÔrootÎª¸ùµÄÊ÷ÖĞ(Ç°Ğò)²éÕÒÊı¾İÎªxµÄ½áµã£¬·µ»ØÖ¸Ïò¸Ã½áµãµÄÖ¸Õë
+     * @brief åœ¨ä»¥rootä¸ºæ ¹çš„æ ‘ä¸­(å‰åº)æŸ¥æ‰¾æ•°æ®ä¸ºxçš„ç»“ç‚¹ï¼Œè¿”å›æŒ‡å‘è¯¥ç»“ç‚¹çš„æŒ‡é’ˆ
      * 
-     * @param x Ä¿±êÊı¾İ
-     * @param root Ä¿±ê¶ş²æÊ÷µÄ¸ù½áµãµÄµØÖ·
-     * @return BinNode* Ö¸Ïò²éÕÒµ½µÄÊı¾İÎªxµÄ½áµãµÄÖ¸Õë¡£·µ»Ønullptr±íÊ¾ÕÒ²»µ½¡£
+     * @param x ç›®æ ‡æ•°æ®
+     * @param root ç›®æ ‡äºŒå‰æ ‘çš„æ ¹ç»“ç‚¹çš„åœ°å€
+     * @return BinNode* æŒ‡å‘æŸ¥æ‰¾åˆ°çš„æ•°æ®ä¸ºxçš„ç»“ç‚¹çš„æŒ‡é’ˆã€‚è¿”å›nullptrè¡¨ç¤ºæ‰¾ä¸åˆ°ã€‚
      * 
-     * @note ÀàµÄ¹¤¾ßº¯Êı
-     * @warning Ê÷ÖĞÓĞdataÏàÍ¬µÄ½áµãÊ±£¬¸Ã·½·¨Ö»ÄÜÕÒµ½Ç°ĞòĞòÁĞÖĞÊ×´Î³öÏÖ¸ÃÊı¾İµÄÄÇ¸ö½áµã£¡
+     * @note ç±»çš„å·¥å…·å‡½æ•°
+     * @warning æ ‘ä¸­æœ‰dataç›¸åŒçš„ç»“ç‚¹æ—¶ï¼Œè¯¥æ–¹æ³•åªèƒ½æ‰¾åˆ°å‰åºåºåˆ—ä¸­é¦–æ¬¡å‡ºç°è¯¥æ•°æ®çš„é‚£ä¸ªç»“ç‚¹ï¼
      */
     BinNode *find(const value_type &x, BinNode *root) const;
 
     /**
-     * @brief Çå¿ÕÒÔrootÎª¸ù½áµãµÄÊ÷£¬°üÀ¨Çå³ı¸ù½áµã
+     * @brief æ¸…ç©ºä»¥rootä¸ºæ ¹ç»“ç‚¹çš„æ ‘ï¼ŒåŒ…æ‹¬æ¸…é™¤æ ¹ç»“ç‚¹
      * 
-     * @param root Ö¸ÏòÄ¿±êÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param root æŒ‡å‘ç›®æ ‡æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      * 
-     * @details º¯ÊıÖ´ĞĞÍê±Ïºó£¬root½«±»ÖÃÎªnullptr
+     * @details å‡½æ•°æ‰§è¡Œå®Œæ¯•åï¼Œrootå°†è¢«ç½®ä¸ºnullptr
      */
     void clear(BinNode *&root);
 
     /**
      * @brief Internal method to clone subtree
      * 
-     * @param _root Ö¸ÏòÔ´¶ş²æÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @return BinNode* Ö¸ÏòĞÂ¶ş²æÊ÷µÄ¸ù½áµãµÄÖ¸Õë
+     * @param _root æŒ‡å‘æºäºŒå‰æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @return BinNode* æŒ‡å‘æ–°äºŒå‰æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
      */
     BinNode *clone(BinNode *_root) const;
 
     /**
-     * @brief Internal method to ÅĞ¶ÏÁ½¿Ã¶ş²æÊ÷ÊÇ·ñÏà»¥¶Ô³Æ
+     * @brief Internal method to åˆ¤æ–­ä¸¤æ£µäºŒå‰æ ‘æ˜¯å¦ç›¸äº’å¯¹ç§°
      * 
-     * @param root1 Ö¸Ïò¶ş²æÊ÷#1µÄ¸ù½áµãµÄÖ¸Õë
-     * @param root2 Ö¸Ïò¶ş²æÊ÷#2µÄ¸ù½áµãµÄÖ¸Õë
-     * @return true #1ºÍ#2Ïà»¥¶Ô³Æ
+     * @param root1 æŒ‡å‘äºŒå‰æ ‘#1çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @param root2 æŒ‡å‘äºŒå‰æ ‘#2çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @return true #1å’Œ#2ç›¸äº’å¯¹ç§°
      * @return false otherwise
      */
     static bool is_symmetrical_subtree(BinNode *root1, BinNode *root2);
 
     /**
-     * @brief Ç°Ğò±éÀúÒÔrootÎª¸ù½áµãµÄÊ÷(µİ¹é°æ±¾)
+     * @brief å‰åºéå†ä»¥rootä¸ºæ ¹ç»“ç‚¹çš„æ ‘(é€’å½’ç‰ˆæœ¬)
      * 
-     * @param root Ö¸ÏòÄ¿±êÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param root æŒ‡å‘ç›®æ ‡æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      */
     void
     preOrder(BinNode *root, std::ostream &out = std::cout) const;
 
     /**
-     * @brief ÖĞĞò±éÀúÒÔrootÎª¸ù½áµãµÄÊ÷(µİ¹é°æ±¾)
+     * @brief ä¸­åºéå†ä»¥rootä¸ºæ ¹ç»“ç‚¹çš„æ ‘(é€’å½’ç‰ˆæœ¬)
      * 
-     * @param root Ö¸ÏòÄ¿±êÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param root æŒ‡å‘ç›®æ ‡æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      */
     void inOrder(BinNode *root, std::ostream &out = std::cout) const;
 
     /**
-     * @brief ºóĞò±éÀúÒÔrootÎª¸ù½áµãµÄÊ÷(µİ¹é°æ±¾)
+     * @brief ååºéå†ä»¥rootä¸ºæ ¹ç»“ç‚¹çš„æ ‘(é€’å½’ç‰ˆæœ¬)
      * 
-     * @param root Ö¸ÏòÄ¿±êÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @param out Êä³öÁ÷¶ÔÏó£¬¿ÉÒÔÊÇ±ê×¼Êä³öÁ÷»òÎÄ¼şÁ÷µÈ
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param root æŒ‡å‘ç›®æ ‡æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @param out è¾“å‡ºæµå¯¹è±¡ï¼Œå¯ä»¥æ˜¯æ ‡å‡†è¾“å‡ºæµæˆ–æ–‡ä»¶æµç­‰
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      */
     void postOrder(BinNode *root, std::ostream &out = std::cout) const;
 
-    /* constexpr */ static Comparator is_less_than_ /* = Comparator{} */; ///< ±È½ÏÆ÷(function object)
+    /* constexpr */ static Comparator is_less_than_ /* = Comparator{} */; ///< æ¯”è¾ƒå™¨(function object)
 
     /**
-     * @brief ±È½Ïvalue_typeÀàĞÍ¶ÔÏóµÄ´óĞ¡¡£
+     * @brief æ¯”è¾ƒvalue_typeç±»å‹å¯¹è±¡çš„å¤§å°ã€‚
      * 
-     * @param lhs ×óÔËËãÊı
-     * @param rhs ÓÒÔËËãÊı
+     * @param lhs å·¦è¿ç®—æ•°
+     * @param rhs å³è¿ç®—æ•°
      * @return true lhs < rhs
      * @return false lhs >= rhs
      */
     static bool value_type_less(const value_type &lhs, const value_type &rhs) { return is_less_than_(lhs, rhs); }
 
     /**
-     * @brief ±È½Ïvalue_typeÀàĞÍ¶ÔÏóµÄ´óĞ¡¡£
+     * @brief æ¯”è¾ƒvalue_typeç±»å‹å¯¹è±¡çš„å¤§å°ã€‚
      * 
-     * @param lhs ×óÔËËãÊı
-     * @param rhs ÓÒÔËËãÊı
+     * @param lhs å·¦è¿ç®—æ•°
+     * @param rhs å³è¿ç®—æ•°
      * @return true lhs == rhs
      * @return false lhs != rhs
      */
     static bool value_type_equal(const value_type &lhs, const value_type &rhs) { return !is_less_than_(lhs, rhs) && !is_less_than_(rhs, lhs); }
 
     /**
-     * @brief ±È½Ïvalue_typeÀàĞÍ¶ÔÏóµÄ´óĞ¡¡£
+     * @brief æ¯”è¾ƒvalue_typeç±»å‹å¯¹è±¡çš„å¤§å°ã€‚
      * 
-     * @param lhs ×óÔËËãÊı
-     * @param rhs ÓÒÔËËãÊı
+     * @param lhs å·¦è¿ç®—æ•°
+     * @param rhs å³è¿ç®—æ•°
      * @return true lhs <= rhs
      * @return false lhs > rhs
      */
     static bool value_type_less_equal(const value_type &lhs, const value_type &rhs) { return value_type_less(lhs, rhs) || value_type_equal(lhs, rhs); }
 
     /**
-     * @brief ·µ»ØÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¹æÄ£(µİ¹é°æ±¾)
+     * @brief è¿”å›ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„è§„æ¨¡(é€’å½’ç‰ˆæœ¬)
      * 
-     * @param _root Ö¸Ïò¸ù½áµãµÄÖ¸Õë
-     * @return value_type ÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¹æÄ£
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param _root æŒ‡å‘æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @return value_type ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„è§„æ¨¡
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      */
     size_type size(BinNode *_root) const;
 
     /**
-     * @brief ·µ»ØÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¹æÄ£(·Çµİ¹é°æ±¾)
+     * @brief è¿”å›ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„è§„æ¨¡(éé€’å½’ç‰ˆæœ¬)
      * 
-     * @param _root Ö¸Ïò¸ù½áµãµÄÖ¸Õë
-     * @return value_type ÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¹æÄ£
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param _root æŒ‡å‘æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @return value_type ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„è§„æ¨¡
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      * @section Reference
      * https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and
      */
     size_type size_loop(BinNode *_root) const;
 
     /**
-     * @brief ·µ»ØÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¸ß¶È(µİ¹é°æ±¾)
+     * @brief è¿”å›ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„é«˜åº¦(é€’å½’ç‰ˆæœ¬)
      * 
-     * @param _root Ö¸Ïò¸ù½áµãµÄÖ¸Õë
-     * @return value_type ÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¸ß¶È
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param _root æŒ‡å‘æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @return value_type ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„é«˜åº¦
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      */
     size_type height(BinNode *_root) const;
 
     /**
-     * @brief ·µ»ØÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¸ß¶È(·Çµİ¹é°æ±¾)
+     * @brief è¿”å›ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„é«˜åº¦(éé€’å½’ç‰ˆæœ¬)
      * 
-     * @param _root Ö¸Ïò¸ù½áµãµÄÖ¸Õë
-     * @return value_type ÒÔÖ¸¶¨½áµãÎª¸ù½áµãµÄ¶ş²æÊ÷µÄ¸ß¶È
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param _root æŒ‡å‘æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @return value_type ä»¥æŒ‡å®šç»“ç‚¹ä¸ºæ ¹ç»“ç‚¹çš„äºŒå‰æ ‘çš„é«˜åº¦
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      * @note Reference
      * https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and
      */
     size_type height_loop(BinNode *_root) const;
 
     /**
-     * @brief Í³¼ÆÊ÷ÖĞ¶ÈÎª2µÄ½áµãµÄ¸öÊı
+     * @brief ç»Ÿè®¡æ ‘ä¸­åº¦ä¸º2çš„ç»“ç‚¹çš„ä¸ªæ•°
      * 
-     * @param _root Ö¸ÏòÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param _root æŒ‡å‘æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      */
     size_type CountDegreeTwo(BinNode *_root) const;
 
     /**
-     * @brief ½»»»×óÓÒ×ÓÊ÷
+     * @brief äº¤æ¢å·¦å³å­æ ‘
      * 
-     * @param _root Ö¸ÏòÊ÷µÄ¸ù½áµãµÄÖ¸Õë
-     * @note ÀàµÄ¹¤¾ßº¯Êı
+     * @param _root æŒ‡å‘æ ‘çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @note ç±»çš„å·¥å…·å‡½æ•°
      */
     void swaplr(BinNode *_root);
 
     /**
-     * @brief ÅĞ¶ÏÁ½¿Ã¶ş²æÊ÷ÊÇ·ñÏàÍ¬
-     * "ÏàÍ¬"ÊÇÖ¸£ºÁ½¿ÃÊ÷µÄĞÎ×´¼°¶ÔÓ¦½áµãµÄÖµÏàµÈ
-     * @param _root1 Ö¸Ïò¶ş²æÊ÷#1µÄ¸ù½áµãµÄÖ¸Õë
-     * @param _root2 Ö¸Ïò¶ş²æÊ÷#2µÄ¸ù½áµãµÄÖ¸Õë
-     * @return true  Á½¿ÃÊ÷ÏàÍ¬
-     * @return false Á½¿ÃÊ÷²»ÏàÍ¬
+     * @brief åˆ¤æ–­ä¸¤æ£µäºŒå‰æ ‘æ˜¯å¦ç›¸åŒ
+     * "ç›¸åŒ"æ˜¯æŒ‡ï¼šä¸¤æ£µæ ‘çš„å½¢çŠ¶åŠå¯¹åº”ç»“ç‚¹çš„å€¼ç›¸ç­‰
+     * @param _root1 æŒ‡å‘äºŒå‰æ ‘#1çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @param _root2 æŒ‡å‘äºŒå‰æ ‘#2çš„æ ¹ç»“ç‚¹çš„æŒ‡é’ˆ
+     * @return true  ä¸¤æ£µæ ‘ç›¸åŒ
+     * @return false ä¸¤æ£µæ ‘ä¸ç›¸åŒ
      */
     static bool is_equal_subtree(BinNode *_root1, BinNode *_root2);
 };
@@ -655,29 +655,29 @@ typename binaryTree<T, Comparator>::BinNode *binaryTree<T, Comparator>::clone(Bi
 template <class T, class U>
 bool binaryTree<T, U>::is_symmetrical_subtree(BinNode *_root1, BinNode *_root2)
 {
-    // Á½¿Ã¿ÕÊ÷
+    // ä¸¤æ£µç©ºæ ‘
     if (!_root1 && !_root2)
         return true;
-    // Ò»¿Ã¿ÕÊ÷
+    // ä¸€æ£µç©ºæ ‘
     if (!_root1 || !_root2)
         return false;
-    // ¸ù½áµã²»Í¬
+    // æ ¹ç»“ç‚¹ä¸åŒ
     if (!value_type_equal(_root1->data, _root2->data))
         return false;
-    // ÖÁ´Ë£¬#1ºÍ#2¶Ô³Æ iff. #1µÄ×ó/ÓÒ×ÓÊ÷Óë#2µÄÓÒ/×ó×ÓÊ÷¶Ô³Æ
+    // è‡³æ­¤ï¼Œ#1å’Œ#2å¯¹ç§° iff. #1çš„å·¦/å³å­æ ‘ä¸#2çš„å³/å·¦å­æ ‘å¯¹ç§°
     return is_symmetrical_subtree(_root1->left, _root2->right) && is_symmetrical_subtree(_root2->left, _root1->right);
 }
 
 template <class T, class U>
 bool binaryTree<T, U>::is_equal_subtree(BinNode *_root1, BinNode *_root2)
 {
-    // Á½¿Ã¿ÕÊ÷
+    // ä¸¤æ£µç©ºæ ‘
     if (!_root1 && !_root2)
         return true;
-    // ½öÒ»¿ÃÎª¿Õ
+    // ä»…ä¸€æ£µä¸ºç©º
     if (!_root1 || !_root2)
         return false;
-    // ¸ù½áµã²»Í¬
+    // æ ¹ç»“ç‚¹ä¸åŒ
     if (!value_type_equal(_root1->data, _root2->data))
         return false;
     return is_equal_subtree(_root1->left, _root2->left) && is_equal_subtree(_root1->right, _root2->right);
@@ -686,10 +686,10 @@ bool binaryTree<T, U>::is_equal_subtree(BinNode *_root1, BinNode *_root2)
 template <typename T, typename U>
 bool binaryTree<T, U>::isFullBinaryTree() const
 {
-    size_type size_of_tree = size_loop();     // ¶ş²æÊ÷µÄ½áµãÊı
-    size_type height_of_tree = height_loop(); // ¶ş²æÊ÷µÄ¸ß¶È(0, 1, ...)
-    // Òò¸ß¶È´Ó0Æğ£¬ÊÇÂú¶ş²æÊ÷iff.ÓĞ2^(height+1) - 1¸ö½áµã
-    // ÕâÑùÊ¹µÃ¿Õ¶ş²æÊ÷²»ÊÇÂú¶ş²æÊ÷
+    size_type size_of_tree = size_loop();     // äºŒå‰æ ‘çš„ç»“ç‚¹æ•°
+    size_type height_of_tree = height_loop(); // äºŒå‰æ ‘çš„é«˜åº¦(0, 1, ...)
+    // å› é«˜åº¦ä»0èµ·ï¼Œæ˜¯æ»¡äºŒå‰æ ‘iff.æœ‰2^(height+1) - 1ä¸ªç»“ç‚¹
+    // è¿™æ ·ä½¿å¾—ç©ºäºŒå‰æ ‘ä¸æ˜¯æ»¡äºŒå‰æ ‘
     if (((size_type(1) << (height_of_tree + 1)) - 1) == size_of_tree)
         return true;
     return false;
@@ -698,47 +698,47 @@ bool binaryTree<T, U>::isFullBinaryTree() const
 template <class T, typename Comparator>
 bool binaryTree<T, Comparator>::isCompleteTree() const
 {
-    // ÈÏÎª¿ÕÊ÷ÊÇÍêÈ«¶ş²æÊ÷
+    // è®¤ä¸ºç©ºæ ‘æ˜¯å®Œå…¨äºŒå‰æ ‘
     if (!root_)
         return true;
 
-    BinNode *current_node = nullptr;         // µ±Ç°½áµã
-    Queue::seqQueue<BinNode *> node_queue{}; // Ôİ´æ½áµãµÄ¶ÓÁĞ£¬ÓÃÓÚ²ã´Î±éÀú
+    BinNode *current_node = nullptr;         // å½“å‰ç»“ç‚¹
+    Queue::seqQueue<BinNode *> node_queue{}; // æš‚å­˜ç»“ç‚¹çš„é˜Ÿåˆ—ï¼Œç”¨äºå±‚æ¬¡éå†
     node_queue.push(root_);
     while (!node_queue.empty())
     {
         current_node = node_queue.front();
         node_queue.pop();
-        // Èôµ±Ç°½áµãÎŞ×óº¢×Óµ«ÓĞÓÒº¢×Ó£¬Ôò·ÇÍêÈ«¶ş²æÊ÷
+        // è‹¥å½“å‰ç»“ç‚¹æ— å·¦å­©å­ä½†æœ‰å³å­©å­ï¼Œåˆ™éå®Œå…¨äºŒå‰æ ‘
         if (!current_node->left && current_node->right)
             return false;
-        // ·Ç¿Õº¢×ÓÈë¶Ó
+        // éç©ºå­©å­å…¥é˜Ÿ
         if (current_node->left)
             node_queue.push(current_node->left);
         if (current_node->right)
             node_queue.push(current_node->right);
         /**
-         * ÖÁ´Ë£¬µ±Ç°½áµã´¦ÀíÍê±Ï¡£
-         * Èôµ±Ç°½áµãÓĞ¿Õº¢×Ó£¬ÔòËüÊÇ²ãĞòÉÏµÄÊ×¸ö¶È·Ç2½áµã¡£
-         * ´Ó¶øÊÇÍêÈ«¶ş²æÊ÷iff.Æäºó(²»º¬)µÄ½áµãÈ«ÎªÒ¶×Ó½áµã¡£
+         * è‡³æ­¤ï¼Œå½“å‰ç»“ç‚¹å¤„ç†å®Œæ¯•ã€‚
+         * è‹¥å½“å‰ç»“ç‚¹æœ‰ç©ºå­©å­ï¼Œåˆ™å®ƒæ˜¯å±‚åºä¸Šçš„é¦–ä¸ªåº¦é2ç»“ç‚¹ã€‚
+         * ä»è€Œæ˜¯å®Œå…¨äºŒå‰æ ‘iff.å…¶å(ä¸å«)çš„ç»“ç‚¹å…¨ä¸ºå¶å­ç»“ç‚¹ã€‚
          * 
-         * º¯ÊıÖ»¿ÉÄÜÔÚ´ËifÖĞ·µ»Ø
+         * å‡½æ•°åªå¯èƒ½åœ¨æ­¤ifä¸­è¿”å›
          */
         if (!current_node->left || !current_node->right)
         {
-            // ¼ì²éºóĞø½áµãÊÇ·ñ¶¼ÊÇÒ¶×Ó½áµã
+            // æ£€æŸ¥åç»­ç»“ç‚¹æ˜¯å¦éƒ½æ˜¯å¶å­ç»“ç‚¹
             while (!node_queue.empty())
             {
                 current_node = node_queue.front();
                 node_queue.pop();
-                // ³öÏÖ·ÇÒ¶×Ó½áµã£¬ÅĞ¶¨Îª·ÇÍêÈ«¶ş²æÊ÷
+                // å‡ºç°éå¶å­ç»“ç‚¹ï¼Œåˆ¤å®šä¸ºéå®Œå…¨äºŒå‰æ ‘
                 if (current_node->left || current_node->right)
                     return false;
             }
             return true;
         }
     } // while (!node_queue.empty())
-    // ¿ØÖÆ²»Ó¦µ½´ï´Ë´¦
+    // æ§åˆ¶ä¸åº”åˆ°è¾¾æ­¤å¤„
     throw(TreeException("Bug in member function \"isCompleteTree\", since control should not reach here", "isCompleteTree()"));
 }
 
@@ -758,23 +758,23 @@ void binaryTree<T, Comparator>::preOrder_loop(/* BinNode *root, */ std::ostream 
 {
     // (First rule)
     /**
-     * ÒıÓÃÀàĞÍµÄĞÎ²Î²»ĞèÒª¼ÇÂ¼¡£
-     * Ö»Ğè¼ÇÂ¼BinNode* _root¡£
-     * Ê×´Îµ÷ÓÃÊ±£¬Êµ²Î¾ÍÊÇ¶ÔÏóµÄ¸ù½áµãroot_£»
-     * ¸ÃÏ¸½ÚÓ¦±»·â×°£¬¹ÊÌá¹©¸øÓÃ»§µÄº¯ÊıĞÎ²Î±í²»Éè_root¡£
-     * µİ¹é°æ±¾ÊÇÓĞÏŞ´Îtail recursion£¬²»±Ø¼ÇÂ¼stage¡£
+     * å¼•ç”¨ç±»å‹çš„å½¢å‚ä¸éœ€è¦è®°å½•ã€‚
+     * åªéœ€è®°å½•BinNode* _rootã€‚
+     * é¦–æ¬¡è°ƒç”¨æ—¶ï¼Œå®å‚å°±æ˜¯å¯¹è±¡çš„æ ¹ç»“ç‚¹root_ï¼›
+     * è¯¥ç»†èŠ‚åº”è¢«å°è£…ï¼Œæ•…æä¾›ç»™ç”¨æˆ·çš„å‡½æ•°å½¢å‚è¡¨ä¸è®¾_rootã€‚
+     * é€’å½’ç‰ˆæœ¬æ˜¯æœ‰é™æ¬¡tail recursionï¼Œä¸å¿…è®°å½•stageã€‚
      */
     typedef BinNode *SnapShotStruct;
 
     // (Second rule)
-    // Ã»ÓĞ·µ»ØÖµ£¬´Ë²½ÖèÊ¡ÂÔ
+    // æ²¡æœ‰è¿”å›å€¼ï¼Œæ­¤æ­¥éª¤çœç•¥
     // (Third rule)
     Stack::seqStack<SnapShotStruct> snapshotStack;
 
     // (Fourth rule)
     /**
-     * Ê×´Îµ÷ÓÃÊ±£¬Êµ²Î¾ÍÊÇ¶ÔÏóµÄ¸ù½áµãroot_£»
-     * ¸ÃÏ¸½ÚÓ¦±»·â×°£¬¹ÊÌá¹©¸øÓÃ»§µÄº¯ÊıĞÎ²Î±í²»Éè_root¡£
+     * é¦–æ¬¡è°ƒç”¨æ—¶ï¼Œå®å‚å°±æ˜¯å¯¹è±¡çš„æ ¹ç»“ç‚¹root_ï¼›
+     * è¯¥ç»†èŠ‚åº”è¢«å°è£…ï¼Œæ•…æä¾›ç»™ç”¨æˆ·çš„å‡½æ•°å½¢å‚è¡¨ä¸è®¾_rootã€‚
      */
     SnapShotStruct currentSnapshot{root_};
     snapshotStack.push(currentSnapshot);
@@ -786,13 +786,13 @@ void binaryTree<T, Comparator>::preOrder_loop(/* BinNode *root, */ std::ostream 
         snapshotStack.pop();
 
         // (Sixth rule)
-        // tail recursion£¬Ö»ĞèÒ»¸östage£¬´Ë²½Ê¡ÂÔ
+        // tail recursionï¼Œåªéœ€ä¸€ä¸ªstageï¼Œæ­¤æ­¥çœç•¥
 
         // (Seventh rule)
         if (!currentSnapshot)
         {
             // (Eighth rule)
-            // ÎŞ·µ»ØÖµ£¬´Ë²½ÖèÊ¡ÂÔ
+            // æ— è¿”å›å€¼ï¼Œæ­¤æ­¥éª¤çœç•¥
             // (Ninth rule)
             continue;
         }
@@ -800,10 +800,10 @@ void binaryTree<T, Comparator>::preOrder_loop(/* BinNode *root, */ std::ostream 
 
         // (Tenth rule)
         /**
-         * º¯ÊıÌåÄÚµÄµİ¹éµ÷ÓÃ·µ»Øºó£¬Î¨Ò»µÄĞĞÎªÊÇĞÂµÄµİ¹éµ÷ÓÃ£¬
-         * ¹Ê²»±Ø±£´æ¶Ïµã(·Östage)£¬Ö±½Ó½«ËùÓĞtail recursions°´·´Ğò½øÕ»¼´¿É¡£
-         * ×¢Òâµ½ÈôÄ³´Îµİ¹éµ÷ÓÃµÄÊµ²ÎÎª0½«µ¼ÖÂ¿Õ²Ù×÷£¬ËùÒÔÈôÎª¿ÕÔò²»±Ø½øÕ»
-         * (µ¼ÖÂÁ½´Î·ÃÎÊ£¬¿ÉÑ¡)¡£
+         * å‡½æ•°ä½“å†…çš„é€’å½’è°ƒç”¨è¿”å›åï¼Œå”¯ä¸€çš„è¡Œä¸ºæ˜¯æ–°çš„é€’å½’è°ƒç”¨ï¼Œ
+         * æ•…ä¸å¿…ä¿å­˜æ–­ç‚¹(åˆ†stage)ï¼Œç›´æ¥å°†æ‰€æœ‰tail recursionsæŒ‰ååºè¿›æ ˆå³å¯ã€‚
+         * æ³¨æ„åˆ°è‹¥æŸæ¬¡é€’å½’è°ƒç”¨çš„å®å‚ä¸º0å°†å¯¼è‡´ç©ºæ“ä½œï¼Œæ‰€ä»¥è‹¥ä¸ºç©ºåˆ™ä¸å¿…è¿›æ ˆ
+         * (å¯¼è‡´ä¸¤æ¬¡è®¿é—®ï¼Œå¯é€‰)ã€‚
          */
         if (currentSnapshot->right)
             snapshotStack.push(currentSnapshot->right);
@@ -945,7 +945,7 @@ void binaryTree<T, Comparator>::postOrder_loop(/* BinNode *root, */ std::ostream
             currentSnapshot.stage = 1;
             snapshotStack.push(currentSnapshot);
             /**
-             * Á¬Ğøµİ¹éµ÷ÓÃ£¬¹éÈëÒ»¸östage£¬Ö±½Ó·´Ğò½øÕ»¼´¿É
+             * è¿ç»­é€’å½’è°ƒç”¨ï¼Œå½’å…¥ä¸€ä¸ªstageï¼Œç›´æ¥ååºè¿›æ ˆå³å¯
              */
             snapshotStack.push(SnapShotStruct{currentSnapshot.root->right, 0});
             snapshotStack.push(SnapShotStruct{currentSnapshot.root->left, 0});
@@ -1069,7 +1069,7 @@ void binaryTree<T, Comparator>::swaplr(BinNode *_root)
 template <class T, typename Comparator>
 typename binaryTree<T, Comparator>::size_type binaryTree<T, Comparator>::CountDegreeTwo(BinNode *_root) const
 {
-    // ÈôÎª¿ÕÊ÷£¬»òÎŞÒ¶×Ó½áµã£¬Ôò·µ»Ø0
+    // è‹¥ä¸ºç©ºæ ‘ï¼Œæˆ–æ— å¶å­ç»“ç‚¹ï¼Œåˆ™è¿”å›0
     if (!_root || (!_root->left && !_root->right))
         return 0;
 
@@ -1094,7 +1094,7 @@ typename binaryTree<T, Comparator>::size_type binaryTree<T, Comparator>::height_
     // (First rule)
     struct SnapShotStruct // this can be declared as local structure since it will be only used within this function.
     {
-        // ²»Òª³õÊ¼»¯structµÄ³ÉÔ±£¡·ñÔòÎŞ·¨Ê¹ÓÃ³õÊ¼»¯ÁĞ±í£¬³ı·Ç¶¨Òå¹¹Ôìº¯Êı
+        // ä¸è¦åˆå§‹åŒ–structçš„æˆå‘˜ï¼å¦åˆ™æ— æ³•ä½¿ç”¨åˆå§‹åŒ–åˆ—è¡¨ï¼Œé™¤éå®šä¹‰æ„é€ å‡½æ•°
         BinNode *_root;         // parameter that changes
         size_type left_height;  // the local variable that changes
         size_type right_height; // the local variable that changes
@@ -1210,7 +1210,7 @@ typename binaryTree<T, Comparator>::size_type binaryTree<T, Comparator>::size_lo
     // (First rule)
     struct SnapShotStruct
     {
-        // ²»Òª³õÊ¼»¯structµÄ³ÉÔ±£¡·ñÔòÎŞ·¨Ê¹ÓÃ³õÊ¼»¯ÁĞ±í£¬³ı·Ç¶¨Òå¹¹Ôìº¯Êı
+        // ä¸è¦åˆå§‹åŒ–structçš„æˆå‘˜ï¼å¦åˆ™æ— æ³•ä½¿ç”¨åˆå§‹åŒ–åˆ—è¡¨ï¼Œé™¤éå®šä¹‰æ„é€ å‡½æ•°
         BinNode *_root;   // - parameter input
         size_type addVal; // - local variable that will be used after returning from the function call
         int stage;        // - Since there is process needed to be done after recursive call. (Sixth rule)
@@ -1313,22 +1313,22 @@ void binaryTree<T, Comparator>::createTree(const value_type &flag, std::istream 
 {
     clear();
 
-    BinNode *this_node{};                     // ÕıÔÚ´¦ÀíµÄ½áµã
-    value_type this_data = flag;              // Ôİ´æÊı¾İ
-    Queue::linkQueue<BinNode *> node_queue{}; // ´æ·Å´ı´¦Àí(dataÒÑ¶¨¶øchild´ı¶¨)½áµãµÄ¶ÓÁĞ
+    BinNode *this_node{};                     // æ­£åœ¨å¤„ç†çš„ç»“ç‚¹
+    value_type this_data = flag;              // æš‚å­˜æ•°æ®
+    Queue::linkQueue<BinNode *> node_queue{}; // å­˜æ”¾å¾…å¤„ç†(dataå·²å®šè€Œchildå¾…å®š)ç»“ç‚¹çš„é˜Ÿåˆ—
 
-    // ÒªÇó´ÓÖÕ¶ËÊäÈëÒ»¸öºÏ·¨Êı¾İ£¬×÷Îª¸ù½áµãµÄdata
+    // è¦æ±‚ä»ç»ˆç«¯è¾“å…¥ä¸€ä¸ªåˆæ³•æ•°æ®ï¼Œä½œä¸ºæ ¹ç»“ç‚¹çš„data
     do
     {
-        std::cout << "\nÇëÊäÈë¸ù½áµã: ";
+        std::cout << "\nè¯·è¾“å…¥æ ¹ç»“ç‚¹: ";
         in >> this_data;
 
-        // ÈôÎª·Ç·¨ÊäÈë£¬»òÊäÈëÁË´ú±í¿Õ½áµãµÄÌØÊâ±ê¼Çflag£¬ÔòÒªÇóÖØĞÂÊäÈë
+        // è‹¥ä¸ºéæ³•è¾“å…¥ï¼Œæˆ–è¾“å…¥äº†ä»£è¡¨ç©ºç»“ç‚¹çš„ç‰¹æ®Šæ ‡è®°flagï¼Œåˆ™è¦æ±‚é‡æ–°è¾“å…¥
         if (std::cin.fail() || value_type_equal(this_data, flag))
         {
             in.clear();
             in.sync();
-            std::cerr << "¸ù½áµã±ØĞëº¬ºÏ·¨Êı¾İ£¡\n";
+            std::cerr << "æ ¹ç»“ç‚¹å¿…é¡»å«åˆæ³•æ•°æ®ï¼\n";
             continue;
         }
         break;
@@ -1339,73 +1339,73 @@ void binaryTree<T, Comparator>::createTree(const value_type &flag, std::istream 
 
     while (!node_queue.empty())
     {
-        // È¡µ±Ç°½áµã
+        // å–å½“å‰ç»“ç‚¹
         this_node = node_queue.front();
         node_queue.pop();
 
-        // ´ÓÖÕ¶ËÇëÇóµ±Ç°½áµãµÄ×óchild¡£ÈôÓĞ×óchild£¬Ôò½«×óchild½ønode_queue±íÊ¾´ı´¦Àí¡£
-        this_data = flag; // ³õÊ¼»¯Êı¾İÔİ´æÆ÷
+        // ä»ç»ˆç«¯è¯·æ±‚å½“å‰ç»“ç‚¹çš„å·¦childã€‚è‹¥æœ‰å·¦childï¼Œåˆ™å°†å·¦childè¿›node_queueè¡¨ç¤ºå¾…å¤„ç†ã€‚
+        this_data = flag; // åˆå§‹åŒ–æ•°æ®æš‚å­˜å™¨
         do
         {
-            std::cout << "\nÇëÊäÈë½áµã£º" << this_node->data << " µÄleft child£¨ÊäÈë " << flag << " ±íÊ¾ÎŞ£©£º\n";
+            std::cout << "\nè¯·è¾“å…¥ç»“ç‚¹ï¼š" << this_node->data << " çš„left childï¼ˆè¾“å…¥ " << flag << " è¡¨ç¤ºæ— ï¼‰ï¼š\n";
             in >> this_data;
 
-            // ÈôÎª·Ç·¨ÊäÈë£¬ÒªÇóÖØĞÂÊäÈë
+            // è‹¥ä¸ºéæ³•è¾“å…¥ï¼Œè¦æ±‚é‡æ–°è¾“å…¥
             if (in.fail())
             {
                 in.clear();
-                in.sync(); // ¶ÁÎÄ¼şÁ÷sync()ĞĞÎªÎ´¶¨Òå£¿
-                std::cerr << "·Ç·¨ÊäÈë£¡";
+                in.sync(); // è¯»æ–‡ä»¶æµsync()è¡Œä¸ºæœªå®šä¹‰ï¼Ÿ
+                std::cerr << "éæ³•è¾“å…¥ï¼";
                 continue;
             }
 
-            // ÈôÖ¸¶¨µ±Ç°½áµãÎŞ×óchild
+            // è‹¥æŒ‡å®šå½“å‰ç»“ç‚¹æ— å·¦child
             if (value_type_equal(this_data, flag))
             {
-                in.sync(); // ¶ÁÎÄ¼şÁ÷sync()ĞĞÎªÎ´¶¨Òå£¿
-                std::cout << "ÒÑÖ¸¶¨¸Ã½áµãÎŞleft child\n";
+                in.sync(); // è¯»æ–‡ä»¶æµsync()è¡Œä¸ºæœªå®šä¹‰ï¼Ÿ
+                std::cout << "å·²æŒ‡å®šè¯¥ç»“ç‚¹æ— left child\n";
                 break;
             }
 
-            // µ±Ç°½áµãÓĞ×óchild£¬Ôò½«×óchildÁ¬µ½parentÉÏ£¬È»ºó½«×óchildÈë¶ÓÁĞ£¨±íÊ¾×óchildµÄchildren´ı¶¨£©
-            std::cout << "ÒÑÖ¸¶¨×óchildÎª£º" << this_data << '\n';
+            // å½“å‰ç»“ç‚¹æœ‰å·¦childï¼Œåˆ™å°†å·¦childè¿åˆ°parentä¸Šï¼Œç„¶åå°†å·¦childå…¥é˜Ÿåˆ—ï¼ˆè¡¨ç¤ºå·¦childçš„childrenå¾…å®šï¼‰
+            std::cout << "å·²æŒ‡å®šå·¦childä¸ºï¼š" << this_data << '\n';
             node_queue.push(this_node->left = new BinNode(this_data, 0, 0));
 
             break;
         } while (true);
 
-        // ´ÓÖÕ¶ËÇëÇóµ±Ç°½áµãµÄÓÒchild¡£ÈôÓĞÓÒchild£¬Ôò½«ÓÒchild½ønode_queue±íÊ¾´ı´¦Àí¡£
-        this_data = flag; // ³õÊ¼»¯Êı¾İÔİ´æÆ÷
+        // ä»ç»ˆç«¯è¯·æ±‚å½“å‰ç»“ç‚¹çš„å³childã€‚è‹¥æœ‰å³childï¼Œåˆ™å°†å³childè¿›node_queueè¡¨ç¤ºå¾…å¤„ç†ã€‚
+        this_data = flag; // åˆå§‹åŒ–æ•°æ®æš‚å­˜å™¨
         do
         {
-            std::cout << "\nÇëÊäÈë½áµã£º" << this_node->data << " µÄright child£¨ÊäÈë " << flag << " ±íÊ¾ÎŞ£©£º\n";
+            std::cout << "\nè¯·è¾“å…¥ç»“ç‚¹ï¼š" << this_node->data << " çš„right childï¼ˆè¾“å…¥ " << flag << " è¡¨ç¤ºæ— ï¼‰ï¼š\n";
             in >> this_data;
 
-            // ÈôÎª·Ç·¨ÊäÈë£¬ÒªÇóÖØĞÂÊäÈë
+            // è‹¥ä¸ºéæ³•è¾“å…¥ï¼Œè¦æ±‚é‡æ–°è¾“å…¥
             if (in.fail())
             {
                 in.clear();
-                in.sync(); // ¶ÁÎÄ¼şÁ÷sync()ĞĞÎªÎ´¶¨Òå£¿
-                std::cerr << "·Ç·¨ÊäÈë£¡";
+                in.sync(); // è¯»æ–‡ä»¶æµsync()è¡Œä¸ºæœªå®šä¹‰ï¼Ÿ
+                std::cerr << "éæ³•è¾“å…¥ï¼";
                 continue;
             }
 
-            // ÈôÖ¸¶¨µ±Ç°½áµãÎŞÓÒchild
+            // è‹¥æŒ‡å®šå½“å‰ç»“ç‚¹æ— å³child
             if (value_type_equal(this_data, flag))
             {
-                in.sync(); // ¶ÁÎÄ¼şÁ÷sync()ĞĞÎªÎ´¶¨Òå£¿
-                std::cout << "ÒÑÖ¸¶¨¸Ã½áµãÎŞright child\n";
+                in.sync(); // è¯»æ–‡ä»¶æµsync()è¡Œä¸ºæœªå®šä¹‰ï¼Ÿ
+                std::cout << "å·²æŒ‡å®šè¯¥ç»“ç‚¹æ— right child\n";
                 break;
             }
 
-            // µ±Ç°½áµãÓĞÓÒchild£¬Ôò½«×óchildÁ¬µ½parentÉÏ£¬È»ºó½«ÓÒchildÈë¶ÓÁĞ£¨±íÊ¾ÓÒchildµÄchildren´ı¶¨£©
-            std::cout << "ÒÑÖ¸¶¨ÓÒchildÎª£º" << this_data << '\n';
+            // å½“å‰ç»“ç‚¹æœ‰å³childï¼Œåˆ™å°†å·¦childè¿åˆ°parentä¸Šï¼Œç„¶åå°†å³childå…¥é˜Ÿåˆ—ï¼ˆè¡¨ç¤ºå³childçš„childrenå¾…å®šï¼‰
+            std::cout << "å·²æŒ‡å®šå³childä¸ºï¼š" << this_data << '\n';
             node_queue.push(this_node->right = new BinNode(this_data, 0, 0));
 
             break;
         } while (true);
 
-        /* µ±Ç°½áµã´¦ÀíÍê±Ï£¬×¼±¸´¦Àínode_queueÖĞµÄÏÂ¸ö½áµã */
+        /* å½“å‰ç»“ç‚¹å¤„ç†å®Œæ¯•ï¼Œå‡†å¤‡å¤„ç†node_queueä¸­çš„ä¸‹ä¸ªç»“ç‚¹ */
 
     } // while (!node_queue.empty())
 }
@@ -1415,29 +1415,29 @@ void printBinaryTree(const binaryTree<T, Comparator> &bin_tree, const typename b
 {
     if (bin_tree.empty())
     {
-        out << "ÊÇÒ»¿Ã¿Õ¶ş²æÊ÷\n";
+        out << "æ˜¯ä¸€æ£µç©ºäºŒå‰æ ‘\n";
         return;
     }
 
-    out << "(²ã´Î´òÓ¡) ¸ñÊ½£º\"parent    lchild    rchild\" ( " << flag << " ±íÊ¾¿Õ½áµã )\n";
-    Queue::seqQueue<typename binaryTree<T, Comparator>::value_type> node_data_queue{}; // ´æ·Å´ı´òÓ¡½áµãµÄ¶ÓÁĞ
-    /*typename*/ typename binaryTree<T, Comparator>::value_type this_data = flag;      // Ôİ´æµ±Ç°½áµãµÄdata
-    typename binaryTree<T, Comparator>::value_type left_data = flag;                   // Ôİ´æ×óchildµÄdata
-    typename binaryTree<T, Comparator>::value_type right_data = flag;                  // Ôİ´æÓÒchildµÄdata
+    out << "(å±‚æ¬¡æ‰“å°) æ ¼å¼ï¼š\"parent    lchild    rchild\" ( " << flag << " è¡¨ç¤ºç©ºç»“ç‚¹ )\n";
+    Queue::seqQueue<typename binaryTree<T, Comparator>::value_type> node_data_queue{}; // å­˜æ”¾å¾…æ‰“å°ç»“ç‚¹çš„é˜Ÿåˆ—
+    /*typename*/ typename binaryTree<T, Comparator>::value_type this_data = flag;      // æš‚å­˜å½“å‰ç»“ç‚¹çš„data
+    typename binaryTree<T, Comparator>::value_type left_data = flag;                   // æš‚å­˜å·¦childçš„data
+    typename binaryTree<T, Comparator>::value_type right_data = flag;                  // æš‚å­˜å³childçš„data
 
-    // ¸ù½áµãµÄdataÈë¶Ó
+    // æ ¹ç»“ç‚¹çš„dataå…¥é˜Ÿ
     node_data_queue.push(bin_tree.root(flag));
 
     while (!node_data_queue.empty())
     {
-        // È¡µ±Ç°½áµãµÄdata
+        // å–å½“å‰ç»“ç‚¹çš„data
         this_data = node_data_queue.front();
         node_data_queue.pop();
 
-        // ÕÒÒÔµ±Ç°dataÎªdataµÄ½áµãµÄ×ó¡¢ÓÒchildµÄdata£¬²¢´òÓ¡µ½±ê×¼Êä³öÉè±¸
+        // æ‰¾ä»¥å½“å‰dataä¸ºdataçš„ç»“ç‚¹çš„å·¦ã€å³childçš„dataï¼Œå¹¶æ‰“å°åˆ°æ ‡å‡†è¾“å‡ºè®¾å¤‡
         out << this_data << '\t' << (left_data = bin_tree.lchild(this_data, flag)) << '\t' << (right_data = bin_tree.rchild(this_data, flag)) << '\n';
 
-        // ÈôÒÔµ±Ç°dataÎªdataµÄ½áµãÓĞchildren£¬Ôò½«childrenÈë¶Ó£¬±íÊ¾´ı´òÓ¡
+        // è‹¥ä»¥å½“å‰dataä¸ºdataçš„ç»“ç‚¹æœ‰childrenï¼Œåˆ™å°†childrenå…¥é˜Ÿï¼Œè¡¨ç¤ºå¾…æ‰“å°
         if (!bin_tree.value_type_equal(left_data, flag))
             node_data_queue.push(left_data);
 
