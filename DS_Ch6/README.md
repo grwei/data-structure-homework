@@ -34,7 +34,7 @@ _**《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）**_ 
 ```bat
 cd ./DS_Ch6
 mkdir bin
-g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -finput-charset=GBK -std=c++17 -I ./include
+g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
 ./bin/test0.exe
 ```
 
