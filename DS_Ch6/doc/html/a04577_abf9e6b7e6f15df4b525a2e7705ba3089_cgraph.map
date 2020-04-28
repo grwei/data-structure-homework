@@ -1,0 +1,20 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="二叉链表实现的二叉树类(binaryTree)的测试例程" alt="" coords="5,208,56,235"/>
+<area shape="rect" id="node2" href="$a04565.html#a26d758d8b5cf8ccd7a4c3b68b3b9d851" title="保存测试数据的文件名" alt="" coords="130,132,239,159"/>
+<area shape="rect" id="node3" href="$a05401.html#aadacd70978bd8a75adc9ef2c4f6f40e4" title="删除左subtree" alt="" coords="104,183,265,209"/>
+<area shape="rect" id="node4" href="$a04583.html#a2bcf1ea574062d56ef2517d84ae446be" title="生成一个文件，内容是一棵二叉树的层次遍历" alt="" coords="119,233,250,260"/>
+<area shape="rect" id="node5" href="$a04583.html#a2e5a25aaeed192affbca048f5589bdbf" title="(测试用)将一棵二叉树的遍历结果插到输出流" alt="" coords="111,284,259,311"/>
+<area shape="rect" id="node6" href="$a05401.html#ac7389dcd912456fbc77ad350a1134732" title="返回二叉树的高度(递归版本)" alt="" coords="339,5,498,32"/>
+<area shape="rect" id="node7" href="$a05401.html#a18c50f432143bfe2feade7347f8ff770" title="返回二叉树的高度(非递归版本)" alt="" coords="324,56,513,83"/>
+<area shape="rect" id="node8" href="$a05401.html#ac6003da876c500af081001c549a90433" title="中序遍历(递归版本)" alt="" coords="336,107,501,133"/>
+<area shape="rect" id="node9" href="$a05401.html#a6cb786410ed6c0f61969a09b76f4da0c" title="中序遍历(非递归版本)" alt="" coords="321,157,517,184"/>
+<area shape="rect" id="node10" href="$a05401.html#a94dcc51623e366cb26fa5e543b19c6f8" title="层次遍历" alt="" coords="329,208,509,235"/>
+<area shape="rect" id="node11" href="$a05401.html#a29e131a4f32bf7ac33dad9cd60d5ca7b" title="后序遍历(递归版本)" alt="" coords="329,259,509,285"/>
+<area shape="rect" id="node12" href="$a05401.html#a24d90fc12dae5213ddb8b21baf14cc66" title="后序遍历(非递归版本)" alt="" coords="313,309,524,336"/>
+<area shape="rect" id="node13" href="$a05401.html#aa0a3d9e4bc6035a9c914e5109d6688b7" title="前序遍历(递归版本)" alt="" coords="332,360,505,387"/>
+<area shape="rect" id="node14" href="$a05401.html#af9d71e1c10511c865aed5c553ac24b72" title="前序遍历(非递归版本)" alt="" coords="317,411,521,437"/>
+<area shape="rect" id="node15" href="$a04583.html#ad484ac5e75e3c6057bed828f29a86776" title="输出一棵二叉树" alt="" coords="347,461,490,488"/>
+<area shape="rect" id="node17" href="$a05401.html#af2559965baee16c7a496049bccf703af" title="返回二叉树的结点数(递归版本)" alt="" coords="345,512,492,539"/>
+<area shape="rect" id="node18" href="$a05401.html#afe73f325fd03d9281d0330b7a2d0c8a8" title="返回二叉树的结点数(非递归版本)" alt="" coords="329,563,508,589"/>
+<area shape="rect" id="node16" href="$a05401.html#ab0bcb9734e8955c6b1e982d584320f64" title="获得数据为x的结点的右child" alt="" coords="572,461,727,488"/>
+</map>

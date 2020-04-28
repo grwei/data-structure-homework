@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node2" href="$a05401.html#a40668a92e598befe619d6e1ffe5f2a52" title="Create a Tree object." alt="" coords="104,5,288,32"/>
+<area shape="rect" id="node3" href="$a04565.html#a26d758d8b5cf8ccd7a4c3b68b3b9d851" title="保存测试数据的文件名" alt="" coords="141,56,251,83"/>
+<area shape="rect" id="node4" href="$a04562.html#a5f8c7bacbf6d26c5c4602194edeed660" title="生成一个文件，内容是一棵二叉树的层次遍历" alt="" coords="147,107,245,133"/>
+<area shape="rect" id="node5" href="$a04562.html#a7d426e6a75c3c77f9d18f61f2192cec9" title="(测试用)将二叉树类的多种方法的输出插到输出流" alt="" coords="139,157,253,184"/>
+</map>

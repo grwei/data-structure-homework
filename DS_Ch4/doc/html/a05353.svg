@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-180 280,-180 280,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<g id="a_node1"><a xlink:title="é“¾æŽ¥é˜Ÿåˆ—ç±»">
+<g id="a_node1"><a xlink:title="Á´½Ó¶ÓÁÐÀà">
 <polygon fill="#bfbfbf" stroke="black" points="31.5,-0.5 31.5,-19.5 149.5,-19.5 149.5,-0.5 31.5,-0.5"/>
 <text text-anchor="middle" x="90.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Queue::linkQueue&lt; T &gt;</text>
 </a>
@@ -32,7 +32,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="a05359.html" target="_top" xlink:title="linkQueueçš„ç»“ç‚¹ç±»">
+<g id="a_node3"><a xlink:href="a05359.html" target="_top" xlink:title="linkQueueµÄ½áµãÀà">
 <polygon fill="white" stroke="black" points="121,-78.5 121,-108.5 230,-108.5 230,-78.5 121,-78.5"/>
 <text text-anchor="start" x="129" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">Queue::linkQueue&lt; T</text>
 <text text-anchor="middle" x="175.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt;::node</text>

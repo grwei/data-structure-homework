@@ -1,0 +1,15 @@
+<map id="include/seqStack.hxx" name="include/seqStack.hxx">
+<area shape="rect" id="node1" title=" " alt="" coords="527,5,673,32"/>
+<area shape="rect" id="node2" href="$a04541.html" title=" " alt="" coords="544,80,656,107"/>
+<area shape="rect" id="node3" href="$a04520.html" title=" " alt="" coords="357,155,502,181"/>
+<area shape="rect" id="node13" href="$a04529.html" title=" " alt="" coords="527,155,673,181"/>
+<area shape="rect" id="node4" href="$a04547.html" title=" " alt="" coords="11,229,114,256"/>
+<area shape="rect" id="node7" href="$a04559.html" title="测试：交换二叉树中所有结点的左右子树" alt="" coords="138,229,235,256"/>
+<area shape="rect" id="node8" href="$a04562.html" title="测试：统计二叉树中度为2的结点的个数" alt="" coords="259,229,357,256"/>
+<area shape="rect" id="node9" href="$a04565.html" title="测试：判断二叉树是否为满二叉树" alt="" coords="381,229,478,256"/>
+<area shape="rect" id="node10" href="$a04568.html" title="测试：判断二叉树是否为完全二叉树" alt="" coords="502,229,599,256"/>
+<area shape="rect" id="node11" href="$a04571.html" title="测试：判断两棵二叉树是否相同" alt="" coords="623,229,721,256"/>
+<area shape="rect" id="node12" href="$a04574.html" title="测试：判断两棵二叉树是否互为镜像" alt="" coords="745,229,842,256"/>
+<area shape="rect" id="node5" href="$a04544.html" title="生成一个文件，内容是一棵二叉树的层次遍历(deprecated)" alt="" coords="5,304,120,331"/>
+<area shape="rect" id="node6" href="$a04577.html" title=" " alt="" coords="17,379,108,405"/>
+</map>

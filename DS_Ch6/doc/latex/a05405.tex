@@ -1,0 +1,173 @@
+\hypertarget{a05405}{}\doxysection{Tree\+::binary\+Tree$<$ T, Comparator $>$\+::Bin\+Node Struct Reference}
+\label{a05405}\index{Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}}
+
+
+二叉链表的结点类  
+
+
+
+
+Collaboration diagram for Tree\+::binary\+Tree$<$ T, Comparator $>$\+::Bin\+Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{a05403}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05405_a8c49db033a012dcf2714d9851c4d7423}{Bin\+Node}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&\+\_\+data=\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}\{\}, \mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+left=nullptr, \mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+right=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new Bin Node object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05405_ae38625fd8375045f8a501e3121790902}{Bin\+Node}} (\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&\&\+\_\+data, \mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+left, \mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Construct a new Bin Node object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05405_afd19bde2e8ba98ecd004b09aa6accca5}{$\sim$\+Bin\+Node}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the Bin Node object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05405_a207e95e3bb20b4e0c11f05476d7d53ee}{data}}
+\begin{DoxyCompactList}\small\item\em 数据 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$ \mbox{\hyperlink{a05405_a8e54593b4a7c50bed8d3e3c94aab4d8b}{left}}
+\begin{DoxyCompactList}\small\item\em 指向左child \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$ \mbox{\hyperlink{a05405_a92a86aa85769df8f3c0b5edfc93b8847}{right}}
+\begin{DoxyCompactList}\small\item\em 指向右child \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Comparator$>$\newline
+struct Tree\+::binary\+Tree$<$ T, Comparator $>$\+::\+Bin\+Node}
+
+二叉链表的结点类 
+
+
+
+Definition at line 120 of file binary\+Tree.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05405_a8c49db033a012dcf2714d9851c4d7423}\label{a05405_a8c49db033a012dcf2714d9851c4d7423}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}!BinNode@{BinNode}}
+\index{BinNode@{BinNode}!Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}}
+\doxysubsubsection{\texorpdfstring{BinNode()}{BinNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Bin\+Node\+::\+Bin\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{\+\_\+data = {\ttfamily \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}\{\}},  }\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+left = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+right = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new Bin Node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & 数据 \\
+\hline
+{\em \+\_\+left} & 左child的地址 \\
+\hline
+{\em \+\_\+right} & 右child的地址 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 133 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05405_ae38625fd8375045f8a501e3121790902}\label{a05405_ae38625fd8375045f8a501e3121790902}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}!BinNode@{BinNode}}
+\index{BinNode@{BinNode}!Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}}
+\doxysubsubsection{\texorpdfstring{BinNode()}{BinNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Bin\+Node\+::\+Bin\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&\&}]{\+\_\+data,  }\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+left,  }\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new Bin Node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & 数据 \\
+\hline
+{\em \+\_\+left} & 左child的地址 \\
+\hline
+{\em \+\_\+right} & 右child的地址 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 142 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05405_afd19bde2e8ba98ecd004b09aa6accca5}\label{a05405_afd19bde2e8ba98ecd004b09aa6accca5}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}!````~BinNode@{$\sim$BinNode}}
+\index{````~BinNode@{$\sim$BinNode}!Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}}
+\doxysubsubsection{\texorpdfstring{$\sim$BinNode()}{~BinNode()}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Bin\+Node\+::$\sim$\+Bin\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the Bin Node object. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05405_a207e95e3bb20b4e0c11f05476d7d53ee}\label{a05405_a207e95e3bb20b4e0c11f05476d7d53ee}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}!data@{data}}
+\index{data@{data}!Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Bin\+Node\+::data}
+
+
+
+数据 
+
+
+
+Definition at line 122 of file binary\+Tree.\+hh.
+
+
+
+Referenced by Tree\+::binary\+Tree$<$ T, Comparator $>$\+::clear().
+
+\mbox{\Hypertarget{a05405_a8e54593b4a7c50bed8d3e3c94aab4d8b}\label{a05405_a8e54593b4a7c50bed8d3e3c94aab4d8b}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}!left@{left}}
+\index{left@{left}!Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05405}{Bin\+Node}}$\ast$ \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Bin\+Node\+::left}
+
+
+
+指向左child 
+
+
+
+Definition at line 123 of file binary\+Tree.\+hh.
+
+
+
+Referenced by Tree\+::binary\+Tree$<$ T, Comparator $>$\+::clear(), and Tree\+::binary\+Tree$<$ T, Comparator $>$\+::is\+Complete\+Tree().
+
+\mbox{\Hypertarget{a05405_a92a86aa85769df8f3c0b5edfc93b8847}\label{a05405_a92a86aa85769df8f3c0b5edfc93b8847}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}!right@{right}}
+\index{right@{right}!Tree::binaryTree$<$ T, Comparator $>$::BinNode@{Tree::binaryTree$<$ T, Comparator $>$::BinNode}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05405}{Bin\+Node}}$\ast$ \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Bin\+Node\+::right}
+
+
+
+指向右child 
+
+
+
+Definition at line 124 of file binary\+Tree.\+hh.
+
+
+
+Referenced by Tree\+::binary\+Tree$<$ T, Comparator $>$\+::clear(), and Tree\+::binary\+Tree$<$ T, Comparator $>$\+::is\+Complete\+Tree().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04520}{binary\+Tree.\+hh}}\end{DoxyCompactItemize}

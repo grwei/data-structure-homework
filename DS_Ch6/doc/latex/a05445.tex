@@ -1,0 +1,170 @@
+\hypertarget{a05445}{}\doxysection{Tree\+::Tree$<$ T $>$ Class Template Reference}
+\label{a05445}\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 类型别名定义 \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \& \mbox{\hyperlink{a05445_a76dc6dbca5c0ffae85f0baa07d674d5e}{reference}}
+\begin{DoxyCompactList}\small\item\em 数据的引用 \end{DoxyCompactList}\item 
+typedef size\+\_\+t \mbox{\hyperlink{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}{size\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 计数器类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{a05445_a5f196dcea9e76eb7ded89167eab8d098}{clear}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{a05445_acd6d253b7cdb4896aee699ed64615bd2}{is\+Empty}} () const =0
+\item 
+virtual \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \mbox{\hyperlink{a05445_ad69f254d936ebbdb94e9758e83c5743a}{root}} (\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} flag) const =0
+\item 
+virtual \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \mbox{\hyperlink{a05445_abe842962c85bd531d3f3fb2155cd18d0}{parent}} (\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} x, \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} flag) const =0
+\item 
+virtual \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \mbox{\hyperlink{a05445_a8a24ae31d049ab4854ef2b9b3742263c}{child}} (\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} x, \mbox{\hyperlink{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}{size\+\_\+type}} i, \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} flag) const =0
+\item 
+virtual void \mbox{\hyperlink{a05445_aadb05cd6ce02cd060df55bd6c029ef1d}{remove}} (\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} x, \mbox{\hyperlink{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}{size\+\_\+type}} i)=0
+\item 
+virtual void \mbox{\hyperlink{a05445_a35ac6530a97f9b3d1e09d53bc1ca6a0d}{traverse}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const typedef \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \& \mbox{\hyperlink{a05445_aae9f5e6a9347ec8772a3255c941182ec}{const\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em 数据的常量引用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Tree\+::\+Tree$<$ T $>$}
+
+
+
+Definition at line 40 of file Tree.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{a05445_a76dc6dbca5c0ffae85f0baa07d674d5e}\label{a05445_a76dc6dbca5c0ffae85f0baa07d674d5e}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!reference@{reference}}
+\index{reference@{reference}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}\& \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{a05445_a76dc6dbca5c0ffae85f0baa07d674d5e}{reference}}}
+
+
+
+数据的引用 
+
+
+
+Definition at line 60 of file Tree.\+h.
+
+\mbox{\Hypertarget{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}\label{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef size\+\_\+t \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}{size\+\_\+type}}}
+
+
+
+计数器类型 
+
+
+
+Definition at line 62 of file Tree.\+h.
+
+\mbox{\Hypertarget{a05445_abd1bd1b2618a43c559e331d74b680fb0}\label{a05445_abd1bd1b2618a43c559e331d74b680fb0}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef T \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}}
+
+
+
+类型别名定义 
+
+数据类型 
+
+Definition at line 59 of file Tree.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05445_a8a24ae31d049ab4854ef2b9b3742263c}\label{a05445_a8a24ae31d049ab4854ef2b9b3742263c}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!child@{child}}
+\index{child@{child}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{child()}{child()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}}]{x,  }\item[{\mbox{\hyperlink{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}{size\+\_\+type}}}]{i,  }\item[{\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}}]{flag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{a05445_a5f196dcea9e76eb7ded89167eab8d098}\label{a05445_a5f196dcea9e76eb7ded89167eab8d098}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{a05445_acd6d253b7cdb4896aee699ed64615bd2}\label{a05445_acd6d253b7cdb4896aee699ed64615bd2}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{a05445_abe842962c85bd531d3f3fb2155cd18d0}\label{a05445_abe842962c85bd531d3f3fb2155cd18d0}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!parent@{parent}}
+\index{parent@{parent}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}}]{x,  }\item[{\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}}]{flag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{a05445_aadb05cd6ce02cd060df55bd6c029ef1d}\label{a05445_aadb05cd6ce02cd060df55bd6c029ef1d}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}}]{x,  }\item[{\mbox{\hyperlink{a05445_a4c96aa19c6f3bad5e559484dfb6ff6e2}{size\+\_\+type}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{a05445_ad69f254d936ebbdb94e9758e83c5743a}\label{a05445_ad69f254d936ebbdb94e9758e83c5743a}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!root@{root}}
+\index{root@{root}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}} \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::root (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}}]{flag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{a05445_a35ac6530a97f9b3d1e09d53bc1ca6a0d}\label{a05445_a35ac6530a97f9b3d1e09d53bc1ca6a0d}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!traverse@{traverse}}
+\index{traverse@{traverse}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{traverse()}{traverse()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::traverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05445_aae9f5e6a9347ec8772a3255c941182ec}\label{a05445_aae9f5e6a9347ec8772a3255c941182ec}} 
+\index{Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!Tree::Tree$<$ T $>$@{Tree::Tree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const typedef \mbox{\hyperlink{a05445_abd1bd1b2618a43c559e331d74b680fb0}{value\+\_\+type}}\& \mbox{\hyperlink{a05445}{Tree\+::\+Tree}}$<$ T $>$\+::const\+\_\+reference}
+
+
+
+数据的常量引用 
+
+
+
+Definition at line 61 of file Tree.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04547}{Tree.\+h}}\end{DoxyCompactItemize}

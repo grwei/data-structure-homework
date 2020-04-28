@@ -1,0 +1,168 @@
+\hypertarget{a05449}{}\doxysection{Tree\+::Tree\+Exception Class Reference}
+\label{a05449}\index{Tree::TreeException@{Tree::TreeException}}
+
+
+{\ttfamily \#include $<$Tree\+Exception.\+hh$>$}
+
+
+
+Inheritance diagram for Tree\+::Tree\+Exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{a05448}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tree\+::Tree\+Exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{a05447}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05449_a7c329516e852a23eec3f208f82c1ddaa}{Tree\+Exception}} (const std\+::string \&text=\char`\"{}undefined exception\char`\"{}, const std\+::string \&id=\char`\"{}undefined\char`\"{}, const std\+::string \&td=\char`\"{}Generic Arg\+Exception\char`\"{})
+\item 
+virtual \mbox{\hyperlink{a05449_ad2d5fcd6e5dfb85924a06fde286f678b}{$\sim$\+Tree\+Exception}} () noexcept
+\item 
+std\+::string \mbox{\hyperlink{a05449_aff0f9a24bf8be885511ffd9176a3db9f}{error}} () const
+\item 
+std\+::string \mbox{\hyperlink{a05449_a94babfd1822a01879a3173a26c032ffb}{arg\+Id}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{a05449_a1374ea5ddb12d83e6da1d312ad171cf3}{what}} () const noexcept
+\item 
+std\+::string \mbox{\hyperlink{a05449_af3bf3d704a47c1cd8c362f953cdfe30b}{type\+Description}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{a05449_ac34c27feb5335df3af23deaee83180b3}{\+\_\+error\+Text}}
+\item 
+std\+::string \mbox{\hyperlink{a05449_a53d17390e84514fbde8c922e88268cd6}{\+\_\+arg\+Id}}
+\item 
+std\+::string \mbox{\hyperlink{a05449_a9242262d6415c848363ce2d734178602}{\+\_\+type\+Description}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple class that defines and \mbox{\hyperlink{a05445}{Tree}} exception. Should be caught whenever a \mbox{\hyperlink{a05445}{Tree}} is created and used. 
+
+Definition at line 40 of file Tree\+Exception.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05449_a7c329516e852a23eec3f208f82c1ddaa}\label{a05449_a7c329516e852a23eec3f208f82c1ddaa}} 
+\index{Tree::TreeException@{Tree::TreeException}!TreeException@{TreeException}}
+\index{TreeException@{TreeException}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{TreeException()}{TreeException()}}
+{\footnotesize\ttfamily Tree\+::\+Tree\+Exception\+::\+Tree\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text = {\ttfamily \char`\"{}undefined~exception\char`\"{}},  }\item[{const std\+::string \&}]{id = {\ttfamily \char`\"{}undefined\char`\"{}},  }\item[{const std\+::string \&}]{td = {\ttfamily \char`\"{}Generic~ArgException\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em text} & -\/ The text of the exception. \\
+\hline
+{\em id} & -\/ The text identifying the argument source. \\
+\hline
+{\em td} & -\/ Text describing the type of Arg\+Exception it is. of the exception. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file Tree\+Exception.\+hh.
+
+\mbox{\Hypertarget{a05449_ad2d5fcd6e5dfb85924a06fde286f678b}\label{a05449_ad2d5fcd6e5dfb85924a06fde286f678b}} 
+\index{Tree::TreeException@{Tree::TreeException}!````~TreeException@{$\sim$TreeException}}
+\index{````~TreeException@{$\sim$TreeException}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{$\sim$TreeException()}{~TreeException()}}
+{\footnotesize\ttfamily virtual Tree\+::\+Tree\+Exception\+::$\sim$\+Tree\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+Destructor. 
+
+Definition at line 73 of file Tree\+Exception.\+hh.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05449_a94babfd1822a01879a3173a26c032ffb}\label{a05449_a94babfd1822a01879a3173a26c032ffb}} 
+\index{Tree::TreeException@{Tree::TreeException}!argId@{argId}}
+\index{argId@{argId}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{argId()}{argId()}}
+{\footnotesize\ttfamily std\+::string Tree\+::\+Tree\+Exception\+::arg\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the argument id. 
+
+Definition at line 83 of file Tree\+Exception.\+hh.
+
+\mbox{\Hypertarget{a05449_aff0f9a24bf8be885511ffd9176a3db9f}\label{a05449_aff0f9a24bf8be885511ffd9176a3db9f}} 
+\index{Tree::TreeException@{Tree::TreeException}!error@{error}}
+\index{error@{error}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily std\+::string Tree\+::\+Tree\+Exception\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the error text. 
+
+Definition at line 78 of file Tree\+Exception.\+hh.
+
+\mbox{\Hypertarget{a05449_af3bf3d704a47c1cd8c362f953cdfe30b}\label{a05449_af3bf3d704a47c1cd8c362f953cdfe30b}} 
+\index{Tree::TreeException@{Tree::TreeException}!typeDescription@{typeDescription}}
+\index{typeDescription@{typeDescription}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{typeDescription()}{typeDescription()}}
+{\footnotesize\ttfamily std\+::string Tree\+::\+Tree\+Exception\+::type\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the type of the exception. Used to explain and distinguish between different child exceptions. 
+
+Definition at line 105 of file Tree\+Exception.\+hh.
+
+\mbox{\Hypertarget{a05449_a1374ea5ddb12d83e6da1d312ad171cf3}\label{a05449_a1374ea5ddb12d83e6da1d312ad171cf3}} 
+\index{Tree::TreeException@{Tree::TreeException}!what@{what}}
+\index{what@{what}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ Tree\+::\+Tree\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Returns the arg id and error text. 
+
+Definition at line 94 of file Tree\+Exception.\+hh.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05449_a53d17390e84514fbde8c922e88268cd6}\label{a05449_a53d17390e84514fbde8c922e88268cd6}} 
+\index{Tree::TreeException@{Tree::TreeException}!\_argId@{\_argId}}
+\index{\_argId@{\_argId}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{\_argId}{\_argId}}
+{\footnotesize\ttfamily std\+::string Tree\+::\+Tree\+Exception\+::\+\_\+arg\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+The argument related to this exception. 
+
+Definition at line 116 of file Tree\+Exception.\+hh.
+
+\mbox{\Hypertarget{a05449_ac34c27feb5335df3af23deaee83180b3}\label{a05449_ac34c27feb5335df3af23deaee83180b3}} 
+\index{Tree::TreeException@{Tree::TreeException}!\_errorText@{\_errorText}}
+\index{\_errorText@{\_errorText}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{\_errorText}{\_errorText}}
+{\footnotesize\ttfamily std\+::string Tree\+::\+Tree\+Exception\+::\+\_\+error\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+The text of the exception message. 
+
+Definition at line 111 of file Tree\+Exception.\+hh.
+
+\mbox{\Hypertarget{a05449_a9242262d6415c848363ce2d734178602}\label{a05449_a9242262d6415c848363ce2d734178602}} 
+\index{Tree::TreeException@{Tree::TreeException}!\_typeDescription@{\_typeDescription}}
+\index{\_typeDescription@{\_typeDescription}!Tree::TreeException@{Tree::TreeException}}
+\doxysubsubsection{\texorpdfstring{\_typeDescription}{\_typeDescription}}
+{\footnotesize\ttfamily std\+::string Tree\+::\+Tree\+Exception\+::\+\_\+type\+Description\hspace{0.3cm}{\ttfamily [private]}}
+
+Describes the type of the exception. Used to distinguish between different child exceptions. 
+
+Definition at line 122 of file Tree\+Exception.\+hh.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04550}{Tree\+Exception.\+hh}}\end{DoxyCompactItemize}

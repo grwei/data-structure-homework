@@ -1,0 +1,1711 @@
+\hypertarget{a05401}{}\doxysection{Tree\+::binary\+Tree$<$ T, Comparator $>$ Class Template Reference}
+\label{a05401}\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+
+
+用二叉链表实现的二叉树类  
+
+
+
+
+{\ttfamily \#include $<$binary\+Tree.\+hh$>$}
+
+
+
+Collaboration diagram for Tree\+::binary\+Tree$<$ T, Comparator $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{a05399}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a05405}{Bin\+Node}}
+\begin{DoxyCompactList}\small\item\em 二叉链表的结点类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 类型别名定义 \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \& \mbox{\hyperlink{a05401_a165837c10ea2f371ac7989e35acb11b5}{reference}}
+\begin{DoxyCompactList}\small\item\em 数据的引用 \end{DoxyCompactList}\item 
+typedef size\+\_\+t \mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 计数器类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05401_a57bd7d354167f52331f751bf0dab4dc7}{binary\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_a3adeeaa5aed3b3d4852c906ff829cab5}{binary\+Tree}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&x)
+\begin{DoxyCompactList}\small\item\em Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_a30b25e4df45a1148e513f7200da3b1b9}{binary\+Tree}} (const \mbox{\hyperlink{a05401}{binary\+Tree}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object 拷贝构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401}{binary\+Tree}} \& \mbox{\hyperlink{a05401_a09214bfe65861c9ff6ea1534429d03cb}{operator=}} (const \mbox{\hyperlink{a05401}{binary\+Tree}} \&rhs)
+\begin{DoxyCompactList}\small\item\em 赋值运算符重载 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_a3b41680a8246aa1c947cad46b984e01e}{binary\+Tree}} (\mbox{\hyperlink{a05401}{binary\+Tree}} \&\&rhs)
+\begin{DoxyCompactList}\small\item\em Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object 移动构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401}{binary\+Tree}} \& \mbox{\hyperlink{a05401_aa3d64f5301306cc864a5138ae1761952}{operator=}} (\mbox{\hyperlink{a05401}{binary\+Tree}} \&\&rhs)
+\begin{DoxyCompactList}\small\item\em 移动赋值运算符 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_a98c1d78d85e836d3424ad66cc2425ee2}{$\sim$binary\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the binary \mbox{\hyperlink{a05445}{Tree}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a9194d1f92b108620b53180da999aaa48}{clear}} ()
+\begin{DoxyCompactList}\small\item\em 清空二叉树 函数返回后，对象的成员root\+\_\+将被置nullptr \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{a05401_a3496f157e966e3acc0bfc97d0b9854b0}{empty}} () const
+\begin{DoxyCompactList}\small\item\em 判断二叉树是否为空树 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401_a6904ca2a5311bc475d24cd7859dff66b}{root}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&flag) const
+\begin{DoxyCompactList}\small\item\em 返回根结点的数据 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401_a1a40ebe3b6ce6854040202e4fb5c0f05}{lchild}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&x, const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&flag) const
+\begin{DoxyCompactList}\small\item\em 获得数据为x的结点的左child \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401_ab0bcb9734e8955c6b1e982d584320f64}{rchild}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&x, const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&flag) const
+\begin{DoxyCompactList}\small\item\em 获得数据为x的结点的右child \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_aadacd70978bd8a75adc9ef2c4f6f40e4}{del\+Left}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&x)
+\begin{DoxyCompactList}\small\item\em 删除左subtree \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_ad960b8028f5d1d8c9282160aede6f68b}{del\+Right}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&x)
+\begin{DoxyCompactList}\small\item\em 删除右subtree \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_aa0a3d9e4bc6035a9c914e5109d6688b7}{pre\+Order}} (std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 前序遍历(递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_af9d71e1c10511c865aed5c553ac24b72}{pre\+Order\+\_\+loop}} (std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 前序遍历(非递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_ac6003da876c500af081001c549a90433}{in\+Order}} (std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 中序遍历(递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a6cb786410ed6c0f61969a09b76f4da0c}{in\+Order\+\_\+loop}} (std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 中序遍历(非递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a29e131a4f32bf7ac33dad9cd60d5ca7b}{post\+Order}} (std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 后序遍历(递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a24d90fc12dae5213ddb8b21baf14cc66}{post\+Order\+\_\+loop}} (std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 后序遍历(非递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a94dcc51623e366cb26fa5e543b19c6f8}{level\+Order}} (std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 层次遍历 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a40668a92e598befe619d6e1ffe5f2a52}{create\+Tree}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&flag=\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}\{\}, std\+::istream \&in=std\+::cin)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{a05445}{Tree}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401_a04b72fb96511872389c079dcdd8dcd39}{parent}} (\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} x, const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&flag) const
+\begin{DoxyCompactList}\small\item\em 返回数据为x的结点的parent结点 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_ac7389dcd912456fbc77ad350a1134732}{height}} () const
+\begin{DoxyCompactList}\small\item\em 返回二叉树的高度(递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_a18c50f432143bfe2feade7347f8ff770}{height\+\_\+loop}} () const
+\begin{DoxyCompactList}\small\item\em 返回二叉树的高度(非递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_af2559965baee16c7a496049bccf703af}{size}} () const
+\begin{DoxyCompactList}\small\item\em 返回二叉树的结点数(递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_afe73f325fd03d9281d0330b7a2d0c8a8}{size\+\_\+loop}} () const
+\begin{DoxyCompactList}\small\item\em 返回二叉树的结点数(非递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a81357f9d197b142b8126579ce51fab17}{swaplr}} ()
+\begin{DoxyCompactList}\small\item\em 交换左右子树 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_a1203fc03a4506fa073d80545ce1de6a3}{Count\+Degree\+Two}} () const
+\begin{DoxyCompactList}\small\item\em 统计树中度为2的结点的个数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{a05401_a2b05f46a36ae7f0f98dfa65dc908fdca}{is\+Complete\+Tree}} () const
+\begin{DoxyCompactList}\small\item\em 返回是否完全二叉树 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{a05401_afee39e46bd46f7178347eaae0581063b}{is\+Full\+Binary\+Tree}} () const
+\begin{DoxyCompactList}\small\item\em 是否满二叉树 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{a05401_a31c21bc3323bcc69b5053c325aacf015}{is\+\_\+symmetrical\+\_\+tree}} (const \mbox{\hyperlink{a05401}{binary\+Tree}} \&lhs, const \mbox{\hyperlink{a05401}{binary\+Tree}} \&rhs)
+\begin{DoxyCompactList}\small\item\em 判断两棵二叉树是否互为镜像 两棵二叉树\#1和\#2互为镜像，如果二者皆为空树；或二者根结点的值相同，且\#1的左、右子树与\#2的右、左子树互为镜像 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const typedef \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \& \mbox{\hyperlink{a05401_ad6b1eaee9b04cf92b17732ee573786c0}{const\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em 数据的常量引用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$ \mbox{\hyperlink{a05401_a8c8d3f85b7ce46148d672e722c8a7c5a}{find}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&x, \mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\mbox{\hyperlink{a05401_a6904ca2a5311bc475d24cd7859dff66b}{root}}) const
+\begin{DoxyCompactList}\small\item\em 在以root为根的树中(前序)查找数据为x的结点，返回指向该结点的指针 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a9d02ce7e04ec1724189dbfbaac976dad}{clear}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\&\mbox{\hyperlink{a05401_a6904ca2a5311bc475d24cd7859dff66b}{root}})
+\begin{DoxyCompactList}\small\item\em 清空以root为根结点的树，包括清除根结点 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$ \mbox{\hyperlink{a05401_a42a46bd0bb2f1f4af08fb0bb97c553ae}{clone}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root) const
+\begin{DoxyCompactList}\small\item\em Internal method to clone subtree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_afcd5d328b700cd21fe3b83a9389afbff}{pre\+Order}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\mbox{\hyperlink{a05401_a6904ca2a5311bc475d24cd7859dff66b}{root}}, std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 前序遍历以root为根结点的树(递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_aaccc2e0eabfaa2e0afbdb8d8f8167810}{in\+Order}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\mbox{\hyperlink{a05401_a6904ca2a5311bc475d24cd7859dff66b}{root}}, std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 中序遍历以root为根结点的树(递归版本) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a21bb7a7c9def883a6fc6100daee7da93}{post\+Order}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\mbox{\hyperlink{a05401_a6904ca2a5311bc475d24cd7859dff66b}{root}}, std\+::ostream \&out=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em 后序遍历以root为根结点的树(递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_a0c1ead0ecde8fd11ed6d413cb436b746}{size}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root) const
+\begin{DoxyCompactList}\small\item\em 返回以指定结点为根结点的二叉树的规模(递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_acacefce24de297c47729246317719729}{size\+\_\+loop}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root) const
+\begin{DoxyCompactList}\small\item\em 返回以指定结点为根结点的二叉树的规模(非递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_a903b0c460b2763a2334df9b688ab7e13}{height}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root) const
+\begin{DoxyCompactList}\small\item\em 返回以指定结点为根结点的二叉树的高度(递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_a952158e7308bee57ec934a3fd292356c}{height\+\_\+loop}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root) const
+\begin{DoxyCompactList}\small\item\em 返回以指定结点为根结点的二叉树的高度(非递归版本) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401_af1189a5975fbb8a44ed1ff746902910d}{Count\+Degree\+Two}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root) const
+\begin{DoxyCompactList}\small\item\em 统计树中度为2的结点的个数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_ac72226f157079d3e873a6412a7f6f9a3}{swaplr}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root)
+\begin{DoxyCompactList}\small\item\em 交换左右子树 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{a05401_a9139b8824a1b08e5436685a2dbc6b296}{is\+\_\+symmetrical\+\_\+subtree}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$root1, \mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$root2)
+\begin{DoxyCompactList}\small\item\em Internal method to 判断两棵二叉树是否相互对称 \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{a05401_acff903bc85aae48ad28856ab8a990bc4}{value\+\_\+type\+\_\+less}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&lhs, const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&rhs)
+\begin{DoxyCompactList}\small\item\em 比较value\+\_\+type类型对象的大小。 \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{a05401_addaed7635a0453b38ab8eda812a8d5a0}{value\+\_\+type\+\_\+equal}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&lhs, const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&rhs)
+\begin{DoxyCompactList}\small\item\em 比较value\+\_\+type类型对象的大小。 \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{a05401_a1811f886d68ab66847e6ceebd91570c3}{value\+\_\+type\+\_\+less\+\_\+equal}} (const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&lhs, const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&rhs)
+\begin{DoxyCompactList}\small\item\em 比较value\+\_\+type类型对象的大小。 \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{a05401_a7a112bcac254c7344802ef74aa561b9c}{is\+\_\+equal\+\_\+subtree}} (\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root1, \mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\+\_\+root2)
+\begin{DoxyCompactList}\small\item\em 判断两棵二叉树是否相同 \char`\"{}相同\char`\"{}是指：两棵树的形状及对应结点的值相等 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$ \mbox{\hyperlink{a05401_ab518fbeddcd16a35e087ab5ce6bdec16}{root\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 二叉树的根结点 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Comparator \mbox{\hyperlink{a05401_a2d83bc4e269a3a8f81db1f6c79824c9e}{is\+\_\+less\+\_\+than\+\_\+}} = Comparator\{\}
+\begin{DoxyCompactList}\small\item\em 比较器(function object) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{a05401_af67a715c8762e222910cecaefadc4b26}{operator==}} (const \mbox{\hyperlink{a05401}{binary\+Tree}} \&lhs, const \mbox{\hyperlink{a05401}{binary\+Tree}} \&rhs)
+\begin{DoxyCompactList}\small\item\em 比较两棵二叉树是否相同 \char`\"{}相同\char`\"{}是指： \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05401_a93afab389963fd3c1c581ef3ebae3432}{print\+Binary\+Tree}} (const \mbox{\hyperlink{a05401}{binary\+Tree}} \&bin\+\_\+tree, const typename \mbox{\hyperlink{a05401}{binary\+Tree}} \+::\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&flag, std\+::ostream \&out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Comparator$>$\newline
+class Tree\+::binary\+Tree$<$ T, Comparator $>$}
+
+用二叉链表实现的二叉树类 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 数据类型 \\
+\hline
+{\em Comparator} & 数据类型的比较器类，默认为std\+::less$<$\+T$>$\\
+\hline
+\end{DoxyTemplParams}
+若类型\+T重载了operator$<$，则\+Comparator的默认类型std\+::less$<$\+T$>$将调用operator$<$，故实例化时不必指定tparam2；~\newline
+否则，要求指定模板参数\+Comparator，which is a function object, 重载了bool operator(\+T t1, T t2)：当语义上t1 $<$ t2时返回true。
+
+要求对\+T重载了operator$<$$<$ 和 operator$>$$>$。建议每个对象的输出在一行以内 \begin{DoxyWarning}{Warning}
+若树中存储了data相同的结点，则私有find方法调用该方法的公有方法可能出现异常！ 
+\end{DoxyWarning}
+
+
+Definition at line 53 of file binary\+Tree.\+hh.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{a05401_a165837c10ea2f371ac7989e35acb11b5}\label{a05401_a165837c10ea2f371ac7989e35acb11b5}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!reference@{reference}}
+\index{reference@{reference}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+typedef \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}\& \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_a165837c10ea2f371ac7989e35acb11b5}{reference}}}
+
+
+
+数据的引用 
+
+
+
+Definition at line 109 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_af83b64f3ad17abdaab0c208a4c0afafc}\label{a05401_af83b64f3ad17abdaab0c208a4c0afafc}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+typedef size\+\_\+t \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}}}
+
+
+
+计数器类型 
+
+
+
+Definition at line 111 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_afaa28be8afcfed930217d6d75ae18383}\label{a05401_afaa28be8afcfed930217d6d75ae18383}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+typedef T \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}}
+
+
+
+类型别名定义 
+
+数据类型 
+
+Definition at line 108 of file binary\+Tree.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05401_a57bd7d354167f52331f751bf0dab4dc7}\label{a05401_a57bd7d354167f52331f751bf0dab4dc7}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!binaryTree@{binaryTree}}
+\index{binaryTree@{binaryTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{binaryTree()}{binaryTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401}{binary\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object. 
+
+创建一棵空树 
+
+Definition at line 160 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a3adeeaa5aed3b3d4852c906ff829cab5}\label{a05401_a3adeeaa5aed3b3d4852c906ff829cab5}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!binaryTree@{binaryTree}}
+\index{binaryTree@{binaryTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{binaryTree()}{binaryTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401}{binary\+Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object. 
+
+创建一棵带有根节点的树
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 根结点的数据 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a30b25e4df45a1148e513f7200da3b1b9}\label{a05401_a30b25e4df45a1148e513f7200da3b1b9}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!binaryTree@{binaryTree}}
+\index{binaryTree@{binaryTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{binaryTree()}{binaryTree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401}{binary\+Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object 拷贝构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & 源对象 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+参考\+C++设计模式——原型模式 
+\end{DoxyNote}
+
+
+Definition at line 177 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a3b41680a8246aa1c947cad46b984e01e}\label{a05401_a3b41680a8246aa1c947cad46b984e01e}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!binaryTree@{binaryTree}}
+\index{binaryTree@{binaryTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{binaryTree()}{binaryTree()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401}{binary\+Tree}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new binary \mbox{\hyperlink{a05445}{Tree}} object 移动构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & 源对象，右值 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 198 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a98c1d78d85e836d3424ad66cc2425ee2}\label{a05401_a98c1d78d85e836d3424ad66cc2425ee2}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!````~binaryTree@{$\sim$binaryTree}}
+\index{````~binaryTree@{$\sim$binaryTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$binaryTree()}{~binaryTree()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::$\sim$\mbox{\hyperlink{a05401}{binary\+Tree}}}
+
+
+
+Destroy the binary \mbox{\hyperlink{a05445}{Tree}} object. 
+
+
+
+Definition at line 654 of file binary\+Tree.\+hh.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05401_a9194d1f92b108620b53180da999aaa48}\label{a05401_a9194d1f92b108620b53180da999aaa48}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!clear@{clear}}
+\index{clear@{clear}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::clear}
+
+
+
+清空二叉树 函数返回后，对象的成员root\+\_\+将被置nullptr 
+
+
+
+Definition at line 648 of file binary\+Tree.\+hh.
+
+
+
+References Tree\+::binary\+Tree$<$ T, Comparator $>$\+::\+Bin\+Node\+::data, Tree\+::binary\+Tree$<$ T, Comparator $>$\+::\+Bin\+Node\+::left, and Tree\+::binary\+Tree$<$ T, Comparator $>$\+::\+Bin\+Node\+::right.
+
+\mbox{\Hypertarget{a05401_a9d02ce7e04ec1724189dbfbaac976dad}\label{a05401_a9d02ce7e04ec1724189dbfbaac976dad}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!clear@{clear}}
+\index{clear@{clear}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$\&}]{root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+清空以root为根结点的树，包括清除根结点 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & 指向目标树的根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+类的工具函数
+\end{DoxyNote}
+函数执行完毕后，root将被置为nullptr 
+
+Definition at line 636 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a42a46bd0bb2f1f4af08fb0bb97c553ae}\label{a05401_a42a46bd0bb2f1f4af08fb0bb97c553ae}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!clone@{clone}}
+\index{clone@{clone}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$ \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::clone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal method to clone subtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向源二叉树的根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bin\+Node$\ast$ 指向新二叉树的根结点的指针 
+\end{DoxyReturn}
+
+
+Definition at line 660 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a1203fc03a4506fa073d80545ce1de6a3}\label{a05401_a1203fc03a4506fa073d80545ce1de6a3}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!CountDegreeTwo@{CountDegreeTwo}}
+\index{CountDegreeTwo@{CountDegreeTwo}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{CountDegreeTwo()}{CountDegreeTwo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Count\+Degree\+Two (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+统计树中度为2的结点的个数 
+
+
+
+Definition at line 409 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_a1203fc03a4506fa073d80545ce1de6a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_af1189a5975fbb8a44ed1ff746902910d}\label{a05401_af1189a5975fbb8a44ed1ff746902910d}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!CountDegreeTwo@{CountDegreeTwo}}
+\index{CountDegreeTwo@{CountDegreeTwo}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{CountDegreeTwo()}{CountDegreeTwo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::Count\+Degree\+Two (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+统计树中度为2的结点的个数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向树的根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+
+
+Definition at line 1082 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a40668a92e598befe619d6e1ffe5f2a52}\label{a05401_a40668a92e598befe619d6e1ffe5f2a52}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!createTree@{createTree}}
+\index{createTree@{createTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{createTree()}{createTree()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::create\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{flag = {\ttfamily \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}\{\}},  }\item[{std\+::istream \&}]{in = {\ttfamily std\+:\+:cin} }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{a05445}{Tree}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & \char`\"{}空结点\char`\"{}的特殊标记 \\
+\hline
+{\em in} & 输入流对象，可以是cin, 或者ifstream类的对象等\\
+\hline
+\end{DoxyParams}
+@ details 该方法首先调用clear()清空二叉树。 然后要从输入流(标准/文件流)按层次顺序输入在建二叉树各结点的值，依此建立一棵二叉树~\newline
+输入flag表示\char`\"{}空结点\char`\"{} \begin{DoxyWarning}{Warning}
+本方法可能调用ifstream类从istream类继承的的sync()方法，which可能导致未定义行为。 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+要求对value\+\_\+type类型重载了operator$>$$>$和operator$<$$<$ 
+\end{DoxyNote}
+
+
+Definition at line 1324 of file binary\+Tree.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{a05401_a40668a92e598befe619d6e1ffe5f2a52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_aadacd70978bd8a75adc9ef2c4f6f40e4}\label{a05401_aadacd70978bd8a75adc9ef2c4f6f40e4}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!delLeft@{delLeft}}
+\index{delLeft@{delLeft}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{delLeft()}{delLeft()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::del\+Left (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+删除左subtree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 目标结点。以该结点的左child为根的树将被删除 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+树中有data相同的结点时，该方法只能访问到前序序列中首次出现该数据的那个结点！ 
+\end{DoxyWarning}
+
+
+Definition at line 1031 of file binary\+Tree.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{a05401_aadacd70978bd8a75adc9ef2c4f6f40e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_ad960b8028f5d1d8c9282160aede6f68b}\label{a05401_ad960b8028f5d1d8c9282160aede6f68b}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!delRight@{delRight}}
+\index{delRight@{delRight}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{delRight()}{delRight()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::del\+Right (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+删除右subtree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 目标结点。以该节点的右child为根的树将被删除 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+树中有data相同的结点时，该方法只能访问到前序序列中首次出现该数据的那个结点！ 
+\end{DoxyWarning}
+
+
+Definition at line 1041 of file binary\+Tree.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{a05401_ad960b8028f5d1d8c9282160aede6f68b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a3496f157e966e3acc0bfc97d0b9854b0}\label{a05401_a3496f157e966e3acc0bfc97d0b9854b0}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!empty@{empty}}
+\index{empty@{empty}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::empty}
+
+
+
+判断二叉树是否为空树 
+
+\begin{DoxyReturn}{Returns}
+true 是空树 
+
+false 非空树 
+\end{DoxyReturn}
+
+
+Definition at line 621 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a8c8d3f85b7ce46148d672e722c8a7c5a}\label{a05401_a8c8d3f85b7ce46148d672e722c8a7c5a}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!find@{find}}
+\index{find@{find}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$ \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::find (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{x,  }\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+在以root为根的树中(前序)查找数据为x的结点，返回指向该结点的指针 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 目标数据 \\
+\hline
+{\em root} & 目标二叉树的根结点的地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bin\+Node$\ast$ 指向查找到的数据为x的结点的指针。返回nullptr表示找不到。
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+树中有data相同的结点时，该方法只能找到前序序列中首次出现该数据的那个结点！ 
+\end{DoxyWarning}
+
+
+Definition at line 1015 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_ac7389dcd912456fbc77ad350a1134732}\label{a05401_ac7389dcd912456fbc77ad350a1134732}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!height@{height}}
+\index{height@{height}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::height}
+
+
+
+返回二叉树的高度(递归版本) 
+
+The height of n\+\_\+i is the length of the longest path from n\+\_\+i to a leaf. Thus all leaves are at height 0. ~\newline
+The height of a tree is equal to the height of the root.
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+type 二叉树的高度 
+\end{DoxyReturn}
+
+
+Definition at line 1195 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_ac7389dcd912456fbc77ad350a1134732_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a903b0c460b2763a2334df9b688ab7e13}\label{a05401_a903b0c460b2763a2334df9b688ab7e13}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!height@{height}}
+\index{height@{height}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+返回以指定结点为根结点的二叉树的高度(递归版本) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 以指定结点为根结点的二叉树的高度 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+
+
+Definition at line 1093 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a18c50f432143bfe2feade7347f8ff770}\label{a05401_a18c50f432143bfe2feade7347f8ff770}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!height\_loop@{height\_loop}}
+\index{height\_loop@{height\_loop}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{height\_loop()}{height\_loop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::height\+\_\+loop}
+
+
+
+返回二叉树的高度(非递归版本) 
+
+The height of n\+\_\+i is the length of the longest path from n\+\_\+i to a leaf. Thus all leaves are at height 0. ~\newline
+The height of a tree is equal to the height of the root.
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+type 二叉树的高度 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reference \href{https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and}{\texttt{ https\+://www.\+codeproject.\+com/\+Articles/418776/\+How-\/to-\/replace-\/recursive-\/functions-\/using-\/stack-\/and}} 
+\end{DoxyNote}
+
+
+Definition at line 1201 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_a18c50f432143bfe2feade7347f8ff770_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a952158e7308bee57ec934a3fd292356c}\label{a05401_a952158e7308bee57ec934a3fd292356c}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!height\_loop@{height\_loop}}
+\index{height\_loop@{height\_loop}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{height\_loop()}{height\_loop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::height\+\_\+loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+返回以指定结点为根结点的二叉树的高度(非递归版本) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 以指定结点为根结点的二叉树的高度 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+类的工具函数 
+
+Reference \href{https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and}{\texttt{ https\+://www.\+codeproject.\+com/\+Articles/418776/\+How-\/to-\/replace-\/recursive-\/functions-\/using-\/stack-\/and}} 
+\end{DoxyNote}
+
+
+Definition at line 1104 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_aaccc2e0eabfaa2e0afbdb8d8f8167810}\label{a05401_aaccc2e0eabfaa2e0afbdb8d8f8167810}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!inOrder@{inOrder}}
+\index{inOrder@{inOrder}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{inOrder()}{inOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::in\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{root,  }\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+中序遍历以root为根结点的树(递归版本) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & 指向目标树的根结点的指针 \\
+\hline
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+
+
+Definition at line 837 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_ac6003da876c500af081001c549a90433}\label{a05401_ac6003da876c500af081001c549a90433}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!inOrder@{inOrder}}
+\index{inOrder@{inOrder}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{inOrder()}{inOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::in\+Order (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const}
+
+
+
+中序遍历(递归版本) 
+
+中序打印二叉树各结点的数据到标准输出设备 
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 906 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_ac6003da876c500af081001c549a90433_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a6cb786410ed6c0f61969a09b76f4da0c}\label{a05401_a6cb786410ed6c0f61969a09b76f4da0c}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!inOrder\_loop@{inOrder\_loop}}
+\index{inOrder\_loop@{inOrder\_loop}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{inOrder\_loop()}{inOrder\_loop()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::in\+Order\+\_\+loop (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const}
+
+
+
+中序遍历(非递归版本) 
+
+中序打印二叉树各结点的数据到标准输出设备 
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 848 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_a6cb786410ed6c0f61969a09b76f4da0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a7a112bcac254c7344802ef74aa561b9c}\label{a05401_a7a112bcac254c7344802ef74aa561b9c}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!is\_equal\_subtree@{is\_equal\_subtree}}
+\index{is\_equal\_subtree@{is\_equal\_subtree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{is\_equal\_subtree()}{is\_equal\_subtree()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, U $>$\+::is\+\_\+equal\+\_\+subtree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root1,  }\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+判断两棵二叉树是否相同 \char`\"{}相同\char`\"{}是指：两棵树的形状及对应结点的值相等 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root1} & 指向二叉树\#1的根结点的指针 \\
+\hline
+{\em \+\_\+root2} & 指向二叉树\#2的根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 两棵树相同 
+
+false 两棵树不相同 
+\end{DoxyReturn}
+
+
+Definition at line 684 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a9139b8824a1b08e5436685a2dbc6b296}\label{a05401_a9139b8824a1b08e5436685a2dbc6b296}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!is\_symmetrical\_subtree@{is\_symmetrical\_subtree}}
+\index{is\_symmetrical\_subtree@{is\_symmetrical\_subtree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{is\_symmetrical\_subtree()}{is\_symmetrical\_subtree()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, U $>$\+::is\+\_\+symmetrical\+\_\+subtree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{root1,  }\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{root2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Internal method to 判断两棵二叉树是否相互对称 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root1} & 指向二叉树\#1的根结点的指针 \\
+\hline
+{\em root2} & 指向二叉树\#2的根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \#1和\#2相互对称 
+
+false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 668 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a31c21bc3323bcc69b5053c325aacf015}\label{a05401_a31c21bc3323bcc69b5053c325aacf015}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!is\_symmetrical\_tree@{is\_symmetrical\_tree}}
+\index{is\_symmetrical\_tree@{is\_symmetrical\_tree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{is\_symmetrical\_tree()}{is\_symmetrical\_tree()}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+static bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::is\+\_\+symmetrical\+\_\+tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{lhs,  }\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+判断两棵二叉树是否互为镜像 两棵二叉树\#1和\#2互为镜像，如果二者皆为空树；或二者根结点的值相同，且\#1的左、右子树与\#2的右、左子树互为镜像 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & 二叉树\#1 \\
+\hline
+{\em rhs} & 二叉树\#2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \#1 symmetrical to \#2 
+
+false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 437 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a2b05f46a36ae7f0f98dfa65dc908fdca}\label{a05401_a2b05f46a36ae7f0f98dfa65dc908fdca}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!isCompleteTree@{isCompleteTree}}
+\index{isCompleteTree@{isCompleteTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{isCompleteTree()}{isCompleteTree()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::is\+Complete\+Tree}
+
+
+
+返回是否完全二叉树 
+
+\begin{DoxyReturn}{Returns}
+true 是完全二叉树 
+
+false 不是完全二叉树 
+\end{DoxyReturn}
+至此，当前结点处理完毕。 若当前结点有空孩子，则它是层序上的首个度非2结点。 从而是完全二叉树iff.\+其后(不含)的结点全为叶子结点。
+
+函数只可能在此if中返回
+
+Definition at line 711 of file binary\+Tree.\+hh.
+
+
+
+References Tree\+::binary\+Tree$<$ T, Comparator $>$\+::\+Bin\+Node\+::left, and Tree\+::binary\+Tree$<$ T, Comparator $>$\+::\+Bin\+Node\+::right.
+
+
+
+Referenced by print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_a2b05f46a36ae7f0f98dfa65dc908fdca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_afee39e46bd46f7178347eaae0581063b}\label{a05401_afee39e46bd46f7178347eaae0581063b}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!isFullBinaryTree@{isFullBinaryTree}}
+\index{isFullBinaryTree@{isFullBinaryTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{isFullBinaryTree()}{isFullBinaryTree()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, U $>$\+::is\+Full\+Binary\+Tree}
+
+
+
+是否满二叉树 
+
+\begin{DoxyNote}{Note}
+定义满二叉树：任意一层的结点数都达到了最大值。
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true 是满二叉树 
+
+false 非满二叉树 
+\end{DoxyReturn}
+
+
+Definition at line 699 of file binary\+Tree.\+hh.
+
+
+
+References Queue\+::seq\+Queue$<$ T $>$\+::push().
+
+
+
+Referenced by print\+\_\+test\+\_\+result().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_afee39e46bd46f7178347eaae0581063b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{a05401_afee39e46bd46f7178347eaae0581063b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a1a40ebe3b6ce6854040202e4fb5c0f05}\label{a05401_a1a40ebe3b6ce6854040202e4fb5c0f05}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!lchild@{lchild}}
+\index{lchild@{lchild}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{lchild()}{lchild()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::lchild (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{x,  }\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{flag }\end{DoxyParamCaption}) const}
+
+
+
+获得数据为x的结点的左child 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 目标结点的数据 \\
+\hline
+{\em flag} & 无左child时返回的标记 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 左child的数据 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+树中有data相同的结点时，该方法只能访问到前序序列中首次出现该数据的那个结点！ 
+\end{DoxyWarning}
+
+
+Definition at line 1051 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a94dcc51623e366cb26fa5e543b19c6f8}\label{a05401_a94dcc51623e366cb26fa5e543b19c6f8}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!levelOrder@{levelOrder}}
+\index{levelOrder@{levelOrder}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{levelOrder()}{levelOrder()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::level\+Order (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const}
+
+
+
+层次遍历 
+
+层次打印二叉树各结点的数据到标准输出设备 
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 990 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_a94dcc51623e366cb26fa5e543b19c6f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_aa3d64f5301306cc864a5138ae1761952}\label{a05401_aa3d64f5301306cc864a5138ae1761952}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}\& \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+移动赋值运算符 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & 源对象，右值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{a05401}{binary\+Tree}}\& 目的对象的引用 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a09214bfe65861c9ff6ea1534429d03cb}\label{a05401_a09214bfe65861c9ff6ea1534429d03cb}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}\& \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+赋值运算符重载 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & 源对象 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{a05401}{binary\+Tree}}\& 目的对象的引用 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a04b72fb96511872389c079dcdd8dcd39}\label{a05401_a04b72fb96511872389c079dcdd8dcd39}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!parent@{parent}}
+\index{parent@{parent}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}}]{x,  }\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{flag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回数据为x的结点的parent结点 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 目标结点的数据 \\
+\hline
+{\em flag} & parent不存在时返回的特殊标记 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type parent结点的数据
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{a04581__bug000002}{Bug}}]二叉链表不允许访问结点的parent，本函数恒返回flag \end{DoxyRefDesc}
+
+
+Definition at line 358 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a21bb7a7c9def883a6fc6100daee7da93}\label{a05401_a21bb7a7c9def883a6fc6100daee7da93}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!postOrder@{postOrder}}
+\index{postOrder@{postOrder}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{postOrder()}{postOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::post\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{root,  }\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+后序遍历以root为根结点的树(递归版本) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & 指向目标树的根结点的指针 \\
+\hline
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+
+
+Definition at line 912 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a29e131a4f32bf7ac33dad9cd60d5ca7b}\label{a05401_a29e131a4f32bf7ac33dad9cd60d5ca7b}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!postOrder@{postOrder}}
+\index{postOrder@{postOrder}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{postOrder()}{postOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::post\+Order (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const}
+
+
+
+后序遍历(递归版本) 
+
+后序打印二叉树各结点的数据到标准输出设备 
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 984 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_a29e131a4f32bf7ac33dad9cd60d5ca7b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a24d90fc12dae5213ddb8b21baf14cc66}\label{a05401_a24d90fc12dae5213ddb8b21baf14cc66}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!postOrder\_loop@{postOrder\_loop}}
+\index{postOrder\_loop@{postOrder\_loop}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{postOrder\_loop()}{postOrder\_loop()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::post\+Order\+\_\+loop (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const}
+
+
+
+后序遍历(非递归版本) 
+
+后序打印二叉树各结点的数据到标准输出设备 
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+连续递归调用，归入一个stage，直接反序进栈即可
+
+Definition at line 923 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_a24d90fc12dae5213ddb8b21baf14cc66_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_afcd5d328b700cd21fe3b83a9389afbff}\label{a05401_afcd5d328b700cd21fe3b83a9389afbff}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!preOrder@{preOrder}}
+\index{preOrder@{preOrder}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{preOrder()}{preOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::pre\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{root,  }\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+前序遍历以root为根结点的树(递归版本) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & 指向目标树的根结点的指针 \\
+\hline
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+
+
+Definition at line 758 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_aa0a3d9e4bc6035a9c914e5109d6688b7}\label{a05401_aa0a3d9e4bc6035a9c914e5109d6688b7}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!preOrder@{preOrder}}
+\index{preOrder@{preOrder}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{preOrder()}{preOrder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::pre\+Order (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const}
+
+
+
+前序遍历(递归版本) 
+
+前序打印二叉树各结点的数据到标准输出设备 
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 831 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_aa0a3d9e4bc6035a9c914e5109d6688b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_af9d71e1c10511c865aed5c553ac24b72}\label{a05401_af9d71e1c10511c865aed5c553ac24b72}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!preOrder\_loop@{preOrder\_loop}}
+\index{preOrder\_loop@{preOrder\_loop}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{preOrder\_loop()}{preOrder\_loop()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::pre\+Order\+\_\+loop (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const}
+
+
+
+前序遍历(非递归版本) 
+
+前序打印二叉树各结点的数据到标准输出设备 
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是标准输出流或文件流等 \\
+\hline
+\end{DoxyParams}
+引用类型的形参不需要记录。 只需记录\+Bin\+Node$\ast$ \+\_\+root。 首次调用时，实参就是对象的根结点root\+\_\+； 该细节应被封装，故提供给用户的函数形参表不设\+\_\+root。 递归版本是有限次tail recursion，不必记录stage。
+
+首次调用时，实参就是对象的根结点root\+\_\+； 该细节应被封装，故提供给用户的函数形参表不设\+\_\+root。
+
+函数体内的递归调用返回后，唯一的行为是新的递归调用， 故不必保存断点(分stage)，直接将所有tail recursions按反序进栈即可。 注意到若某次递归调用的实参为0将导致空操作，所以若为空则不必进栈 (导致两次访问，可选)。
+
+Definition at line 769 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_af9d71e1c10511c865aed5c553ac24b72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_ab0bcb9734e8955c6b1e982d584320f64}\label{a05401_ab0bcb9734e8955c6b1e982d584320f64}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!rchild@{rchild}}
+\index{rchild@{rchild}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{rchild()}{rchild()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::rchild (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{x,  }\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{flag }\end{DoxyParamCaption}) const}
+
+
+
+获得数据为x的结点的右child 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 目标结点的数据 \\
+\hline
+{\em flag} & 无右child时返回的标记 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 右child的数据 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+树中有data相同的结点时，该方法只能访问到前序序列中首次出现该数据的那个结点！ 
+\end{DoxyWarning}
+
+
+Definition at line 1061 of file binary\+Tree.\+hh.
+
+
+
+Referenced by Tree\+::print\+Binary\+Tree().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_ab0bcb9734e8955c6b1e982d584320f64_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a6904ca2a5311bc475d24cd7859dff66b}\label{a05401_a6904ca2a5311bc475d24cd7859dff66b}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!root@{root}}
+\index{root@{root}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::root (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{flag }\end{DoxyParamCaption}) const}
+
+
+
+返回根结点的数据 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & 为空树时返回的特殊标记 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 根结点的数据 
+\end{DoxyReturn}
+
+
+Definition at line 627 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_af2559965baee16c7a496049bccf703af}\label{a05401_af2559965baee16c7a496049bccf703af}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!size@{size}}
+\index{size@{size}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::size}
+
+
+
+返回二叉树的结点数(递归版本) 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+type 二叉树的结点数 
+\end{DoxyReturn}
+
+
+Definition at line 1312 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_af2559965baee16c7a496049bccf703af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_a0c1ead0ecde8fd11ed6d413cb436b746}\label{a05401_a0c1ead0ecde8fd11ed6d413cb436b746}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!size@{size}}
+\index{size@{size}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+返回以指定结点为根结点的二叉树的规模(递归版本) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 以指定结点为根结点的二叉树的规模 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+
+
+Definition at line 1207 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_afe73f325fd03d9281d0330b7a2d0c8a8}\label{a05401_afe73f325fd03d9281d0330b7a2d0c8a8}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!size\_loop@{size\_loop}}
+\index{size\_loop@{size\_loop}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{size\_loop()}{size\_loop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::size\+\_\+loop}
+
+
+
+返回二叉树的结点数(非递归版本) 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+type 二叉树的结点数 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Reference \href{https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and}{\texttt{ https\+://www.\+codeproject.\+com/\+Articles/418776/\+How-\/to-\/replace-\/recursive-\/functions-\/using-\/stack-\/and}} 
+\end{DoxyNote}
+
+
+Definition at line 1318 of file binary\+Tree.\+hh.
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and Tree\+::print\+\_\+test\+\_\+result().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05401_afe73f325fd03d9281d0330b7a2d0c8a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_acacefce24de297c47729246317719729}\label{a05401_acacefce24de297c47729246317719729}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!size\_loop@{size\_loop}}
+\index{size\_loop@{size\_loop}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{size\_loop()}{size\_loop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::\mbox{\hyperlink{a05401_af83b64f3ad17abdaab0c208a4c0afafc}{size\+\_\+type}} \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::size\+\_\+loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+返回以指定结点为根结点的二叉树的规模(非递归版本) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 以指定结点为根结点的二叉树的规模 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+\hypertarget{a05401_Reference}{}\doxysubsection{Reference}\label{a05401_Reference}
+\href{https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and}{\texttt{ https\+://www.\+codeproject.\+com/\+Articles/418776/\+How-\/to-\/replace-\/recursive-\/functions-\/using-\/stack-\/and}} 
+
+Definition at line 1220 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a81357f9d197b142b8126579ce51fab17}\label{a05401_a81357f9d197b142b8126579ce51fab17}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!swaplr@{swaplr}}
+\index{swaplr@{swaplr}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{swaplr()}{swaplr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::swaplr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+交换左右子树 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向树的根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+不允许用户指定参数 
+\end{DoxyWarning}
+
+
+Definition at line 404 of file binary\+Tree.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{a05401_a81357f9d197b142b8126579ce51fab17_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05401_ac72226f157079d3e873a6412a7f6f9a3}\label{a05401_ac72226f157079d3e873a6412a7f6f9a3}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!swaplr@{swaplr}}
+\index{swaplr@{swaplr}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{swaplr()}{swaplr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::swaplr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05405}{Bin\+Node}} $\ast$}]{\+\_\+root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+交换左右子树 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+root} & 指向树的根结点的指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+类的工具函数 
+\end{DoxyNote}
+
+
+Definition at line 1071 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_addaed7635a0453b38ab8eda812a8d5a0}\label{a05401_addaed7635a0453b38ab8eda812a8d5a0}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!value\_type\_equal@{value\_type\_equal}}
+\index{value\_type\_equal@{value\_type\_equal}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type\_equal()}{value\_type\_equal()}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+static bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::value\+\_\+type\+\_\+equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+比较value\+\_\+type类型对象的大小。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & 左运算数 \\
+\hline
+{\em rhs} & 右运算数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true lhs == rhs 
+
+false lhs != rhs 
+\end{DoxyReturn}
+
+
+Definition at line 538 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_acff903bc85aae48ad28856ab8a990bc4}\label{a05401_acff903bc85aae48ad28856ab8a990bc4}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!value\_type\_less@{value\_type\_less}}
+\index{value\_type\_less@{value\_type\_less}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type\_less()}{value\_type\_less()}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+static bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::value\+\_\+type\+\_\+less (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+比较value\+\_\+type类型对象的大小。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & 左运算数 \\
+\hline
+{\em rhs} & 右运算数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true lhs $<$ rhs 
+
+false lhs $>$= rhs 
+\end{DoxyReturn}
+
+
+Definition at line 528 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a1811f886d68ab66847e6ceebd91570c3}\label{a05401_a1811f886d68ab66847e6ceebd91570c3}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!value\_type\_less\_equal@{value\_type\_less\_equal}}
+\index{value\_type\_less\_equal@{value\_type\_less\_equal}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type\_less\_equal()}{value\_type\_less\_equal()}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+static bool \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::value\+\_\+type\+\_\+less\+\_\+equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+比较value\+\_\+type类型对象的大小。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & 左运算数 \\
+\hline
+{\em rhs} & 右运算数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true lhs $<$= rhs 
+
+false lhs $>$ rhs 
+\end{DoxyReturn}
+
+
+Definition at line 548 of file binary\+Tree.\+hh.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{a05401_af67a715c8762e222910cecaefadc4b26}\label{a05401_af67a715c8762e222910cecaefadc4b26}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{lhs,  }\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+比较两棵二叉树是否相同 \char`\"{}相同\char`\"{}是指： 
+
+不能在此声明下述友元(invalid use of incomplete type)， 原因：类的内部类型value\+\_\+type未声明。 只需把友元声明置于typedef后即可
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 数据类型 \\
+\hline
+{\em Comparator} & 数据类型的比较器类，默认为std\+::less$<$\+T$>$ \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+此函数模板的模板实参由函数实参表推断，用户无需指定
+\end{DoxyNote}
+若类型\+T重载了operator$<$，则\+Comparator的默认类型std\+::less$<$\+T$>$将调用operator$<$，故实例化时不必指定tparam2；~\newline
+否则，要求指定模板参数\+Comparator，which is a function object, 重载了bool operator(\+T t1, T t2)：当语义上t1 $<$ t2时返回true。 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & 二叉树\#1 \\
+\hline
+{\em rhs} & 二叉树\#2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \#1和\#2相同 
+
+false \#1和\#2不同 
+\end{DoxyReturn}
+
+
+Definition at line 1462 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a93afab389963fd3c1c581ef3ebae3432}\label{a05401_a93afab389963fd3c1c581ef3ebae3432}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!printBinaryTree@{printBinaryTree}}
+\index{printBinaryTree@{printBinaryTree}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{printBinaryTree}{printBinaryTree}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+void print\+Binary\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{bin\+\_\+tree,  }\item[{const typename \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \+::\mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}} \&}]{flag,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05401_ad6b1eaee9b04cf92b17732ee573786c0}\label{a05401_ad6b1eaee9b04cf92b17732ee573786c0}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+const typedef \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{value\+\_\+type}}\& \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::const\+\_\+reference}
+
+
+
+数据的常量引用 
+
+
+
+Definition at line 110 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_a2d83bc4e269a3a8f81db1f6c79824c9e}\label{a05401_a2d83bc4e269a3a8f81db1f6c79824c9e}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!is\_less\_than\_@{is\_less\_than\_}}
+\index{is\_less\_than\_@{is\_less\_than\_}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{is\_less\_than\_}{is\_less\_than\_}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+Comparator \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::is\+\_\+less\+\_\+than\+\_\+ = Comparator\{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+比较器(function object) 
+
+
+
+Definition at line 518 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a05401_ab518fbeddcd16a35e087ab5ce6bdec16}\label{a05401_ab518fbeddcd16a35e087ab5ce6bdec16}} 
+\index{Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}!root\_@{root\_}}
+\index{root\_@{root\_}!Tree::binaryTree$<$ T, Comparator $>$@{Tree::binaryTree$<$ T, Comparator $>$}}
+\doxysubsubsection{\texorpdfstring{root\_}{root\_}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+\mbox{\hyperlink{a05405}{Bin\+Node}}$\ast$ \mbox{\hyperlink{a05401}{Tree\+::binary\+Tree}}$<$ T, Comparator $>$\+::root\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+二叉树的根结点 
+
+
+
+Definition at line 151 of file binary\+Tree.\+hh.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04520}{binary\+Tree.\+hh}}\end{DoxyCompactItemize}

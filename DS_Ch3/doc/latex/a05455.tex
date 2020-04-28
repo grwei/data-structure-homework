@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for Stack\+::seq\+Stack$<$ T $>$\+:\nopagebreak
+Inheritance diagram for Stack\+::seq\+Stack$<$ T $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for Stack\+::seq\+Stack$<$ T $>$\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Stack\+::seq\+Stack$<$ T $>$\+:\nopagebreak
+Collaboration diagram for Stack\+::seq\+Stack$<$ T $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -44,6 +46,8 @@ int \mbox{\hyperlink{a05455_a91fa28d561e88adc40c3213552c58402}{size}} () const
 int \mbox{\hyperlink{a05455_aa4bbd748b258a1a9f9d3588ea2ba6a28}{elem\+Mem}} () const
 \item 
 virtual \mbox{\hyperlink{a05455_a851e1ffd30b14e563880b142184dcff8}{$\sim$seq\+Stack}} ()
+\item 
+bool \mbox{\hyperlink{a05455_aaf9af6f236859cd234ab9643a8431343}{empty}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -67,7 +71,7 @@ class Stack\+::seq\+Stack$<$ T $>$}
 
 
 
-Definition at line 22 of file seq\+Stack.\+hxx.
+Definition at line 37 of file seq\+Stack.\+hxx.
 
 
 
@@ -81,7 +85,7 @@ Definition at line 22 of file seq\+Stack.\+hxx.
 
 
 
-Definition at line 44 of file seq\+Stack.\+hxx.
+Definition at line 60 of file seq\+Stack.\+hxx.
 
 \mbox{\Hypertarget{a05455_a2f3735bc0b48c0c5a4b8605326e5dc18}\label{a05455_a2f3735bc0b48c0c5a4b8605326e5dc18}} 
 \index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!seqStack@{seqStack}}
@@ -92,11 +96,7 @@ Definition at line 44 of file seq\+Stack.\+hxx.
 
 
 
-Definition at line 50 of file seq\+Stack.\+hxx.
-
-
-
-References Stack\+::seq\+Stack$<$ T $>$\+::elem, and Stack\+::seq\+Stack$<$ T $>$\+::top\+\_\+p.
+Definition at line 66 of file seq\+Stack.\+hxx.
 
 \mbox{\Hypertarget{a05455_a851e1ffd30b14e563880b142184dcff8}\label{a05455_a851e1ffd30b14e563880b142184dcff8}} 
 \index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!````~seqStack@{$\sim$seqStack}}
@@ -107,7 +107,7 @@ References Stack\+::seq\+Stack$<$ T $>$\+::elem, and Stack\+::seq\+Stack$<$ T $>
 
 
 
-Definition at line 58 of file seq\+Stack.\+hxx.
+Definition at line 74 of file seq\+Stack.\+hxx.
 
 
 
@@ -121,7 +121,7 @@ void \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::double\+Space\hs
 
 
 
-Definition at line 100 of file seq\+Stack.\+hxx.
+Definition at line 116 of file seq\+Stack.\+hxx.
 
 \mbox{\Hypertarget{a05455_aa4bbd748b258a1a9f9d3588ea2ba6a28}\label{a05455_aa4bbd748b258a1a9f9d3588ea2ba6a28}} 
 \index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!elemMem@{elemMem}}
@@ -132,19 +132,31 @@ int \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::elem\+Mem}
 
 
 
-Definition at line 118 of file seq\+Stack.\+hxx.
+Definition at line 134 of file seq\+Stack.\+hxx.
 
 
 
 Referenced by Akm\+\_\+t\+::\+Ackermann\+Loop().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{a05455_aa4bbd748b258a1a9f9d3588ea2ba6a28_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{a05455_aaf9af6f236859cd234ab9643a8431343}\label{a05455_aaf9af6f236859cd234ab9643a8431343}} 
+\index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 68 of file seq\+Stack.\+hxx.
+
 \mbox{\Hypertarget{a05455_a35a066a0aedc630474fd3e3dcaa9ced8}\label{a05455_a35a066a0aedc630474fd3e3dcaa9ced8}} 
 \index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!isEmpty@{isEmpty}}
 \index{isEmpty@{isEmpty}!Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}}
@@ -158,13 +170,14 @@ Implements \mbox{\hyperlink{a05475_a1bb0944e358213f0a1d9588f990d81d2}{Stack\+::\
 
 
 
-Definition at line 64 of file seq\+Stack.\+hxx.
+Definition at line 80 of file seq\+Stack.\+hxx.
 
 
 
 Referenced by Akm\+\_\+t\+::\+Ackermann\+Loop(), and R\+P\+N\+::\+Rpn\+\_\+t\+::calc\+Val().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -184,13 +197,14 @@ Implements \mbox{\hyperlink{a05475_af865cee9e7a5a5e0de29f19335cbeb38}{Stack\+::\
 
 
 
-Definition at line 88 of file seq\+Stack.\+hxx.
+Definition at line 104 of file seq\+Stack.\+hxx.
 
 
 
 Referenced by Akm\+\_\+t\+::\+Ackermann\+Loop(), and R\+P\+N\+::\+Rpn\+\_\+t\+::calc\+Val().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -210,13 +224,14 @@ Implements \mbox{\hyperlink{a05475_a22ddad40bcc336ee4a9cb548a002f8f7}{Stack\+::\
 
 
 
-Definition at line 70 of file seq\+Stack.\+hxx.
+Definition at line 86 of file seq\+Stack.\+hxx.
 
 
 
 Referenced by Akm\+\_\+t\+::\+Ackermann\+Loop(), and R\+P\+N\+::\+Rpn\+\_\+t\+::calc\+Val().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -232,7 +247,7 @@ void \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::push (\begin{Dox
 
 
 
-Definition at line 79 of file seq\+Stack.\+hxx.
+Definition at line 95 of file seq\+Stack.\+hxx.
 
 \mbox{\Hypertarget{a05455_a91fa28d561e88adc40c3213552c58402}\label{a05455_a91fa28d561e88adc40c3213552c58402}} 
 \index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!size@{size}}
@@ -243,13 +258,14 @@ int \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::size}
 
 
 
-Definition at line 112 of file seq\+Stack.\+hxx.
+Definition at line 128 of file seq\+Stack.\+hxx.
 
 
 
 Referenced by Akm\+\_\+t\+::\+Ackermann\+Loop().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -269,13 +285,14 @@ Implements \mbox{\hyperlink{a05475_a107016f2348e0e8bf78cac002c23b501}{Stack\+::\
 
 
 
-Definition at line 94 of file seq\+Stack.\+hxx.
+Definition at line 110 of file seq\+Stack.\+hxx.
 
 
 
 Referenced by Akm\+\_\+t\+::\+Ackermann\+Loop().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -294,11 +311,7 @@ T$\ast$ \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::elem\hspace{0
 
 
 
-Definition at line 25 of file seq\+Stack.\+hxx.
-
-
-
-Referenced by Stack\+::seq\+Stack$<$ T $>$\+::seq\+Stack().
+Definition at line 52 of file seq\+Stack.\+hxx.
 
 \mbox{\Hypertarget{a05455_a6b4370152560ca57d6a39261e04982aa}\label{a05455_a6b4370152560ca57d6a39261e04982aa}} 
 \index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!maxSize@{maxSize}}
@@ -309,7 +322,7 @@ int \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::max\+Size\hspace{
 
 
 
-Definition at line 27 of file seq\+Stack.\+hxx.
+Definition at line 54 of file seq\+Stack.\+hxx.
 
 \mbox{\Hypertarget{a05455_a03d55ff6c91871c0ac9cdc90e29eea3d}\label{a05455_a03d55ff6c91871c0ac9cdc90e29eea3d}} 
 \index{Stack::seqStack$<$ T $>$@{Stack::seqStack$<$ T $>$}!top\_p@{top\_p}}
@@ -320,11 +333,7 @@ int \mbox{\hyperlink{a05455}{Stack\+::seq\+Stack}}$<$ T $>$\+::top\+\_\+p\hspace
 
 
 
-Definition at line 26 of file seq\+Stack.\+hxx.
-
-
-
-Referenced by Stack\+::seq\+Stack$<$ T $>$\+::seq\+Stack().
+Definition at line 53 of file seq\+Stack.\+hxx.
 
 
 

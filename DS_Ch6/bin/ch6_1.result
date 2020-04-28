@@ -1,0 +1,69 @@
+A
+L	C
+B	E	@	D
+@	@	@	@	W	@
+@	X
+@	@
+
+Current local time and date: Tue Apr 28 23:01:39 2020
+
+二叉树的规模(递归 非递归)：
+8 8
+二叉树的高(深)度(递归 非递归)，从0起：
+4 4
+前序遍历(递归)：
+A L B E C D W X 
+前序遍历(非递归)：
+A L B E C D W X 
+中序遍历(递归)：
+B L E A C W X D 
+中序遍历(非递归)：
+B L E A C W X D 
+后序遍历(递归)：
+B E L X W D C A 
+后序遍历(非递归)：
+B E L X W D C A 
+层次遍历：
+A L C B E D W X 
+层次打印(调用lchild(), rchild(), root()等API)：
+(层次打印) 格式："parent    lchild    rchild" ( @ 表示空结点 )
+A	L	C
+L	B	E
+C	@	D
+B	@	@
+E	@	@
+D	W	@
+W	@	X
+X	@	@
+
+交换左右结点后：
+二叉树的规模(递归 非递归)：
+8 8
+二叉树的高(深)度(递归 非递归)，从0起：
+4 4
+前序遍历(递归)：
+A C D W X L E B 
+前序遍历(非递归)：
+A C D W X L E B 
+中序遍历(递归)：
+D X W C A E L B 
+中序遍历(非递归)：
+D X W C A E L B 
+后序遍历(递归)：
+X W D C E B L A 
+后序遍历(非递归)：
+X W D C E B L A 
+层次遍历：
+A C L D E B W X 
+层次打印(调用lchild(), rchild(), root()等API)：
+(层次打印) 格式："parent    lchild    rchild" ( @ 表示空结点 )
+A	C	L
+C	D	@
+L	E	B
+D	@	W
+E	@	@
+B	@	@
+W	X	@
+X	@	@
+
+It took me 1021 clicks (1.021 seconds).

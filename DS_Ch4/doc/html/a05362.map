@@ -1,6 +1,6 @@
 <map id="Queue::Queue&lt; T &gt;" name="Queue::Queue&lt; T &gt;">
 <area shape="rect" id="node1" title="队列的抽象类" alt="" coords="198,5,335,32"/>
-<area shape="rect" id="node2" href="$a05355.html" title="链接队列类" alt="" coords="5,80,163,107"/>
+<area shape="rect" id="node2" href="$a05355.html" title="���Ӷ�����" alt="" coords="5,80,163,107"/>
 <area shape="rect" id="node3" href="$a05367.html" title="循环队列类" alt="" coords="187,80,346,107"/>
 <area shape="rect" id="node4" href="$a05371.html" title="队头位置固定的队列类" alt="" coords="370,80,526,107"/>
 </map>

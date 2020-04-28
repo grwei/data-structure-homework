@@ -1,13 +1,12 @@
 <map id="include/linkStack.hpp" name="include/linkStack.hpp">
-<area shape="rect" id="node1" title="顺序栈类" alt="" coords="263,5,410,32"/>
-<area shape="rect" id="node2" href="$a04547.html" title="栈的抽象类" alt="" coords="277,80,396,107"/>
+<area shape="rect" id="node1" title="顺序栈类" alt="" coords="246,5,393,32"/>
+<area shape="rect" id="node2" href="$a04547.html" title="栈的抽象类" alt="" coords="260,80,379,107"/>
 <area shape="rect" id="node3" href="$a04520.html" title="Ackermann库" alt="" coords="5,155,156,181"/>
-<area shape="rect" id="node5" href="$a04541.html" title="顺序栈类的定义和实现" alt="" coords="181,155,327,181"/>
-<area shape="rect" id="node6" href="$a04532.html" title="全排列" alt="" coords="352,155,487,181"/>
-<area shape="rect" id="node8" href="$a04535.html" title="后缀表达式类" alt="" coords="511,155,619,181"/>
-<area shape="rect" id="node11" href="$a04553.html" title="将十进制非负实数以二进制打印" alt="" coords="643,155,740,181"/>
+<area shape="rect" id="node5" href="$a04532.html" title="全排列" alt="" coords="180,155,315,181"/>
+<area shape="rect" id="node7" href="$a04535.html" title="后缀表达式类" alt="" coords="339,155,447,181"/>
+<area shape="rect" id="node10" href="$a04553.html" title="将十进制非负实数以二进制打印" alt="" coords="471,155,568,181"/>
 <area shape="rect" id="node4" href="$a04565.html" title="Ackerman函数的递归和非递归实现" alt="" coords="32,229,129,256"/>
-<area shape="rect" id="node7" href="$a04556.html" title="全排列的递归和非递归实现" alt="" coords="371,229,468,256"/>
-<area shape="rect" id="node9" href="$a04559.html" title="中缀表达式转为后缀表达式" alt="" coords="504,229,601,256"/>
-<area shape="rect" id="node10" href="$a04562.html" title="后缀表达式的计算" alt="" coords="625,229,723,256"/>
+<area shape="rect" id="node6" href="$a04556.html" title="全排列的递归和非递归实现" alt="" coords="199,229,296,256"/>
+<area shape="rect" id="node8" href="$a04559.html" title="中缀表达式转为后缀表达式" alt="" coords="332,229,429,256"/>
+<area shape="rect" id="node9" href="$a04562.html" title="后缀表达式的计算" alt="" coords="453,229,551,256"/>
 </map>

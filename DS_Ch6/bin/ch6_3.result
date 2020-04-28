@@ -1,0 +1,117 @@
+A
+B	C
+D	E	F	G
+@	@	@	@	@	@	H	I
+@	@	@	@
+
+Current local time and date: Tue Apr 28 23:01:41 2020
+
+二叉树的规模(递归 非递归)：
+9 9
+二叉树的高(深)度(递归 非递归)，从0起：
+3 3
+度为2的结点的个数是：
+4
+是否为满二叉树：
+false
+是否为完全二叉树：
+false
+前序遍历(递归)：
+A B D E C F G H I 
+前序遍历(非递归)：
+A B D E C F G H I 
+中序遍历(递归)：
+D B E A F C H G I 
+中序遍历(非递归)：
+D B E A F C H G I 
+后序遍历(递归)：
+D E B F H I G C A 
+后序遍历(非递归)：
+D E B F H I G C A 
+层次遍历：
+A B C D E F G H I 
+层次打印(调用lchild(), rchild(), root()等API)：
+(层次打印) 格式："parent    lchild    rchild" ( @ 表示空结点 )
+A	B	C
+B	D	E
+C	F	G
+D	@	@
+E	@	@
+F	@	@
+G	H	I
+H	@	@
+I	@	@
+
+交换左右结点后：
+二叉树的规模(递归 非递归)：
+9 9
+二叉树的高(深)度(递归 非递归)，从0起：
+3 3
+度为2的结点的个数是：
+4
+是否为满二叉树：
+false
+是否为完全二叉树：
+true
+前序遍历(递归)：
+A C G I H F B E D 
+前序遍历(非递归)：
+A C G I H F B E D 
+中序遍历(递归)：
+I G H C F A E B D 
+中序遍历(非递归)：
+I G H C F A E B D 
+后序遍历(递归)：
+I H G F C E D B A 
+后序遍历(非递归)：
+I H G F C E D B A 
+层次遍历：
+A C B G F E D I H 
+层次打印(调用lchild(), rchild(), root()等API)：
+(层次打印) 格式："parent    lchild    rchild" ( @ 表示空结点 )
+A	C	B
+C	G	F
+B	E	D
+G	I	H
+F	@	@
+E	@	@
+D	@	@
+I	@	@
+H	@	@
+
+剪枝后：
+二叉树的规模(递归 非递归)：
+7 7
+二叉树的高(深)度(递归 非递归)，从0起：
+2 2
+度为2的结点的个数是：
+3
+是否为满二叉树：
+true
+是否为完全二叉树：
+true
+前序遍历(递归)：
+A C G F B E D 
+前序遍历(非递归)：
+A C G F B E D 
+中序遍历(递归)：
+G C F A E B D 
+中序遍历(非递归)：
+G C F A E B D 
+后序遍历(递归)：
+G F C E D B A 
+后序遍历(非递归)：
+G F C E D B A 
+层次遍历：
+A C B G F E D 
+层次打印(调用lchild(), rchild(), root()等API)：
+(层次打印) 格式："parent    lchild    rchild" ( @ 表示空结点 )
+A	C	B
+C	G	F
+B	E	D
+G	@	@
+F	@	@
+E	@	@
+D	@	@
+
+It took me 377 clicks (0.377 seconds).

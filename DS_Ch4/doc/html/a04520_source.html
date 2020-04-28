@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a04520_source.html',''); initResizable
 <a href="a04520.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @file linkQueue.hh</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @author Guorui Wei (313017602@qq.com)</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @brief é“¾æ¥é˜Ÿåˆ—çš„å®šä¹‰å’Œå®ç°</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @brief Á´½Ó¶ÓÁĞµÄ¶¨ÒåºÍÊµÏÖ</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * @version 0.1</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * @date 2020-04-05</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * </span></div>
@@ -244,74 +244,139 @@ $(document).ready(function(){initNavTree('a04520_source.html',''); initResizable
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="a05355.html#abdb77311033f9875239bac66eaf44123">  288</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a05355.html#ac499d36d6f71e5620b598d233033bf9e">linkQueue&lt;T&gt;::push</a>(<span class="keyword">const</span> <a class="code" href="a05355.html#a24941cae0156e591c133de04e802cca2">value_type</a> &amp;val)</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (!_front)</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        _rear = _front = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(val);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    _rear = _rear-&gt;_next = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(val);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    ++_size;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a05355.html#ac499d36d6f71e5620b598d233033bf9e">linkQueue&lt;T&gt;::push</a>(value_type &amp;&amp;val)</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
-<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="a05355.html#ac499d36d6f71e5620b598d233033bf9e">  300</a></span>&#160;    <span class="comment">// å‘ç©ºé˜Ÿåˆ—å…¥é˜Ÿ</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">if</span> (!_front)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        _rear = _front = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(std::move(val));</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        _rear = _rear-&gt;_next = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(std::move(val));</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    ++_size;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a05355.html#aeae9f79486c195f593260dcf7cee8705">linkQueue&lt;T&gt;::pop</a>()</div>
-<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="a05355.html#af1c983a094fb25107db3b7d0d9d27b90">  310</a></span>&#160;{</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <a class="code" href="a05359.html">node</a> *delPtr = _front;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    _front = _front-&gt;<a class="code" href="a05359.html#ad7c3b0314a0b4a4d31ce9a6dfe7aa59d">_next</a>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">delete</span> delPtr;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    --_size;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">// æœ€åä¸€ä¸ªå…ƒç´ å‡ºé˜Ÿ</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">if</span> (!_front)</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        _rear = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="a05355.html#aeae9f79486c195f593260dcf7cee8705">  321</a></span>&#160;} <span class="comment">// namespace Queue</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">// Ïò¿Õ¶ÓÁĞÈë¶Ó     if (!_front)
+        _rear = _front = new node(val);
+    else
+        _rear = _rear-&gt;_next = new node(val);
+    ++_size;
+}
+
+template &lt;class T&gt;
+void linkQueue&lt;T&gt;::push(value_type &amp;&amp;val)
+{
+    // Ïò¿Õ¶ÓÁĞÈë¶Ó
+    if (!_front)
+        _rear = _front = new node(std::move(val));
+    else
+        _rear = _rear-&gt;_next = new node(std::move(val));
+    ++_size;
+}
+
+template &lt;class T&gt;
+void linkQueue&lt;T&gt;::pop()
+{
+    node *delPtr = _front;
+    _front = _front-&gt;_next;
+    delete delPtr;
+    --_size;
+
+    // ×îºóÒ»¸öÔªËØ³ö¶Ó
+    if (!_front)
+        _rear = nullptr;
+}
+
+} // namespace Queue
+
+#endif // __LINKQUEUE_HH__
+</span> </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">if</span> (!_front)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        _rear = _front = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(val);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        _rear = _rear-&gt;_next = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(val);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    ++_size;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a05355.html#ac499d36d6f71e5620b598d233033bf9e">linkQueue&lt;T&gt;::push</a>(value_type &amp;&amp;val)</div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="a05355.html#ac499d36d6f71e5620b598d233033bf9e">  300</a></span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">// Ïò¿Õ¶ÓÁĞÈë¶Ó     if (!_front)
+        _rear = _front = new node(std::move(val));
+    else
+        _rear = _rear-&gt;_next = new node(std::move(val));
+    ++_size;
+}
+
+template &lt;class T&gt;
+void linkQueue&lt;T&gt;::pop()
+{
+    node *delPtr = _front;
+    _front = _front-&gt;_next;
+    delete delPtr;
+    --_size;
+
+    // ×îºóÒ»¸öÔªËØ³ö¶Ó
+    if (!_front)
+        _rear = nullptr;
+}
+
+} // namespace Queue
+
+#endif // __LINKQUEUE_HH__
+</span> </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> (!_front)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        _rear = _front = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(std::move(val));</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        _rear = _rear-&gt;_next = <span class="keyword">new</span> <a class="code" href="a05359.html">node</a>(std::move(val));</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    ++_size;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;}</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a05355.html#aeae9f79486c195f593260dcf7cee8705">linkQueue&lt;T&gt;::pop</a>()</div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="a05355.html#af1c983a094fb25107db3b7d0d9d27b90">  311</a></span>&#160;{</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="a05359.html">node</a> *delPtr = _front;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    _front = _front-&gt;<a class="code" href="a05359.html#ad7c3b0314a0b4a4d31ce9a6dfe7aa59d">_next</a>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keyword">delete</span> delPtr;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    --_size;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">// ×îºóÒ»¸öÔªËØ³ö¶Ó     if (!_front)
+        _rear = nullptr;
+}
+
+} // namespace Queue
+
+#endif // __LINKQUEUE_HH__
+</span> </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">if</span> (!_front)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        _rear = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="a05355.html#aeae9f79486c195f593260dcf7cee8705">  322</a></span>&#160;} <span class="comment">// namespace Queue</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">#endif // __LINKQUEUE_HH__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa05359_html_a25699c37e3e4ac595620001d8dab1d24"><div class="ttname"><a href="a05359.html#a25699c37e3e4ac595620001d8dab1d24">Queue::linkQueue::node::~node</a></div><div class="ttdeci">~node()=default</div><div class="ttdoc">Destroy the node object.</div></div>
 <div class="ttc" id="aa05355_html_abdb77311033f9875239bac66eaf44123"><div class="ttname"><a href="a05355.html#abdb77311033f9875239bac66eaf44123">Queue::linkQueue::back</a></div><div class="ttdeci">reference &amp; back()</div><div class="ttdoc">Returns a reference to the last element in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00288">linkQueue.hh:288</a></div></div>
 <div class="ttc" id="aa04523_html"><div class="ttname"><a href="a04523.html">Queue.h</a></div></div>
-<div class="ttc" id="aa05359_html"><div class="ttname"><a href="a05359.html">Queue::linkQueue::node</a></div><div class="ttdoc">linkQueueçš„ç»“ç‚¹ç±»</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00077">linkQueue.hh:77</a></div></div>
-<div class="ttc" id="aa05355_html_a1ffba1b3394857d6a2d25be65778cad4"><div class="ttname"><a href="a05355.html#a1ffba1b3394857d6a2d25be65778cad4">Queue::linkQueue::const_reference</a></div><div class="ttdeci">const typedef value_type &amp; const_reference</div><div class="ttdoc">æ•°æ®çš„å¸¸é‡å¼•ç”¨</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00069">linkQueue.hh:69</a></div></div>
+<div class="ttc" id="aa05359_html"><div class="ttname"><a href="a05359.html">Queue::linkQueue::node</a></div><div class="ttdoc">linkQueueµÄ½áµãÀà</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00077">linkQueue.hh:77</a></div></div>
+<div class="ttc" id="aa05355_html_a1ffba1b3394857d6a2d25be65778cad4"><div class="ttname"><a href="a05355.html#a1ffba1b3394857d6a2d25be65778cad4">Queue::linkQueue::const_reference</a></div><div class="ttdeci">const typedef value_type &amp; const_reference</div><div class="ttdoc">Êı¾İµÄ³£Á¿ÒıÓÃ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00069">linkQueue.hh:69</a></div></div>
 <div class="ttc" id="aa05355_html_aef230987d83493acb2cf18f464475792"><div class="ttname"><a href="a05355.html#aef230987d83493acb2cf18f464475792">Queue::linkQueue::getHead</a></div><div class="ttdeci">virtual value_type getHead() const</div><div class="ttdoc">Get the Head object.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00185">linkQueue.hh:185</a></div></div>
-<div class="ttc" id="aa05355_html_a54dfda0217f797ea2bef60075c99ac63"><div class="ttname"><a href="a05355.html#a54dfda0217f797ea2bef60075c99ac63">Queue::linkQueue::_rear</a></div><div class="ttdeci">node * _rear</div><div class="ttdoc">æŒ‡å‘é˜Ÿå°¾ç»“ç‚¹</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00126">linkQueue.hh:126</a></div></div>
-<div class="ttc" id="aa05355_html_a24941cae0156e591c133de04e802cca2"><div class="ttname"><a href="a05355.html#a24941cae0156e591c133de04e802cca2">Queue::linkQueue::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdoc">ç±»å‹åˆ«åå®šä¹‰</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00067">linkQueue.hh:67</a></div></div>
+<div class="ttc" id="aa05355_html_a54dfda0217f797ea2bef60075c99ac63"><div class="ttname"><a href="a05355.html#a54dfda0217f797ea2bef60075c99ac63">Queue::linkQueue::_rear</a></div><div class="ttdeci">node * _rear</div><div class="ttdoc">Ö¸Ïò¶ÓÎ²½áµã</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00126">linkQueue.hh:126</a></div></div>
+<div class="ttc" id="aa05355_html_a24941cae0156e591c133de04e802cca2"><div class="ttname"><a href="a05355.html#a24941cae0156e591c133de04e802cca2">Queue::linkQueue::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdoc">ÀàĞÍ±ğÃû¶¨Òå</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00067">linkQueue.hh:67</a></div></div>
 <div class="ttc" id="aa05355_html_ae90ee4038f5a7434925d25d301291126"><div class="ttname"><a href="a05355.html#ae90ee4038f5a7434925d25d301291126">Queue::linkQueue::linkQueue</a></div><div class="ttdeci">linkQueue()</div><div class="ttdoc">Construct a new link Queue object.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00246">linkQueue.hh:246</a></div></div>
-<div class="ttc" id="aa05355_html"><div class="ttname"><a href="a05355.html">Queue::linkQueue</a></div><div class="ttdoc">é“¾æ¥é˜Ÿåˆ—ç±»</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00046">linkQueue.hh:46</a></div></div>
+<div class="ttc" id="aa05355_html"><div class="ttname"><a href="a05355.html">Queue::linkQueue</a></div><div class="ttdoc">Á´½Ó¶ÓÁĞÀà</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00046">linkQueue.hh:46</a></div></div>
 <div class="ttc" id="aa05355_html_a3d55a01fb2481fbeea2aa2242e3fe2e0"><div class="ttname"><a href="a05355.html#a3d55a01fb2481fbeea2aa2242e3fe2e0">Queue::linkQueue::front</a></div><div class="ttdeci">reference &amp; front()</div><div class="ttdoc">Returns a reference to the next element in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00276">linkQueue.hh:276</a></div></div>
-<div class="ttc" id="aa05355_html_a5661fe7b20aabbe1cab20d0e5fd37db4"><div class="ttname"><a href="a05355.html#a5661fe7b20aabbe1cab20d0e5fd37db4">Queue::linkQueue::reference</a></div><div class="ttdeci">value_type &amp; reference</div><div class="ttdoc">æ•°æ®çš„å¼•ç”¨</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00068">linkQueue.hh:68</a></div></div>
-<div class="ttc" id="aa05355_html_aaf901ac8159cbebdbc2ad24272ba9e44"><div class="ttname"><a href="a05355.html#aaf901ac8159cbebdbc2ad24272ba9e44">Queue::linkQueue::_size</a></div><div class="ttdeci">size_type _size</div><div class="ttdoc">é˜Ÿåˆ—ä¸­å½“å‰å…ƒç´ ä¸ªæ•°</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00132">linkQueue.hh:132</a></div></div>
+<div class="ttc" id="aa05355_html_a5661fe7b20aabbe1cab20d0e5fd37db4"><div class="ttname"><a href="a05355.html#a5661fe7b20aabbe1cab20d0e5fd37db4">Queue::linkQueue::reference</a></div><div class="ttdeci">value_type &amp; reference</div><div class="ttdoc">Êı¾İµÄÒıÓÃ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00068">linkQueue.hh:68</a></div></div>
+<div class="ttc" id="aa05355_html_aaf901ac8159cbebdbc2ad24272ba9e44"><div class="ttname"><a href="a05355.html#aaf901ac8159cbebdbc2ad24272ba9e44">Queue::linkQueue::_size</a></div><div class="ttdeci">size_type _size</div><div class="ttdoc">¶ÓÁĞÖĞµ±Ç°ÔªËØ¸öÊı</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00132">linkQueue.hh:132</a></div></div>
 <div class="ttc" id="aa05355_html_ac48d4ae12a9424ed78c3067c3fc89af5"><div class="ttname"><a href="a05355.html#ac48d4ae12a9424ed78c3067c3fc89af5">Queue::linkQueue::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">Test whether container is empty.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00264">linkQueue.hh:264</a></div></div>
-<div class="ttc" id="aa05355_html_a2a4b5fa3cd765b3ce964ee87d3d48448"><div class="ttname"><a href="a05355.html#a2a4b5fa3cd765b3ce964ee87d3d48448">Queue::linkQueue::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdoc">è®¡æ•°å™¨ç±»å‹</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00070">linkQueue.hh:70</a></div></div>
-<div class="ttc" id="aa05355_html_a8101cd4442a0a5079d53499b0f9780fb"><div class="ttname"><a href="a05355.html#a8101cd4442a0a5079d53499b0f9780fb">Queue::linkQueue::_front</a></div><div class="ttdeci">node * _front</div><div class="ttdoc">æŒ‡å‘é˜Ÿé¦–ç»“ç‚¹</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00120">linkQueue.hh:120</a></div></div>
-<div class="ttc" id="aa05355_html_a179aae8f99c7dd20985dc3c58d95dbd1"><div class="ttname"><a href="a05355.html#a179aae8f99c7dd20985dc3c58d95dbd1">Queue::linkQueue::deQueue</a></div><div class="ttdeci">virtual value_type deQueue()</div><div class="ttdoc">å‡ºé˜Ÿä¸€ä¸ªå…ƒç´ </div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00173">linkQueue.hh:173</a></div></div>
-<div class="ttc" id="aa05355_html_ab2530a905f47965fa272fa9462ed6949"><div class="ttname"><a href="a05355.html#ab2530a905f47965fa272fa9462ed6949">Queue::linkQueue::isEmpty</a></div><div class="ttdeci">virtual bool isEmpty() const</div><div class="ttdoc">åˆ¤é˜Ÿç©º</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00153">linkQueue.hh:153</a></div></div>
+<div class="ttc" id="aa05355_html_a2a4b5fa3cd765b3ce964ee87d3d48448"><div class="ttname"><a href="a05355.html#a2a4b5fa3cd765b3ce964ee87d3d48448">Queue::linkQueue::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdoc">¼ÆÊıÆ÷ÀàĞÍ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00070">linkQueue.hh:70</a></div></div>
+<div class="ttc" id="aa05355_html_a8101cd4442a0a5079d53499b0f9780fb"><div class="ttname"><a href="a05355.html#a8101cd4442a0a5079d53499b0f9780fb">Queue::linkQueue::_front</a></div><div class="ttdeci">node * _front</div><div class="ttdoc">Ö¸Ïò¶ÓÊ×½áµã</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00120">linkQueue.hh:120</a></div></div>
+<div class="ttc" id="aa05355_html_a179aae8f99c7dd20985dc3c58d95dbd1"><div class="ttname"><a href="a05355.html#a179aae8f99c7dd20985dc3c58d95dbd1">Queue::linkQueue::deQueue</a></div><div class="ttdeci">virtual value_type deQueue()</div><div class="ttdoc">³ö¶ÓÒ»¸öÔªËØ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00173">linkQueue.hh:173</a></div></div>
+<div class="ttc" id="aa05355_html_ab2530a905f47965fa272fa9462ed6949"><div class="ttname"><a href="a05355.html#ab2530a905f47965fa272fa9462ed6949">Queue::linkQueue::isEmpty</a></div><div class="ttdeci">virtual bool isEmpty() const</div><div class="ttdoc">ÅĞ¶Ó¿Õ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00153">linkQueue.hh:153</a></div></div>
 <div class="ttc" id="aa05355_html_a4acd9ab12441d2135920e33b54f26b63"><div class="ttname"><a href="a05355.html#a4acd9ab12441d2135920e33b54f26b63">Queue::linkQueue::~linkQueue</a></div><div class="ttdeci">virtual ~linkQueue()</div><div class="ttdoc">Destroy the link Queue object.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00252">linkQueue.hh:252</a></div></div>
-<div class="ttc" id="aa04539_html"><div class="ttname"><a href="a04539.html">Queue</a></div><div class="ttdoc">è‡ªå®šä¹‰çš„é˜Ÿåˆ—ç±»éƒ½åœ¨Queueåå­—ç©ºé—´ä¸‹(linkQueue.hh)</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00025">linkQueue.hh:25</a></div></div>
+<div class="ttc" id="aa04539_html"><div class="ttname"><a href="a04539.html">Queue</a></div><div class="ttdoc">×Ô¶¨ÒåµÄ¶ÓÁĞÀà¶¼ÔÚQueueÃû×Ö¿Õ¼äÏÂ(linkQueue.hh)</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00025">linkQueue.hh:25</a></div></div>
 <div class="ttc" id="aa05355_html_ac499d36d6f71e5620b598d233033bf9e"><div class="ttname"><a href="a05355.html#ac499d36d6f71e5620b598d233033bf9e">Queue::linkQueue::push</a></div><div class="ttdeci">void push(const value_type &amp;val)</div><div class="ttdoc">Inserts a new element at the end of the queue, after its current last element.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00300">linkQueue.hh:300</a></div></div>
-<div class="ttc" id="aa05355_html_aede436261be17f6040b8978da00beae2"><div class="ttname"><a href="a05355.html#aede436261be17f6040b8978da00beae2">Queue::linkQueue::enQueue</a></div><div class="ttdeci">virtual void enQueue(const_reference &amp;x)</div><div class="ttdoc">å…¥é˜Ÿä¸€ä¸ªå…ƒç´ </div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00163">linkQueue.hh:163</a></div></div>
-<div class="ttc" id="aa05359_html_afc9a3840aa03914c4131062cd0c7f0e6"><div class="ttname"><a href="a05359.html#afc9a3840aa03914c4131062cd0c7f0e6">Queue::linkQueue::node::_data</a></div><div class="ttdeci">value_type _data</div><div class="ttdoc">æ•°æ®åŸŸ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00083">linkQueue.hh:83</a></div></div>
-<div class="ttc" id="aa05355_html_aeae9f79486c195f593260dcf7cee8705"><div class="ttname"><a href="a05355.html#aeae9f79486c195f593260dcf7cee8705">Queue::linkQueue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdoc">Removes the next element in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00321">linkQueue.hh:321</a></div></div>
+<div class="ttc" id="aa05355_html_aede436261be17f6040b8978da00beae2"><div class="ttname"><a href="a05355.html#aede436261be17f6040b8978da00beae2">Queue::linkQueue::enQueue</a></div><div class="ttdeci">virtual void enQueue(const_reference &amp;x)</div><div class="ttdoc">Èë¶ÓÒ»¸öÔªËØ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00163">linkQueue.hh:163</a></div></div>
+<div class="ttc" id="aa05359_html_afc9a3840aa03914c4131062cd0c7f0e6"><div class="ttname"><a href="a05359.html#afc9a3840aa03914c4131062cd0c7f0e6">Queue::linkQueue::node::_data</a></div><div class="ttdeci">value_type _data</div><div class="ttdoc">Êı¾İÓò</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00083">linkQueue.hh:83</a></div></div>
+<div class="ttc" id="aa05355_html_aeae9f79486c195f593260dcf7cee8705"><div class="ttname"><a href="a05355.html#aeae9f79486c195f593260dcf7cee8705">Queue::linkQueue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdoc">Removes the next element in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00322">linkQueue.hh:322</a></div></div>
 <div class="ttc" id="aa05355_html_a9ddfcaefd4d1a8dce222c978d35f1474"><div class="ttname"><a href="a05355.html#a9ddfcaefd4d1a8dce222c978d35f1474">Queue::linkQueue::size</a></div><div class="ttdeci">size_type size() const</div><div class="ttdoc">Returns the number of elements in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00270">linkQueue.hh:270</a></div></div>
 <div class="ttc" id="aa05359_html_a72fb8f6312dc236349d79bd150cf0e62"><div class="ttname"><a href="a05359.html#a72fb8f6312dc236349d79bd150cf0e62">Queue::linkQueue::node::node</a></div><div class="ttdeci">node(const value_type &amp;data=value_type(), node *next=nullptr)</div><div class="ttdoc">Construct a new node object.</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00097">linkQueue.hh:97</a></div></div>
-<div class="ttc" id="aa05359_html_ad7c3b0314a0b4a4d31ce9a6dfe7aa59d"><div class="ttname"><a href="a05359.html#ad7c3b0314a0b4a4d31ce9a6dfe7aa59d">Queue::linkQueue::node::_next</a></div><div class="ttdeci">node * _next</div><div class="ttdoc">æŒ‡å‘åç»§nodeçš„æŒ‡é’ˆ</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00089">linkQueue.hh:89</a></div></div>
+<div class="ttc" id="aa05359_html_ad7c3b0314a0b4a4d31ce9a6dfe7aa59d"><div class="ttname"><a href="a05359.html#ad7c3b0314a0b4a4d31ce9a6dfe7aa59d">Queue::linkQueue::node::_next</a></div><div class="ttdeci">node * _next</div><div class="ttdoc">Ö¸Ïòºó¼ÌnodeµÄÖ¸Õë</div><div class="ttdef"><b>Definition:</b> <a href="a04520_source.html#l00089">linkQueue.hh:89</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a04520.html">linkQueue.hh</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 11:55:31 for é˜Ÿåˆ— by
+    <li class="footer">Generated on Tue Apr 28 2020 23:03:02 for é˜Ÿåˆ— by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

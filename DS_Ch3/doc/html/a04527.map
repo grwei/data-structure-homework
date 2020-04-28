@@ -1,8 +1,9 @@
 <map id="include/linkStack.hpp" name="include/linkStack.hpp">
-<area shape="rect" id="node1" title="顺序栈类" alt="" coords="131,5,278,32"/>
-<area shape="rect" id="node2" href="$a04547.html" title="栈的抽象类" alt="" coords="167,80,242,107"/>
+<area shape="rect" id="node1" title="顺序栈类" alt="" coords="81,5,227,32"/>
+<area shape="rect" id="node2" href="$a04547.html" title="栈的抽象类" alt="" coords="117,80,191,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,103,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="127,155,181,181"/>
-<area shape="rect" id="node5" href="$a04541.html" title="顺序栈类的定义和实现" alt="" coords="205,155,308,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="227,229,287,256"/>
+<area shape="rect" id="node5" href="$a04541.html" title=" " alt="" coords="205,155,308,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="179,229,246,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="271,229,331,256"/>
 </map>

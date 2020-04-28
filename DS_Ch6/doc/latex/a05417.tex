@@ -1,0 +1,144 @@
+\hypertarget{a05417}{}\doxysection{Queue\+::link\+Queue$<$ T $>$\+::node Struct Reference}
+\label{a05417}\index{Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}}
+
+
+link\+Queue的结点类  
+
+
+
+
+Collaboration diagram for Queue\+::link\+Queue$<$ T $>$\+::node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{a05415}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05417_a72fb8f6312dc236349d79bd150cf0e62}{node}} (const \mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \&data=\mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}}(), \mbox{\hyperlink{a05417}{node}} $\ast$next=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new node object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05417_aa7b85506f32898ea493aa5617cba2fd9}{node}} (\mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \&\&data, \mbox{\hyperlink{a05417}{node}} $\ast$next=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new node object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05417_a25699c37e3e4ac595620001d8dab1d24}{$\sim$node}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the node object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \mbox{\hyperlink{a05417_afc9a3840aa03914c4131062cd0c7f0e6}{\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em 数据域 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05417}{node}} $\ast$ \mbox{\hyperlink{a05417_ad7c3b0314a0b4a4d31ce9a6dfe7aa59d}{\+\_\+next}}
+\begin{DoxyCompactList}\small\item\em 指向后继node的指针 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct Queue\+::link\+Queue$<$ T $>$\+::node}
+
+link\+Queue的结点类 
+
+
+
+Definition at line 77 of file link\+Queue.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05417_a72fb8f6312dc236349d79bd150cf0e62}\label{a05417_a72fb8f6312dc236349d79bd150cf0e62}} 
+\index{Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}!node@{node}}
+\index{node@{node}!Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05413}{Queue\+::link\+Queue}}$<$ T $>$\+::node\+::node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \&}]{data = {\ttfamily \mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}}()},  }\item[{\mbox{\hyperlink{a05417}{node}} $\ast$}]{next = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & 数据 \\
+\hline
+{\em next} & 指向后继结点的指针 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file link\+Queue.\+hh.
+
+\mbox{\Hypertarget{a05417_aa7b85506f32898ea493aa5617cba2fd9}\label{a05417_aa7b85506f32898ea493aa5617cba2fd9}} 
+\index{Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}!node@{node}}
+\index{node@{node}!Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05413}{Queue\+::link\+Queue}}$<$ T $>$\+::node\+::node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \&\&}]{data,  }\item[{\mbox{\hyperlink{a05417}{node}} $\ast$}]{next = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & 数据的值 \\
+\hline
+{\em next} & 指向后继结点的指针 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file link\+Queue.\+hh.
+
+\mbox{\Hypertarget{a05417_a25699c37e3e4ac595620001d8dab1d24}\label{a05417_a25699c37e3e4ac595620001d8dab1d24}} 
+\index{Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}!````~node@{$\sim$node}}
+\index{````~node@{$\sim$node}!Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}}
+\doxysubsubsection{\texorpdfstring{$\sim$node()}{~node()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05413}{Queue\+::link\+Queue}}$<$ T $>$\+::node\+::$\sim$node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the node object. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05417_afc9a3840aa03914c4131062cd0c7f0e6}\label{a05417_afc9a3840aa03914c4131062cd0c7f0e6}} 
+\index{Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}!\_data@{\_data}}
+\index{\_data@{\_data}!Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \mbox{\hyperlink{a05413}{Queue\+::link\+Queue}}$<$ T $>$\+::node\+::\+\_\+data}
+
+
+
+数据域 
+
+
+
+Definition at line 83 of file link\+Queue.\+hh.
+
+\mbox{\Hypertarget{a05417_ad7c3b0314a0b4a4d31ce9a6dfe7aa59d}\label{a05417_ad7c3b0314a0b4a4d31ce9a6dfe7aa59d}} 
+\index{Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}!\_next@{\_next}}
+\index{\_next@{\_next}!Queue::linkQueue$<$ T $>$::node@{Queue::linkQueue$<$ T $>$::node}}
+\doxysubsubsection{\texorpdfstring{\_next}{\_next}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{a05417}{node}}$\ast$ \mbox{\hyperlink{a05413}{Queue\+::link\+Queue}}$<$ T $>$\+::node\+::\+\_\+next}
+
+
+
+指向后继node的指针 
+
+
+
+Definition at line 89 of file link\+Queue.\+hh.
+
+
+
+Referenced by Queue\+::link\+Queue$<$ T $>$\+::push().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04526}{link\+Queue.\+hh}}\end{DoxyCompactItemize}

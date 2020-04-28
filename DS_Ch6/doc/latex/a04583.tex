@@ -1,0 +1,231 @@
+\hypertarget{a04583}{}\doxysection{Tree Namespace Reference}
+\label{a04583}\index{Tree@{Tree}}
+
+
+自定义的树类都在\+Tree名字空间内  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{a05401}{binary\+Tree}}
+\begin{DoxyCompactList}\small\item\em 用二叉链表实现的二叉树类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a05409}{bin\+Tree}}
+\item 
+class \mbox{\hyperlink{a05445}{Tree}}
+\item 
+class \mbox{\hyperlink{a05449}{Tree\+Exception}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T , typename Comparator $>$ }\\void \mbox{\hyperlink{a04583_ad484ac5e75e3c6057bed828f29a86776}{print\+Binary\+Tree}} (const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&bin\+\_\+tree, const typename \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::value\+\_\+type \&flag, std\+::ostream \&out=std\+::cout)
+\begin{DoxyCompactList}\small\item\em 输出一棵二叉树 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , typename Comparator $>$ }\\bool \mbox{\hyperlink{a04583_a3897ede30a2ea3b81556119f6f95b878}{operator==}} (const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&lhs, const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em 比较两棵二叉树是否相同 \char`\"{}相同\char`\"{}是指： \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{a04583_a2bcf1ea574062d56ef2517d84ae446be}{Gen\+Tree\+Data}} (const char $\ast$\+\_\+file\+\_\+path=\char`\"{}./test0.\+txt\char`\"{}, const char $\ast$empty\+\_\+flag=\char`\"{}@\char`\"{})
+\begin{DoxyCompactList}\small\item\em 生成一个文件，内容是一棵二叉树的层次遍历 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename Comparator $>$ }\\static void \mbox{\hyperlink{a04583_a2e5a25aaeed192affbca048f5589bdbf}{print\+\_\+test\+\_\+result}} (const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&binary\+\_\+tree, const typename \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::value\+\_\+type \&flag, std\+::ostream \&out=std\+::cout)
+\begin{DoxyCompactList}\small\item\em (测试用)将一棵二叉树的遍历结果插到输出流 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+自定义的树类都在\+Tree名字空间内 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{a04583_a2bcf1ea574062d56ef2517d84ae446be}\label{a04583_a2bcf1ea574062d56ef2517d84ae446be}} 
+\index{Tree@{Tree}!GenTreeData@{GenTreeData}}
+\index{GenTreeData@{GenTreeData}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{GenTreeData()}{GenTreeData()}}
+{\footnotesize\ttfamily static bool Tree\+::\+Gen\+Tree\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+file\+\_\+path = {\ttfamily \char`\"{}./test0.txt\char`\"{}},  }\item[{const char $\ast$}]{empty\+\_\+flag = {\ttfamily \char`\"{}@\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+生成一个文件，内容是一棵二叉树的层次遍历 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+file\+\_\+path} & 文件路径 \\
+\hline
+{\em empty\+\_\+flag} & 空结点标记\\
+\hline
+\end{DoxyParams}
+首先询问是否删除同名文件（若有）。 然后判断文件是否存在且可读，若是，则不做任何操作； 若否，则尝试新建文件。 函数返回true，只保证文件file\+\_\+path存在，不保证其可读。
+
+\begin{DoxyReturn}{Returns}
+true 文件已存在，或生成成功 
+
+false 文件生成失败 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file test0.\+hh.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{a04583_a2bcf1ea574062d56ef2517d84ae446be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a04583_a3897ede30a2ea3b81556119f6f95b878}\label{a04583_a3897ede30a2ea3b81556119f6f95b878}} 
+\index{Tree@{Tree}!operator==@{operator==}}
+\index{operator==@{operator==}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+bool Tree\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{lhs,  }\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+比较两棵二叉树是否相同 \char`\"{}相同\char`\"{}是指： 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 数据类型 \\
+\hline
+{\em Comparator} & 数据类型的比较器类，默认为std\+::less$<$\+T$>$ \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+此函数模板的模板实参由函数实参表推断，用户无需指定
+\end{DoxyNote}
+若类型\+T重载了operator$<$，则\+Comparator的默认类型std\+::less$<$\+T$>$将调用operator$<$，故实例化时不必指定tparam2；~\newline
+否则，要求指定模板参数\+Comparator，which is a function object, 重载了bool operator(\+T t1, T t2)：当语义上t1 $<$ t2时返回true。 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & 二叉树\#1 \\
+\hline
+{\em rhs} & 二叉树\#2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \#1和\#2相同 
+
+false \#1和\#2不同 
+\end{DoxyReturn}
+
+
+Definition at line 1462 of file binary\+Tree.\+hh.
+
+\mbox{\Hypertarget{a04583_a2e5a25aaeed192affbca048f5589bdbf}\label{a04583_a2e5a25aaeed192affbca048f5589bdbf}} 
+\index{Tree@{Tree}!print\_test\_result@{print\_test\_result}}
+\index{print\_test\_result@{print\_test\_result}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{print\_test\_result()}{print\_test\_result()}}
+{\footnotesize\ttfamily template$<$typename T , typename Comparator $>$ \\
+static void Tree\+::print\+\_\+test\+\_\+result (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{binary\+\_\+tree,  }\item[{const typename \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::value\+\_\+type \&}]{flag,  }\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+(测试用)将一棵二叉树的遍历结果插到输出流 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 二叉树存储的数据的类型 \\
+\hline
+{\em Comparator} & 函数对象，用于比较\+T类型的数据：lhs $<$ rhs 要求重载bool operator(const T \&lhs, const T \&rhs) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em binary\+\_\+tree} & 二叉树类的对象 \\
+\hline
+{\em flag} & 类\+T的对象，表示空结点的特殊标记 \\
+\hline
+{\em out} & 输出流对象，要求是ostream类及其派生类的对象，如std\+::cout，或ofstream类的对象 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file test0.\+hh.
+
+
+
+References Tree\+::binary\+Tree$<$ T, Comparator $>$\+::height(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::height\+\_\+loop(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::in\+Order(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::in\+Order\+\_\+loop(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::level\+Order(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::post\+Order(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::post\+Order\+\_\+loop(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::pre\+Order(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::pre\+Order\+\_\+loop(), print\+Binary\+Tree(), Tree\+::binary\+Tree$<$ T, Comparator $>$\+::size(), and Tree\+::binary\+Tree$<$ T, Comparator $>$\+::size\+\_\+loop().
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a04583_a2e5a25aaeed192affbca048f5589bdbf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{a04583_a2e5a25aaeed192affbca048f5589bdbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a04583_ad484ac5e75e3c6057bed828f29a86776}\label{a04583_ad484ac5e75e3c6057bed828f29a86776}} 
+\index{Tree@{Tree}!printBinaryTree@{printBinaryTree}}
+\index{printBinaryTree@{printBinaryTree}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{printBinaryTree()}{printBinaryTree()}}
+{\footnotesize\ttfamily template$<$class T , typename Comparator $>$ \\
+void Tree\+::print\+Binary\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$ \&}]{bin\+\_\+tree,  }\item[{const typename \mbox{\hyperlink{a05401}{binary\+Tree}}$<$ T, Comparator $>$\+::value\+\_\+type \&}]{flag,  }\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})}
+
+
+
+输出一棵二叉树 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 二叉树的数据类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em bin\+\_\+tree} & 二叉树类的对象 \\
+\hline
+{\em flag} & 用于表示空结点的特殊标记 \\
+\hline
+{\em out} & 输出流对象。默认是std\+::cout，也可以是ostream类及其派生类的对象，包括输出文件流等。\\
+\hline
+\end{DoxyParams}
+按层次顺序输出每个结点及其children，用于测试二叉树类实现的正确性。 该函数假定树中没有data相同的结点 \begin{DoxyNote}{Note}
+该函数模板被声明为binary\+Tree$<$\+T$>$类的友元仅作测试用，实际上不必作友元。~\newline
+用于测试：
+\begin{DoxyEnumerate}
+\item 二叉树类实现的正确性，包括lchild，rchild，root等\+A\+PI
+\item 模板作同参模板的友元
+\item 模板函数的模板实参的推断：tparam2是否能由binary\+Tree的tparam2的默认值推断？ 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{a04580__deprecated000001}{Deprecated}}]该函数仅作测试用，将在正式版本中删除。 \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{a04581__bug000001}{Bug}}]bin\+\_\+tree中不允许含有data相同的结点，否则可能导致无限循环！ \end{DoxyRefDesc}
+
+
+Definition at line 1426 of file binary\+Tree.\+hh.
+
+
+
+References Tree\+::binary\+Tree$<$ T, Comparator $>$\+::rchild().
+
+
+
+Referenced by print\+\_\+test\+\_\+result(), and print\+\_\+test\+\_\+result().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{a04583_ad484ac5e75e3c6057bed828f29a86776_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a04583_ad484ac5e75e3c6057bed828f29a86776_icgraph}
+\end{center}
+\end{figure}

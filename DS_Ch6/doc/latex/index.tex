@@ -1,0 +1,99 @@
+文档\hypertarget{index_autotoc_md1}{}\doxysection{Overview}\label{index_autotoc_md1}
+{\itshape {\bfseries{《数据结构：思想与实现（第2版）》（翁惠玉，俞勇）}}} {\bfseries{第6章 树}}
+
+
+\begin{DoxyItemize}
+\item 本章文档\+: \href{https://grwei.github.io/data-structure-homework/DS_Ch6/doc/html/index.html}{\texttt{ 树}}
+\item 本章主页\+: \href{https://grwei.github.io/data-structure-homework/DS_Ch6/}{\texttt{ 树}}
+\item 课程主页\+: \href{https://grwei.github.io/data-structure-homework/}{\texttt{ 数据结构}}
+\item 个人主页\+: \href{https://grwei.github.io/}{\texttt{ grwei}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{文件结构}\label{index_autotoc_md2}
+{\bfseries{注意：本章所有文件的编码都是{\ttfamily G\+BK}}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily ./include}\+: 头文件
+\item {\ttfamily ./src}\+: 测试例程
+\item {\ttfamily ./doc}\+: {\ttfamily H\+T\+ML}和{\ttfamily L\+A\+T\+EX}文档
+\begin{DoxyItemize}
+\item {\ttfamily H\+T\+ML}文档\href{./doc/html/index.html}{\texttt{ 打开}}方式：
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ./path/to/projectRoot}
+\DoxyCodeLine{./doc/html/index.html}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysection{Compiling}\label{index_autotoc_md3}
+将{\ttfamily ./include}文件夹加入{\ttfamily Include\+Path}，编译{\ttfamily ./src}文件夹中的$\ast$$\ast$单个$\ast$$\ast$源文件。
+
+
+\begin{DoxyItemize}
+\item {\bfseries{例1}} {\ttfamily g++}编译并运行\href{src/test0.cc}{\texttt{ {\ttfamily test0.\+cc}}}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ./DS\_Ch6}
+\DoxyCodeLine{mkdir bin}
+\DoxyCodeLine{g++ ./src/test0.cc -\/o ./bin/test0.exe -\/g -\/Wall -\/Wextra -\/Wshadow -\/static-\/libgcc -\/fexec-\/charset=GBK -\/finput-\/charset=GBK -\/std=c++17 -\/I ./include}
+\DoxyCodeLine{./bin/test0.exe}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{例2}} 编译并执行所有测试
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ./DS\_Ch6}
+\DoxyCodeLine{run\_test.bat}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysection{References and notes}\label{index_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item 从绝对路径解析文件所在目录：\href{http://www.cplusplus.com/reference/string/string/find_last_of/}{\texttt{ {\ttfamily find\+\_\+last\+\_\+of}}}，用于\href{src/test0.cc}{\texttt{ {\ttfamily test0.\+cc}}}
+\item 用{\ttfamily C/\+C++}调用{\ttfamily D\+OS}命令删除文件，用于\href{include/test0.hh}{\texttt{ {\ttfamily test0.\+hh}}}
+\item Returns the processor time consumed by the program：\href{http://www.cplusplus.com/reference/ctime/clock/}{\texttt{ {\ttfamily clock}}}，用于\href{include/test0.hh}{\texttt{ {\ttfamily test0.\+hh}}}
+\item 获取当前时间：\href{http://www.cplusplus.com/reference/ctime/localtime/}{\texttt{ {\ttfamily localtime}}}，用于\href{include/test0.hh}{\texttt{ {\ttfamily test0.\+hh}}}
+\item \href{https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and}{\texttt{ 用堆栈消除递归的一般方法}}，用于\href{include/binaryTree.hh}{\texttt{ {\ttfamily binary\+Tree.\+hh}}}
+\item 不要类内初始化{\ttfamily struct}的成员！否则无法使用\href{https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/others/\#braced-initializer-list}{\texttt{ 列表初始化}}，除非定义构造函数。用于\href{include/binaryTree.hh}{\texttt{ {\ttfamily binary\+Tree.\+hh}}}(braced-\/initializer-\/list)。
+\begin{DoxyItemize}
+\item 参考：\href{https://en.cppreference.com/w/cpp/language/list_initialization}{\texttt{ List initialization (since C++11)}}
+\end{DoxyItemize}
+\item 多加括号以避免优先级问题。例如优先级 {\ttfamily \&\&} $>$ {\ttfamily $\vert$$\vert$}，在g++编译选项开启\href{https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html\#Warning-Options}{\texttt{ {\ttfamily -\/Wextra}}}时，可能出现 `warning\+: suggest parentheses around '\&\&\textquotesingle{} within \textquotesingle{}$\vert$$\vert$\textquotesingle{}{\ttfamily 。详见gcc官方文档：\mbox{[}}-\/Wparentheses{\ttfamily \mbox{]}(\href{https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html}{\texttt{ https\+://gcc.\+gnu.\+org/onlinedocs/gcc/\+Warning-\/\+Options.\+html}}\#Warning-\/\+Options)}
+\item {\ttfamily 二叉树遍历的非递归实现是\mbox{[}用堆栈消除递归的一般方法\mbox{]}(\href{https://www.codeproject.com/Articles/418776/How-to-replace-recursive-functions-using-stack-and}{\texttt{ https\+://www.\+codeproject.\+com/\+Articles/418776/\+How-\/to-\/replace-\/recursive-\/functions-\/using-\/stack-\/and}})的简化情况。教材给出的方法可视作一般方法的简单情况，于是此方法统一了教材给出的递归消除方案。用于\mbox{[}}\mbox{\hyperlink{a04520}{binary\+Tree.\+hh}}\`{}\mbox{]}(\mbox{\hyperlink{a04520}{include/binary\+Tree.\+hh}})
+\begin{DoxyItemize}
+\item 连续递归调用，可归为一个stage，按反序一次性进栈。
+\item 有限次连续tail recursions不必分stage，直接按反序进栈即可
+\end{DoxyItemize}
+\item 类的非静态数据成员不能作成员函数的默认实参：\href{https://www.zhihu.com/question/39643639}{\texttt{ 原因}}。
+\item 函数模板的特定实例作类模板的特定实例的友元：类模板内的友元声明是否可省略模板实参？\href{include/binaryTree.hh}{\texttt{ binary\+Tree.\+hh}}
+\begin{DoxyItemize}
+\item 结论：可以。类模板定义内，类模板名引用处的模板实参默认同类定义使用的模板实参。例如：
+\end{DoxyItemize}
+
+\`{}\`{}\`{}cpp friend bool operator==$<$/$\ast$T, Comparator$\ast$/$>$(const binary\+Tree /$\ast$$<$T, Comparator$>$$\ast$/ \&lhs, const binary\+Tree /$\ast$$<$T, Comparator$>$$\ast$/ \&rhs); friend void print\+Binary\+Tree$<$/$\ast$T, Comparator$\ast$/$>$(const binary\+Tree /$\ast$$<$T, Comparator$>$$\ast$/ \&bin\+\_\+tree, const typename binary\+Tree /$\ast$$<$T, Comparator$>$$\ast$/ \+::value\+\_\+type \&flag, std\+::ostream \&out); \`{}\`{}\`{}
+\item 类的拷贝/移动构造/赋值运算符重载函数
+\begin{DoxyItemize}
+\item 参考1：\href{https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/\#copyable-and-movable-types}{\texttt{ C++风格指南——可拷贝类型和可移动类型}}
+\item 参考2：\href{https://blog.csdn.net/cabinriver/article/details/8895372?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2}{\texttt{ C++设计模式——原型模式}}
+\end{DoxyItemize}
+\item 关于类的前向声明 核心是从编译器的角度思考：顺序编译到此条语句时，是否有足够的信息完成编译？ 参考资料：
+\begin{DoxyItemize}
+\item \href{https://stackoverflow.com/questions/553682/when-can-i-use-a-forward-declaration}{\texttt{ When can I use a forward declaration?}}
+\item \href{https://stackoverflow.com/questions/3183710/forward-declaration-with-friend-function-invalid-use-of-incomplete-type?noredirect=1}{\texttt{ Forward declaration with friend function\+: invalid use of incomplete type}}
+\end{DoxyItemize}
+\item {\ttfamily std\+::move()}的后果：实参变右值，语句执行完毕后被析构，变成$\ast$$\ast$过期对象$\ast$$\ast$。
+\begin{DoxyItemize}
+\item \href{src/ch6_6.cc}{\texttt{ 关于两种构造和两种赋值的简单测试}}：被移动的二叉树变成空二叉树，这正是\href{include/binaryTree.hh}{\texttt{ 析构函数}}定义的行为。过期对象仍可访问，还可被移动赋值。疑问：析构函数是否会释放自动成员？例\href{include/binaryTree.hh}{\texttt{ {\ttfamily Bin\+Node $\ast$root\+\_\+}}}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md5}{}\doxysection{Contact me}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Author\+: Guorui Wei (危 国锐)
+\item E-\/mail\+: \href{mailto:313017602@qq.com}{\texttt{ 313017602@qq.\+com}} 
+\end{DoxyItemize}

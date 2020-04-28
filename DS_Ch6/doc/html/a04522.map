@@ -1,0 +1,12 @@
+<map id="include/binaryTree.hh" name="include/binaryTree.hh">
+<area shape="rect" id="node1" title=" " alt="" coords="357,5,502,32"/>
+<area shape="rect" id="node2" href="$a04547.html" title=" " alt="" coords="11,80,114,107"/>
+<area shape="rect" id="node5" href="$a04559.html" title="测试：交换二叉树中所有结点的左右子树" alt="" coords="138,80,235,107"/>
+<area shape="rect" id="node6" href="$a04562.html" title="测试：统计二叉树中度为2的结点的个数" alt="" coords="259,80,357,107"/>
+<area shape="rect" id="node7" href="$a04565.html" title="测试：判断二叉树是否为满二叉树" alt="" coords="381,80,478,107"/>
+<area shape="rect" id="node8" href="$a04568.html" title="测试：判断二叉树是否为完全二叉树" alt="" coords="502,80,599,107"/>
+<area shape="rect" id="node9" href="$a04571.html" title="测试：判断两棵二叉树是否相同" alt="" coords="623,80,721,107"/>
+<area shape="rect" id="node10" href="$a04574.html" title="测试：判断两棵二叉树是否互为镜像" alt="" coords="745,80,842,107"/>
+<area shape="rect" id="node3" href="$a04544.html" title="生成一个文件，内容是一棵二叉树的层次遍历(deprecated)" alt="" coords="5,155,120,181"/>
+<area shape="rect" id="node4" href="$a04577.html" title=" " alt="" coords="17,229,108,256"/>
+</map>

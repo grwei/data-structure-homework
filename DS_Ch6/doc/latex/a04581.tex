@@ -1,0 +1,9 @@
+
+\begin{DoxyRefList}
+\item[Member \mbox{\hyperlink{a05401_a04b72fb96511872389c079dcdd8dcd39}{Tree::binary\+Tree$<$ T, Comparator $>$::parent}} (value\+\_\+type x, const value\+\_\+type \&flag) const]\label{a04581__bug000002}%
+\Hypertarget{a04581__bug000002}%
+二叉链表不允许访问结点的parent，本函数恒返回flag  
+\item[Member \mbox{\hyperlink{a04583_ad484ac5e75e3c6057bed828f29a86776}{Tree::print\+Binary\+Tree}} (const binary\+Tree$<$ T, Comparator $>$ \&bin\+\_\+tree, const typename \mbox{\hyperlink{a05401_afaa28be8afcfed930217d6d75ae18383}{binary\+Tree$<$ T, Comparator $>$\+::value\+\_\+type}} \&flag, std\+::ostream \&out=std\+::cout)]\label{a04581__bug000001}%
+\Hypertarget{a04581__bug000001}%
+bin\+\_\+tree中不允许含有data相同的结点，否则可能导致无限循环！ 
+\end{DoxyRefList}

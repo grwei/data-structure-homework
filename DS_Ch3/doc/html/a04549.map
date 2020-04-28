@@ -1,13 +1,12 @@
 <map id="include/Stack.hh" name="include/Stack.hh">
-<area shape="rect" id="node1" title="栈的抽象类" alt="" coords="365,5,484,32"/>
+<area shape="rect" id="node1" title="栈的抽象类" alt="" coords="277,5,396,32"/>
 <area shape="rect" id="node2" href="$a04520.html" title="Ackermann库" alt="" coords="5,80,156,107"/>
 <area shape="rect" id="node4" href="$a04526.html" title="顺序栈类" alt="" coords="181,80,327,107"/>
-<area shape="rect" id="node5" href="$a04541.html" title="顺序栈类的定义和实现" alt="" coords="351,80,498,107"/>
-<area shape="rect" id="node6" href="$a04532.html" title="全排列" alt="" coords="523,80,657,107"/>
-<area shape="rect" id="node8" href="$a04535.html" title="后缀表达式类" alt="" coords="681,80,789,107"/>
-<area shape="rect" id="node11" href="$a04553.html" title="将十进制非负实数以二进制打印" alt="" coords="813,80,911,107"/>
+<area shape="rect" id="node5" href="$a04532.html" title="全排列" alt="" coords="352,80,487,107"/>
+<area shape="rect" id="node7" href="$a04535.html" title="后缀表达式类" alt="" coords="511,80,619,107"/>
+<area shape="rect" id="node10" href="$a04553.html" title="将十进制非负实数以二进制打印" alt="" coords="643,80,740,107"/>
 <area shape="rect" id="node3" href="$a04565.html" title="Ackerman函数的递归和非递归实现" alt="" coords="32,155,129,181"/>
-<area shape="rect" id="node7" href="$a04556.html" title="全排列的递归和非递归实现" alt="" coords="541,155,639,181"/>
-<area shape="rect" id="node9" href="$a04559.html" title="中缀表达式转为后缀表达式" alt="" coords="675,155,772,181"/>
-<area shape="rect" id="node10" href="$a04562.html" title="后缀表达式的计算" alt="" coords="796,155,893,181"/>
+<area shape="rect" id="node6" href="$a04556.html" title="全排列的递归和非递归实现" alt="" coords="371,155,468,181"/>
+<area shape="rect" id="node8" href="$a04559.html" title="中缀表达式转为后缀表达式" alt="" coords="504,155,601,181"/>
+<area shape="rect" id="node9" href="$a04562.html" title="后缀表达式的计算" alt="" coords="625,155,723,181"/>
 </map>

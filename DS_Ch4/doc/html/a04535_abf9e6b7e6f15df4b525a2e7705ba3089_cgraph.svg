@@ -156,7 +156,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node9 -->
 <g id="node9" class="node"><title>Node9</title>
-<g id="a_node9"><a xlink:href="a05355.html#ab2530a905f47965fa272fa9462ed6949" target="_top" xlink:title="判队空">
+<g id="a_node9"><a xlink:href="a05355.html#ab2530a905f47965fa272fa9462ed6949" target="_top" xlink:title="�жӿ�">
 <polygon fill="white" stroke="black" points="75.5,-228.5 75.5,-247.5 212.5,-247.5 212.5,-228.5 75.5,-228.5"/>
 <text text-anchor="middle" x="144" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">Queue::linkQueue::isEmpty</text>
 </a>

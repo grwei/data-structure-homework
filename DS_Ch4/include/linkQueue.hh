@@ -1,7 +1,7 @@
 /****************************************************
  * @file linkQueue.hh
  * @author Guorui Wei (313017602@qq.com)
- * @brief é“¾æ¥é˜Ÿåˆ—çš„å®šä¹‰å’Œå®ç°
+ * @brief Á´½Ó¶ÓÁĞµÄ¶¨ÒåºÍÊµÏÖ
  * @version 0.1
  * @date 2020-04-05
  * 
@@ -19,47 +19,47 @@
 #include <utility>
 
 /**
- * @brief è‡ªå®šä¹‰çš„é˜Ÿåˆ—ç±»éƒ½åœ¨Queueåå­—ç©ºé—´ä¸‹(linkQueue.hh)
+ * @brief ×Ô¶¨ÒåµÄ¶ÓÁĞÀà¶¼ÔÚQueueÃû×Ö¿Õ¼äÏÂ(linkQueue.hh)
  * 
  */
 namespace Queue
 {
 
 /**
- * @brief é“¾æ¥é˜Ÿåˆ—ç±»
+ * @brief Á´½Ó¶ÓÁĞÀà
  * 
- * @tparam T æ•°æ®çš„ç±»å‹
+ * @tparam T Êı¾İµÄÀàĞÍ
  */
 template <typename T>
 class linkQueue : Queue<T>
 {
 public:
     /**
-     * @brief ç±»å‹åˆ«åå®šä¹‰
+     * @brief ÀàĞÍ±ğÃû¶¨Òå
      * 
-     * @note æµ‹è¯•ï¼šèƒ½å¦ä»åŸºç±»ç»§æ‰¿
+     * @note ²âÊÔ£ºÄÜ·ñ´Ó»ùÀà¼Ì³Ğ
      * 
      */
-    typedef T value_type;                      ///< æ•°æ®ç±»å‹
-    typedef value_type &reference;             ///< æ•°æ®çš„å¼•ç”¨
-    typedef const value_type &const_reference; ///< æ•°æ®çš„å¸¸é‡å¼•ç”¨
-    typedef size_t size_type;                  ///< è®¡æ•°å™¨ç±»å‹
+    typedef T value_type;                      ///< Êı¾İÀàĞÍ
+    typedef value_type &reference;             ///< Êı¾İµÄÒıÓÃ
+    typedef const value_type &const_reference; ///< Êı¾İµÄ³£Á¿ÒıÓÃ
+    typedef size_t size_type;                  ///< ¼ÆÊıÆ÷ÀàĞÍ
 
 private:
     /**
-     * @brief linkQueueçš„ç»“ç‚¹ç±»
+     * @brief linkQueueµÄ½áµãÀà
      * 
      */
     struct node
     {
         /**
-         * @brief æ•°æ®åŸŸ
+         * @brief Êı¾İÓò
          * 
          */
         value_type _data;
 
         /**
-         * @brief æŒ‡å‘åç»§nodeçš„æŒ‡é’ˆ
+         * @brief Ö¸Ïòºó¼ÌnodeµÄÖ¸Õë
          * 
          */
         node *_next;
@@ -67,8 +67,8 @@ private:
         /**
          * @brief Construct a new node object
          * 
-         * @param data æ•°æ®
-         * @param next æŒ‡å‘åç»§ç»“ç‚¹çš„æŒ‡é’ˆ
+         * @param data Êı¾İ
+         * @param next Ö¸Ïòºó¼Ì½áµãµÄÖ¸Õë
          */
         node(const value_type &data = value_type(), node *next = nullptr)
             : _data(data), _next(next) {}
@@ -76,8 +76,8 @@ private:
         /**
          * @brief Construct a new node object
          * 
-         * @param data æ•°æ®çš„å€¼
-         * @param next æŒ‡å‘åç»§ç»“ç‚¹çš„æŒ‡é’ˆ
+         * @param data Êı¾İµÄÖµ
+         * @param next Ö¸Ïòºó¼Ì½áµãµÄÖ¸Õë
          */
         node(value_type &&data, node *next = nullptr)
             : _data(std::move(data)), _next(next) {}
@@ -90,19 +90,19 @@ private:
     };
 
     /**
-     * @brief æŒ‡å‘é˜Ÿé¦–ç»“ç‚¹
+     * @brief Ö¸Ïò¶ÓÊ×½áµã
      * 
      */
     node *_front;
 
     /**
-     * @brief æŒ‡å‘é˜Ÿå°¾ç»“ç‚¹
+     * @brief Ö¸Ïò¶ÓÎ²½áµã
      * 
      */
     node *_rear;
 
     /**
-     * @brief é˜Ÿåˆ—ä¸­å½“å‰å…ƒç´ ä¸ªæ•°
+     * @brief ¶ÓÁĞÖĞµ±Ç°ÔªËØ¸öÊı
      * 
      */
     size_type _size;
@@ -121,10 +121,10 @@ public:
     virtual ~linkQueue();
 
     /**
-     * @brief åˆ¤é˜Ÿç©º
+     * @brief ÅĞ¶Ó¿Õ
      * 
-     * @return true é˜Ÿç©º
-     * @return false é˜Ÿéç©º
+     * @return true ¶Ó¿Õ
+     * @return false ¶Ó·Ç¿Õ
      */
     virtual bool isEmpty() const
     {
@@ -132,9 +132,9 @@ public:
     }
 
     /**
-     * @brief å…¥é˜Ÿä¸€ä¸ªå…ƒç´ 
+     * @brief Èë¶ÓÒ»¸öÔªËØ
      * 
-     * @param x å…ƒç´ çš„æ•°æ®
+     * @param x ÔªËØµÄÊı¾İ
      */
     virtual void enQueue(const_reference &x)
     {
@@ -142,7 +142,7 @@ public:
     }
 
     /**
-     * @brief å‡ºé˜Ÿä¸€ä¸ªå…ƒç´ 
+     * @brief ³ö¶ÓÒ»¸öÔªËØ
      * 
      * @return value_type
      */
@@ -156,7 +156,7 @@ public:
     /**
      * @brief Get the Head object
      * 
-     * @return value_type é˜Ÿé¦–å…ƒç´ çš„å€¼
+     * @return value_type ¶ÓÊ×ÔªËØµÄÖµ
      */
     virtual value_type getHead() const
     {
@@ -181,28 +181,28 @@ public:
     /**
      * @brief Returns a reference to the next element in the queue.
      * 
-     * @return reference& é˜Ÿé¦–å…ƒç´ çš„å¼•ç”¨
+     * @return reference& ¶ÓÊ×ÔªËØµÄÒıÓÃ
      */
     reference &front();
 
     /**
      * @brief Returns a reference to the next element in the queue.
      * 
-     * @return const_reference& é˜Ÿé¦–å…ƒç´ çš„å¸¸é‡å¼•ç”¨
+     * @return const_reference& ¶ÓÊ×ÔªËØµÄ³£Á¿ÒıÓÃ
      */
     const_reference &front() const;
 
     /**
      * @brief Returns a reference to the last element in the queue.
      * 
-     * @return reference& é˜Ÿå°¾å…ƒç´ çš„å¼•ç”¨
+     * @return reference& ¶ÓÎ²ÔªËØµÄÒıÓÃ
      */
     reference &back();
 
     /**
      * @brief Returns a reference to the last element in the queue.
      * 
-     * @return const_reference& é˜Ÿå°¾å…ƒç´ çš„å¸¸é‡å¼•ç”¨
+     * @return const_reference& ¶ÓÎ²ÔªËØµÄ³£Á¿ÒıÓÃ
      */
     const_reference &back() const;
 
@@ -210,7 +210,7 @@ public:
      * @brief Inserts a new element at the end of the queue, 
      * after its current last element.
      * 
-     * @param val æ•°æ®çš„å€¼
+     * @param val Êı¾İµÄÖµ
      */
     void push(const value_type &val);
 
@@ -218,7 +218,7 @@ public:
      * @brief Inserts a new element at the end of the queue
      * @note after its current last element
      * 
-     * @param val æ•°æ®çš„å€¼
+     * @param val Êı¾İµÄÖµ
      */
     void push(value_type &&val);
 
@@ -287,17 +287,18 @@ typename linkQueue<T>::const_reference &linkQueue<T>::back() const
 template <class T>
 void linkQueue<T>::push(const value_type &val)
 {
+    // Ïò¿Õ¶ÓÁĞÈë¶Ó
     if (!_front)
         _rear = _front = new node(val);
-
-    _rear = _rear->_next = new node(val);
+    else
+        _rear = _rear->_next = new node(val);
     ++_size;
 }
 
 template <class T>
 void linkQueue<T>::push(value_type &&val)
 {
-    // å‘ç©ºé˜Ÿåˆ—å…¥é˜Ÿ
+    // Ïò¿Õ¶ÓÁĞÈë¶Ó
     if (!_front)
         _rear = _front = new node(std::move(val));
     else
@@ -313,11 +314,11 @@ void linkQueue<T>::pop()
     delete delPtr;
     --_size;
 
-    // æœ€åä¸€ä¸ªå…ƒç´ å‡ºé˜Ÿ
+    // ×îºóÒ»¸öÔªËØ³ö¶Ó
     if (!_front)
         _rear = nullptr;
 }
 
 } // namespace Queue
 
-#endif
+#endif // __LINKQUEUE_HH__

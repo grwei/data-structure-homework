@@ -1,0 +1,227 @@
+\hypertarget{a05429}{}\doxysection{Queue\+::Queue$<$ T $>$ Class Template Reference}
+\label{a05429}\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+
+
+队列的抽象类  
+
+
+
+
+{\ttfamily \#include $<$Queue.\+h$>$}
+
+
+
+Inheritance diagram for Queue\+::Queue$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a05428}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 类型别名定义 \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \& \mbox{\hyperlink{a05429_a4e3a13b89ce9081afd5798de32d4fa81}{reference}}
+\begin{DoxyCompactList}\small\item\em 数据的引用 \end{DoxyCompactList}\item 
+typedef size\+\_\+t \mbox{\hyperlink{a05429_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 计数器类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{a05429_a6365212cc8eddb4a9cfcd01157871a28}{is\+Empty}} () const =0
+\begin{DoxyCompactList}\small\item\em 判队空 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{a05429_aa2ef424f20563040f57f0c61ec7bb218}{en\+Queue}} (const \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \&x)=0
+\begin{DoxyCompactList}\small\item\em 入队一个元素 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \mbox{\hyperlink{a05429_a99c3a22792cac8edd4f1f3f66b51b204}{de\+Queue}} ()=0
+\begin{DoxyCompactList}\small\item\em 出队一个元素 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \mbox{\hyperlink{a05429_a873aceeb23ba3fc9a384b58c51d06470}{get\+Head}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the Head object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{a05429_aa895cc6f12f03d84e4dc5e5b0a2138f3}{$\sim$\+Queue}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{a05429}{Queue}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const typedef \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \& \mbox{\hyperlink{a05429_ad9f80e94b3756f35d8607a3e3db496e6}{const\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em 数据的常量引用 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Queue\+::\+Queue$<$ T $>$}
+
+队列的抽象类 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 数据的类型 \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 45 of file Queue.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{a05429_a4e3a13b89ce9081afd5798de32d4fa81}\label{a05429_a4e3a13b89ce9081afd5798de32d4fa81}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!reference@{reference}}
+\index{reference@{reference}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}}\& \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{a05429_a4e3a13b89ce9081afd5798de32d4fa81}{reference}}}
+
+
+
+数据的引用 
+
+
+
+Definition at line 67 of file Queue.\+h.
+
+\mbox{\Hypertarget{a05429_ac56ee55fa4e9d51f130437b5077cbabe}\label{a05429_ac56ee55fa4e9d51f130437b5077cbabe}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef size\+\_\+t \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{a05429_ac56ee55fa4e9d51f130437b5077cbabe}{size\+\_\+type}}}
+
+
+
+计数器类型 
+
+
+
+Definition at line 69 of file Queue.\+h.
+
+\mbox{\Hypertarget{a05429_ae505902c39a9ac533982592c4280ae77}\label{a05429_ae505902c39a9ac533982592c4280ae77}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef T \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}}}
+
+
+
+类型别名定义 
+
+\begin{DoxyNote}{Note}
+测试：能否从被派生类继承 数据类型 
+\end{DoxyNote}
+
+
+Definition at line 66 of file Queue.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05429_aa895cc6f12f03d84e4dc5e5b0a2138f3}\label{a05429_aa895cc6f12f03d84e4dc5e5b0a2138f3}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!````~Queue@{$\sim$Queue}}
+\index{````~Queue@{$\sim$Queue}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Queue()}{~Queue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{a05429}{Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{a05429}{Queue}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05429_a99c3a22792cac8edd4f1f3f66b51b204}\label{a05429_a99c3a22792cac8edd4f1f3f66b51b204}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!deQueue@{deQueue}}
+\index{deQueue@{deQueue}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deQueue()}{deQueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::de\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+出队一个元素 
+
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 出队数据的值 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{a05413_a179aae8f99c7dd20985dc3c58d95dbd1}{Queue\+::link\+Queue$<$ T $>$}}, \mbox{\hyperlink{a05433_a333f4b5828c74edd7e6d750b0f763fd8}{Queue\+::seq\+Queue$<$ T $>$}}, and \mbox{\hyperlink{a05453_a34472178c199808dab4db051750e99d3}{Queue\+::vec\+Queue$<$ T $>$}}.
+
+\mbox{\Hypertarget{a05429_aa2ef424f20563040f57f0c61ec7bb218}\label{a05429_aa2ef424f20563040f57f0c61ec7bb218}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!enQueue@{enQueue}}
+\index{enQueue@{enQueue}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enQueue()}{enQueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::en\+Queue (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+入队一个元素 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 数据的值 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a05429_a873aceeb23ba3fc9a384b58c51d06470}\label{a05429_a873aceeb23ba3fc9a384b58c51d06470}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!getHead@{getHead}}
+\index{getHead@{getHead}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the Head object. 
+
+\begin{DoxyReturn}{Returns}
+value\+\_\+type 队首元素的值 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{a05413_aef230987d83493acb2cf18f464475792}{Queue\+::link\+Queue$<$ T $>$}}, \mbox{\hyperlink{a05433_abadb989f8c708e711b725b58b5deb6c8}{Queue\+::seq\+Queue$<$ T $>$}}, and \mbox{\hyperlink{a05453_aac46859598ecdcd06af0de88de1f8cb2}{Queue\+::vec\+Queue$<$ T $>$}}.
+
+\mbox{\Hypertarget{a05429_a6365212cc8eddb4a9cfcd01157871a28}\label{a05429_a6365212cc8eddb4a9cfcd01157871a28}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+判队空 
+
+\begin{DoxyReturn}{Returns}
+true 队空 
+
+false 队非空 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{a05413_ab2530a905f47965fa272fa9462ed6949}{Queue\+::link\+Queue$<$ T $>$}}, \mbox{\hyperlink{a05433_ae24200b125bb042e8ddc0cb79378d2c9}{Queue\+::seq\+Queue$<$ T $>$}}, and \mbox{\hyperlink{a05453_a4706d52871dae567f7191f8c9b7d9a09}{Queue\+::vec\+Queue$<$ T $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05429_ad9f80e94b3756f35d8607a3e3db496e6}\label{a05429_ad9f80e94b3756f35d8607a3e3db496e6}} 
+\index{Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!Queue::Queue$<$ T $>$@{Queue::Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const typedef \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}}\& \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::const\+\_\+reference}
+
+
+
+数据的常量引用 
+
+
+
+Definition at line 68 of file Queue.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04532}{Queue.\+h}}\end{DoxyCompactItemize}
