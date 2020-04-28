@@ -10,7 +10,6 @@ var a05453 =
     [ "deQueue", "a05453.html#a34472178c199808dab4db051750e99d3", null ],
     [ "doubleSpace", "a05453.html#a2e7017cbd96497cd5b36ddc75710b665", null ],
     [ "empty", "a05453.html#a7f8ac7b73205ea04e63925c1b6d95daa", null ],
-    [ "enQueue", "a05453.html#aa2ef424f20563040f57f0c61ec7bb218", null ],
     [ "enQueue", "a05453.html#a9fa4e1ebac29845c4f48d8668dacfd13", null ],
     [ "front", "a05453.html#ad938d48bc5b2353deeca16e992a6aa74", null ],
     [ "front", "a05453.html#a6e0fe8e9569745d019caa76c91a117a6", null ],

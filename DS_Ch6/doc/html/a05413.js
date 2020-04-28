@@ -10,7 +10,6 @@ var a05413 =
     [ "back", "a05413.html#a0ea8157cb1ac90c80bf491a7ca393c7a", null ],
     [ "deQueue", "a05413.html#a179aae8f99c7dd20985dc3c58d95dbd1", null ],
     [ "empty", "a05413.html#ac48d4ae12a9424ed78c3067c3fc89af5", null ],
-    [ "enQueue", "a05413.html#aa2ef424f20563040f57f0c61ec7bb218", null ],
     [ "enQueue", "a05413.html#aede436261be17f6040b8978da00beae2", null ],
     [ "front", "a05413.html#a3d55a01fb2481fbeea2aa2242e3fe2e0", null ],
     [ "front", "a05413.html#ae6e84efdcec2a2e44bb83fbc29b1a3fb", null ],

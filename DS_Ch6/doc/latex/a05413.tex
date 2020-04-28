@@ -81,11 +81,6 @@ void \mbox{\hyperlink{a05413_aeae9f79486c195f593260dcf7cee8705}{pop}} ()
 \item 
 const typedef \mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \& \mbox{\hyperlink{a05413_a1ffba1b3394857d6a2d25be65778cad4}{const\+\_\+reference}}
 \begin{DoxyCompactList}\small\item\em 数据的常量引用 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-virtual void \mbox{\hyperlink{a05429_aa2ef424f20563040f57f0c61ec7bb218}{en\+Queue}} (const \mbox{\hyperlink{a05413_a24941cae0156e591c133de04e802cca2}{value\+\_\+type}} \&x)=0
-\begin{DoxyCompactList}\small\item\em 入队一个元素 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -95,6 +90,7 @@ virtual void \mbox{\hyperlink{a05429_aa2ef424f20563040f57f0c61ec7bb218}{en\+Queu
 \begin{DoxyCompactList}\small\item\em 指向队尾结点 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{a05413_a2a4b5fa3cd765b3ce964ee87d3d48448}{size\+\_\+type}} \mbox{\hyperlink{a05413_aaf901ac8159cbebdbc2ad24272ba9e44}{\+\_\+size}}
 \begin{DoxyCompactList}\small\item\em 队列中当前元素个数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -273,26 +269,10 @@ false not empty
 
 Definition at line 264 of file link\+Queue.\+hh.
 
-\mbox{\Hypertarget{a05429_aa2ef424f20563040f57f0c61ec7bb218}\label{a05429_aa2ef424f20563040f57f0c61ec7bb218}} 
-\index{Queue::linkQueue$<$ T $>$@{Queue::linkQueue$<$ T $>$}!enQueue@{enQueue}}
-\index{enQueue@{enQueue}!Queue::linkQueue$<$ T $>$@{Queue::linkQueue$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{enQueue()}{enQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-virtual void \mbox{\hyperlink{a05429}{Queue\+::\+Queue}}$<$ T $>$\+::en\+Queue (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05429_ae505902c39a9ac533982592c4280ae77}{value\+\_\+type}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
-
-
-
-入队一个元素 
-
-
-\begin{DoxyParams}{Parameters}
-{\em x} & 数据的值 \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{a05413_aede436261be17f6040b8978da00beae2}\label{a05413_aede436261be17f6040b8978da00beae2}} 
 \index{Queue::linkQueue$<$ T $>$@{Queue::linkQueue$<$ T $>$}!enQueue@{enQueue}}
 \index{enQueue@{enQueue}!Queue::linkQueue$<$ T $>$@{Queue::linkQueue$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{enQueue()}{enQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{enQueue()}{enQueue()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 virtual void \mbox{\hyperlink{a05413}{Queue\+::link\+Queue}}$<$ T $>$\+::en\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05413_a1ffba1b3394857d6a2d25be65778cad4}{const\+\_\+reference}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
