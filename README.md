@@ -31,6 +31,12 @@ g++ ./src/test0.cc -o ./bin/test0.exe -g -fexec-charset=GBK -std=c++11 -I ./incl
 - 第3章 [栈](https://grwei.github.io/data-structure-homework/DS_Ch3/)
 - 第4章 [队列](https://grwei.github.io/data-structure-homework/DS_Ch4/)
 - 第6章 [树](https://grwei.github.io/data-structure-homework/DS_Ch6/)
+- 第7章 [优先级队列](https://grwei.github.io/data-structure-homework/DS_Ch7/)
+- 第8章 [集合与静态查找表](https://grwei.github.io/data-structure-homework/DS_Ch8/)
+- 第9章 [动态查找表](https://grwei.github.io/data-structure-homework/DS_Ch9/)
+- 第10章 [排序](https://grwei.github.io/data-structure-homework/DS_Ch10/)
+- 第11章 [外部查找与排序](https://grwei.github.io/data-structure-homework/DS_Ch11/)
+- 第13章 [图](https://grwei.github.io/data-structure-homework/DS_Ch13/)
 
 ## Contact me
 
