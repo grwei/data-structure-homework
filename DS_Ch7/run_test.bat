@@ -21,8 +21,10 @@ IF EXIST %rootPath%%binFolder% (
 )
 
 :: How to write the following into a for /D ?
-g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
-g++ ./src/ch7_1.cc -o ./bin/ch7_1.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=GBK -std=c++17 -I ./include
+g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=UTF-8 -finput-charset=UTF-8 -std=c++17 -I ./include
+g++ ./src/ch7_1.cc -o ./bin/ch7_1.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=UTF-8 -finput-charset=UTF-8 -std=c++17 -I ./include
+g++ ./src/ch7_7.cc -o ./bin/ch7_7.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=UTF-8 -finput-charset=UTF-8 -std=c++17 -I ./include
+
 
 FOR /R %rootPath%%binFolder% %%i IN (*.exe) DO (
     %%i

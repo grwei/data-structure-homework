@@ -1,0 +1,559 @@
+\hypertarget{a05365}{}\doxysection{Queue\+::Binary\+Heap$<$ Comparable, Compare $>$ Class Template Reference}
+\label{a05365}\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+
+
+Priority queue.  
+
+
+
+
+{\ttfamily \#include $<$Binary\+Heap.\+h$>$}
+
+
+
+Inheritance diagram for Queue\+::Binary\+Heap$<$ Comparable, Compare $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a05364}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Queue\+::Binary\+Heap$<$ Comparable, Compare $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a05363}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em an unsigned integral type \end{DoxyCompactList}\item 
+typedef Comparable \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type of the elements. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} \& \mbox{\hyperlink{a05365_a1a57a95efe94466aa397c91d229d51e1}{reference}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05365_ad4c2fd534d811c79a58014225bb611d0}{Binary\+Heap}} (\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} capacity=100, const Compare \&\mbox{\hyperlink{a05365_a7c3e97779c95d115ce0bc768301d6222}{comp}}=Compare\{\})
+\begin{DoxyCompactList}\small\item\em Construct a new Binary Heap object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05365_a096f70d6131ff92f03b8cb9454ee6766}{Binary\+Heap}} (const \mbox{\hyperlink{a05397}{List\+::seq\+List}}$<$ \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} $>$ \&items, const Compare \&\mbox{\hyperlink{a05365_a7c3e97779c95d115ce0bc768301d6222}{comp}}=Compare\{\})
+\begin{DoxyCompactList}\small\item\em Construct a new Binary Heap object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05365_a3b865d3cc021d8c5579ad0a948c2a537}{$\sim$\+Binary\+Heap}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the Binary Heap object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{a05365_a1b17341032c71a6bbc3bde8b9278a058}{empty}} () const
+\begin{DoxyCompactList}\small\item\em 判队空 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05365_af054b0ea158e04fcd0b55500c41180ad}{const\+\_\+reference}} \mbox{\hyperlink{a05365_addbe9312d5ed03d89fc34173e976846e}{top}} () const
+\begin{DoxyCompactList}\small\item\em 返回队头元素值 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05365_a75c8292669678e23690c332946aa0c32}{pop}} ()
+\begin{DoxyCompactList}\small\item\em 队头元素出队 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05365_a6319f8261ea5e9e91e3d89c0cd9bc0e7}{pop}} (Comparable $\ast$min\+Item)
+\begin{DoxyCompactList}\small\item\em 队头元素出队，保存在min\+Item指向的空间中 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05365_a55c7ce3559cf549fe8b2f279fddbb890}{push}} (\mbox{\hyperlink{a05365_af054b0ea158e04fcd0b55500c41180ad}{const\+\_\+reference}} x)
+\begin{DoxyCompactList}\small\item\em 将x入队 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05365_a6b1525cfc014033a5c460e526eafc9e4}{clear}} ()
+\begin{DoxyCompactList}\small\item\em 清空队列 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} \mbox{\hyperlink{a05365_ac066dc2daf01560d8d7dcf20a7e8eaa2}{size}} () const
+\begin{DoxyCompactList}\small\item\em Return size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05365_ad010d9254b771f603f1c08976e9c86d7}{print\+\_\+heap}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em 将二叉堆中元素顺序输出. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const typedef \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} \& \mbox{\hyperlink{a05365_af054b0ea158e04fcd0b55500c41180ad}{const\+\_\+reference}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a05365_acdcafcbbf456afaa4f752a4745924d84}{build\+Heap}} ()
+\begin{DoxyCompactList}\small\item\em Establish heap order property from an arbitrary arrangement of items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05365_ac33f64edbf6550d9bff7bfe91fc8e5c1}{percolate\+Down}} (\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} hole)
+\begin{DoxyCompactList}\small\item\em Internal method to percolate down in the heap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05365_aa22b0a16174cd96b24bff1d801382c1d}{percolate\+Up}} (\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} hole)
+\begin{DoxyCompactList}\small\item\em Internal method to percolate up in the heap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} \mbox{\hyperlink{a05365_ab1fe0aaab23b1a3c067812a7a2cfc29a}{current\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Number of elements in heap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05397}{List\+::seq\+List}}$<$ \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} $>$ \mbox{\hyperlink{a05365_aaefef5c059029c801c34674dd416830d}{array\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The heap array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr Compare \mbox{\hyperlink{a05365_a7c3e97779c95d115ce0bc768301d6222}{comp}} = Compare\{\}
+\begin{DoxyCompactList}\small\item\em function object of type Compare \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{a05365_acef3fe96c42e2e2f22ef369c600e89de}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{a05365}{Binary\+Heap}} \&heap)
+\begin{DoxyCompactList}\small\item\em 将二叉堆中元素顺序插到输出流对象out中. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Comparable, class Compare = std\+::less$<$\+Comparable$>$$>$\newline
+class Queue\+::\+Binary\+Heap$<$ Comparable, Compare $>$}
+
+Priority queue. 
+
+Priority queues are a type of container adaptors, specifically designed such that its first element is always the greatest of the elements it contains, according to some strict weak ordering criterion.\textbackslash{} This context is similar to a heap, where elements can be inserted at any moment, and only the max heap element can be retrieved (the one at the top in the priority queue).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Comparable} & Type of the elements.\textbackslash{} Aliased as member type priority\+\_\+queue\+::value\+\_\+type.\\
+\hline
+{\em std\+::less$<$\+Comparable$>$} & A binary predicate that takes two elements (of type T) as arguments and returns a bool.\textbackslash{} The expression comp(a,b), where comp is an object of this type and a and b are elements in the container, shall return true if a is considered to go before b in the strict weak ordering the function defines.\textbackslash{} The priority\+\_\+queue uses this function to maintain the elements sorted in a way that preserves heap properties (i.\+e., that the element popped is the last according to this strict weak ordering).\textbackslash{} This can be a function pointer or a function object, and defaults to less$<$\+T$>$, which returns the same as applying the less-\/than operator (a$<$b).\textbackslash{} 即：comp(a, b)返回true，当且仅当b的优先级高于a. 故若comp为less，则为最大堆. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 40 of file Binary\+Heap.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{a05365_a1a57a95efe94466aa397c91d229d51e1}\label{a05365_a1a57a95efe94466aa397c91d229d51e1}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!reference@{reference}}
+\index{reference@{reference}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+typedef \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}\& \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::\mbox{\hyperlink{a05365_a1a57a95efe94466aa397c91d229d51e1}{reference}}}
+
+
+
+Definition at line 46 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a00ff92178a973907096e16a5855cc88a}\label{a05365_a00ff92178a973907096e16a5855cc88a}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+typedef size\+\_\+t \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}}}
+
+
+
+an unsigned integral type 
+
+
+
+Definition at line 44 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}\label{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+typedef Comparable \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::\mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}}
+
+
+
+Type of the elements. 
+
+
+
+Definition at line 45 of file Binary\+Heap.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05365_ad4c2fd534d811c79a58014225bb611d0}\label{a05365_ad4c2fd534d811c79a58014225bb611d0}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!BinaryHeap@{BinaryHeap}}
+\index{BinaryHeap@{BinaryHeap}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{BinaryHeap()}{BinaryHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+\mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::\mbox{\hyperlink{a05365}{Binary\+Heap}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}}}]{capacity = {\ttfamily 100},  }\item[{const Compare \&}]{comp = {\ttfamily Compare\{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Binary Heap object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & 容器的初始容量. \\
+\hline
+{\em comp} & 函数对象（二元谓词）\\
+\hline
+\end{DoxyParams}
+数据范围array\mbox{[}1\mbox{]} $\sim$ array\mbox{[}capacity\mbox{]} 
+
+Definition at line 203 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a096f70d6131ff92f03b8cb9454ee6766}\label{a05365_a096f70d6131ff92f03b8cb9454ee6766}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!BinaryHeap@{BinaryHeap}}
+\index{BinaryHeap@{BinaryHeap}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{BinaryHeap()}{BinaryHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+\mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::\mbox{\hyperlink{a05365}{Binary\+Heap}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05397}{List\+::seq\+List}}$<$ \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} $>$ \&}]{items,  }\item[{const Compare \&}]{comp = {\ttfamily Compare\{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Binary Heap object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em items} & 容器的初值来源 \\
+\hline
+{\em comp} & 函数对象（二元谓词） \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 237 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a3b865d3cc021d8c5579ad0a948c2a537}\label{a05365_a3b865d3cc021d8c5579ad0a948c2a537}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!````~BinaryHeap@{$\sim$BinaryHeap}}
+\index{````~BinaryHeap@{$\sim$BinaryHeap}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BinaryHeap()}{~BinaryHeap()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+\mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::$\sim$\mbox{\hyperlink{a05365}{Binary\+Heap}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the Binary Heap object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05365_acdcafcbbf456afaa4f752a4745924d84}\label{a05365_acdcafcbbf456afaa4f752a4745924d84}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!buildHeap@{buildHeap}}
+\index{buildHeap@{buildHeap}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{buildHeap()}{buildHeap()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::build\+Heap\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Establish heap order property from an arbitrary arrangement of items. 
+
+\begin{DoxyNote}{Note}
+Run in linear time. 
+\end{DoxyNote}
+
+
+Definition at line 249 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a6b1525cfc014033a5c460e526eafc9e4}\label{a05365_a6b1525cfc014033a5c460e526eafc9e4}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!clear@{clear}}
+\index{clear@{clear}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::clear}
+
+
+
+清空队列 
+
+
+
+Definition at line 315 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a1b17341032c71a6bbc3bde8b9278a058}\label{a05365_a1b17341032c71a6bbc3bde8b9278a058}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!empty@{empty}}
+\index{empty@{empty}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+bool \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::empty}
+
+
+
+判队空 
+
+\begin{DoxyReturn}{Returns}
+true 空 
+
+false 非空 
+\end{DoxyReturn}
+
+
+Definition at line 209 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_ac33f64edbf6550d9bff7bfe91fc8e5c1}\label{a05365_ac33f64edbf6550d9bff7bfe91fc8e5c1}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!percolateDown@{percolateDown}}
+\index{percolateDown@{percolateDown}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{percolateDown()}{percolateDown()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::percolate\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}}}]{hole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal method to percolate down in the heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hole} & the index at which the percolate begins. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 258 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_aa22b0a16174cd96b24bff1d801382c1d}\label{a05365_aa22b0a16174cd96b24bff1d801382c1d}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!percolateUp@{percolateUp}}
+\index{percolateUp@{percolateUp}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{percolateUp()}{percolateUp()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::percolate\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}}}]{hole }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Internal method to percolate up in the heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hole} & the index at which the percolate begins. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 283 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a75c8292669678e23690c332946aa0c32}\label{a05365_a75c8292669678e23690c332946aa0c32}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!pop@{pop}}
+\index{pop@{pop}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::pop}
+
+
+
+队头元素出队 
+
+
+
+Definition at line 298 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_a6319f8261ea5e9e91e3d89c0cd9bc0e7}\label{a05365_a6319f8261ea5e9e91e3d89c0cd9bc0e7}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!pop@{pop}}
+\index{pop@{pop}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::pop (\begin{DoxyParamCaption}\item[{Comparable $\ast$}]{min\+Item }\end{DoxyParamCaption})}
+
+
+
+队头元素出队，保存在min\+Item指向的空间中 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Item} & 指向元素类型的指针 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 306 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_ad010d9254b771f603f1c08976e9c86d7}\label{a05365_ad010d9254b771f603f1c08976e9c86d7}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!print\_heap@{print\_heap}}
+\index{print\_heap@{print\_heap}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{print\_heap()}{print\_heap()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::print\+\_\+heap (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+将二叉堆中元素顺序输出. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是std\+::cout，或fout等. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 181 of file Binary\+Heap.\+h.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{a05365_ad010d9254b771f603f1c08976e9c86d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05365_a55c7ce3559cf549fe8b2f279fddbb890}\label{a05365_a55c7ce3559cf549fe8b2f279fddbb890}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!push@{push}}
+\index{push@{push}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+void \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05365_af054b0ea158e04fcd0b55500c41180ad}{const\+\_\+reference}}}]{x }\end{DoxyParamCaption})}
+
+
+
+将x入队 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 新元素 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 221 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_ac066dc2daf01560d8d7dcf20a7e8eaa2}\label{a05365_ac066dc2daf01560d8d7dcf20a7e8eaa2}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!size@{size}}
+\index{size@{size}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+\mbox{\hyperlink{a05365}{Binary\+Heap}}$<$ Comparable, Compare $>$\+::\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::size}
+
+
+
+Return size. 
+
+Returns the number of elements in the priority\+\_\+queue.\textbackslash{} This member function effectively calls member size of the underlying container object.
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+type The number of elements in the underlying container.\textbackslash{} Member type size\+\_\+type is an unsigned integral type. 
+\end{DoxyReturn}
+
+
+Definition at line 322 of file Binary\+Heap.\+h.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{a05365_ac066dc2daf01560d8d7dcf20a7e8eaa2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05365_addbe9312d5ed03d89fc34173e976846e}\label{a05365_addbe9312d5ed03d89fc34173e976846e}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!top@{top}}
+\index{top@{top}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare $>$ \\
+\mbox{\hyperlink{a05365}{Binary\+Heap}}$<$ Comparable, Compare $>$\+::\mbox{\hyperlink{a05365_af054b0ea158e04fcd0b55500c41180ad}{const\+\_\+reference}} \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::top}
+
+
+
+返回队头元素值 
+
+\begin{DoxyReturn}{Returns}
+const Comparable\& 队头元素（最小） 
+\end{DoxyReturn}
+
+
+Definition at line 215 of file Binary\+Heap.\+h.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{a05365_addbe9312d5ed03d89fc34173e976846e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{a05365_acef3fe96c42e2e2f22ef369c600e89de}\label{a05365_acef3fe96c42e2e2f22ef369c600e89de}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{a05365}{Binary\+Heap}}$<$ Comparable, Compare $>$ \&}]{heap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+将二叉堆中元素顺序插到输出流对象out中. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & 输出流对象，可以是std\+::cout，或fout等. \\
+\hline
+{\em heap} & 二叉堆对象 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 实参输出流对象的引用 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file Binary\+Heap.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05365_aaefef5c059029c801c34674dd416830d}\label{a05365_aaefef5c059029c801c34674dd416830d}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!array\_@{array\_}}
+\index{array\_@{array\_}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{array\_}{array\_}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+\mbox{\hyperlink{a05397}{List\+::seq\+List}}$<$\mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}$>$ \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::array\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The heap array. 
+
+数据范围\mbox{[}1, current\+\_\+size\mbox{]} 
+
+Definition at line 62 of file Binary\+Heap.\+h.
+
+
+
+Referenced by Queue\+::\+Binary\+Heap$<$ int, std\+::greater$<$ int $>$ $>$\+::print\+\_\+heap().
+
+\mbox{\Hypertarget{a05365_a7c3e97779c95d115ce0bc768301d6222}\label{a05365_a7c3e97779c95d115ce0bc768301d6222}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!comp@{comp}}
+\index{comp@{comp}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{comp}{comp}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+constexpr Compare \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::comp = Compare\{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+function object of type Compare 
+
+A binary predicate that takes two elements (of type T) as arguments and returns a bool.\textbackslash{} The expression comp(a,b), where comp is an object of this type and a and b are elements in the container, shall return true if a is considered to go before b in the strict weak ordering the function defines.\textbackslash{} The priority\+\_\+queue uses this function to maintain the elements sorted in a way that preserves heap properties (i.\+e., that the element popped is the last according to this strict weak ordering).\textbackslash{} This can be a function pointer or a function object, and defaults to less$<$\+T$>$, which returns the same as applying the less-\/than operator (a$<$b). 
+
+Definition at line 73 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_af054b0ea158e04fcd0b55500c41180ad}\label{a05365_af054b0ea158e04fcd0b55500c41180ad}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+const typedef \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}\& \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::const\+\_\+reference}
+
+
+
+Definition at line 47 of file Binary\+Heap.\+h.
+
+\mbox{\Hypertarget{a05365_ab1fe0aaab23b1a3c067812a7a2cfc29a}\label{a05365_ab1fe0aaab23b1a3c067812a7a2cfc29a}} 
+\index{Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}!current\_size\_@{current\_size\_}}
+\index{current\_size\_@{current\_size\_}!Queue::BinaryHeap$<$ Comparable, Compare $>$@{Queue::BinaryHeap$<$ Comparable, Compare $>$}}
+\doxysubsubsection{\texorpdfstring{current\_size\_}{current\_size\_}}
+{\footnotesize\ttfamily template$<$typename Comparable , class Compare  = std\+::less$<$\+Comparable$>$$>$ \\
+\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} \mbox{\hyperlink{a05365}{Queue\+::\+Binary\+Heap}}$<$ Comparable, Compare $>$\+::current\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of elements in heap. 
+
+
+
+Definition at line 55 of file Binary\+Heap.\+h.
+
+
+
+Referenced by Queue\+::\+Binary\+Heap$<$ int, std\+::greater$<$ int $>$ $>$\+::print\+\_\+heap().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04520}{Binary\+Heap.\+h}}\end{DoxyCompactItemize}

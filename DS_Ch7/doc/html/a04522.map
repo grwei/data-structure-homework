@@ -1,4 +1,6 @@
 <map id="include/BinaryHeap.h" name="include/BinaryHeap.h">
-<area shape="rect" id="node1" title="优先级队列的接口和实现" alt="" coords="5,5,151,32"/>
-<area shape="rect" id="node2" href="$a04538.html" title="优先级队列基本测试代码" alt="" coords="33,80,123,107"/>
+<area shape="rect" id="node1" title="优先级队列的接口和实现" alt="" coords="103,5,248,32"/>
+<area shape="rect" id="node2" href="$a04538.html" title="程序设计题第1题：实现最大堆" alt="" coords="5,80,103,107"/>
+<area shape="rect" id="node3" href="$a04541.html" title="程序设计题第7题：实现基于最小堆的整型的优先级队列，包含功能findMin(x) 和 decreaseKey(i, value)" alt="" coords="127,80,224,107"/>
+<area shape="rect" id="node4" href="$a04544.html" title="优先级队列基本测试代码" alt="" coords="249,80,339,107"/>
 </map>

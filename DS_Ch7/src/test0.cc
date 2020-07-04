@@ -7,9 +7,12 @@
  * 
  * @copyright Copyright (c) 2020
  * 
+ * See the file LICENSE in the top directory of this distribution for
+ * more information.
  */
 
 #include "BinaryHeap.h"
+#include <cstdlib> /* srand, rand */
 #include <ctime>
 #include <fstream>
 
@@ -19,6 +22,8 @@
  * @param argc 参数个数
  * @param argv 参数数组
  * @return int 返回值
+ * @warning 要求.exe对其所在的目录有读写权限
+ * @details 部分测试结果将输出到一个文本文档中
  */
 int main(int argc, char const *argv[])
 {
@@ -55,18 +60,53 @@ int main(int argc, char const *argv[])
     // 开始测试
     try
     {
-        List::seqList<std::string> string_array{"1", "2", "3", "9", "8", "7", "6", "5", "4", "0"};
+        int low{10}, high{99}, num_of_points{18};
+        List::seqList<std::string> string_array(num_of_points);
+        /* initialize random seed: */
+        srand(time(NULL));
+
+        /* generate secret number between 1 and 10: */
+        int iSecret;
+        for (int i = 0; i < num_of_points; ++i)
+        {
+            iSecret = low + (high - low + 1) * rand() / (RAND_MAX + 1);
+            string_array.push_back(std::to_string(iSecret));
+        }
+
         string_array.traverse(std::cout);
         string_array.traverse(fout);
-        Priority_queue::BinaryHeap priority_queue(string_array);
 
+        // 从源数组建立一个最小堆
+        Queue::BinaryHeap priority_queue(string_array, std::greater<std::string>{});
+
+        // 依次出队
         std::string str;
         while (!priority_queue.empty())
         {
             str = priority_queue.top();
             priority_queue.pop(&str);
-            std::cout << str << '\t';
-            fout << str << '\t';
+            std::cout << str << ' ';
+            fout << str << ' ';
+        }
+
+        std::cout << "\n队空? "
+                  << std::boolalpha << priority_queue.empty() << '\n';
+        fout << "\n队空? "
+             << std::boolalpha << priority_queue.empty() << '\n';
+
+        // 逐元素入队建立最小堆
+        for (int i = 0; i < num_of_points; ++i)
+        {
+            priority_queue.push(string_array[i]);
+        }
+
+        // 依次出队
+        while (!priority_queue.empty())
+        {
+            str = priority_queue.top();
+            priority_queue.pop(&str);
+            std::cout << str << ' ';
+            fout << str << ' ';
         }
     }
     catch (const std::string &e)

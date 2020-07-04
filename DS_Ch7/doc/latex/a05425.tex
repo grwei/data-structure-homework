@@ -1,0 +1,157 @@
+\hypertarget{a05425}{}\doxysection{Queue\+::priority\+\_\+queue\+\_\+int Class Reference}
+\label{a05425}\index{Queue::priority\_queue\_int@{Queue::priority\_queue\_int}}
+
+
+基于最小堆的整型的优先级队列类  
+
+
+
+
+Inheritance diagram for Queue\+::priority\+\_\+queue\+\_\+int\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a05424}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Queue\+::priority\+\_\+queue\+\_\+int\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a05423}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05425_a68a0d0619315a29e4154ffe3aca47f1a}{priority\+\_\+queue\+\_\+int}} (const \mbox{\hyperlink{a05397}{List\+::seq\+List}}$<$ \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} $>$ \&items)
+\item 
+\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} \mbox{\hyperlink{a05425_a0323a591fd71bd6310e48046da6df915}{find\+Min}} (\mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} x) const
+\begin{DoxyCompactList}\small\item\em 找出优先级值大于等于指定值x的最小元素，返回其下标 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05425_a51a285434a21179e240e221df46cebee}{decrease\+Key}} (\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} i, \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} value)
+\begin{DoxyCompactList}\small\item\em 将第i个结点的优先级值减小value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a05425_a50f8ba6f2c5caa5154be4c86278d10d5}{increase\+Key}} (\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}} i, \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} value)
+\begin{DoxyCompactList}\small\item\em 将第i个结点的优先级值增加value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+基于最小堆的整型的优先级队列类 
+
+
+
+Definition at line 28 of file ch7\+\_\+7.\+cc.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05425_a68a0d0619315a29e4154ffe3aca47f1a}\label{a05425_a68a0d0619315a29e4154ffe3aca47f1a}} 
+\index{Queue::priority\_queue\_int@{Queue::priority\_queue\_int}!priority\_queue\_int@{priority\_queue\_int}}
+\index{priority\_queue\_int@{priority\_queue\_int}!Queue::priority\_queue\_int@{Queue::priority\_queue\_int}}
+\doxysubsubsection{\texorpdfstring{priority\_queue\_int()}{priority\_queue\_int()}}
+{\footnotesize\ttfamily Queue\+::priority\+\_\+queue\+\_\+int\+::priority\+\_\+queue\+\_\+int (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05397}{List\+::seq\+List}}$<$ \mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}} $>$ \&}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file ch7\+\_\+7.\+cc.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05425_a51a285434a21179e240e221df46cebee}\label{a05425_a51a285434a21179e240e221df46cebee}} 
+\index{Queue::priority\_queue\_int@{Queue::priority\_queue\_int}!decreaseKey@{decreaseKey}}
+\index{decreaseKey@{decreaseKey}!Queue::priority\_queue\_int@{Queue::priority\_queue\_int}}
+\doxysubsubsection{\texorpdfstring{decreaseKey()}{decreaseKey()}}
+{\footnotesize\ttfamily void Queue\+::priority\+\_\+queue\+\_\+int\+::decrease\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}}}]{i,  }\item[{\mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+将第i个结点的优先级值减小value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & 目标元素的下标 \\
+\hline
+{\em value} & 优先级值的减小量 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 187 of file ch7\+\_\+7.\+cc.
+
+\mbox{\Hypertarget{a05425_a0323a591fd71bd6310e48046da6df915}\label{a05425_a0323a591fd71bd6310e48046da6df915}} 
+\index{Queue::priority\_queue\_int@{Queue::priority\_queue\_int}!findMin@{findMin}}
+\index{findMin@{findMin}!Queue::priority\_queue\_int@{Queue::priority\_queue\_int}}
+\doxysubsubsection{\texorpdfstring{findMin()}{findMin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{Queue\+::priority\+\_\+queue\+\_\+int\+::size\+\_\+type}} Queue\+::priority\+\_\+queue\+\_\+int\+::find\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}}]{x }\end{DoxyParamCaption}) const}
+
+
+
+找出优先级值大于等于指定值x的最小元素，返回其下标 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & 指定值x \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 大于等于指定值x的最小元素的下标，0表示查找失败 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file ch7\+\_\+7.\+cc.
+
+
+
+References Queue\+::\+Binary\+Heap$<$ int, std\+::greater$<$ int $>$ $>$\+::array\+\_\+, and Queue\+::\+Binary\+Heap$<$ int, std\+::greater$<$ int $>$ $>$\+::current\+\_\+size\+\_\+.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{a05425_a0323a591fd71bd6310e48046da6df915_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a05425_a50f8ba6f2c5caa5154be4c86278d10d5}\label{a05425_a50f8ba6f2c5caa5154be4c86278d10d5}} 
+\index{Queue::priority\_queue\_int@{Queue::priority\_queue\_int}!increaseKey@{increaseKey}}
+\index{increaseKey@{increaseKey}!Queue::priority\_queue\_int@{Queue::priority\_queue\_int}}
+\doxysubsubsection{\texorpdfstring{increaseKey()}{increaseKey()}}
+{\footnotesize\ttfamily void Queue\+::priority\+\_\+queue\+\_\+int\+::increase\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05365_a00ff92178a973907096e16a5855cc88a}{size\+\_\+type}}}]{i,  }\item[{\mbox{\hyperlink{a05365_a2c0d8d11e4c4688ba13eb56613bade1b}{value\+\_\+type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+将第i个结点的优先级值增加value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & 目标元素的下标 \\
+\hline
+{\em value} & 优先级值的增加量 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 199 of file ch7\+\_\+7.\+cc.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{a05425_a50f8ba6f2c5caa5154be4c86278d10d5_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{a04541}{ch7\+\_\+7.\+cc}}\end{DoxyCompactItemize}

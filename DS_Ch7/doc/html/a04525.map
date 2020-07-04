@@ -1,8 +1,10 @@
 <map id="include/dLinkList.h" name="include/dLinkList.h">
-<area shape="rect" id="node1" title="双链表类" alt="" coords="87,5,218,32"/>
-<area shape="rect" id="node2" href="$a04526.html" title="栈的抽象类" alt="" coords="103,80,202,107"/>
-<area shape="rect" id="node3" href="$a04529.html" title="顺序表类" alt="" coords="18,155,138,181"/>
-<area shape="rect" id="node6" href="$a04532.html" title="单链表类的定义和实现" alt="" coords="162,155,293,181"/>
-<area shape="rect" id="node4" href="$a04520.html" title="优先级队列的接口和实现" alt="" coords="5,229,151,256"/>
-<area shape="rect" id="node5" href="$a04538.html" title="优先级队列基本测试代码" alt="" coords="33,304,123,331"/>
+<area shape="rect" id="node1" title="双链表类" alt="" coords="185,5,315,32"/>
+<area shape="rect" id="node2" href="$a04526.html" title="栈的抽象类" alt="" coords="201,80,299,107"/>
+<area shape="rect" id="node3" href="$a04529.html" title="顺序表类" alt="" coords="115,155,235,181"/>
+<area shape="rect" id="node8" href="$a04532.html" title="单链表类的定义和实现" alt="" coords="259,155,390,181"/>
+<area shape="rect" id="node4" href="$a04520.html" title="优先级队列的接口和实现" alt="" coords="103,229,248,256"/>
+<area shape="rect" id="node5" href="$a04538.html" title="程序设计题第1题：实现最大堆" alt="" coords="5,304,103,331"/>
+<area shape="rect" id="node6" href="$a04541.html" title="程序设计题第7题：实现基于最小堆的整型的优先级队列，包含功能findMin(x) 和 decreaseKey(i, value)" alt="" coords="127,304,224,331"/>
+<area shape="rect" id="node7" href="$a04544.html" title="优先级队列基本测试代码" alt="" coords="249,304,339,331"/>
 </map>

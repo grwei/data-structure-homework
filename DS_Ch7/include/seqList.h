@@ -7,6 +7,8 @@
  * 
  * @copyright Copyright (c) 2020
  * 
+ * See the file LICENSE in the top directory of this distribution for
+ * more information.
  */
 
 #ifndef __seqListIncluded
@@ -44,6 +46,18 @@ namespace List
                 ++current;
                 return old;
             }
+            virtual const_iterator &operator--()
+            {
+                --current;
+                return *this;
+            }
+            const_iterator operator--(int)
+            {
+                const_iterator old = *this;
+                --current;
+                return old;
+            }
+
             virtual bool operator==(const const_iterator &rhs) const { return rhs.current == current; }
             virtual bool operator!=(const const_iterator &rhs) const { return rhs.current != current; }
 
@@ -70,6 +84,19 @@ namespace List
             {
                 iterator old = *this;
                 ++iterator::current;
+                return old;
+            }
+
+            virtual iterator &operator--()
+            {
+                --iterator::current;
+                return *this;
+            }
+
+            iterator operator--(int)
+            {
+                iterator old = *this;
+                --iterator::current;
                 return old;
             }
             // 与基类相同
@@ -167,7 +194,21 @@ namespace List
         size_t size() const;
 
         /**
+         * @brief Return size of allocated storage capacity\
+         * 
+         * Returns the size of the storage space currently allocated for the vector, expressed in terms of elements.
+         * This capacity is not necessarily equal to the vector size. It can be equal or greater, with the extra space allowing to accommodate for growth without the need to reallocate on each insertion.\n
+         * Notice that this capacity does not suppose a limit on the size of the vector. When this capacity is exhausted and more is needed, it is automatically expanded by the container (reallocating it storage space).\n 
+         * 
+         * @return size_t The size of the currently allocated storage capacity in the vector, measured in terms of the number elements it can hold.
+         * 
+         * Member type size_type is an unsigned integral type.
+         */
+        size_t capacity() const noexcept;
+
+        /**
          * @brief Access first element.
+         * 
          * Returns a reference to the first element in the vector.
          * 
          * @return T& A reference to the first element in the vector container.
@@ -177,6 +218,7 @@ namespace List
 
         /**
          * @brief Access first element.
+         * 
          * Returns a reference to the first element in the vector.
          * 
          * @return T& A reference to the first element in the vector container.
@@ -186,6 +228,7 @@ namespace List
 
         /**
          * @brief Access last element.
+         * 
          * Returns a reference to the last element in the vector.
          * 
          * @return T& A reference to the last element in the vector.
@@ -195,6 +238,7 @@ namespace List
 
         /**
          * @brief Access last element.
+         * 
          * Returns a reference to the last element in the vector.
          * 
          * @return T& A reference to the last element in the vector.
@@ -209,6 +253,33 @@ namespace List
          * @param n New container size, expressed in number of elements.
          */
         void resize(size_t n);
+
+        /**
+         * @brief Request a change in capacity
+         * 
+         * Requests that the vector capacity be at least enough to contain n elements.
+         * If n is greater than the current vector capacity, the function causes the container to reallocate its storage increasing its capacity to n (or greater).\
+         * In all other cases, the function call does not cause a reallocation and the vector capacity is not affected.\
+         * This function has no effect on the vector size and cannot alter its elements.\
+         * 
+         * @param n Minimum capacity for the vector.\
+         * Note that the resulting vector capacity may be equal or greater than n.\
+         * Member type size_type is an unsigned integral type.
+         */
+        void reserve(size_t n);
+
+        /**
+         * @brief 将顺序表元素顺序插到输出流对象out中
+         * 
+         * @param out 输出流对象，可以是std::cout，或fout等
+         * @param obj 顺序表对象
+         * @return std::ostream& 实参输出流对象的引用
+         */
+        friend std::ostream &operator<<(std::ostream &out, const seqList &obj)
+        {
+            obj.traverse(out);
+            return out;
+        }
 
         virtual iterator begin() { return iterator(data); } // 数据范围[begin, end)
         virtual const_iterator begin() const { return iterator(data); }
@@ -252,7 +323,7 @@ namespace List
     {
         out << '\n';
         for (size_t i = 0; i < currentLength; ++i)
-            out << data[i] << ' ';
+            out << data[i] << ", ";
 
         out << std::endl;
     }
@@ -367,17 +438,17 @@ namespace List
     template <class T>
     void seqList<T>::push_back(const T &x)
     {
-        if (++currentLength > maxSize)
+        if (currentLength > maxSize)
             doubleSpace();
-        data[currentLength] = x;
+        data[currentLength++] = x;
     }
 
     template <class T>
     void seqList<T>::push_back(T &&x)
     {
-        if (++currentLength > maxSize)
+        if (currentLength == maxSize)
             doubleSpace();
-        data[currentLength] = std::move(x);
+        data[currentLength++] = std::move(x);
     }
 
     template <class T>
@@ -417,6 +488,27 @@ namespace List
             doubleSpace();
 
         currentLength = n;
+    }
+
+    template <class T>
+    size_t seqList<T>::capacity() const noexcept
+    {
+        return maxSize;
+    }
+
+    template <class T>
+    void seqList<T>::reserve(size_t n)
+    {
+        if (n > maxSize)
+        {
+            T *newArray = new T[maxSize = n];
+            for (size_t i = 0; i < currentLength; ++i)
+            {
+                newArray[i] = std::move(data[i]);
+            }
+            std::swap(data, newArray);
+            delete[] newArray;
+        }
     }
 
 } // namespace List

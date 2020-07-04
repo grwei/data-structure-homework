@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['list_79',['List',['../a05379.html',1,'List']]],
-  ['list_3c_20comparable_20_3e_80',['List&lt; Comparable &gt;',['../a05379.html',1,'List']]]
+  ['list_97',['List',['../a05385.html',1,'List']]],
+  ['list_3c_20value_5ftype_20_3e_98',['List&lt; value_type &gt;',['../a05385.html',1,'List']]]
 ];

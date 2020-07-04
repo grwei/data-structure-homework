@@ -12,6 +12,8 @@
  * 
  * @copyright Copyright (c) 2020
  * 
+ * See the file LICENSE in the top directory of this distribution for
+ * more information.
  */
 
 #include <iostream>

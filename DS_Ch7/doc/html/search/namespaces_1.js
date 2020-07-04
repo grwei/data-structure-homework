@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['priority_5fqueue_86',['Priority_queue',['../a04542.html',1,'']]]
+  ['queue_105',['Queue',['../a04548.html',1,'']]]
 ];

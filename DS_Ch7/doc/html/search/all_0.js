@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['array_5f_0',['array_',['../a05359.html#af07d3ce82c1d923d6a6b49001e217c34',1,'Priority_queue::BinaryHeap']]]
+  ['array_5f_0',['array_',['../a05365.html#aaefef5c059029c801c34674dd416830d',1,'Queue::BinaryHeap']]]
 ];
