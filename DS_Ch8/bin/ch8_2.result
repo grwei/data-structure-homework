@@ -1,0 +1,23 @@
+
+Current local time and date: Sun Jul 05 17:40:35 2020
+
+*find(17) = 17
+*find(19) = 19
+*find(22) = 22
+*find(33) = 33
+*find(42) = 42
+*find(45) = 45
+*find(52) = 52
+*find(57) = 57
+*find(60) = 60
+*find(61) = 61
+*find(61) = 61
+*find(62) = 62
+*find(64) = 64
+*find(65) = 65
+*find(67) = 67
+*find(91) = 91
+*find(92) = 92
+*find(97) = 97
+
+It took me 10 clicks (0.01 seconds).

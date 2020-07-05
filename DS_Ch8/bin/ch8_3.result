@@ -1,0 +1,15 @@
+
+Current local time and date: Sun Jul 05 17:40:36 2020
+
+set1 has 10 elements:
+10, 11, 12, 14, 15, 16, 17, 18, 19, 24, 
+set2 has 10 elements:
+10, 11, 13, 16, 17, 18, 19, 20, 22, 24, 
+The union has 13 elements:
+10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 
+The intersection has 7 elements:
+10, 11, 16, 17, 18, 19, 24, 
+The difference has 3 elements:
+12, 14, 15, 
+
+It took me 12 clicks (0.012 seconds).

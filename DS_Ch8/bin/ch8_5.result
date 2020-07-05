@@ -1,0 +1,18 @@
+
+Current local time and date: Sun Jul 05 17:40:37 2020
+
+vec has 9 elements:
+11, 13, 16, 18, 19, 20, 22, 24, 25, 
+*rfind(11) = 11
+*rfind(11) = 11
+*rfind(11) = 11
+*rfind(11) = 11
+*rfind(11) = 11
+*rfind(11) = 11
+*rfind(11) = 11
+*rfind(11) = 11
+*rfind(11) = 11
+vec has 9 elements:
+13, 16, 18, 19, 20, 22, 24, 25, 11, 
+
+It took me 11 clicks (0.011 seconds).

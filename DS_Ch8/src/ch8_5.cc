@@ -18,6 +18,47 @@
 #include <iostream>
 #include <vector>
 
+namespace Find
+{
+    /**
+     * @brief 顺序查找一个顺序单链表
+     * 
+     * Returns an iterator to the first element in the range [first,last) that compares equal to val. If no such element is found, the function returns last. \n
+     * The function uses operator== to compare the individual elements to val.
+     * 
+     * @tparam InputIterator 
+     * @tparam T 
+     * @param rbegin Input iterators to the initial and final positions in a sequence. \n
+     * The range searched is [rbegin,rend), which contains all the elements between first and last, including the element pointed by first but not the element pointed by last.
+     * @param rend Input iterators to the initial and final positions in a sequence. \n
+     * The range searched is [rbegin,rend), which contains all the elements between first and last, including the element pointed by first but not the element pointed by last.
+     * @param val Value to search for in the range. \n
+     * T shall be a type supporting comparisons with the elements pointed by InputIterator using operator== (with the elements as left-hand side operands, and val as right-hand side).
+     * @return InputIterator An iterator to the first element in the range that compares equal to val. \n
+     * If no elements match, the function returns rend.
+     */
+    template <class InputIterator, class T>
+    InputIterator rfind(InputIterator rbegin, InputIterator rend, const T &val)
+    {
+        const auto rfirst{rbegin};
+        while (rbegin != rend)
+        {
+            if (*rbegin == val)
+            {
+                // 将目标元素向表尾移动一位，使得被查概率高的元素更靠近表尾
+                if (rbegin != rfirst)
+                {
+                    std::iter_swap(rbegin, rbegin - 1);
+                    --rbegin;
+                }
+                return rbegin;
+            }
+            ++rbegin;
+        }
+        return rend;
+    }
+} // namespace Find
+
 /**
  * @brief 测试程序
  * 
@@ -67,13 +108,50 @@ int main(int argc, char const *argv[])
         srand(time(NULL));
 
         /* generate secret number between low and high: */
-        size_t low{10}, high{25}, num_of_points{3};
+        size_t low{10}, high{25}, num_of_points{16};
         size_t iSecret;
         for (size_t i = 0; i < num_of_points; ++i)
         {
             iSecret = low + (high - low + 1) * rand() / (RAND_MAX + 1);
             vec.push_back(iSecret);
         }
+
+        // 对vec排序，并去除重复元素
+        std::vector<size_t>::iterator it;
+        std::sort(vec.begin(), vec.end());
+        it = std::unique(vec.begin(), vec.end());
+        vec.resize(std::distance(vec.begin(), it));
+
+        // 输出vec的元素
+        std::cout << "vec has " << (vec.size()) << " elements:\n";
+        fout << "vec has " << (vec.size()) << " elements:\n";
+        for (auto it = vec.begin(); it != vec.end(); ++it)
+        {
+            std::cout << *it << ", ";
+            fout << *it << ", ";
+        }
+        std::cout << '\n';
+        fout << '\n';
+
+        // 从表尾反复查找同一元素
+        auto target = vec.at(0);
+        for (size_t i = 0; i < vec.size(); ++i)
+        {
+            auto result = *Find::rfind(vec.rbegin(), vec.rend(), target);
+            std::cout << "*rfind(" << target << ") = " << result << '\n';
+            fout << "*rfind(" << target << ") = " << result << '\n';
+        }
+
+        // 再次输出vec的元素
+        std::cout << "vec has " << (vec.size()) << " elements:\n";
+        fout << "vec has " << (vec.size()) << " elements:\n";
+        for (auto it = vec.begin(); it != vec.end(); ++it)
+        {
+            std::cout << *it << ", ";
+            fout << *it << ", ";
+        }
+        std::cout << '\n';
+        fout << '\n';
     }
     catch (const std::string &e)
     {

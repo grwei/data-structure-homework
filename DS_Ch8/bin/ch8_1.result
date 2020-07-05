@@ -1,0 +1,23 @@
+
+Current local time and date: Sun Jul 05 17:40:34 2020
+
+binarySearch(14) = 0
+binarySearch(17) = 1
+binarySearch(20) = 2
+binarySearch(22) = 3
+binarySearch(26) = 4
+binarySearch(30) = 5
+binarySearch(34) = 6
+binarySearch(45) = 7
+binarySearch(49) = 8
+binarySearch(51) = 9
+binarySearch(62) = 10
+binarySearch(78) = 11
+binarySearch(78) = 11
+binarySearch(91) = 13
+binarySearch(93) = 14
+binarySearch(94) = 15
+binarySearch(95) = 16
+binarySearch(98) = 17
+
+It took me 10 clicks (0.01 seconds).

@@ -4,6 +4,8 @@
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$class Input\+Iterator , class T $>$ }\\Input\+Iterator \mbox{\hyperlink{a04540_ae062e105b56a46334a7af5874640b2a4}{find}} (Input\+Iterator first, Input\+Iterator last, const T \&val)
+\begin{DoxyCompactList}\small\item\em 顺序查找一个顺序单链表 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator , class T $>$ }\\Input\+Iterator \mbox{\hyperlink{a04540_a709553d9282f26c6058580f99f7a1de1}{rfind}} (Input\+Iterator rbegin, Input\+Iterator rend, const T \&val)
 \begin{DoxyCompactList}\small\item\em 顺序查找一个顺序单链表 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -53,11 +55,63 @@ Definition at line 41 of file ch8\+\_\+2.\+cc.
 
 Referenced by main().
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{a04540_ae062e105b56a46334a7af5874640b2a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a04540_a709553d9282f26c6058580f99f7a1de1}\label{a04540_a709553d9282f26c6058580f99f7a1de1}} 
+\index{Find@{Find}!rfind@{rfind}}
+\index{rfind@{rfind}!Find@{Find}}
+\doxysubsubsection{\texorpdfstring{rfind()}{rfind()}}
+{\footnotesize\ttfamily template$<$class Input\+Iterator , class T $>$ \\
+Input\+Iterator Find\+::rfind (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{rbegin,  }\item[{Input\+Iterator}]{rend,  }\item[{const T \&}]{val }\end{DoxyParamCaption})}
+
+
+
+顺序查找一个顺序单链表 
+
+Returns an iterator to the first element in the range \mbox{[}first,last) that compares equal to val. If no such element is found, the function returns last. ~\newline
+The function uses operator== to compare the individual elements to val.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Input\+Iterator} & \\
+\hline
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em rbegin} & Input iterators to the initial and final positions in a sequence. ~\newline
+The range searched is \mbox{[}rbegin,rend), which contains all the elements between first and last, including the element pointed by first but not the element pointed by last. \\
+\hline
+{\em rend} & Input iterators to the initial and final positions in a sequence. ~\newline
+The range searched is \mbox{[}rbegin,rend), which contains all the elements between first and last, including the element pointed by first but not the element pointed by last. \\
+\hline
+{\em val} & Value to search for in the range. ~\newline
+T shall be a type supporting comparisons with the elements pointed by Input\+Iterator using operator== (with the elements as left-\/hand side operands, and val as right-\/hand side). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Input\+Iterator An iterator to the first element in the range that compares equal to val. ~\newline
+If no elements match, the function returns rend. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file ch8\+\_\+5.\+cc.
+
+
+
+Referenced by main().
+
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=210pt]{a04540_ae062e105b56a46334a7af5874640b2a4_icgraph}
+\includegraphics[width=213pt]{a04540_a709553d9282f26c6058580f99f7a1de1_icgraph}
 \end{center}
 \end{figure}
