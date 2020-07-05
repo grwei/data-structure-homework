@@ -29,13 +29,13 @@
 
 将`./include`文件夹加入`IncludePath`，编译`./src`文件夹中的**单个**源文件。
 
-- **例1** `g++`编译并运行[`test0.cc`](src/test0.cc)
+- **例1** `g++`编译并运行[`ch8_5.cc`](src/ch8_5.cc)
 
 ```bat
 cd ./DS_Ch8
 mkdir bin
-g++ ./src/test0.cc -o ./bin/test0.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=UTF-8 -finput-charset=UTF-8 -std=c++17 -I ./include
-./bin/test0.exe
+g++ ./src/ch8_5.cc -o ./bin/ch8_5.exe -g -Wall -Wextra -Wshadow -static-libgcc -fexec-charset=UTF-8 -finput-charset=UTF-8 -std=c++17 -I ./include
+./bin/ch8_5.exe
 ```
 
 - **例2** 编译并执行所有测试
