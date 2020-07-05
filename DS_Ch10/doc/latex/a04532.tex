@@ -1,0 +1,199 @@
+\hypertarget{a04532}{}\doxysection{src/ch8\+\_\+3.cc File Reference}
+\label{a04532}\index{src/ch8\_3.cc@{src/ch8\_3.cc}}
+
+
+程序设计题第3题：用operator+,$\ast$,/实现存储在数组中的集合的并, 交, 差  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for ch8\+\_\+3.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a04533}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{a04532_a058e6aac216c16ddc89cd6c18dd1343f}{operator+}} (const std\+::vector$<$ T $>$ \&vec1, const std\+::vector$<$ T $>$ \&vec2)
+\begin{DoxyCompactList}\small\item\em 返回两个非降序vector集合的并集vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{a04532_a94c94d206b635ca3e8f8b37009c913d9}{operator$\ast$}} (const std\+::vector$<$ T $>$ \&vec1, const std\+::vector$<$ T $>$ \&vec2)
+\begin{DoxyCompactList}\small\item\em 返回两个非降序vector集合的交集vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{a04532_af394b3d3f8a643e143063ed4fb064be8}{operator-\/}} (const std\+::vector$<$ T $>$ \&vec1, const std\+::vector$<$ T $>$ \&vec2)
+\begin{DoxyCompactList}\small\item\em 返回两个非降序vector集合的差集vector \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a04532_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em 测试程序 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+程序设计题第3题：用operator+,$\ast$,/实现存储在数组中的集合的并, 交, 差 
+
+\begin{DoxyAuthor}{Author}
+Guorui Wei (\href{mailto:313017602@qq.com}{\texttt{ 313017602@qq.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/07-\/05
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020
+\end{DoxyCopyright}
+See the file L\+I\+C\+E\+N\+SE in the top directory of this distribution for more information. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{a04532_abf9e6b7e6f15df4b525a2e7705ba3089}\label{a04532_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{ch8\_3.cc@{ch8\_3.cc}!main@{main}}
+\index{main@{main}!ch8\_3.cc@{ch8\_3.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+测试程序 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & 参数个数 \\
+\hline
+{\em argv} & 参数数组 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 返回值 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+要求.\+exe对其所在的目录有读写权限
+\end{DoxyWarning}
+部分测试结果将输出到一个文本文档中 
+
+Definition at line 63 of file ch8\+\_\+3.\+cc.
+
+\mbox{\Hypertarget{a04532_a94c94d206b635ca3e8f8b37009c913d9}\label{a04532_a94c94d206b635ca3e8f8b37009c913d9}} 
+\index{ch8\_3.cc@{ch8\_3.cc}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!ch8\_3.cc@{ch8\_3.cc}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$ T $>$ operator$\ast$ (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{vec1,  }\item[{const std\+::vector$<$ T $>$ \&}]{vec2 }\end{DoxyParamCaption})}
+
+
+
+返回两个非降序vector集合的交集vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 元素的类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em vec1} & 集合1 \\
+\hline
+{\em vec2} & 集合2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+T$>$ 集合1和集合2的交 
+\end{DoxyReturn}
+Input iterators to the initial and final positions of the first sorted sequence.
+
+The range used is \mbox{[}first1,last1), which contains all the elements between first1 and last1, including the element pointed by first1 but not the element pointed by last1.
+
+Input iterators to the initial and final positions of the second sorted sequence.
+
+The range used is \mbox{[}first2,last2).
+
+Output iterator to the initial position of the range where the resulting sequence is stored.
+
+The pointed type shall support being assigned the value of an element from the other ranges.
+
+Definition at line 264 of file ch8\+\_\+3.\+cc.
+
+\mbox{\Hypertarget{a04532_a058e6aac216c16ddc89cd6c18dd1343f}\label{a04532_a058e6aac216c16ddc89cd6c18dd1343f}} 
+\index{ch8\_3.cc@{ch8\_3.cc}!operator+@{operator+}}
+\index{operator+@{operator+}!ch8\_3.cc@{ch8\_3.cc}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$ T $>$ operator+ (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{vec1,  }\item[{const std\+::vector$<$ T $>$ \&}]{vec2 }\end{DoxyParamCaption})}
+
+
+
+返回两个非降序vector集合的并集vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 元素的类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em vec1} & 集合1 \\
+\hline
+{\em vec2} & 集合2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+T$>$ 集合1和集合2的并 
+\end{DoxyReturn}
+Input iterators to the initial and final positions of the first sorted sequence.
+
+The range used is \mbox{[}first1,last1), which contains all the elements between first1 and last1, including the element pointed by first1 but not the element pointed by last1.
+
+Input iterators to the initial and final positions of the second sorted sequence.
+
+The range used is \mbox{[}first2,last2).
+
+Output iterator to the initial position of the range where the resulting sequence is stored.
+
+The pointed type shall support being assigned the value of an element from the other ranges.
+
+Definition at line 203 of file ch8\+\_\+3.\+cc.
+
+\mbox{\Hypertarget{a04532_af394b3d3f8a643e143063ed4fb064be8}\label{a04532_af394b3d3f8a643e143063ed4fb064be8}} 
+\index{ch8\_3.cc@{ch8\_3.cc}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!ch8\_3.cc@{ch8\_3.cc}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$ T $>$ operator-\/ (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{vec1,  }\item[{const std\+::vector$<$ T $>$ \&}]{vec2 }\end{DoxyParamCaption})}
+
+
+
+返回两个非降序vector集合的差集vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 元素的类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em vec1} & 集合1 \\
+\hline
+{\em vec2} & 集合2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+T$>$ 集合1和集合2的差 
+\end{DoxyReturn}
+Input iterators to the initial and final positions of the first sorted sequence.
+
+The range used is \mbox{[}first1,last1), which contains all the elements between first1 and last1, including the element pointed by first1 but not the element pointed by last1.
+
+Input iterators to the initial and final positions of the second sorted sequence.
+
+The range used is \mbox{[}first2,last2).
+
+Output iterator to the initial position of the range where the resulting sequence is stored.
+
+The pointed type shall support being assigned the value of an element from the other ranges.
+
+Definition at line 308 of file ch8\+\_\+3.\+cc.
+
