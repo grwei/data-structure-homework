@@ -1,0 +1,287 @@
+\hypertarget{a05349}{}\doxysection{Set\+::Binary\+Search\+Tree$<$ Key\+\_\+T, Other\+\_\+T $>$ Class Template Reference}
+\label{a05349}\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+
+
+{\ttfamily \#include $<$Binary\+Search\+Tree.\+h$>$}
+
+
+
+Collaboration diagram for Set\+::Binary\+Search\+Tree$<$ Key\+\_\+T, Other\+\_\+T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{a05347}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a05353}{Binary\+Node}}
+\begin{DoxyCompactList}\small\item\em 结点类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05349_a9322f00f829709c12afe68ff7486bfcc}{Binary\+Search\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Binary Search Tree object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a05349_ad3ebe96656d77a293c55aca7bee5eccb}{Binary\+Search\+Tree}} (const \mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} \&rhs)
+\item 
+\mbox{\hyperlink{a05349_a6d44fabb54e92f94f9798975f9690325}{Binary\+Search\+Tree}} (\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} \&\&rhs)
+\item 
+\mbox{\hyperlink{a05349_aca13efd6bcdf1eb7077e3e1dd651eae3}{$\sim$\+Binary\+Search\+Tree}} ()
+\item 
+const \mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \& \mbox{\hyperlink{a05349_a961a86c44f813c955edce608f15c1959}{find\+Min}} () const
+\item 
+const \mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \& \mbox{\hyperlink{a05349_aca891d32b2cc0e090bd293f1ecd489d0}{find\+Max}} () const
+\item 
+bool \mbox{\hyperlink{a05349_a918d892590ea228bcaac5a5e7ccfbf66}{contains}} (const Key\+\_\+T \&x) const
+\item 
+bool \mbox{\hyperlink{a05349_ac67871e1ba4c1f0bcf79e7b261970cbb}{is\+Empty}} () const
+\item 
+void \mbox{\hyperlink{a05349_a621153a5035d69d2c17f88d39fb225ea}{print\+Tree}} (ostream \&out=cout) const
+\item 
+void \mbox{\hyperlink{a05349_ad3ac3823f24a77f8663d7d6885ff224a}{make\+Empty}} ()
+\item 
+void \mbox{\hyperlink{a05349_ac69b385558af4bd5bec9430a61104822}{insert}} (const \mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&x)
+\item 
+void \mbox{\hyperlink{a05349_a21402cfe891a8eb4535967da465ffc32}{insert}} (\mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&\&x)
+\item 
+void \mbox{\hyperlink{a05349_a83618f7c240cdebf15294a923c064697}{remove}} (const Key\+\_\+T \&x)
+\item 
+\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} \& \mbox{\hyperlink{a05349_afbebbfafd8b1fa6ba7ae675358478351}{operator=}} (const \mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} \&rhs)
+\item 
+\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} \& \mbox{\hyperlink{a05349_a6d81cb7edfd853a07549e004514366c9}{operator=}} (\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} \&\&rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a05349_aee33813277060af328cf32d30370690d}{insert}} (const \mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&x, \mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&t)
+\item 
+void \mbox{\hyperlink{a05349_a79560bb3e4e58dd06e3012d24da28462}{insert}} (\mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&\&x, \mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&t)
+\item 
+void \mbox{\hyperlink{a05349_a77ffb98306d93285598369860a64f7cc}{remove}} (const Key\+\_\+T \&x, \mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&t)
+\item 
+\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$ \mbox{\hyperlink{a05349_a6ed350e7c1902b042b455c541bc4772b}{find\+Min}} (\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$t) const
+\item 
+\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$ \mbox{\hyperlink{a05349_ae277ff2d21ec3771266563cd750a026a}{find\+Max}} (\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$t) const
+\item 
+bool \mbox{\hyperlink{a05349_a8b8663736db5106ac9c4c25715ac7c6d}{contains}} (const Key\+\_\+T \&x, \mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$t) const
+\item 
+void \mbox{\hyperlink{a05349_af1ac26a9817338b437b3e144ba76d7e9}{make\+Empty}} (\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&t)
+\item 
+void \mbox{\hyperlink{a05349_a3e77ba936b0392c3a256017a2a5330cd}{print\+Tree}} (\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$t, ostream \&out) const
+\item 
+\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$ \mbox{\hyperlink{a05349_a6687f357346cbc259f708ce3fd003b76}{clone}} (\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$t) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$ \mbox{\hyperlink{a05349_add44b3dee7f2f424ef37a2266f8c633f}{root}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+\_\+T, typename Other\+\_\+T = Key\+\_\+T$>$\newline
+class Set\+::\+Binary\+Search\+Tree$<$ Key\+\_\+\+T, Other\+\_\+\+T $>$}
+
+
+
+Definition at line 23 of file Binary\+Search\+Tree.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a05349_a9322f00f829709c12afe68ff7486bfcc}\label{a05349_a9322f00f829709c12afe68ff7486bfcc}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!BinarySearchTree@{BinarySearchTree}}
+\index{BinarySearchTree@{BinarySearchTree}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{BinarySearchTree()}{BinarySearchTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Binary Search Tree object. 
+
+\mbox{\Hypertarget{a05349_ad3ebe96656d77a293c55aca7bee5eccb}\label{a05349_ad3ebe96656d77a293c55aca7bee5eccb}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!BinarySearchTree@{BinarySearchTree}}
+\index{BinarySearchTree@{BinarySearchTree}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{BinarySearchTree()}{BinarySearchTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05349}{Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_a6d44fabb54e92f94f9798975f9690325}\label{a05349_a6d44fabb54e92f94f9798975f9690325}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!BinarySearchTree@{BinarySearchTree}}
+\index{BinarySearchTree@{BinarySearchTree}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{BinarySearchTree()}{BinarySearchTree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&\&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_aca13efd6bcdf1eb7077e3e1dd651eae3}\label{a05349_aca13efd6bcdf1eb7077e3e1dd651eae3}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!````~BinarySearchTree@{$\sim$BinarySearchTree}}
+\index{````~BinarySearchTree@{$\sim$BinarySearchTree}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BinarySearchTree()}{~BinarySearchTree()}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::$\sim$\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a05349_a6687f357346cbc259f708ce3fd003b76}\label{a05349_a6687f357346cbc259f708ce3fd003b76}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!clone@{clone}}
+\index{clone@{clone}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05353}{Binary\+Node}}$\ast$ \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::clone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_a918d892590ea228bcaac5a5e7ccfbf66}\label{a05349_a918d892590ea228bcaac5a5e7ccfbf66}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!contains@{contains}}
+\index{contains@{contains}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+bool \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::contains (\begin{DoxyParamCaption}\item[{const Key\+\_\+T \&}]{x }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{a05349_a8b8663736db5106ac9c4c25715ac7c6d}\label{a05349_a8b8663736db5106ac9c4c25715ac7c6d}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!contains@{contains}}
+\index{contains@{contains}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+bool \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::contains (\begin{DoxyParamCaption}\item[{const Key\+\_\+T \&}]{x,  }\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_aca891d32b2cc0e090bd293f1ecd489d0}\label{a05349_aca891d32b2cc0e090bd293f1ecd489d0}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!findMax@{findMax}}
+\index{findMax@{findMax}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{findMax()}{findMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+const \mbox{\hyperlink{a05357}{Set}}$<$Key\+\_\+T, Other\+\_\+T$>$\& \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::find\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{a05349_ae277ff2d21ec3771266563cd750a026a}\label{a05349_ae277ff2d21ec3771266563cd750a026a}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!findMax@{findMax}}
+\index{findMax@{findMax}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{findMax()}{findMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05353}{Binary\+Node}}$\ast$ \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::find\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_a961a86c44f813c955edce608f15c1959}\label{a05349_a961a86c44f813c955edce608f15c1959}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!findMin@{findMin}}
+\index{findMin@{findMin}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{findMin()}{findMin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+const \mbox{\hyperlink{a05357}{Set}}$<$Key\+\_\+T, Other\+\_\+T$>$\& \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::find\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{a05349_a6ed350e7c1902b042b455c541bc4772b}\label{a05349_a6ed350e7c1902b042b455c541bc4772b}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!findMin@{findMin}}
+\index{findMin@{findMin}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{findMin()}{findMin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05353}{Binary\+Node}}$\ast$ \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::find\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_ac69b385558af4bd5bec9430a61104822}\label{a05349_ac69b385558af4bd5bec9430a61104822}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!insert@{insert}}
+\index{insert@{insert}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_aee33813277060af328cf32d30370690d}\label{a05349_aee33813277060af328cf32d30370690d}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!insert@{insert}}
+\index{insert@{insert}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&}]{x,  }\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_a21402cfe891a8eb4535967da465ffc32}\label{a05349_a21402cfe891a8eb4535967da465ffc32}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!insert@{insert}}
+\index{insert@{insert}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&\&}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_a79560bb3e4e58dd06e3012d24da28462}\label{a05349_a79560bb3e4e58dd06e3012d24da28462}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!insert@{insert}}
+\index{insert@{insert}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05357}{Set}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&\&}]{x,  }\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_ac67871e1ba4c1f0bcf79e7b261970cbb}\label{a05349_ac67871e1ba4c1f0bcf79e7b261970cbb}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+bool \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{a05349_ad3ac3823f24a77f8663d7d6885ff224a}\label{a05349_ad3ac3823f24a77f8663d7d6885ff224a}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!makeEmpty@{makeEmpty}}
+\index{makeEmpty@{makeEmpty}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{makeEmpty()}{makeEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::make\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_af1ac26a9817338b437b3e144ba76d7e9}\label{a05349_af1ac26a9817338b437b3e144ba76d7e9}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!makeEmpty@{makeEmpty}}
+\index{makeEmpty@{makeEmpty}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{makeEmpty()}{makeEmpty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::make\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_a6d81cb7edfd853a07549e004514366c9}\label{a05349_a6d81cb7edfd853a07549e004514366c9}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}}\& \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&\&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_afbebbfafd8b1fa6ba7ae675358478351}\label{a05349_afbebbfafd8b1fa6ba7ae675358478351}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05349}{Binary\+Search\+Tree}}\& \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a05349}{Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_a3e77ba936b0392c3a256017a2a5330cd}\label{a05349_a3e77ba936b0392c3a256017a2a5330cd}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!printTree@{printTree}}
+\index{printTree@{printTree}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{printTree()}{printTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::print\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$}]{t,  }\item[{ostream \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{a05349_a621153a5035d69d2c17f88d39fb225ea}\label{a05349_a621153a5035d69d2c17f88d39fb225ea}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!printTree@{printTree}}
+\index{printTree@{printTree}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{printTree()}{printTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::print\+Tree (\begin{DoxyParamCaption}\item[{ostream \&}]{out = {\ttfamily cout} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{a05349_a83618f7c240cdebf15294a923c064697}\label{a05349_a83618f7c240cdebf15294a923c064697}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!remove@{remove}}
+\index{remove@{remove}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::remove (\begin{DoxyParamCaption}\item[{const Key\+\_\+T \&}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a05349_a77ffb98306d93285598369860a64f7cc}\label{a05349_a77ffb98306d93285598369860a64f7cc}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!remove@{remove}}
+\index{remove@{remove}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+void \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::remove (\begin{DoxyParamCaption}\item[{const Key\+\_\+T \&}]{x,  }\item[{\mbox{\hyperlink{a05353}{Binary\+Node}} $\ast$\&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{a05349_add44b3dee7f2f424ef37a2266f8c633f}\label{a05349_add44b3dee7f2f424ef37a2266f8c633f}} 
+\index{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}!root@{root}}
+\index{root@{root}!Set::BinarySearchTree$<$ Key\_T, Other\_T $>$@{Set::BinarySearchTree$<$ Key\_T, Other\_T $>$}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily template$<$typename Key\+\_\+T , typename Other\+\_\+T  = Key\+\_\+T$>$ \\
+\mbox{\hyperlink{a05353}{Binary\+Node}}$\ast$ \mbox{\hyperlink{a05349}{Set\+::\+Binary\+Search\+Tree}}$<$ Key\+\_\+T, Other\+\_\+T $>$\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 69 of file Binary\+Search\+Tree.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a04520}{Binary\+Search\+Tree.\+h}}\end{DoxyCompactItemize}

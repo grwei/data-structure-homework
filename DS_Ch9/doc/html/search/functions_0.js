@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['binarysearch_31',['binarySearch',['../a04526.html#aa946f1b64d0c5697cbd08372997fa9c4',1,'ch8_1.cc']]]
+  ['binarynode_40',['BinaryNode',['../a05353.html#a299c68fbdafa87bdd265ae59d5db3a04',1,'Set::BinarySearchTree::BinaryNode::BinaryNode(const Set&lt; Key_T, Other_T &gt; &amp;theElement, BinaryNode *lt, BinaryNode *rt)'],['../a05353.html#a8e500b3c3f25e990c5f7fc499107f07c',1,'Set::BinarySearchTree::BinaryNode::BinaryNode(Set&lt; Key_T, Other_T &gt; &amp;&amp;theElement, BinaryNode *lt, BinaryNode *rt)']]],
+  ['binarysearchtree_41',['BinarySearchTree',['../a05349.html#a9322f00f829709c12afe68ff7486bfcc',1,'Set::BinarySearchTree::BinarySearchTree()'],['../a05349.html#ad3ebe96656d77a293c55aca7bee5eccb',1,'Set::BinarySearchTree::BinarySearchTree(const BinarySearchTree &amp;rhs)'],['../a05349.html#a6d44fabb54e92f94f9798975f9690325',1,'Set::BinarySearchTree::BinarySearchTree(BinarySearchTree &amp;&amp;rhs)']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['find_6',['Find',['../a04540.html',1,'Find'],['../a04540.html#ae062e105b56a46334a7af5874640b2a4',1,'Find::find()']]]
+  ['element_5f_6',['element_',['../a05353.html#ad0f591a217b249718d43ce2cf229b8ec',1,'Set::BinarySearchTree::BinaryNode']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['operator_2a_34',['operator*',['../a04532.html#a94c94d206b635ca3e8f8b37009c913d9',1,'ch8_3.cc']]],
-  ['operator_2b_35',['operator+',['../a04532.html#a058e6aac216c16ddc89cd6c18dd1343f',1,'ch8_3.cc']]],
-  ['operator_2d_36',['operator-',['../a04532.html#af394b3d3f8a643e143063ed4fb064be8',1,'ch8_3.cc']]]
+  ['insert_46',['insert',['../a05349.html#ac69b385558af4bd5bec9430a61104822',1,'Set::BinarySearchTree::insert(const Set&lt; Key_T, Other_T &gt; &amp;x)'],['../a05349.html#a21402cfe891a8eb4535967da465ffc32',1,'Set::BinarySearchTree::insert(Set&lt; Key_T, Other_T &gt; &amp;&amp;x)'],['../a05349.html#aee33813277060af328cf32d30370690d',1,'Set::BinarySearchTree::insert(const Set&lt; Key_T, Other_T &gt; &amp;x, BinaryNode *&amp;t)'],['../a05349.html#a79560bb3e4e58dd06e3012d24da28462',1,'Set::BinarySearchTree::insert(Set&lt; Key_T, Other_T &gt; &amp;&amp;x, BinaryNode *&amp;t)']]],
+  ['isempty_47',['isEmpty',['../a05349.html#ac67871e1ba4c1f0bcf79e7b261970cbb',1,'Set::BinarySearchTree']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_8',['main',['../a04526.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;ch8_1.cc'],['../a04529.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;ch8_2.cc'],['../a04532.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;ch8_3.cc'],['../a04535.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;ch8_5.cc']]]
+  ['insert_9',['insert',['../a05349.html#ac69b385558af4bd5bec9430a61104822',1,'Set::BinarySearchTree::insert(const Set&lt; Key_T, Other_T &gt; &amp;x)'],['../a05349.html#a21402cfe891a8eb4535967da465ffc32',1,'Set::BinarySearchTree::insert(Set&lt; Key_T, Other_T &gt; &amp;&amp;x)'],['../a05349.html#aee33813277060af328cf32d30370690d',1,'Set::BinarySearchTree::insert(const Set&lt; Key_T, Other_T &gt; &amp;x, BinaryNode *&amp;t)'],['../a05349.html#a79560bb3e4e58dd06e3012d24da28462',1,'Set::BinarySearchTree::insert(Set&lt; Key_T, Other_T &gt; &amp;&amp;x, BinaryNode *&amp;t)']]],
+  ['isempty_10',['isEmpty',['../a05349.html#ac67871e1ba4c1f0bcf79e7b261970cbb',1,'Set::BinarySearchTree']]]
 ];

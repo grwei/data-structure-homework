@@ -1,7 +1,7 @@
 /**
- * @file ch8_2.cc
+ * @file test0.cc
  * @author Guorui Wei (313017602@qq.com)
- * @brief 程序设计题第2题：顺序查找有序单链表
+ * @brief 二叉查找树类的基本测试
  * @version 0.1
  * @date 2020-07-05
  * 
@@ -16,39 +16,7 @@
 #include <ctime>
 #include <fstream>
 #include <iostream>
-#include <list>
-
-namespace Find
-{
-    /**
-     * @brief 顺序查找一个顺序单链表
-     * 
-     * Returns an iterator to the first element in the range [first,last) that compares equal to val. If no such element is found, the function returns last. \n
-     * The function uses operator== to compare the individual elements to val.
-     * 
-     * @tparam InputIterator 
-     * @tparam T 
-     * @param first Input iterators to the initial and final positions in a sequence. \n
-     * The range searched is [first,last), which contains all the elements between first and last, including the element pointed by first but not the element pointed by last.
-     * @param last Input iterators to the initial and final positions in a sequence. \n
-     * The range searched is [first,last), which contains all the elements between first and last, including the element pointed by first but not the element pointed by last.
-     * @param val Value to search for in the range. \n
-     * T shall be a type supporting comparisons with the elements pointed by InputIterator using operator== (with the elements as left-hand side operands, and val as right-hand side).
-     * @return InputIterator An iterator to the first element in the range that compares equal to val. \n
-     * If no elements match, the function returns last.
-     */
-    template <class InputIterator, class T>
-    InputIterator find(InputIterator first, InputIterator last, const T &val)
-    {
-        while (first != last)
-        {
-            if (*first == val)
-                return first;
-            ++first;
-        }
-        return last;
-    }
-} // namespace Find
+#include <vector>
 
 /**
  * @brief 测试程序
@@ -71,7 +39,7 @@ int main(int argc, char const *argv[])
     std::string::size_type found = full_path_exec.find_last_of("/\\", std::string::npos);
     const std::string exec_path = full_path_exec.substr(0, found);
     const std::string exec_filename = full_path_exec.substr(found + 1, std::string::npos);
-    const std::string data_file_name("\\ch8_2.result");
+    const std::string data_file_name("\\test0.result");
 
     // 打开测试数据文件
     std::string data_file_full_path{exec_path + data_file_name}; // 数据文件的绝对地址
@@ -93,34 +61,29 @@ int main(int argc, char const *argv[])
     // 开始测试
     try
     {
-        std::list<size_t> ls;
+        std::vector<size_t> vec;
 
         /* initialize random seed: */
         srand(time(NULL));
 
         /* generate secret number between low and high: */
-        size_t low{10}, high{99}, num_of_points{18};
+        size_t low{10}, high{25}, num_of_points{3};
         size_t iSecret;
         for (size_t i = 0; i < num_of_points; ++i)
         {
             iSecret = low + (high - low + 1) * rand() / (RAND_MAX + 1);
-            ls.push_back(iSecret);
-        }
-
-        // 先排序
-        ls.sort(std::less<size_t>{});
-
-        // 开始顺序查找
-        for (auto itr = ls.begin(); itr != ls.end(); ++itr)
-        {
-            std::cout << "*find(" << *itr << ") = " << *Find::find(ls.begin(), ls.end(), *itr) << '\n';
-            fout << "*find(" << *itr << ") = " << *Find::find(ls.begin(), ls.end(), *itr) << '\n';
+            vec.push_back(iSecret);
         }
     }
     catch (const std::string &e)
     {
         std::cerr << e << '\n';
         fout << e << '\n';
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+        fout << e.what() << '\n';
     }
 
     // output time information

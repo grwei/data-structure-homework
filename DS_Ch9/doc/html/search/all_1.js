@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['ch8_5f1_2ecc_1',['ch8_1.cc',['../a04526.html',1,'']]],
-  ['ch8_5f2_2ecc_2',['ch8_2.cc',['../a04529.html',1,'']]],
-  ['ch8_5f3_2ecc_3',['ch8_3.cc',['../a04532.html',1,'']]],
-  ['ch8_5f5_2ecc_4',['ch8_5.cc',['../a04535.html',1,'']]]
+  ['clone_3',['clone',['../a05349.html#a6687f357346cbc259f708ce3fd003b76',1,'Set::BinarySearchTree']]],
+  ['contains_4',['contains',['../a05349.html#a918d892590ea228bcaac5a5e7ccfbf66',1,'Set::BinarySearchTree::contains(const Key_T &amp;x) const'],['../a05349.html#a8b8663736db5106ac9c4c25715ac7c6d',1,'Set::BinarySearchTree::contains(const Key_T &amp;x, BinaryNode *t) const']]]
 ];

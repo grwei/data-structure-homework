@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['set_22',['Set',['../a05356.html',1,'Set']]]
+  ['binarynode_32',['BinaryNode',['../a05353.html',1,'Set::BinarySearchTree']]],
+  ['binarysearchtree_33',['BinarySearchTree',['../a05349.html',1,'Set']]]
 ];

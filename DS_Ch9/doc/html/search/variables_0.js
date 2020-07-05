@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_5f_38',['key_',['../a05356.html#a1d970a431f502f7ac50bb04a57a36518',1,'Set::Set']]]
+  ['element_5f_55',['element_',['../a05353.html#ad0f591a217b249718d43ce2cf229b8ec',1,'Set::BinarySearchTree::BinaryNode']]]
 ];
