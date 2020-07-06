@@ -47,6 +47,15 @@ run_test.bat
 
 ## References and notes
 
+none
+
+## Homework
+
+- 第十章作业：
+- 简答题1～7
+- 程序设计题：1，2，4，7，8，10，12
+- 课下思考并自己实现：3，5，6，9，11
+
 ## Contact me
 
 - Author: Guorui Wei (危 国锐)

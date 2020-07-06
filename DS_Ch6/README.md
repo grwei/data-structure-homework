@@ -79,6 +79,12 @@ run_test.bat
 13. `std::move()`的后果：实参变右值，语句执行完毕后被析构，变成**过期对象**。
     - [关于两种构造和两种赋值的简单测试](src/ch6_6.cc)：被移动的二叉树变成空二叉树，这正是[析构函数](include/binaryTree.hh)定义的行为。过期对象仍可访问，还可被移动赋值。疑问：析构函数是否会释放自动成员？例[`BinNode *root_`](include/binaryTree.hh)
 
+## Homework
+
+- 第六章作业：
+- 简答题1~10，12
+- 程序设计题1~6，7~9可以用伪码或者文字表示，鼓励正式代码，课下自行思考13~15。
+
 ## Contact me
 
 - Author: Guorui Wei (危 国锐)

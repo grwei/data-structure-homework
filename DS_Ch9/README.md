@@ -47,6 +47,14 @@ run_test.bat
 
 ## References and notes
 
+none
+
+## Homework
+
+- 简答题1，2，3，4，8，9，10，11，12，13
+- 程序设计题：1，2，3，5，6，7，8，11
+- 课下自行思考其它题目。
+
 ## Contact me
 
 - Author: Guorui Wei (危 国锐)

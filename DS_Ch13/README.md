@@ -47,6 +47,14 @@ run_test.bat
 
 ## References and notes
 
+none
+
+## Homework
+
+- 第十三章作业：
+- 简答题1~6；
+- 程序设计题：4，5，8，12
+
 ## Contact me
 
 - Author: Guorui Wei (危 国锐)

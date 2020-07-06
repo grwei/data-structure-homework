@@ -40,6 +40,13 @@ mkdir bin
 g++ ./src/test0.cc -o ./bin/test0.exe -g -fexec-charset=GBK -std=c++11 -I ./include
 ./bin/test0.exe
 ```
+## Homework
+
+- 简答题1~4，
+- 程序设计题：1
+- 课后自行思考完成：2，3，4，5
+
+4月11日 23:55前提交
 
 ## Contact me
 
