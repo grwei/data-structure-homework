@@ -25,7 +25,8 @@ var NAVTREE =
   [ "引言", "index.html", [
     [ "Documentation", "index.html", [
       [ "Overview", "index.html#autotoc_md1", null ],
-      [ "Contact me", "index.html#autotoc_md2", null ]
+      [ "Homework", "index.html#autotoc_md2", null ],
+      [ "Contact me", "index.html#autotoc_md3", null ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],

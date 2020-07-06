@@ -25,7 +25,8 @@ var NAVTREE =
   [ "栈", "index.html", [
     [ "Documentation", "index.html", [
       [ "Overview", "index.html#autotoc_md1", null ],
-      [ "Contact me", "index.html#autotoc_md2", null ]
+      [ "Homework", "index.html#autotoc_md2", null ],
+      [ "Contact me", "index.html#autotoc_md3", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],

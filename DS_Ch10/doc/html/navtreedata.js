@@ -28,7 +28,8 @@ var NAVTREE =
       [ "文件结构", "index.html#autotoc_md2", null ],
       [ "Compiling", "index.html#autotoc_md3", null ],
       [ "References and notes", "index.html#autotoc_md4", null ],
-      [ "Contact me", "index.html#autotoc_md5", null ]
+      [ "Homework", "index.html#autotoc_md5", null ],
+      [ "Contact me", "index.html#autotoc_md6", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
