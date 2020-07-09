@@ -1,7 +1,7 @@
 /****************************************************
  * @file seqStack.hxx
  * @author Guorui Wei (313017602@qq.com)
- * @brief Ë³ÐòÕ»ÀàµÄ¶¨ÒåºÍÊµÏÖ
+ * @brief Ë³ï¿½ï¿½Õ»ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
  * @version 0.1
  * @date 2020-04-05
  * 
@@ -15,114 +15,114 @@
 #ifndef __seqStackIncluded
 #define __seqStackIncluded
 
-#include "Stack.h"
+#include "Stack.hh"
 #include <climits>
 
 namespace Stack
 {
 
-template <class T>
-class seqStack : public Stack<T>
-{
-private:
-    T *elem;            // Êý×éÃû
-    int top_p;          // Õ»¶¥ÔªËØµÄÏÂ±ê¡£-1±íÊ¾Õ»¿Õ
-    int maxSize;        // Êý×é¹æÄ£
-    void doubleSpace(); // À©Õ¹¿Õ¼ä
+    template <class T>
+    class seqStack : public Stack<T>
+    {
+    private:
+        T *elem;            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        int top_p;          // Õ»ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½Â±ê¡£-1ï¿½ï¿½Ê¾Õ»ï¿½ï¿½
+        int maxSize;        // ï¿½ï¿½ï¿½ï¿½ï¿½Ä£
+        void doubleSpace(); // ï¿½ï¿½Õ¹ï¿½Õ¼ï¿½
 
-public:
-    seqStack(int initSize = 10);
-    seqStack(std::initializer_list<T> &&il); // Ö§³ÖÁÐ±í³õÊ¼»¯
-    virtual bool isEmpty() const;            // ÅÐÕ»¿Õ
-    virtual void push(const T &elem);        // ½øÕ»
-    virtual void push(T &&elem);             // ½øÕ»(move)
-    virtual T pop();                         // ³öÕ»
-    virtual T top() const;                   // ¶ÁÕ»¶¥ÔªËØ
-    int size() const;                        // Returns the number of elements in the stack.
-    int elemMem() const;                     // ·µ»Ø¶¯Ì¬Êý×éµÄ´óÐ¡(Bytes)
-    virtual ~seqStack();
-    bool empty() const { return isEmpty(); }
-};
+    public:
+        seqStack(int initSize = 10);
+        seqStack(std::initializer_list<T> &&il); // Ö§ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
+        virtual bool isEmpty() const;            // ï¿½ï¿½Õ»ï¿½ï¿½
+        virtual void push(const T &elem);        // ï¿½ï¿½Õ»
+        virtual void push(T &&elem);             // ï¿½ï¿½Õ»(move)
+        virtual T pop();                         // ï¿½ï¿½Õ»
+        virtual T top() const;                   // ï¿½ï¿½Õ»ï¿½ï¿½Ôªï¿½ï¿½
+        int size() const;                        // Returns the number of elements in the stack.
+        int elemMem() const;                     // ï¿½ï¿½ï¿½Ø¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½Ä´ï¿½Ð¡(Bytes)
+        virtual ~seqStack();
+        bool empty() const { return isEmpty(); }
+    };
 
-template <class T>
-seqStack<T>::seqStack(int initSize)
-    : elem(new T[initSize]), top_p(-1), maxSize(initSize)
-{
-}
+    template <class T>
+    seqStack<T>::seqStack(int initSize)
+        : elem(new T[initSize]), top_p(-1), maxSize(initSize)
+    {
+    }
 
-template <class T>
-seqStack<T>::seqStack(std::initializer_list<T> &&il)
-    : maxSize(il.size), elem(new T[il.size]), top_p(-1)
-{
-    for (auto &&i : il)
-        elem[++top_p] = i;
-}
+    template <class T>
+    seqStack<T>::seqStack(std::initializer_list<T> &&il)
+        : maxSize(il.size), elem(new T[il.size]), top_p(-1)
+    {
+        for (auto &&i : il)
+            elem[++top_p] = i;
+    }
 
-template <class T>
-seqStack<T>::~seqStack()
-{
-    delete[] elem;
-}
+    template <class T>
+    seqStack<T>::~seqStack()
+    {
+        delete[] elem;
+    }
 
-template <class T>
-bool seqStack<T>::isEmpty() const
-{
-    return top_p == -1;
-}
+    template <class T>
+    bool seqStack<T>::isEmpty() const
+    {
+        return top_p == -1;
+    }
 
-template <class T>
-void seqStack<T>::push(const T &_elem)
-{
-    if (top_p == maxSize - 1)
-        doubleSpace();
+    template <class T>
+    void seqStack<T>::push(const T &_elem)
+    {
+        if (top_p == maxSize - 1)
+            doubleSpace();
 
-    seqStack<T>::elem[++top_p] = _elem;
-}
+        seqStack<T>::elem[++top_p] = _elem;
+    }
 
-template <class T>
-void seqStack<T>::push(T &&_elem)
-{
-    if (top_p == maxSize - 1)
-        doubleSpace();
+    template <class T>
+    void seqStack<T>::push(T &&_elem)
+    {
+        if (top_p == maxSize - 1)
+            doubleSpace();
 
-    seqStack<T>::elem[++top_p] = std::move(_elem);
-}
+        seqStack<T>::elem[++top_p] = std::move(_elem);
+    }
 
-template <class T>
-T seqStack<T>::pop()
-{
-    return elem[top_p--];
-}
+    template <class T>
+    T seqStack<T>::pop()
+    {
+        return elem[top_p--];
+    }
 
-template <class T>
-T seqStack<T>::top() const
-{
-    return elem[top_p];
-}
+    template <class T>
+    T seqStack<T>::top() const
+    {
+        return elem[top_p];
+    }
 
-template <class T>
-void seqStack<T>::doubleSpace()
-{
-    T *old = elem;
+    template <class T>
+    void seqStack<T>::doubleSpace()
+    {
+        T *old = elem;
 
-    elem = new T[maxSize *= 2];
-    for (int i = 0; i <= top_p; ++i)
-        elem[i] = old[i];
+        elem = new T[maxSize *= 2];
+        for (int i = 0; i <= top_p; ++i)
+            elem[i] = old[i];
 
-    delete[] old;
-}
+        delete[] old;
+    }
 
-template <class T>
-int seqStack<T>::size() const
-{
-    return top_p + 1;
-}
+    template <class T>
+    int seqStack<T>::size() const
+    {
+        return top_p + 1;
+    }
 
-template <class T>
-int seqStack<T>::elemMem() const
-{
-    return sizeof(T) * maxSize + sizeof(*this);
-}
+    template <class T>
+    int seqStack<T>::elemMem() const
+    {
+        return sizeof(T) * maxSize + sizeof(*this);
+    }
 
 } // namespace Stack
 
