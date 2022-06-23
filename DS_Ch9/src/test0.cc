@@ -29,6 +29,7 @@
  */
 int main(int argc, char const *argv[])
 {
+    auto pi = new int[100];
     // time
     clock_t t = clock();
     time_t rawtime;
